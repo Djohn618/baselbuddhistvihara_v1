@@ -48,34 +48,36 @@
 
   <main>
     <section id="home" class="hero">
-      <!-- Background media: gradient placeholder until real photography is ready.
-           When images are added, replace .hero__media with a slideshow of
-           <img>/<picture> elements cross-fading with a Ken Burns pan/zoom
-           animation; keep .hero__overlay stacked above it for text contrast. -->
-      <div class="hero__media" aria-hidden="true"></div>
-      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__left">
+        <img src="assets/images/logo/V2.png" alt="Basel Buddhist Vihara Logo" class="hero__logo">
 
-      <div class="hero__content container container--narrow">
-        <p class="hero__label" data-i18n="hero.label">Basel Buddhist Vihara — SKBZ</p>
-        <h1 class="hero__heading" data-i18n="hero.tagline">Ein Ort des Friedens, der Weisheit und der Gemeinschaft</h1>
-        <p class="hero__subtitle" data-i18n="hero.founded">Gegründet am 1. Juli 2024 · Basel, Schweiz</p>
+        <div class="hero__left-content">
+          <h1 class="hero__heading">
+            <span class="hero__heading-line1" data-i18n="hero.heading1">Basel Buddhist Vihara</span>
+            <span class="hero__heading-line2" data-i18n="hero.heading2">Ein Ort des Friedens</span>
+          </h1>
+          <p class="hero__subtitle" data-i18n="hero.founded">Gegründet am 1. Juli 2024 · Basel, Schweiz</p>
 
-        <div class="hero__actions">
-          <a href="#about" class="btn btn--accent btn--lg" data-i18n="hero.cta">Mehr erfahren</a>
-          <a href="#contact" class="btn btn--outline-light btn--lg" data-i18n="nav.contact">Kontakt</a>
+          <div class="hero__actions">
+            <a href="#about" class="btn btn--primary btn--lg" data-i18n="hero.cta">Mehr erfahren</a>
+            <a href="#contact" class="btn btn--outline btn--lg" data-i18n="nav.contact">Kontakt</a>
+          </div>
         </div>
+
+        <p class="hero__counter" aria-hidden="true">01 / 03</p>
       </div>
 
-      <a href="#about" class="hero__scroll" aria-label="Nach unten scrollen">
-        <span class="hero__scroll-arrow"></span>
-      </a>
+      <div class="hero__right">
+        <!-- Replace with real temple photo -->
+        <div class="hero__image" aria-hidden="true"></div>
+      </div>
     </section>
 
     <section id="about" class="about section">
       <div class="container">
         <div class="about__grid">
           <div class="about__media">
-            <div class="about__image-frame">
+            <div class="about__image-frame paper-card">
               <!-- Temple/monk photography goes here — replace with a real
                    <img> (e.g. temple exterior or a ceremony photo) once available. -->
               <div class="about__image-placeholder" aria-hidden="true"></div>
@@ -90,23 +92,23 @@
             <div class="about__divider" aria-hidden="true"></div>
 
             <ul class="about__highlights">
-              <li class="about__highlight">
+              <li class="about__highlight paper-card">
                 <span class="about__highlight-icon" aria-hidden="true">🗓️</span>
                 <span data-i18n="about.facts.foundingDate">Gegründet am 1. Juli 2024</span>
               </li>
-              <li class="about__highlight">
+              <li class="about__highlight paper-card">
                 <span class="about__highlight-icon" aria-hidden="true">✨</span>
                 <span data-i18n="about.facts.inauguration">Feierliche Eröffnung am 6. Juli 2024 mit fünf Mönchen und rund 30 Teilnehmenden</span>
               </li>
-              <li class="about__highlight">
+              <li class="about__highlight paper-card">
                 <span class="about__highlight-icon" aria-hidden="true">🙏</span>
                 <span data-i18n="about.facts.founder">Unser Gründer: Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero — obwohl er am 12. Juni 2024 im Genfer Internationalen Buddhistischen Zentrum verstarb, bleibt seine edle Vision ein ewiges Leuchtfeuer für den Vihara.</span>
               </li>
-              <li class="about__highlight">
+              <li class="about__highlight paper-card">
                 <span class="about__highlight-icon" aria-hidden="true">🧘</span>
                 <span data-i18n="about.facts.headMonk">Tempelvorsteher: Ehrw. Udumaththe Ariyaseela Thero</span>
               </li>
-              <li class="about__highlight">
+              <li class="about__highlight paper-card">
                 <span class="about__highlight-icon" aria-hidden="true">👤</span>
                 <span data-i18n="about.facts.president">Präsidentin: Fabienne Eglin</span>
               </li>
@@ -121,50 +123,104 @@
         <h2 class="programs__title text-center" data-i18n="programs.title">Programme &amp; Veranstaltungen</h2>
         <p class="programs__subtitle text-center" data-i18n="programs.subtitle">Monatliche Programme — jeweils in der dritten Woche des Monats</p>
 
-        <div class="programs__card programs__list-card">
-          <ul class="programs__list">
-            <li class="programs__item">
-              <span class="programs__item-icon" aria-hidden="true">🧘</span>
-              <span data-i18n="programs.items.item1">Meditationsprogramm auf Deutsch — Jeden dritten Freitag, 18:00–20:00 Uhr</span>
-            </li>
-            <li class="programs__item">
-              <span class="programs__item-icon" aria-hidden="true">🧘</span>
-              <span data-i18n="programs.items.item2">Meditationsprogramm auf Singhalesisch — Jeden dritten Samstag, 18:00–20:00 Uhr</span>
-            </li>
-            <li class="programs__item">
-              <span class="programs__item-icon" aria-hidden="true">🌕</span>
-              <span data-i18n="programs.items.item3">Poya-Programm — Jeden dritten Sonntag, 14:00–18:00 Uhr</span>
-            </li>
-          </ul>
+        <div class="programs__carousel">
+          <button type="button" class="programs__nav programs__nav--prev" id="programs-prev" aria-label="Zurück">&#10094;</button>
+
+          <div class="programs__cards" id="programs-cards">
+            <article class="program-card paper-card">
+              <span class="program-card__badge" data-i18n="programs.cards.card1.badge">Jeden 3. Freitag</span>
+              <span class="program-card__icon" aria-hidden="true">🕯️</span>
+              <h3 class="program-card__title" data-i18n="programs.cards.card1.title">Meditation auf Deutsch</h3>
+              <p class="program-card__time" data-i18n="programs.cards.card1.time">18:00–20:00 Uhr</p>
+            </article>
+
+            <article class="program-card paper-card">
+              <span class="program-card__badge" data-i18n="programs.cards.card2.badge">Jeden 3. Samstag</span>
+              <span class="program-card__icon" aria-hidden="true">🧘</span>
+              <h3 class="program-card__title" data-i18n="programs.cards.card2.title">Meditation auf Singhalesisch</h3>
+              <p class="program-card__time" data-i18n="programs.cards.card2.time">18:00–20:00 Uhr</p>
+            </article>
+
+            <article class="program-card paper-card">
+              <span class="program-card__badge" data-i18n="programs.cards.card3.badge">Jeden 3. Sonntag</span>
+              <span class="program-card__icon" aria-hidden="true">🌕</span>
+              <h3 class="program-card__title" data-i18n="programs.cards.card3.title">Poya-Programm</h3>
+              <p class="program-card__time" data-i18n="programs.cards.card3.time">14:00–18:00 Uhr</p>
+            </article>
+
+            <article class="program-card paper-card">
+              <span class="program-card__badge" data-i18n="programs.cards.card4.badge">Nach Vereinbarung</span>
+              <span class="program-card__icon" aria-hidden="true">🏠</span>
+              <h3 class="program-card__title" data-i18n="programs.cards.card4.title">Dana-Zeremonien</h3>
+            </article>
+
+            <article class="program-card paper-card">
+              <span class="program-card__badge" data-i18n="programs.cards.card5.badge">Jährlich</span>
+              <span class="program-card__icon" aria-hidden="true">🎋</span>
+              <h3 class="program-card__title" data-i18n="programs.cards.card5.title">Kathina-Zeremonie</h3>
+            </article>
+
+            <article class="program-card paper-card">
+              <span class="program-card__badge" data-i18n="programs.cards.card6.badge">Bald bekannt gegeben</span>
+              <span class="program-card__icon" aria-hidden="true">📅</span>
+              <h3 class="program-card__title" data-i18n="programs.cards.card6.title">Weitere Events</h3>
+            </article>
+          </div>
+
+          <button type="button" class="programs__nav programs__nav--next" id="programs-next" aria-label="Weiter">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="youtube" class="youtube section">
+      <div class="container">
+        <h2 class="youtube__title text-center" data-i18n="youtube.title">Dhamma Dana</h2>
+        <p class="youtube__subtitle text-center" data-i18n="youtube.subtitle">Unsere YouTube-Kanäle</p>
+
+        <!-- Replace placeholder cards with real YouTube links when available -->
+        <div class="youtube__grid">
+          <a href="#" class="youtube-card">
+            <div class="youtube-card__thumb">
+              <span class="youtube-card__play" aria-hidden="true">▶</span>
+            </div>
+            <h3 class="youtube-card__title" data-i18n="youtube.videos.video1.title">Buddhistische Philosophie</h3>
+            <p class="youtube-card__speaker" data-i18n="youtube.videos.video1.speaker">Ehrw. Ariyaseela Thero</p>
+            <p class="youtube-card__date" data-i18n="youtube.videos.video1.date">Bald verfügbar</p>
+          </a>
+
+          <a href="#" class="youtube-card">
+            <div class="youtube-card__thumb">
+              <span class="youtube-card__play" aria-hidden="true">▶</span>
+            </div>
+            <h3 class="youtube-card__title" data-i18n="youtube.videos.video2.title">Meditationsanleitung</h3>
+            <p class="youtube-card__speaker" data-i18n="youtube.videos.video2.speaker">Ehrw. Ariyaseela Thero</p>
+            <p class="youtube-card__date" data-i18n="youtube.videos.video2.date">Bald verfügbar</p>
+          </a>
+
+          <a href="#" class="youtube-card">
+            <div class="youtube-card__thumb">
+              <span class="youtube-card__play" aria-hidden="true">▶</span>
+            </div>
+            <h3 class="youtube-card__title" data-i18n="youtube.videos.video3.title">Dhamma Vortrag</h3>
+            <p class="youtube-card__speaker" data-i18n="youtube.videos.video3.speaker">Ehrw. Ariyaseela Thero</p>
+            <p class="youtube-card__date" data-i18n="youtube.videos.video3.date">Bald verfügbar</p>
+          </a>
+
+          <a href="#" class="youtube-card">
+            <div class="youtube-card__thumb">
+              <span class="youtube-card__play" aria-hidden="true">▶</span>
+            </div>
+            <h3 class="youtube-card__title" data-i18n="youtube.videos.video4.title">Pirith Chanting</h3>
+            <p class="youtube-card__speaker" data-i18n="youtube.videos.video4.speaker">Ehrw. Ariyaseela Thero</p>
+            <p class="youtube-card__date" data-i18n="youtube.videos.video4.date">Bald verfügbar</p>
+          </a>
         </div>
 
-        <div class="programs__grid">
-          <div class="programs__col">
-            <h3 class="programs__col-title" data-i18n="programs.services.title">Unsere Dienstleistungen</h3>
-            <div class="programs__card">
-              <ul class="programs__list">
-                <li class="programs__item">
-                  <span class="programs__item-icon" aria-hidden="true">🙏</span>
-                  <span data-i18n="programs.services.item1">Dana-Zeremonien — monatlich, jährlich oder an einem besonderen Datum</span>
-                </li>
-                <li class="programs__item">
-                  <span class="programs__item-icon" aria-hidden="true">🏠</span>
-                  <span data-i18n="programs.services.item2">Hausbesuche — Mönche können für Pirith-Gesänge und Dana eingeladen werden</span>
-                </li>
-                <li class="programs__item">
-                  <span class="programs__item-icon" aria-hidden="true">📅</span>
-                  <span data-i18n="programs.services.item3">Termine im Vihara — Bitte vorab einen Termin vereinbaren</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="programs__col">
-            <h3 class="programs__col-title" data-i18n="programs.youtubeTitle">YouTube</h3>
-            <div class="programs__card programs__card--special">
-              <p data-i18n="programs.youtube">Dhamma Dana — Wir betreiben zwei YouTube-Kanäle mit wöchentlichen Videos zu buddhistischer Philosophie, Meditation und Dhamma-Vorträgen.</p>
-            </div>
-          </div>
+        <div class="youtube__more">
+          <a href="#" class="youtube__view-all">
+            <span data-i18n="youtube.viewAll">Alle Videos ansehen</span>
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
@@ -252,39 +308,41 @@
             <h2 class="contact__heading" data-i18n="contact.title">Kontakt</h2>
 
             <ul class="contact__list">
-              <li class="contact__item">
+              <li class="contact__item paper-card">
                 <span class="contact__icon" aria-hidden="true">📍</span>
                 <span class="contact__text" data-i18n="contact.address">Basel Buddhist Vihara
 Feldbergstrasse 142
 4057 Basel, Switzerland</span>
               </li>
-              <li class="contact__item">
+              <li class="contact__item paper-card">
                 <span class="contact__icon" aria-hidden="true">📞</span>
                 <a class="contact__text contact__link" href="tel:+41792303699" data-i18n="contact.phone">+41 792 303 699</a>
               </li>
-              <li class="contact__item">
+              <li class="contact__item paper-card">
                 <span class="contact__icon" aria-hidden="true">✉️</span>
                 <a class="contact__text contact__link" href="mailto:ariyaseela@gmail.com" data-i18n="contact.email">ariyaseela@gmail.com</a>
               </li>
-              <li class="contact__item">
+              <li class="contact__item paper-card">
                 <span class="contact__icon" aria-hidden="true">🕐</span>
                 <span class="contact__text" data-i18n="contact.hours">Täglich 7:00 – 18:30 Uhr</span>
               </li>
             </ul>
 
-            <p class="contact__note">
+            <p class="contact__note paper-card">
               <span aria-hidden="true">ℹ️</span>
               <span data-i18n="contact.appointmentNote">Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.</span>
             </p>
 
-            <!-- Map center is an approximate placeholder for Feldbergstrasse 142,
-                 4057 Basel — refine with the exact geocoded coordinates once confirmed. -->
             <div class="contact__map">
               <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=7.5870%2C47.5665%2C7.5960%2C47.5715&amp;layer=mapnik&amp;marker=47.5690%2C7.5915"
-                title="Basel Buddhist Vihara – Feldbergstrasse 142, 4057 Basel"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.1213891651228!2d7.594330377081455!3d47.56718479069762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b9537b349647%3A0x7032a3cb4e594aaa!2sBasel%20Buddhist%20Vihara!5e1!3m2!1sen!2sch!4v1784121869506!5m2!1sen!2sch"
+                width="100%"
+                height="350"
+                style="border:0; border-radius: 12px;"
+                allowfullscreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Basel Buddhist Vihara auf Google Maps"></iframe>
             </div>
           </div>
 

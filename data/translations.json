@@ -9,8 +9,8 @@
       "contact": "Kontakt"
     },
     "hero": {
-      "label": "Basel Buddhist Vihara — SKBZ",
-      "tagline": "Ein Ort des Friedens, der Weisheit und der Gemeinschaft",
+      "heading1": "Basel Buddhist Vihara",
+      "heading2": "Ein Ort des Friedens",
       "founded": "Gegründet am 1. Juli 2024 · Basel, Schweiz",
       "cta": "Mehr erfahren"
     },
@@ -28,19 +28,25 @@
     "programs": {
       "title": "Programme & Veranstaltungen",
       "subtitle": "Monatliche Programme — jeweils in der dritten Woche des Monats",
-      "items": {
-        "item1": "Meditationsprogramm auf Deutsch — Jeden dritten Freitag, 18:00–20:00 Uhr",
-        "item2": "Meditationsprogramm auf Singhalesisch — Jeden dritten Samstag, 18:00–20:00 Uhr",
-        "item3": "Poya-Programm — Jeden dritten Sonntag, 14:00–18:00 Uhr"
+      "cards": {
+        "card1": { "title": "Meditation auf Deutsch", "badge": "Jeden 3. Freitag", "time": "18:00–20:00 Uhr" },
+        "card2": { "title": "Meditation auf Singhalesisch", "badge": "Jeden 3. Samstag", "time": "18:00–20:00 Uhr" },
+        "card3": { "title": "Poya-Programm", "badge": "Jeden 3. Sonntag", "time": "14:00–18:00 Uhr" },
+        "card4": { "title": "Dana-Zeremonien", "badge": "Nach Vereinbarung" },
+        "card5": { "title": "Kathina-Zeremonie", "badge": "Jährlich" },
+        "card6": { "title": "Weitere Events", "badge": "Bald bekannt gegeben" }
+      }
+    },
+    "youtube": {
+      "title": "Dhamma Dana",
+      "subtitle": "Unsere YouTube-Kanäle",
+      "videos": {
+        "video1": { "title": "Buddhistische Philosophie", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" },
+        "video2": { "title": "Meditationsanleitung", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" },
+        "video3": { "title": "Dhamma Vortrag", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" },
+        "video4": { "title": "Pirith Chanting", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" }
       },
-      "services": {
-        "title": "Unsere Dienstleistungen",
-        "item1": "Dana-Zeremonien — monatlich, jährlich oder an einem besonderen Datum",
-        "item2": "Hausbesuche — Mönche können für Pirith-Gesänge und Dana eingeladen werden",
-        "item3": "Termine im Vihara — Bitte vorab einen Termin vereinbaren"
-      },
-      "youtubeTitle": "YouTube",
-      "youtube": "Dhamma Dana — Wir betreiben zwei YouTube-Kanäle mit wöchentlichen Videos zu buddhistischer Philosophie, Meditation und Dhamma-Vorträgen."
+      "viewAll": "Alle Videos ansehen"
     },
     "gallery": {
       "comingSoon": "Foto folgt bald",
@@ -106,8 +112,8 @@
       "contact": "Contact"
     },
     "hero": {
-      "label": "Basel Buddhist Vihara — SKBZ",
-      "tagline": "A Place of Peace, Wisdom and Community",
+      "heading1": "Basel Buddhist Vihara",
+      "heading2": "A Place of Peace",
       "founded": "Founded on July 1, 2024 · Basel, Switzerland",
       "cta": "Learn More"
     },
@@ -125,19 +131,25 @@
     "programs": {
       "title": "Programs & Events",
       "subtitle": "Monthly Programs — every third week of the month",
-      "items": {
-        "item1": "Meditation Program in German — Every third Friday, 6:00–8:00 PM",
-        "item2": "Meditation Program in Sinhalese — Every third Saturday, 6:00–8:00 PM",
-        "item3": "Poya Program — Every third Sunday, 2:00–6:00 PM"
+      "cards": {
+        "card1": { "title": "Meditation in German", "badge": "Every 3rd Friday", "time": "6:00–8:00 PM" },
+        "card2": { "title": "Meditation in Sinhalese", "badge": "Every 3rd Saturday", "time": "6:00–8:00 PM" },
+        "card3": { "title": "Poya Program", "badge": "Every 3rd Sunday", "time": "2:00–6:00 PM" },
+        "card4": { "title": "Dana Ceremonies", "badge": "By Appointment" },
+        "card5": { "title": "Kathina Ceremony", "badge": "Annually" },
+        "card6": { "title": "More Events", "badge": "Announced Soon" }
+      }
+    },
+    "youtube": {
+      "title": "Dhamma Dana",
+      "subtitle": "Our YouTube Channels",
+      "videos": {
+        "video1": { "title": "Buddhist Philosophy", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" },
+        "video2": { "title": "Meditation Guide", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" },
+        "video3": { "title": "Dhamma Talk", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" },
+        "video4": { "title": "Pirith Chanting", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" }
       },
-      "services": {
-        "title": "Our Services",
-        "item1": "Dana Offerings — monthly, annually, or on a special date of your choice",
-        "item2": "Home Visits — Monks can be invited for Pirith chanting and Dana",
-        "item3": "Vihara Appointments — Please book in advance"
-      },
-      "youtubeTitle": "YouTube",
-      "youtube": "Dhamma Dana — We maintain two YouTube channels with weekly videos on Buddhist philosophy, meditation, and Dhamma sermons."
+      "viewAll": "View All Videos"
     },
     "gallery": {
       "comingSoon": "Photo coming soon",
@@ -203,8 +215,8 @@
       "contact": "සම්බන්ධ වන්න"
     },
     "hero": {
-      "label": "Basel Buddhist Vihara — SKBZ",
-      "tagline": "සාමය, ප්‍රඥාව සහ සමාජයේ ස්ථානයක්",
+      "heading1": "Basel Buddhist Vihara",
+      "heading2": "සාමයේ ස්ථානයක්",
       "founded": "2024 ජූලි 1 වන දින ආරම්භ කරන ලදී · බාසල්, ස්විට්සර්ලන්තය",
       "cta": "තව දැනගන්න"
     },
@@ -222,19 +234,25 @@
     "programs": {
       "title": "වැඩසටහන් සහ උත්සව",
       "subtitle": "මාසික වැඩසටහන් — සෑම මාසයකම තුන්වන සතිය",
-      "items": {
-        "item1": "ජර්මන් භාෂාවෙන් භාවනා වැඩසටහන — සෑම තුන්වන සිකුරාදා, සවස 6.00–8.00",
-        "item2": "සිංහල භාෂාවෙන් භාවනා වැඩසටහන — සෑම තුන්වන සෙනසුරාදා, සවස 6.00–8.00",
-        "item3": "පෝය වැඩසටහන — සෑම තුන්වන ඉරිදා, දහවල් 2.00–6.00"
+      "cards": {
+        "card1": { "title": "ජර්මන් භාෂාවෙන් භාවනාව", "badge": "සෑම 3වන සිකුරාදා", "time": "සවස 6.00–8.00" },
+        "card2": { "title": "සිංහල භාෂාවෙන් භාවනාව", "badge": "සෑම 3වන සෙනසුරාදා", "time": "සවස 6.00–8.00" },
+        "card3": { "title": "පෝය වැඩසටහන", "badge": "සෑම 3වන ඉරිදා", "time": "දහවල් 2.00–6.00" },
+        "card4": { "title": "දානමය පිංකම්", "badge": "එකඟතාවය අනුව" },
+        "card5": { "title": "කඨින චීවර පිංකම", "badge": "වාර්ෂිකව" },
+        "card6": { "title": "තවත් උත්සව", "badge": "ඉක්මනින් නිවේදනය කරනු ලැබේ" }
+      }
+    },
+    "youtube": {
+      "title": "Dhamma Dana",
+      "subtitle": "අපගේ යූටියුබ් නාලිකා",
+      "videos": {
+        "video1": { "title": "බෞද්ධ දර්ශනය", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" },
+        "video2": { "title": "භාවනා මාර්ගෝපදේශය", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" },
+        "video3": { "title": "ධර්ම දේශනාව", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" },
+        "video4": { "title": "පිරිත් සජ්ඣායනාව", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" }
       },
-      "services": {
-        "title": "අපේ සේවාවන්",
-        "item1": "දානමය පිංකම් — මාසිකව, වාර්ෂිකව හෝ ඔබගේ විශේෂ දිනයක",
-        "item2": "නිවසට වැඩම කරවීම — පිරිත් සජ්ඣායනා සහ දාන පිංකම් සඳහා",
-        "item3": "විහාරයට පැමිණීම — කලින් වේලාවක් වෙන්කරවා ගන්න"
-      },
-      "youtubeTitle": "YouTube",
-      "youtube": "ධර්ම දානය — අප යූටියුබ් නාලිකා ද්විත්වයක් හරහා සතියකට වීඩියෝවක් ධර්ම දානය ලෙස ලබා දෙයි."
+      "viewAll": "සියලුම වීඩියෝ නරඹන්න"
     },
     "gallery": {
       "comingSoon": "ඡායාරූපය ළඟදීම",

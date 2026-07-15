@@ -100,6 +100,22 @@
     window.history.replaceState({}, '', url.pathname + url.hash);
   }
 
+  function initProgramsCarousel() {
+    var track = document.getElementById('programs-cards');
+    var prevBtn = document.getElementById('programs-prev');
+    var nextBtn = document.getElementById('programs-next');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    function scrollByCard(direction) {
+      var card = track.querySelector('.program-card');
+      var amount = card ? card.getBoundingClientRect().width + 16 : 260;
+      track.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    }
+
+    prevBtn.addEventListener('click', function () { scrollByCard(-1); });
+    nextBtn.addEventListener('click', function () { scrollByCard(1); });
+  }
+
   function init() {
     handleHeaderScroll();
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
@@ -107,6 +123,7 @@
     initLinkClicks();
     initEscapeClose();
     initScrollSpy();
+    initProgramsCarousel();
     initContactFormStatus();
   }
 
