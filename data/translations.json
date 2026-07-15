@@ -78,9 +78,25 @@
     },
     "contact": {
       "title": "Kontakt",
-      "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
+      "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "phone": "+41 792 303 699",
-      "email": "ariyaseela@gmail.com"
+      "email": "ariyaseela@gmail.com",
+      "hours": "Täglich 7:00 – 18:30 Uhr",
+      "form": {
+        "name": "Name",
+        "email": "E-Mail",
+        "subject": "Betreff",
+        "subjectOptions": {
+          "general": "Allgemeine Anfrage",
+          "programs": "Programm-Info",
+          "donations": "Spenden",
+          "other": "Sonstiges"
+        },
+        "message": "Nachricht",
+        "submit": "Nachricht senden",
+        "success": "Vielen Dank! Ihre Nachricht wurde gesendet.",
+        "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail."
+      }
     },
     "footer": {
       "text": "© 2025 Basel Buddhist Vihara. Alle Rechte vorbehalten."
@@ -165,9 +181,25 @@
     },
     "contact": {
       "title": "Contact",
-      "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
+      "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "phone": "+41 792 303 699",
-      "email": "ariyaseela@gmail.com"
+      "email": "ariyaseela@gmail.com",
+      "hours": "Daily 7:00 AM – 6:30 PM",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "subjectOptions": {
+          "general": "General Inquiry",
+          "programs": "Program Info",
+          "donations": "Donations",
+          "other": "Other"
+        },
+        "message": "Message",
+        "submit": "Send Message",
+        "success": "Thank you! Your message has been sent.",
+        "error": "Something went wrong. Please try again or email us directly."
+      }
     },
     "footer": {
       "text": "© 2025 Basel Buddhist Vihara. All Rights Reserved."
@@ -252,9 +284,25 @@
     },
     "contact": {
       "title": "සම්බන්ධ වන්න",
-      "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
+      "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "phone": "+41 792 303 699",
-      "email": "ariyaseela@gmail.com"
+      "email": "ariyaseela@gmail.com",
+      "hours": "සෑම දිනකම උදේ 7:00 – සවස 18:30",
+      "form": {
+        "name": "නම",
+        "email": "විද්‍යුත් තැපෑල",
+        "subject": "විෂය",
+        "subjectOptions": {
+          "general": "සාමාන්‍ය විමසීමක්",
+          "programs": "වැඩසටහන් තොරතුරු",
+          "donations": "පරිත්‍යාග",
+          "other": "වෙනත්"
+        },
+        "message": "පණිවිඩය",
+        "submit": "පණිවිඩය යවන්න",
+        "success": "ස්තුතියි! ඔබේ පණිවිඩය යවා ඇත.",
+        "error": "යම් දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න හෝ අපට කෙලින්ම විද්‍යුත් තැපෑලෙන් ලියන්න."
+      }
     },
     "footer": {
       "text": "© 2025 බාසල් බෞද්ධ විහාරය. සියලුම හිමිකම් ඇවිරිණි."

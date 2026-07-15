@@ -263,12 +263,83 @@
       </div>
     </section>
 
-    <section id="contact" class="dev-placeholder">
-      <div class="container container--narrow">
-        <h2 data-i18n="contact.title">Kontakt</h2>
-        <p data-i18n="contact.address">Feldbergstrasse 142, 4057 Basel, Switzerland</p>
-        <p data-i18n="contact.phone">+41 792 303 699</p>
-        <p data-i18n="contact.email">ariyaseela@gmail.com</p>
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__info">
+            <h2 class="contact__heading" data-i18n="contact.title">Kontakt</h2>
+
+            <ul class="contact__list">
+              <li class="contact__item">
+                <span class="contact__icon" aria-hidden="true">📍</span>
+                <span class="contact__text" data-i18n="contact.address">Basel Buddhist Vihara
+Feldbergstrasse 142
+4057 Basel, Switzerland</span>
+              </li>
+              <li class="contact__item">
+                <span class="contact__icon" aria-hidden="true">📞</span>
+                <a class="contact__text contact__link" href="tel:+41792303699" data-i18n="contact.phone">+41 792 303 699</a>
+              </li>
+              <li class="contact__item">
+                <span class="contact__icon" aria-hidden="true">✉️</span>
+                <a class="contact__text contact__link" href="mailto:ariyaseela@gmail.com" data-i18n="contact.email">ariyaseela@gmail.com</a>
+              </li>
+              <li class="contact__item">
+                <span class="contact__icon" aria-hidden="true">🕐</span>
+                <span class="contact__text" data-i18n="contact.hours">Täglich 7:00 – 18:30 Uhr</span>
+              </li>
+            </ul>
+
+            <!-- Map center is an approximate placeholder for Feldbergstrasse 142,
+                 4057 Basel — refine with the exact geocoded coordinates once confirmed. -->
+            <div class="contact__map">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=7.5870%2C47.5665%2C7.5960%2C47.5715&amp;layer=mapnik&amp;marker=47.5690%2C7.5915"
+                title="Basel Buddhist Vihara – Feldbergstrasse 142, 4057 Basel"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="contact__form-wrap">
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+
+            <form class="contact__form" action="contact.php" method="post" novalidate>
+              <div class="form__group">
+                <label class="form__label" for="contact-name" data-i18n="contact.form.name">Name</label>
+                <input class="form__input" type="text" id="contact-name" name="name" autocomplete="name" required>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="contact-email" data-i18n="contact.form.email">E-Mail</label>
+                <input class="form__input" type="email" id="contact-email" name="email" autocomplete="email" required>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="contact-subject" data-i18n="contact.form.subject">Betreff</label>
+                <select class="form__input form__select" id="contact-subject" name="subject" required>
+                  <option value="general" data-i18n="contact.form.subjectOptions.general">Allgemeine Anfrage</option>
+                  <option value="programs" data-i18n="contact.form.subjectOptions.programs">Programm-Info</option>
+                  <option value="donations" data-i18n="contact.form.subjectOptions.donations">Spenden</option>
+                  <option value="other" data-i18n="contact.form.subjectOptions.other">Sonstiges</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="contact-message" data-i18n="contact.form.message">Nachricht</label>
+                <textarea class="form__input form__textarea" id="contact-message" name="message" rows="5" required></textarea>
+              </div>
+
+              <!-- Honeypot spam trap: left empty by humans, filled in by most bots -->
+              <div class="visually-hidden" aria-hidden="true">
+                <label for="contact-website">Website</label>
+                <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <button type="submit" class="btn btn--accent btn--lg form__submit" data-i18n="contact.form.submit">Nachricht senden</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>

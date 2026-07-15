@@ -78,6 +78,28 @@
     });
   }
 
+  function initContactFormStatus() {
+    var statusEl = document.getElementById('form-status');
+    if (!statusEl) return;
+
+    var status = new URLSearchParams(window.location.search).get('status');
+    if (status !== 'sent' && status !== 'error') return;
+
+    var key = status === 'sent' ? 'contact.form.success' : 'contact.form.error';
+    statusEl.classList.add(status === 'sent' ? 'form__status--success' : 'form__status--error');
+
+    function applyMessage() {
+      statusEl.textContent = window.i18n.t(key);
+    }
+
+    applyMessage();
+    document.addEventListener('i18n:change', applyMessage);
+
+    var url = new URL(window.location.href);
+    url.searchParams.delete('status');
+    window.history.replaceState({}, '', url.pathname + url.hash);
+  }
+
   function init() {
     handleHeaderScroll();
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
@@ -85,6 +107,7 @@
     initLinkClicks();
     initEscapeClose();
     initScrollSpy();
+    initContactFormStatus();
   }
 
   if (document.readyState === 'loading') {
