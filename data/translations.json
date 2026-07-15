@@ -24,6 +24,22 @@
         "community": "Sri-Lankische Mönchs-Gemeinschaft"
       }
     },
+    "programs": {
+      "title": "Unsere Programme",
+      "regular": {
+        "title": "Regelmässige Programme",
+        "item1": "Tägliche Buddha Puja & Chanting — 7:00, 11:30, 18:30 Uhr",
+        "item2": "Meditation — Mittwoch 10:00–11:00 Uhr",
+        "item3": "Dhamma Diskussion — Montag bis Freitag, 19:00–19:45 Uhr",
+        "item4": "Dhamma-Schule für Kinder — Sonntag 14:30–17:00 Uhr",
+        "item5": "Vollmond Chanting & Meditation — jeden Vollmondtag, 18:30 Uhr"
+      },
+      "special": {
+        "title": "Besondere Veranstaltungen",
+        "text": "Besondere Veranstaltungen und Zeremonien werden regelmässig angekündigt.",
+        "cta": "Kontakt aufnehmen"
+      }
+    },
     "contact": {
       "title": "Kontakt",
       "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
@@ -59,6 +75,22 @@
         "community": "Sri Lankan Monastic Community"
       }
     },
+    "programs": {
+      "title": "Our Programs",
+      "regular": {
+        "title": "Regular Programs",
+        "item1": "Daily Buddha Puja & Chanting — 7:00, 11:30, 18:30",
+        "item2": "Meditation — Wednesday 10:00–11:00",
+        "item3": "Dhamma Discussion — Monday to Friday, 19:00–19:45",
+        "item4": "Dhamma School for Children — Sunday 14:30–17:00",
+        "item5": "Full Moon Chanting & Meditation — every Full Moon day, 18:30"
+      },
+      "special": {
+        "title": "Special Events",
+        "text": "Special events and ceremonies are announced regularly.",
+        "cta": "Contact Us"
+      }
+    },
     "contact": {
       "title": "Contact",
       "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
@@ -92,6 +124,22 @@
         "founded": "2024 දී ආරම්භ කරන ලදී",
         "region": "යුරෝපය, ස්විට්සර්ලන්තය සහ ජර්මනිය",
         "community": "ශ්‍රී ලාංකික භික්ෂු සමාජය"
+      }
+    },
+    "programs": {
+      "title": "අපේ වැඩසටහන්",
+      "regular": {
+        "title": "නිතිපතා වැඩසටහන්",
+        "item1": "දෛනික බුද්ධ පූජාව සහ දේශනා — උදේ 7:00, 11:30, සවස 18:30",
+        "item2": "භාවනාව — බදාදා පෙ.ව. 10:00–11:00",
+        "item3": "ධම්ම සාකච්ඡාව — සඳුදා සිට සිකුරාදා, ප.ව. 19:00–19:45",
+        "item4": "ළමුන් සඳහා ධම්ම පාසල — ඉරිදා ප.ව. 14:30–17:00",
+        "item5": "පෝය දින දේශනා සහ භාවනාව — සෑම පෝය දිනකම ප.ව. 18:30"
+      },
+      "special": {
+        "title": "විශේෂ උත්සව",
+        "text": "විශේෂ උත්සව සහ චාරිත්‍ර නිතිපතා නිවේදනය කරනු ලැබේ.",
+        "cta": "අප අමතන්න"
       }
     },
     "contact": {
