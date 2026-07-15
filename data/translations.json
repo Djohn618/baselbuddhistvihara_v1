@@ -17,7 +17,12 @@
     },
     "about": {
       "title": "Über das Basel Buddhist Vihara",
-      "text": "Am 1. Juli 2024 fand ein bedeutsames Ereignis statt, als eine engagierte Gruppe sri-lankischer Mönche das Basel Buddhist Vihara in der Stadt Basel gründete. Diese neue Institution stellt einen wichtigen Schritt dar, um die zeitlosen Lehren des Buddha einem breiteren Publikum in Europa zugänglich zu machen, mit besonderem Fokus auf die Schweiz, Deutschland und Frankreich."
+      "text": "Am 1. Juli 2024 fand ein bedeutsames Ereignis statt, als eine engagierte Gruppe sri-lankischer Mönche das Basel Buddhist Vihara in der Stadt Basel gründete. Diese neue Institution stellt einen wichtigen Schritt dar, um die zeitlosen Lehren des Buddha einem breiteren Publikum in Europa zugänglich zu machen, mit besonderem Fokus auf die Schweiz, Deutschland und Frankreich.",
+      "highlights": {
+        "founded": "Gegründet 2024",
+        "region": "Europa, Schweiz & Deutschland",
+        "community": "Sri-Lankische Mönchs-Gemeinschaft"
+      }
     },
     "contact": {
       "title": "Kontakt",
@@ -47,7 +52,12 @@
     },
     "about": {
       "title": "About Basel Buddhist Vihara",
-      "text": "On July 1, 2024, a momentous occasion unfolded as a dedicated group of Sri Lankan monks established the Basel Buddhist Vihara in Basel city. This new institution represents a significant stride in bringing the timeless teachings of the Buddha to a broader audience across Europe, with a special focus on Switzerland, Germany, and France."
+      "text": "On July 1, 2024, a momentous occasion unfolded as a dedicated group of Sri Lankan monks established the Basel Buddhist Vihara in Basel city. This new institution represents a significant stride in bringing the timeless teachings of the Buddha to a broader audience across Europe, with a special focus on Switzerland, Germany, and France.",
+      "highlights": {
+        "founded": "Founded 2024",
+        "region": "Europe, Switzerland & Germany",
+        "community": "Sri Lankan Monastic Community"
+      }
     },
     "contact": {
       "title": "Contact",
@@ -77,7 +87,12 @@
     },
     "about": {
       "title": "බාසල් බෞද්ධ විහාරය ගැන",
-      "text": "2024 ජුලි 1 වන දින, කැපවූ ශ්‍රී ලාංකික භික්ෂූන් වහන්සේලා පිරිසක් බාසල් නගරයේ බාසල් බෞද්ධ විහාරය ආරම්භ කිරීමත් සමඟ වැදගත් අවස්ථාවක් දිග හැරුණි. මෙම නව ආයතනය ස්විට්සර්ලන්තය, ජර්මනිය සහ ප්‍රංශය කෙරෙහි විශේෂ අවධානයක් යොමු කරමින් බුදුන් වහන්සේගේ සදාකාලික ඉගැන්වීම් යුරෝපය පුරා පුළුල් ප්‍රේක්ෂක පිරිසක් වෙත ගෙන ඒමේ සැලකිය යුතු ප්‍රගතියක් නියෝජනය කරයි."
+      "text": "2024 ජුලි 1 වන දින, කැපවූ ශ්‍රී ලාංකික භික්ෂූන් වහන්සේලා පිරිසක් බාසල් නගරයේ බාසල් බෞද්ධ විහාරය ආරම්භ කිරීමත් සමඟ වැදගත් අවස්ථාවක් දිග හැරුණි. මෙම නව ආයතනය ස්විට්සර්ලන්තය, ජර්මනිය සහ ප්‍රංශය කෙරෙහි විශේෂ අවධානයක් යොමු කරමින් බුදුන් වහන්සේගේ සදාකාලික ඉගැන්වීම් යුරෝපය පුරා පුළුල් ප්‍රේක්ෂක පිරිසක් වෙත ගෙන ඒමේ සැලකිය යුතු ප්‍රගතියක් නියෝජනය කරයි.",
+      "highlights": {
+        "founded": "2024 දී ආරම්භ කරන ලදී",
+        "region": "යුරෝපය, ස්විට්සර්ලන්තය සහ ජර්මනිය",
+        "community": "ශ්‍රී ලාංකික භික්ෂු සමාජය"
+      }
     },
     "contact": {
       "title": "සම්බන්ධ වන්න",
