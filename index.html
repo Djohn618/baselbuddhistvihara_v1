@@ -195,9 +195,41 @@
       </div>
     </section>
 
-    <section id="gallery" class="dev-placeholder">
+    <section id="gallery" class="gallery section">
       <div class="container">
-        <h2 data-i18n="nav.gallery">Galerie</h2>
+        <h2 class="gallery__title text-center" data-i18n="nav.gallery">Galerie</h2>
+
+        <!-- Replace placeholder divs with <img> tags when real photos are available -->
+        <div class="gallery__grid">
+          <button type="button" class="gallery__item">
+            <span class="gallery__placeholder gallery__placeholder--1" aria-hidden="true"></span>
+            <span class="gallery__label" data-i18n="gallery.comingSoon">Foto folgt bald</span>
+          </button>
+          <button type="button" class="gallery__item">
+            <span class="gallery__placeholder gallery__placeholder--2" aria-hidden="true"></span>
+            <span class="gallery__label" data-i18n="gallery.comingSoon">Foto folgt bald</span>
+          </button>
+          <button type="button" class="gallery__item">
+            <span class="gallery__placeholder gallery__placeholder--3" aria-hidden="true"></span>
+            <span class="gallery__label" data-i18n="gallery.comingSoon">Foto folgt bald</span>
+          </button>
+          <button type="button" class="gallery__item">
+            <span class="gallery__placeholder gallery__placeholder--4" aria-hidden="true"></span>
+            <span class="gallery__label" data-i18n="gallery.comingSoon">Foto folgt bald</span>
+          </button>
+          <button type="button" class="gallery__item">
+            <span class="gallery__placeholder gallery__placeholder--5" aria-hidden="true"></span>
+            <span class="gallery__label" data-i18n="gallery.comingSoon">Foto folgt bald</span>
+          </button>
+          <button type="button" class="gallery__item">
+            <span class="gallery__placeholder gallery__placeholder--6" aria-hidden="true"></span>
+            <span class="gallery__label" data-i18n="gallery.comingSoon">Foto folgt bald</span>
+          </button>
+        </div>
+
+        <div class="gallery__more">
+          <button type="button" class="btn btn--outline btn--lg" data-i18n="gallery.more">Mehr Fotos</button>
+        </div>
       </div>
     </section>
 
@@ -223,7 +255,18 @@
     </div>
   </footer>
 
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galerie Vorschau">
+    <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Schliessen">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Vorheriges Bild">&#10094;</button>
+    <div class="lightbox__content">
+      <span class="lightbox__placeholder" id="lightbox-placeholder" aria-hidden="true"></span>
+      <p class="lightbox__label" id="lightbox-label"></p>
+    </div>
+    <button type="button" class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Nächstes Bild">&#10095;</button>
+  </div>
+
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js"></script>
 </body>
 </html>

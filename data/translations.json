@@ -58,6 +58,10 @@
         "text": "Feier des Vesak-Festes — Geburtstag, Erleuchtung und Tod des Buddha"
       }
     },
+    "gallery": {
+      "comingSoon": "Foto folgt bald",
+      "more": "Mehr Fotos"
+    },
     "contact": {
       "title": "Kontakt",
       "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
@@ -127,6 +131,10 @@
         "text": "Celebrating Vesak — the birth, enlightenment, and passing of the Buddha"
       }
     },
+    "gallery": {
+      "comingSoon": "Photo coming soon",
+      "more": "More Photos"
+    },
     "contact": {
       "title": "Contact",
       "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
@@ -195,6 +203,10 @@
         "title": "වෙසක් උත්සවය 2025",
         "text": "වෙසක් උත්සව සැමරුම — බුදුන් වහන්සේගේ උපත, බුද්ධත්වය සහ පිරිනිවන් පෑම"
       }
+    },
+    "gallery": {
+      "comingSoon": "ඡායාරූපය ළඟදීම",
+      "more": "තවත් ඡායාරූප"
     },
     "contact": {
       "title": "සම්බන්ධ වන්න",
