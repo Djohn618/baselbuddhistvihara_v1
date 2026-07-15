@@ -523,6 +523,20 @@ blockquote {
   margin-block: var(--space-lg);
 }
 
+.lucide {
+  width: 20px;
+  height: 20px;
+  stroke: #C9922A;
+  stroke-width: 1.5;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.lucide-lg {
+  width: 28px;
+  height: 28px;
+}
+
 /* Warm parchment/paper texture — used where a physical, tactile feel is wanted */
 .paper-card {
   position: relative;
@@ -1016,7 +1030,7 @@ blockquote {
 }
 
 .program-card__icon {
-  font-size: var(--fs-xl);
+  display: inline-flex;
   margin-block: var(--space-2xs);
 }
 
@@ -1109,11 +1123,6 @@ blockquote {
 
 .youtube-card:hover .youtube-card__thumb {
   transform: translateY(-2px);
-}
-
-.youtube-card__play {
-  font-size: var(--fs-3xl);
-  color: var(--color-secondary-light);
 }
 
 .youtube-card__title {
