@@ -62,6 +62,20 @@
       "comingSoon": "Foto folgt bald",
       "more": "Mehr Fotos"
     },
+    "donations": {
+      "title": "Unterstützen Sie unsere Gemeinschaft",
+      "text": "Ihre Spende hilft uns, die Lehren des Buddha in der Schweiz und Europa zu verbreiten und unsere Gemeinschaft zu wachsen.",
+      "oneTime": {
+        "title": "Einmalige Spende",
+        "ibanLabel": "IBAN",
+        "ibanValue": "[wird noch mitgeteilt]",
+        "accountLabel": "Kontoinhaber"
+      },
+      "contact": {
+        "title": "Kontakt für Spenden",
+        "text": "Für weitere Informationen zu Spendenmöglichkeiten kontaktieren Sie uns."
+      }
+    },
     "contact": {
       "title": "Kontakt",
       "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
@@ -135,6 +149,20 @@
       "comingSoon": "Photo coming soon",
       "more": "More Photos"
     },
+    "donations": {
+      "title": "Support Our Community",
+      "text": "Your donation helps us spread the teachings of the Buddha in Switzerland and Europe and grow our community.",
+      "oneTime": {
+        "title": "One-time Donation",
+        "ibanLabel": "IBAN",
+        "ibanValue": "[to be announced]",
+        "accountLabel": "Account Holder"
+      },
+      "contact": {
+        "title": "Contact for Donations",
+        "text": "For more information on donation options, please contact us."
+      }
+    },
     "contact": {
       "title": "Contact",
       "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
@@ -207,6 +235,20 @@
     "gallery": {
       "comingSoon": "ඡායාරූපය ළඟදීම",
       "more": "තවත් ඡායාරූප"
+    },
+    "donations": {
+      "title": "අපේ ප්‍රජාව සහාය කරන්න",
+      "text": "ඔබේ පරිත්‍යාගය ස්විට්සර්ලන්තයේ සහ යුරෝපයේ බුදුන් වහන්සේගේ ඉගැන්වීම් ව්‍යාප්ත කිරීමට සහ අපේ ප්‍රජාව වර්ධනය කිරීමට උපකාරී වේ.",
+      "oneTime": {
+        "title": "එක්වර පරිත්‍යාගය",
+        "ibanLabel": "IBAN",
+        "ibanValue": "[පසුව දන්වනු ලැබේ]",
+        "accountLabel": "ගිණුම් හිමිකරු"
+      },
+      "contact": {
+        "title": "පරිත්‍යාග සඳහා සම්බන්ධ වන්න",
+        "text": "පරිත්‍යාග විකල්ප පිළිබඳ වැඩිදුර තොරතුරු සඳහා අප අමතන්න."
+      }
     },
     "contact": {
       "title": "සම්බන්ධ වන්න",
