@@ -99,7 +99,10 @@
       }
     },
     "footer": {
-      "text": "© 2025 Basel Buddhist Vihara. Alle Rechte vorbehalten."
+      "tagline": "Ein Ort des Friedens in Basel",
+      "linksTitle": "Navigation",
+      "text": "© 2025 Basel Buddhist Vihara (SKBZ). Alle Rechte vorbehalten.",
+      "credit": "Gestaltet mit ❤️ in Basel"
     }
   },
   "en": {
@@ -202,7 +205,10 @@
       }
     },
     "footer": {
-      "text": "© 2025 Basel Buddhist Vihara. All Rights Reserved."
+      "tagline": "A Place of Peace in Basel",
+      "linksTitle": "Quick Links",
+      "text": "© 2025 Basel Buddhist Vihara (SKBZ). All Rights Reserved.",
+      "credit": "Designed with ❤️ in Basel"
     }
   },
   "si": {
@@ -305,7 +311,10 @@
       }
     },
     "footer": {
-      "text": "© 2025 බාසල් බෞද්ධ විහාරය. සියලුම හිමිකම් ඇවිරිණි."
+      "tagline": "බාසල් හි සාමයේ ස්ථානයක්",
+      "linksTitle": "ඉක්මන් සබැඳි",
+      "text": "© 2025 බාසල් බෞද්ධ විහාරය (SKBZ). සියලුම හිමිකම් ඇවිරිණි.",
+      "credit": "බාසල් හි ❤️ සමඟින් නිර්මාණය කරන ලදී"
     }
   }
 }
