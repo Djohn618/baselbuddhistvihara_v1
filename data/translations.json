@@ -1,10 +1,9 @@
 {
   "de": {
     "nav": {
-      "home": "Startseite",
+      "home": "Home",
       "about": "Über Uns",
-      "programs": "Programme",
-      "events": "Veranstaltungen",
+      "programs": "Programme & Veranstaltungen",
       "gallery": "Galerie",
       "donations": "Spenden",
       "contact": "Kontakt"
@@ -17,63 +16,54 @@
     },
     "about": {
       "title": "Über das Basel Buddhist Vihara",
-      "text": "Am 1. Juli 2024 fand ein bedeutsames Ereignis statt, als eine engagierte Gruppe sri-lankischer Mönche das Basel Buddhist Vihara in der Stadt Basel gründete. Diese neue Institution stellt einen wichtigen Schritt dar, um die zeitlosen Lehren des Buddha einem breiteren Publikum in Europa zugänglich zu machen, mit besonderem Fokus auf die Schweiz, Deutschland und Frankreich.",
-      "highlights": {
-        "founded": "Gegründet 2024",
-        "region": "Europa, Schweiz & Deutschland",
-        "community": "Sri-Lankische Mönchs-Gemeinschaft"
+      "text": "Das Basel Buddhist Vihara ist das wichtigste spirituelle Zentrum für srilankische Buddhisten und Menschen aller Nationalitäten in und um Basel, die sich für die buddhistische Philosophie interessieren. In Verbindung mit dem am 17. März 2021 gegründeten Sri Kalyana Buddhistischen Zentrum (SKBZ) ist es unser Hauptziel, spirituelle Führung auf der Grundlage des Dhamma anzubieten, um einen friedlichen und disziplinierten Lebensstil zu fördern.",
+      "facts": {
+        "foundingDate": "Gegründet am 1. Juli 2024",
+        "inauguration": "Feierliche Eröffnung am 6. Juli 2024 mit fünf Mönchen und rund 30 Teilnehmenden",
+        "founder": "Unser Gründer: Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero — obwohl er am 12. Juni 2024 im Genfer Internationalen Buddhistischen Zentrum verstarb, bleibt seine edle Vision ein ewiges Leuchtfeuer für den Vihara.",
+        "headMonk": "Tempelvorsteher: Ehrw. Udumaththe Ariyaseela Thero",
+        "president": "Präsidentin: Fabienne Eglin"
       }
     },
     "programs": {
-      "title": "Unsere Programme",
-      "regular": {
-        "title": "Regelmässige Programme",
-        "item1": "Tägliche Buddha Puja & Chanting — 7:00, 11:30, 18:30 Uhr",
-        "item2": "Meditation — Mittwoch 10:00–11:00 Uhr",
-        "item3": "Dhamma Diskussion — Montag bis Freitag, 19:00–19:45 Uhr",
-        "item4": "Dhamma-Schule für Kinder — Sonntag 14:30–17:00 Uhr",
-        "item5": "Vollmond Chanting & Meditation — jeden Vollmondtag, 18:30 Uhr"
+      "title": "Programme & Veranstaltungen",
+      "subtitle": "Monatliche Programme — jeweils in der dritten Woche des Monats",
+      "items": {
+        "item1": "Meditationsprogramm auf Deutsch — Jeden dritten Freitag, 18:00–20:00 Uhr",
+        "item2": "Meditationsprogramm auf Singhalesisch — Jeden dritten Samstag, 18:00–20:00 Uhr",
+        "item3": "Poya-Programm — Jeden dritten Sonntag, 14:00–18:00 Uhr"
       },
-      "special": {
-        "title": "Besondere Veranstaltungen",
-        "text": "Besondere Veranstaltungen und Zeremonien werden regelmässig angekündigt.",
-        "cta": "Kontakt aufnehmen"
-      }
-    },
-    "events": {
-      "title": "Kommende Veranstaltungen",
-      "event1": {
-        "date": "Bald",
-        "title": "Vollmond Zeremonie",
-        "text": "Monatliche Vollmond-Chanting und Meditationszeremonie"
+      "services": {
+        "title": "Unsere Dienstleistungen",
+        "item1": "Dana-Zeremonien — monatlich, jährlich oder an einem besonderen Datum",
+        "item2": "Hausbesuche — Mönche können für Pirith-Gesänge und Dana eingeladen werden",
+        "item3": "Termine im Vihara — Bitte vorab einen Termin vereinbaren"
       },
-      "event2": {
-        "date": "Jeden Freitag",
-        "title": "Dhamma Diskussion",
-        "text": "Wöchentliche Dhamma-Diskussion für alle Interessierten"
-      },
-      "event3": {
-        "date": "Mai 2025",
-        "title": "Vesak Feier 2025",
-        "text": "Feier des Vesak-Festes — Geburtstag, Erleuchtung und Tod des Buddha"
-      }
+      "youtubeTitle": "YouTube",
+      "youtube": "Dhamma Dana — Wir betreiben zwei YouTube-Kanäle mit wöchentlichen Videos zu buddhistischer Philosophie, Meditation und Dhamma-Vorträgen."
     },
     "gallery": {
       "comingSoon": "Foto folgt bald",
       "more": "Mehr Fotos"
     },
     "donations": {
-      "title": "Unterstützen Sie unsere Gemeinschaft",
-      "text": "Ihre Spende hilft uns, die Lehren des Buddha in der Schweiz und Europa zu verbreiten und unsere Gemeinschaft zu wachsen.",
-      "oneTime": {
-        "title": "Einmalige Spende",
+      "title": "Spenden",
+      "text": "Die laufenden Kosten des Basel Buddhist Vihara — einschliesslich Miete, Stromrechnungen und Unterhalt der Mönche — werden durch das Sri Kalyana Buddhistisches Zentrum (SKBZ) getragen. Wir sind auf Ihre grosszügige Unterstützung angewiesen.",
+      "bank": {
+        "title": "Banküberweisung",
+        "accountHolderLabel": "Kontoinhaber",
+        "accountHolder": "Sri Kalyana Buddhistisches Zentrum (SKBZ)",
         "ibanLabel": "IBAN",
-        "ibanValue": "[wird noch mitgeteilt]",
-        "accountLabel": "Kontoinhaber"
+        "iban": "CH05 8080 8009 7919",
+        "accountTypeLabel": "Kontoart",
+        "accountType": "Vereinskonto / CHF",
+        "addressLabel": "Adresse",
+        "address": "Neugrabenweg 29, 5702 Niederlenz"
       },
       "contact": {
         "title": "Kontakt für Spenden",
-        "text": "Für weitere Informationen zu Spendenmöglichkeiten kontaktieren Sie uns."
+        "text": "Für weitere Informationen zu Spendenmöglichkeiten kontaktieren Sie uns.",
+        "cta": "Kontakt aufnehmen"
       }
     },
     "contact": {
@@ -82,6 +72,7 @@
       "phone": "+41 792 303 699",
       "email": "ariyaseela@gmail.com",
       "hours": "Täglich 7:00 – 18:30 Uhr",
+      "appointmentNote": "Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.",
       "form": {
         "name": "Name",
         "email": "E-Mail",
@@ -99,7 +90,7 @@
       }
     },
     "footer": {
-      "tagline": "Ein Ort des Friedens in Basel",
+      "tagline": "Ein Ort des Friedens in Basel seit 2024",
       "linksTitle": "Navigation",
       "text": "© 2025 Basel Buddhist Vihara (SKBZ). Alle Rechte vorbehalten.",
       "credit": "Gestaltet mit ❤️ in Basel"
@@ -109,8 +100,7 @@
     "nav": {
       "home": "Home",
       "about": "About Us",
-      "programs": "Programs",
-      "events": "Events",
+      "programs": "Programs & Events",
       "gallery": "Gallery",
       "donations": "Donations",
       "contact": "Contact"
@@ -123,63 +113,54 @@
     },
     "about": {
       "title": "About Basel Buddhist Vihara",
-      "text": "On July 1, 2024, a momentous occasion unfolded as a dedicated group of Sri Lankan monks established the Basel Buddhist Vihara in Basel city. This new institution represents a significant stride in bringing the timeless teachings of the Buddha to a broader audience across Europe, with a special focus on Switzerland, Germany, and France.",
-      "highlights": {
-        "founded": "Founded 2024",
-        "region": "Europe, Switzerland & Germany",
-        "community": "Sri Lankan Monastic Community"
+      "text": "The Basel Buddhist Vihara is the primary spiritual sanctuary for Sri Lankan Buddhists and individuals of all nationalities interested in Buddhist philosophy, living in and around Basel, Switzerland. Affiliated with the Sri Kalyana Buddhistisches Zentrum (SKBZ), which was founded on March 17, 2021, our Vihara aims to provide spiritual guidance based on the Dhamma to help cultivate a peaceful and disciplined lifestyle.",
+      "facts": {
+        "foundingDate": "Founded July 1, 2024",
+        "inauguration": "Official inauguration on July 6, 2024, with five monks and approximately 30 devotees",
+        "founder": "Our Founder: Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero — although he passed away on June 12, 2024, at the Geneva International Buddhist Center, his noble vision remains an eternal beacon for the Vihara.",
+        "headMonk": "Head Monk: Ven. Udumaththe Ariyaseela Thero",
+        "president": "President: Fabienne Eglin"
       }
     },
     "programs": {
-      "title": "Our Programs",
-      "regular": {
-        "title": "Regular Programs",
-        "item1": "Daily Buddha Puja & Chanting — 7:00, 11:30, 18:30",
-        "item2": "Meditation — Wednesday 10:00–11:00",
-        "item3": "Dhamma Discussion — Monday to Friday, 19:00–19:45",
-        "item4": "Dhamma School for Children — Sunday 14:30–17:00",
-        "item5": "Full Moon Chanting & Meditation — every Full Moon day, 18:30"
+      "title": "Programs & Events",
+      "subtitle": "Monthly Programs — every third week of the month",
+      "items": {
+        "item1": "Meditation Program in German — Every third Friday, 6:00–8:00 PM",
+        "item2": "Meditation Program in Sinhalese — Every third Saturday, 6:00–8:00 PM",
+        "item3": "Poya Program — Every third Sunday, 2:00–6:00 PM"
       },
-      "special": {
-        "title": "Special Events",
-        "text": "Special events and ceremonies are announced regularly.",
-        "cta": "Contact Us"
-      }
-    },
-    "events": {
-      "title": "Upcoming Events",
-      "event1": {
-        "date": "Soon",
-        "title": "Full Moon Ceremony",
-        "text": "Monthly full moon chanting and meditation ceremony"
+      "services": {
+        "title": "Our Services",
+        "item1": "Dana Offerings — monthly, annually, or on a special date of your choice",
+        "item2": "Home Visits — Monks can be invited for Pirith chanting and Dana",
+        "item3": "Vihara Appointments — Please book in advance"
       },
-      "event2": {
-        "date": "Every Friday",
-        "title": "Dhamma Discussion",
-        "text": "Weekly Dhamma discussion for all interested"
-      },
-      "event3": {
-        "date": "May 2025",
-        "title": "Vesak Celebration 2025",
-        "text": "Celebrating Vesak — the birth, enlightenment, and passing of the Buddha"
-      }
+      "youtubeTitle": "YouTube",
+      "youtube": "Dhamma Dana — We maintain two YouTube channels with weekly videos on Buddhist philosophy, meditation, and Dhamma sermons."
     },
     "gallery": {
       "comingSoon": "Photo coming soon",
       "more": "More Photos"
     },
     "donations": {
-      "title": "Support Our Community",
-      "text": "Your donation helps us spread the teachings of the Buddha in Switzerland and Europe and grow our community.",
-      "oneTime": {
-        "title": "One-time Donation",
+      "title": "Donations",
+      "text": "All operational costs of the Basel Buddhist Vihara — including monthly rent, utility bills, and the support of the resident monks — are managed by the Sri Kalyana Buddhistisches Zentrum (SKBZ). We deeply appreciate your generous support.",
+      "bank": {
+        "title": "Bank Transfer",
+        "accountHolderLabel": "Account Holder",
+        "accountHolder": "Sri Kalyana Buddhistisches Zentrum (SKBZ)",
         "ibanLabel": "IBAN",
-        "ibanValue": "[to be announced]",
-        "accountLabel": "Account Holder"
+        "iban": "CH05 8080 8009 7919",
+        "accountTypeLabel": "Account Type",
+        "accountType": "Association Account / CHF",
+        "addressLabel": "Address",
+        "address": "Neugrabenweg 29, 5702 Niederlenz"
       },
       "contact": {
         "title": "Contact for Donations",
-        "text": "For more information on donation options, please contact us."
+        "text": "For more information on donation options, please contact us.",
+        "cta": "Contact Us"
       }
     },
     "contact": {
@@ -188,6 +169,7 @@
       "phone": "+41 792 303 699",
       "email": "ariyaseela@gmail.com",
       "hours": "Daily 7:00 AM – 6:30 PM",
+      "appointmentNote": "Please book an appointment in advance before visiting the Vihara.",
       "form": {
         "name": "Name",
         "email": "Email",
@@ -205,7 +187,7 @@
       }
     },
     "footer": {
-      "tagline": "A Place of Peace in Basel",
+      "tagline": "A Place of Peace in Basel since 2024",
       "linksTitle": "Quick Links",
       "text": "© 2025 Basel Buddhist Vihara (SKBZ). All Rights Reserved.",
       "credit": "Designed with ❤️ in Basel"
@@ -215,8 +197,7 @@
     "nav": {
       "home": "මුල් පිටුව",
       "about": "අප ගැන",
-      "programs": "වැඩසටහන්",
-      "events": "උත්සව",
+      "programs": "වැඩසටහන් සහ උත්සව",
       "gallery": "ගැලරිය",
       "donations": "පරිත්‍යාග",
       "contact": "සම්බන්ධ වන්න"
@@ -229,63 +210,54 @@
     },
     "about": {
       "title": "බාසල් බෞද්ධ විහාරය ගැන",
-      "text": "2024 ජුලි 1 වන දින, කැපවූ ශ්‍රී ලාංකික භික්ෂූන් වහන්සේලා පිරිසක් බාසල් නගරයේ බාසල් බෞද්ධ විහාරය ආරම්භ කිරීමත් සමඟ වැදගත් අවස්ථාවක් දිග හැරුණි. මෙම නව ආයතනය ස්විට්සර්ලන්තය, ජර්මනිය සහ ප්‍රංශය කෙරෙහි විශේෂ අවධානයක් යොමු කරමින් බුදුන් වහන්සේගේ සදාකාලික ඉගැන්වීම් යුරෝපය පුරා පුළුල් ප්‍රේක්ෂක පිරිසක් වෙත ගෙන ඒමේ සැලකිය යුතු ප්‍රගතියක් නියෝජනය කරයි.",
-      "highlights": {
-        "founded": "2024 දී ආරම්භ කරන ලදී",
-        "region": "යුරෝපය, ස්විට්සර්ලන්තය සහ ජර්මනිය",
-        "community": "ශ්‍රී ලාංකික භික්ෂු සමාජය"
+      "text": "බාසල් බෞද්ධ විහාරය යනු ස්විට්සර්ලන්තයේ බාසල් නගරය සහ ඒ අවට ජීවත් වන ශ්‍රී ලාංකික බෞද්ධයින්ගේ මෙන්ම, බෞද්ධ දර්ශනය කෙරෙහි උනන්දුවක් දක්වන සියලුම ජාතිකයින්ගේ අධ්‍යාත්මික සුවය සලසන ප්‍රධානතම පුදබිමයි. 2021 මාර්තු මස 17 වන දින ආරම්භ කරන ලද ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානයට (SKBZ) අනුබද්ධිතව ක්‍රියාත්මක වන අප විහාරස්ථානය, සාමකාමී සහ සංවර ජීවන රටාවක් ගොඩනඟා ගැනීමට අවශ්‍ය ධර්මානුකූල මඟපෙන්වීම ලබාදීම මූලික අරමුණ කරගෙන ක්‍රියාත්මක වේ.",
+      "facts": {
+        "foundingDate": "2024 ජූලි 1 වන දින ආරම්භ විය",
+        "inauguration": "2024 ජූලි 6 වන දින ස්වාමීන් වහන්සේලා පස් නමකගේ සහ සැදැහැවතුන් 30 දෙනෙකුගේ සහභාගීත්වයෙන් නිල සමාරම්භය",
+        "founder": "අපගේ නිර්මාතෘ: අතිපූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක ස්වාමීන් වහන්සේ — 2024 ජූනි 12 වන දින ජිනීවා ජාත්‍යන්තර බෞද්ධ මධ්‍යස්ථානයේදී අපවත් වී වදාළද, උන්වහන්සේගේ දර්ශනය සදාකාලික ආලෝකයක් ලෙස රැඳේ.",
+        "headMonk": "විහාරාධිපති: පූජ්‍ය උඩුමත්තේ අරියසීල ස්වාමීන් වහන්සේ",
+        "president": "සභාපතිනිය: ෆේබියන් එග්ලින්"
       }
     },
     "programs": {
-      "title": "අපේ වැඩසටහන්",
-      "regular": {
-        "title": "නිතිපතා වැඩසටහන්",
-        "item1": "දෛනික බුද්ධ පූජාව සහ දේශනා — උදේ 7:00, 11:30, සවස 18:30",
-        "item2": "භාවනාව — බදාදා පෙ.ව. 10:00–11:00",
-        "item3": "ධම්ම සාකච්ඡාව — සඳුදා සිට සිකුරාදා, ප.ව. 19:00–19:45",
-        "item4": "ළමුන් සඳහා ධම්ම පාසල — ඉරිදා ප.ව. 14:30–17:00",
-        "item5": "පෝය දින දේශනා සහ භාවනාව — සෑම පෝය දිනකම ප.ව. 18:30"
+      "title": "වැඩසටහන් සහ උත්සව",
+      "subtitle": "මාසික වැඩසටහන් — සෑම මාසයකම තුන්වන සතිය",
+      "items": {
+        "item1": "ජර්මන් භාෂාවෙන් භාවනා වැඩසටහන — සෑම තුන්වන සිකුරාදා, සවස 6.00–8.00",
+        "item2": "සිංහල භාෂාවෙන් භාවනා වැඩසටහන — සෑම තුන්වන සෙනසුරාදා, සවස 6.00–8.00",
+        "item3": "පෝය වැඩසටහන — සෑම තුන්වන ඉරිදා, දහවල් 2.00–6.00"
       },
-      "special": {
-        "title": "විශේෂ උත්සව",
-        "text": "විශේෂ උත්සව සහ චාරිත්‍ර නිතිපතා නිවේදනය කරනු ලැබේ.",
-        "cta": "අප අමතන්න"
-      }
-    },
-    "events": {
-      "title": "ඉදිරි වැඩසටහන්",
-      "event1": {
-        "date": "ළඟදීම",
-        "title": "පෝය උත්සවය",
-        "text": "මාසික පෝය දින දේශනා හා භාවනා උත්සවය"
+      "services": {
+        "title": "අපේ සේවාවන්",
+        "item1": "දානමය පිංකම් — මාසිකව, වාර්ෂිකව හෝ ඔබගේ විශේෂ දිනයක",
+        "item2": "නිවසට වැඩම කරවීම — පිරිත් සජ්ඣායනා සහ දාන පිංකම් සඳහා",
+        "item3": "විහාරයට පැමිණීම — කලින් වේලාවක් වෙන්කරවා ගන්න"
       },
-      "event2": {
-        "date": "සෑම සිකුරාදාවකම",
-        "title": "ධම්ම සාකච්ඡාව",
-        "text": "උනන්දුවක් දක්වන සියලුම දෙනා සඳහා සතිපතා ධම්ම සාකච්ඡාව"
-      },
-      "event3": {
-        "date": "2025 මැයි",
-        "title": "වෙසක් උත්සවය 2025",
-        "text": "වෙසක් උත්සව සැමරුම — බුදුන් වහන්සේගේ උපත, බුද්ධත්වය සහ පිරිනිවන් පෑම"
-      }
+      "youtubeTitle": "YouTube",
+      "youtube": "ධර්ම දානය — අප යූටියුබ් නාලිකා ද්විත්වයක් හරහා සතියකට වීඩියෝවක් ධර්ම දානය ලෙස ලබා දෙයි."
     },
     "gallery": {
       "comingSoon": "ඡායාරූපය ළඟදීම",
       "more": "තවත් ඡායාරූප"
     },
     "donations": {
-      "title": "අපේ ප්‍රජාව සහාය කරන්න",
-      "text": "ඔබේ පරිත්‍යාගය ස්විට්සර්ලන්තයේ සහ යුරෝපයේ බුදුන් වහන්සේගේ ඉගැන්වීම් ව්‍යාප්ත කිරීමට සහ අපේ ප්‍රජාව වර්ධනය කිරීමට උපකාරී වේ.",
-      "oneTime": {
-        "title": "එක්වර පරිත්‍යාගය",
+      "title": "පරිත්‍යාග",
+      "text": "බාසල් බෞද්ධ විහාරයේ දෛනික නඩත්තු කටයුතු ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානය (SKBZ) විසින් සිදු කරනු ලැබේ. ඔබගේ නොමසුරු දායකත්වය අප ඉතා කෘතවේදීව අගය කොට සලකමු.",
+      "bank": {
+        "title": "බැංකු මාරුව",
+        "accountHolderLabel": "ගිණුම් හිමිකරු",
+        "accountHolder": "Sri Kalyana Buddhistisches Zentrum (SKBZ)",
         "ibanLabel": "IBAN",
-        "ibanValue": "[පසුව දන්වනු ලැබේ]",
-        "accountLabel": "ගිණුම් හිමිකරු"
+        "iban": "CH05 8080 8009 7919",
+        "accountTypeLabel": "ගිණුම් වර්ගය",
+        "accountType": "සංගම ගිණුම / CHF",
+        "addressLabel": "ලිපිනය",
+        "address": "Neugrabenweg 29, 5702 Niederlenz"
       },
       "contact": {
         "title": "පරිත්‍යාග සඳහා සම්බන්ධ වන්න",
-        "text": "පරිත්‍යාග විකල්ප පිළිබඳ වැඩිදුර තොරතුරු සඳහා අප අමතන්න."
+        "text": "පරිත්‍යාග විකල්ප පිළිබඳ වැඩිදුර තොරතුරු සඳහා අප අමතන්න.",
+        "cta": "අප අමතන්න"
       }
     },
     "contact": {
@@ -294,6 +266,7 @@
       "phone": "+41 792 303 699",
       "email": "ariyaseela@gmail.com",
       "hours": "සෑම දිනකම උදේ 7:00 – සවස 18:30",
+      "appointmentNote": "විහාරයට පැමිණීමට පෙර කලින් වේලාවක් වෙන්කරවා ගැනීම කාරුණිකව ඉල්ලා සිටිමු.",
       "form": {
         "name": "නම",
         "email": "විද්‍යුත් තැපෑල",
@@ -311,7 +284,7 @@
       }
     },
     "footer": {
-      "tagline": "බාසල් හි සාමයේ ස්ථානයක්",
+      "tagline": "බාසල් හි සාමයේ ස්ථානයක් 2024 සිට",
       "linksTitle": "ඉක්මන් සබැඳි",
       "text": "© 2025 බාසල් බෞද්ධ විහාරය (SKBZ). සියලුම හිමිකම් ඇවිරිණි.",
       "credit": "බාසල් හි ❤️ සමඟින් නිර්මාණය කරන ලදී"
