@@ -48,11 +48,28 @@
   </header>
 
   <main>
-    <section id="home" class="dev-placeholder">
-      <div class="container">
-        <h1 data-i18n="hero.tagline">Ein Ort des Friedens, der Weisheit und der Gemeinschaft</h1>
-        <a href="#about" class="btn btn--accent" data-i18n="hero.cta">Mehr erfahren</a>
+    <section id="home" class="hero">
+      <!-- Background media: gradient placeholder until real photography is ready.
+           When images are added, replace .hero__media with a slideshow of
+           <img>/<picture> elements cross-fading with a Ken Burns pan/zoom
+           animation; keep .hero__overlay stacked above it for text contrast. -->
+      <div class="hero__media" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content container container--narrow">
+        <p class="hero__label" data-i18n="hero.label">Basel Buddhist Vihara — SKBZ</p>
+        <h1 class="hero__heading" data-i18n="hero.tagline">Ein Ort des Friedens, der Weisheit und der Gemeinschaft</h1>
+        <p class="hero__subtitle" data-i18n="hero.founded">Gegründet am 1. Juli 2024 · Basel, Schweiz</p>
+
+        <div class="hero__actions">
+          <a href="#about" class="btn btn--accent btn--lg" data-i18n="hero.cta">Mehr erfahren</a>
+          <a href="#contact" class="btn btn--outline-light btn--lg" data-i18n="nav.contact">Kontakt</a>
+        </div>
       </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Nach unten scrollen">
+        <span class="hero__scroll-arrow"></span>
+      </a>
     </section>
 
     <section id="about" class="dev-placeholder">

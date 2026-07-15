@@ -469,6 +469,17 @@ blockquote {
   color: var(--color-white);
 }
 
+.btn--outline-light {
+  background-color: transparent;
+  border-color: var(--color-text-inverse);
+  color: var(--color-text-inverse);
+}
+
+.btn--outline-light:hover {
+  background-color: var(--color-text-inverse);
+  color: var(--color-primary-dark);
+}
+
 .btn--ghost {
   background-color: transparent;
   color: var(--color-primary);
@@ -701,6 +712,112 @@ blockquote {
 
 .no-scroll {
   overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   8b. Hero
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: var(--color-text-inverse);
+}
+
+/* Gradient placeholder — swap for a slideshow of real photography later
+   (see markup comment in index.html for the Ken Burns approach). */
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #2C1810 0%, #6B2737 100%);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding-block: var(--space-3xl);
+}
+
+.hero__label {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.hero__heading {
+  color: var(--color-text-inverse);
+  max-width: 18ch;
+}
+
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  color: rgba(250, 247, 242, 0.85);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-inverse);
+  transform: translateX(-50%);
+  animation: hero-bounce 2s ease-in-out infinite;
+}
+
+.hero__scroll-arrow {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+@keyframes hero-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+    opacity: 1;
+  }
 }
 
 /* Temporary scaffold for section anchors — replaced as each section is built */
