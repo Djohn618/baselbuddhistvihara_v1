@@ -40,6 +40,24 @@
         "cta": "Kontakt aufnehmen"
       }
     },
+    "events": {
+      "title": "Kommende Veranstaltungen",
+      "event1": {
+        "date": "Bald",
+        "title": "Vollmond Zeremonie",
+        "text": "Monatliche Vollmond-Chanting und Meditationszeremonie"
+      },
+      "event2": {
+        "date": "Jeden Freitag",
+        "title": "Dhamma Diskussion",
+        "text": "Wöchentliche Dhamma-Diskussion für alle Interessierten"
+      },
+      "event3": {
+        "date": "Mai 2025",
+        "title": "Vesak Feier 2025",
+        "text": "Feier des Vesak-Festes — Geburtstag, Erleuchtung und Tod des Buddha"
+      }
+    },
     "contact": {
       "title": "Kontakt",
       "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
@@ -91,6 +109,24 @@
         "cta": "Contact Us"
       }
     },
+    "events": {
+      "title": "Upcoming Events",
+      "event1": {
+        "date": "Soon",
+        "title": "Full Moon Ceremony",
+        "text": "Monthly full moon chanting and meditation ceremony"
+      },
+      "event2": {
+        "date": "Every Friday",
+        "title": "Dhamma Discussion",
+        "text": "Weekly Dhamma discussion for all interested"
+      },
+      "event3": {
+        "date": "May 2025",
+        "title": "Vesak Celebration 2025",
+        "text": "Celebrating Vesak — the birth, enlightenment, and passing of the Buddha"
+      }
+    },
     "contact": {
       "title": "Contact",
       "address": "Feldbergstrasse 142, 4057 Basel, Switzerland",
@@ -140,6 +176,24 @@
         "title": "විශේෂ උත්සව",
         "text": "විශේෂ උත්සව සහ චාරිත්‍ර නිතිපතා නිවේදනය කරනු ලැබේ.",
         "cta": "අප අමතන්න"
+      }
+    },
+    "events": {
+      "title": "ඉදිරි වැඩසටහන්",
+      "event1": {
+        "date": "ළඟදීම",
+        "title": "පෝය උත්සවය",
+        "text": "මාසික පෝය දින දේශනා හා භාවනා උත්සවය"
+      },
+      "event2": {
+        "date": "සෑම සිකුරාදාවකම",
+        "title": "ධම්ම සාකච්ඡාව",
+        "text": "උනන්දුවක් දක්වන සියලුම දෙනා සඳහා සතිපතා ධම්ම සාකච්ඡාව"
+      },
+      "event3": {
+        "date": "2025 මැයි",
+        "title": "වෙසක් උත්සවය 2025",
+        "text": "වෙසක් උත්සව සැමරුම — බුදුන් වහන්සේගේ උපත, බුද්ධත්වය සහ පිරිනිවන් පෑම"
       }
     },
     "contact": {
