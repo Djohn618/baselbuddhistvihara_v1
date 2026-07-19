@@ -125,19 +125,65 @@
   }
 
   function initProgramsCarousel() {
-    var track = document.getElementById('programs-cards');
+    var track = document.getElementById('programs-track');
     var prevBtn = document.getElementById('programs-prev');
     var nextBtn = document.getElementById('programs-next');
-    if (!track || !prevBtn || !nextBtn) return;
+    var dotsContainer = document.getElementById('programs-dots');
+    if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
-    function scrollByCard(direction) {
-      var card = track.querySelector('.program-card');
-      var amount = card ? card.getBoundingClientRect().width + 16 : 260;
-      track.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    var cards = Array.prototype.slice.call(track.children);
+    var dots = Array.prototype.slice.call(dotsContainer.children);
+    if (!cards.length) return;
+
+    var currentIndex = 0;
+
+    function getPerView() {
+      var w = window.innerWidth;
+      if (w >= 1024) return 3;
+      if (w >= 768) return 2;
+      return 1;
     }
 
-    prevBtn.addEventListener('click', function () { scrollByCard(-1); });
-    nextBtn.addEventListener('click', function () { scrollByCard(1); });
+    function getMaxIndex() {
+      return Math.max(0, cards.length - getPerView());
+    }
+
+    function getStep() {
+      var gapValue = window.getComputedStyle(track).columnGap;
+      if (!gapValue || gapValue === 'normal') gapValue = window.getComputedStyle(track).gap;
+      var gap = parseFloat(gapValue) || 0;
+      return cards[0].getBoundingClientRect().width + gap;
+    }
+
+    function render() {
+      var maxIndex = getMaxIndex();
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+      track.style.transform = 'translateX(-' + (currentIndex * getStep()) + 'px)';
+
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('is-active', i === currentIndex);
+      });
+
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === maxIndex;
+    }
+
+    function goTo(index) {
+      currentIndex = Math.max(0, Math.min(index, getMaxIndex()));
+      render();
+    }
+
+    prevBtn.addEventListener('click', function () { goTo(currentIndex - 1); });
+    nextBtn.addEventListener('click', function () { goTo(currentIndex + 1); });
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goTo(i); });
+    });
+
+    window.addEventListener('resize', render);
+
+    render();
   }
 
   function init() {

@@ -171,56 +171,119 @@
       </div>
     </section>
 
-    <section id="programs" class="programs section">
+    <section id="programs" class="programs">
       <div class="container">
-        <h2 class="programs__title text-center" data-i18n="programs.title">Programme &amp; Veranstaltungen</h2>
-        <p class="programs__subtitle text-center" data-i18n="programs.subtitle">Monatliche Programme — jeweils in der dritten Woche des Monats</p>
+        <div class="programs__header">
+          <p class="programs__label" data-i18n="programs.label">Unsere Programme</p>
+          <h2 class="programs__title" data-i18n="programs.title">Programme &amp; Veranstaltungen</h2>
+          <div class="programs__underline" aria-hidden="true"></div>
+        </div>
 
         <div class="programs__carousel">
-          <button type="button" class="programs__nav programs__nav--prev" id="programs-prev" aria-label="Zurück">&#10094;</button>
+          <button type="button" class="carousel-prev" id="programs-prev" aria-label="Zurück">
+            <i data-lucide="chevron-left"></i>
+          </button>
 
-          <div class="programs__cards" id="programs-cards">
-            <article class="program-card paper-card">
-              <span class="program-card__badge" data-i18n="programs.cards.card1.badge">Jeden 3. Freitag</span>
-              <span class="program-card__icon" aria-hidden="true"><i data-lucide="wind" class="lucide-lg"></i></span>
-              <h3 class="program-card__title" data-i18n="programs.cards.card1.title">Meditation auf Deutsch</h3>
-              <p class="program-card__time" data-i18n="programs.cards.card1.time">18:00–20:00 Uhr</p>
-            </article>
+          <div class="programs__viewport">
+            <div class="programs__track" id="programs-track">
+              <article class="program-card">
+                <div class="program-card__image" aria-hidden="true">
+                  <!-- replace with real photo when available -->
+                  <span class="program-card__badge" data-i18n="programs.cards.card1.badge">Jeden 3. Freitag</span>
+                </div>
+                <div class="program-card__body">
+                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="wind"></i></span>
+                  <h3 class="program-card__title" data-i18n="programs.cards.card1.title">Meditation auf Deutsch</h3>
+                  <div class="program-card__divider" aria-hidden="true"></div>
+                  <p class="program-card__meta" data-i18n="programs.cards.card1.time">18:00 – 20:00 Uhr</p>
+                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                </div>
+              </article>
 
-            <article class="program-card paper-card">
-              <span class="program-card__badge" data-i18n="programs.cards.card2.badge">Jeden 3. Samstag</span>
-              <span class="program-card__icon" aria-hidden="true"><i data-lucide="wind" class="lucide-lg"></i></span>
-              <h3 class="program-card__title" data-i18n="programs.cards.card2.title">Meditation auf Singhalesisch</h3>
-              <p class="program-card__time" data-i18n="programs.cards.card2.time">18:00–20:00 Uhr</p>
-            </article>
+              <article class="program-card">
+                <div class="program-card__image" aria-hidden="true">
+                  <!-- replace with real photo when available -->
+                  <span class="program-card__badge" data-i18n="programs.cards.card2.badge">Jeden 3. Samstag</span>
+                </div>
+                <div class="program-card__body">
+                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="wind"></i></span>
+                  <h3 class="program-card__title" data-i18n="programs.cards.card2.title">Meditation auf Singhalesisch</h3>
+                  <div class="program-card__divider" aria-hidden="true"></div>
+                  <p class="program-card__meta" data-i18n="programs.cards.card2.time">18:00 – 20:00 Uhr</p>
+                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                </div>
+              </article>
 
-            <article class="program-card paper-card">
-              <span class="program-card__badge" data-i18n="programs.cards.card3.badge">Jeden 3. Sonntag</span>
-              <span class="program-card__icon" aria-hidden="true"><i data-lucide="moon" class="lucide-lg"></i></span>
-              <h3 class="program-card__title" data-i18n="programs.cards.card3.title">Poya-Programm</h3>
-              <p class="program-card__time" data-i18n="programs.cards.card3.time">14:00–18:00 Uhr</p>
-            </article>
+              <article class="program-card">
+                <div class="program-card__image" aria-hidden="true">
+                  <!-- replace with real photo when available -->
+                  <span class="program-card__badge" data-i18n="programs.cards.card3.badge">Jeden 3. Sonntag</span>
+                </div>
+                <div class="program-card__body">
+                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="moon"></i></span>
+                  <h3 class="program-card__title" data-i18n="programs.cards.card3.title">Poya-Programm</h3>
+                  <div class="program-card__divider" aria-hidden="true"></div>
+                  <p class="program-card__meta" data-i18n="programs.cards.card3.time">14:00 – 18:00 Uhr</p>
+                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                </div>
+              </article>
 
-            <article class="program-card paper-card">
-              <span class="program-card__badge" data-i18n="programs.cards.card4.badge">Nach Vereinbarung</span>
-              <span class="program-card__icon" aria-hidden="true"><i data-lucide="heart-handshake" class="lucide-lg"></i></span>
-              <h3 class="program-card__title" data-i18n="programs.cards.card4.title">Dana-Zeremonien</h3>
-            </article>
+              <article class="program-card">
+                <div class="program-card__image" aria-hidden="true">
+                  <!-- replace with real photo when available -->
+                  <span class="program-card__badge" data-i18n="programs.cards.card4.badge">Nach Vereinbarung</span>
+                </div>
+                <div class="program-card__body">
+                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="heart-handshake"></i></span>
+                  <h3 class="program-card__title" data-i18n="programs.cards.card4.title">Dana-Zeremonien</h3>
+                  <div class="program-card__divider" aria-hidden="true"></div>
+                  <p class="program-card__meta" data-i18n="programs.cards.card4.desc">Monatlich, jährlich oder an einem besonderen Datum</p>
+                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                </div>
+              </article>
 
-            <article class="program-card paper-card">
-              <span class="program-card__badge" data-i18n="programs.cards.card5.badge">Jährlich</span>
-              <span class="program-card__icon" aria-hidden="true"><i data-lucide="star" class="lucide-lg"></i></span>
-              <h3 class="program-card__title" data-i18n="programs.cards.card5.title">Kathina-Zeremonie</h3>
-            </article>
+              <article class="program-card">
+                <div class="program-card__image" aria-hidden="true">
+                  <!-- replace with real photo when available -->
+                  <span class="program-card__badge" data-i18n="programs.cards.card5.badge">Jährlich</span>
+                </div>
+                <div class="program-card__body">
+                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="star"></i></span>
+                  <h3 class="program-card__title" data-i18n="programs.cards.card5.title">Kathina-Zeremonie</h3>
+                  <div class="program-card__divider" aria-hidden="true"></div>
+                  <p class="program-card__meta" data-i18n="programs.cards.card5.desc">Traditionelle jährliche Robe-Zeremonie</p>
+                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                </div>
+              </article>
 
-            <article class="program-card paper-card">
-              <span class="program-card__badge" data-i18n="programs.cards.card6.badge">Bald bekannt gegeben</span>
-              <span class="program-card__icon" aria-hidden="true"><i data-lucide="calendar" class="lucide-lg"></i></span>
-              <h3 class="program-card__title" data-i18n="programs.cards.card6.title">Weitere Events</h3>
-            </article>
+              <article class="program-card">
+                <div class="program-card__image" aria-hidden="true">
+                  <!-- replace with real photo when available -->
+                  <span class="program-card__badge" data-i18n="programs.cards.card6.badge">Nach Vereinbarung</span>
+                </div>
+                <div class="program-card__body">
+                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="home"></i></span>
+                  <h3 class="program-card__title" data-i18n="programs.cards.card6.title">Hausbesuche</h3>
+                  <div class="program-card__divider" aria-hidden="true"></div>
+                  <p class="program-card__meta" data-i18n="programs.cards.card6.desc">Mönche kommen für Pirith-Gesänge und Dana</p>
+                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                </div>
+              </article>
+            </div>
           </div>
 
-          <button type="button" class="programs__nav programs__nav--next" id="programs-next" aria-label="Weiter">&#10095;</button>
+          <button type="button" class="carousel-next" id="programs-next" aria-label="Weiter">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="programs__dots" id="programs-dots">
+          <button type="button" class="programs__dot" aria-label="Karte 1"></button>
+          <button type="button" class="programs__dot" aria-label="Karte 2"></button>
+          <button type="button" class="programs__dot" aria-label="Karte 3"></button>
+          <button type="button" class="programs__dot" aria-label="Karte 4"></button>
+          <button type="button" class="programs__dot" aria-label="Karte 5"></button>
+          <button type="button" class="programs__dot" aria-label="Karte 6"></button>
         </div>
       </div>
     </section>
