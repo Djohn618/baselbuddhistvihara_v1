@@ -769,11 +769,6 @@ blockquote {
   background-color: var(--color-bg-light);
 }
 
-.hero__logo {
-  height: 44px;
-  width: auto;
-}
-
 .hero__left-content {
   display: flex;
   flex-direction: column;
@@ -810,13 +805,6 @@ blockquote {
   flex-wrap: wrap;
   gap: var(--space-sm);
   margin-top: var(--space-sm);
-}
-
-.hero__counter {
-  font-family: var(--font-body);
-  font-size: var(--fs-sm);
-  letter-spacing: 0.1em;
-  color: var(--color-text-muted);
 }
 
 .hero__right {
