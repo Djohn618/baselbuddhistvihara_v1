@@ -1,0 +1,85 @@
+.gitignore für Basel Buddhist Vihara
+
+# ========================
+# System Files
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ========================
+# IDE & Editor
+# ========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.cursor/
+
+# ========================
+# PHP & Server
+# ========================
+# Config with sensitive data (email passwords etc.)
+php/config.php
+config.php
+*.env
+.env
+.env.local
+.env.production
+
+# PHP error logs
+php_errors.log
+error_log
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+npm-debug.log*
+
+# ========================
+# Dependencies (if ever needed)
+# ========================
+node_modules/
+vendor/
+
+# ========================
+# Build Output (if ever needed)
+# ========================
+dist/
+build/
+
+# ========================
+# Temp & Cache
+# ========================
+.cache/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# ========================
+# Uploads & Private Media
+# ========================
+# Uncomment if you want to exclude real photos from git
+# (recommended if photos are large — upload directly to Cyon instead)
+# assets/images/gallery/*.jpg
+# assets/images/gallery/*.png
+# assets/images/hero/*.jpg
+# assets/images/about/*.jpg
+
+# ========================
+# Sensitive Files
+# ========================
+*.pem
+*.key
+*.cert
+*.p12
