@@ -15,14 +15,45 @@
       "cta": "Mehr erfahren"
     },
     "about": {
+      "label": "Über Uns",
       "title": "Über das Basel Buddhist Vihara",
-      "text": "Das Basel Buddhist Vihara ist das wichtigste spirituelle Zentrum für srilankische Buddhisten und Menschen aller Nationalitäten in und um Basel, die sich für die buddhistische Philosophie interessieren. In Verbindung mit dem am 17. März 2021 gegründeten Sri Kalyana Buddhistischen Zentrum (SKBZ) ist es unser Hauptziel, spirituelle Führung auf der Grundlage des Dhamma anzubieten, um einen friedlichen und disziplinierten Lebensstil zu fördern.",
-      "facts": {
-        "foundingDate": "Gegründet am 1. Juli 2024",
-        "inauguration": "Feierliche Eröffnung am 6. Juli 2024 mit fünf Mönchen und rund 30 Teilnehmenden",
-        "founder": "Unser Gründer: Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero — obwohl er am 12. Juni 2024 im Genfer Internationalen Buddhistischen Zentrum verstarb, bleibt seine edle Vision ein ewiges Leuchtfeuer für den Vihara.",
-        "headMonk": "Tempelvorsteher: Ehrw. Udumaththe Ariyaseela Thero",
-        "president": "Präsidentin: Fabienne Eglin"
+      "body": "Das Basel Buddhist Vihara ist das wichtigste spirituelle Zentrum für srilankische Buddhisten und Menschen aller Nationalitäten in und um Basel, die sich für die buddhistische Philosophie interessieren. In Verbindung mit dem am 17. März 2021 gegründeten Sri Kalyana Buddhistischen Zentrum (SKBZ) ist es unser Hauptziel, spirituelle Führung auf der Grundlage des Dhamma anzubieten, um einen friedlichen und disziplinierten Lebensstil zu fördern.",
+      "stats": {
+        "founded": "Gegründet",
+        "monks": "Mönche",
+        "languages": "Sprachen",
+        "youtubeChannels": "YouTube Kanäle"
+      },
+      "bullets": {
+        "bullet1": "Spirituelle Führung auf Grundlage des Dhamma",
+        "bullet2": "Offen für alle Nationalitäten und Hintergründe",
+        "bullet3": "Monatliche Programme in Deutsch und Singhalesisch",
+        "bullet4": "Verbunden mit dem Sri Kalyana Buddhistischen Zentrum (SKBZ)"
+      },
+      "story": {
+        "heading": "Unsere Geschichte",
+        "founder": {
+          "label": "Gründer",
+          "name": "Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero",
+          "text": "Das spirituelle Fundament und die anfängliche Führung wurden von unserem verstorbenen Gründer gelegt. Obwohl er am 12. Juni 2024 verstarb, bleibt seine edle Vision ein ewiges Leuchtfeuer für den Vihara."
+        },
+        "leadership": {
+          "label": "Leitung",
+          "roles": {
+            "headMonk": "Tempelvorsteher",
+            "president": "Präsidentin",
+            "vicePresident": "Vizepräsident",
+            "secretary": "Sekretär",
+            "treasurer": "Kassier"
+          },
+          "names": {
+            "headMonk": "Ehrw. Udumaththe Ariyaseela Thero",
+            "president": "Fabienne Eglin",
+            "vicePresident": "Michael Joel Anneler",
+            "secretary": "Ehrw. Henegama Sobitha Thero",
+            "treasurer": "Ehrw. Udumaththe Ariyaseela Thero"
+          }
+        }
       }
     },
     "programs": {
@@ -118,14 +149,45 @@
       "cta": "Learn More"
     },
     "about": {
+      "label": "About Us",
       "title": "About Basel Buddhist Vihara",
-      "text": "The Basel Buddhist Vihara is the primary spiritual sanctuary for Sri Lankan Buddhists and individuals of all nationalities interested in Buddhist philosophy, living in and around Basel, Switzerland. Affiliated with the Sri Kalyana Buddhistisches Zentrum (SKBZ), which was founded on March 17, 2021, our Vihara aims to provide spiritual guidance based on the Dhamma to help cultivate a peaceful and disciplined lifestyle.",
-      "facts": {
-        "foundingDate": "Founded July 1, 2024",
-        "inauguration": "Official inauguration on July 6, 2024, with five monks and approximately 30 devotees",
-        "founder": "Our Founder: Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero — although he passed away on June 12, 2024, at the Geneva International Buddhist Center, his noble vision remains an eternal beacon for the Vihara.",
-        "headMonk": "Head Monk: Ven. Udumaththe Ariyaseela Thero",
-        "president": "President: Fabienne Eglin"
+      "body": "The Basel Buddhist Vihara is the primary spiritual sanctuary for Sri Lankan Buddhists and individuals of all nationalities interested in Buddhist philosophy, living in and around Basel, Switzerland. Affiliated with the Sri Kalyana Buddhistisches Zentrum (SKBZ), which was founded on March 17, 2021, our Vihara aims to provide spiritual guidance based on the Dhamma to help cultivate a peaceful and disciplined lifestyle.",
+      "stats": {
+        "founded": "Founded",
+        "monks": "Monks",
+        "languages": "Languages",
+        "youtubeChannels": "YouTube Channels"
+      },
+      "bullets": {
+        "bullet1": "Spiritual guidance rooted in the Dhamma",
+        "bullet2": "Open to all nationalities and backgrounds",
+        "bullet3": "Monthly programs in German and Sinhalese",
+        "bullet4": "Affiliated with Sri Kalyana Buddhistisches Zentrum (SKBZ)"
+      },
+      "story": {
+        "heading": "Our Story",
+        "founder": {
+          "label": "Founder",
+          "name": "Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero",
+          "text": "The spiritual foundation was laid by our late founder. Although he passed away on June 12, 2024, his noble vision remains an eternal beacon for the Basel Buddhist Vihara."
+        },
+        "leadership": {
+          "label": "Leadership",
+          "roles": {
+            "headMonk": "Head Monk",
+            "president": "President",
+            "vicePresident": "Vice President",
+            "secretary": "Secretary",
+            "treasurer": "Treasurer"
+          },
+          "names": {
+            "headMonk": "Ven. Udumaththe Ariyaseela Thero",
+            "president": "Fabienne Eglin",
+            "vicePresident": "Michael Joel Anneler",
+            "secretary": "Ven. Henegama Sobitha Thero",
+            "treasurer": "Ven. Udumaththe Ariyaseela Thero"
+          }
+        }
       }
     },
     "programs": {
@@ -221,14 +283,45 @@
       "cta": "තව දැනගන්න"
     },
     "about": {
+      "label": "අප ගැන",
       "title": "බාසල් බෞද්ධ විහාරය ගැන",
-      "text": "බාසල් බෞද්ධ විහාරය යනු ස්විට්සර්ලන්තයේ බාසල් නගරය සහ ඒ අවට ජීවත් වන ශ්‍රී ලාංකික බෞද්ධයින්ගේ මෙන්ම, බෞද්ධ දර්ශනය කෙරෙහි උනන්දුවක් දක්වන සියලුම ජාතිකයින්ගේ අධ්‍යාත්මික සුවය සලසන ප්‍රධානතම පුදබිමයි. 2021 මාර්තු මස 17 වන දින ආරම්භ කරන ලද ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානයට (SKBZ) අනුබද්ධිතව ක්‍රියාත්මක වන අප විහාරස්ථානය, සාමකාමී සහ සංවර ජීවන රටාවක් ගොඩනඟා ගැනීමට අවශ්‍ය ධර්මානුකූල මඟපෙන්වීම ලබාදීම මූලික අරමුණ කරගෙන ක්‍රියාත්මක වේ.",
-      "facts": {
-        "foundingDate": "2024 ජූලි 1 වන දින ආරම්භ විය",
-        "inauguration": "2024 ජූලි 6 වන දින ස්වාමීන් වහන්සේලා පස් නමකගේ සහ සැදැහැවතුන් 30 දෙනෙකුගේ සහභාගීත්වයෙන් නිල සමාරම්භය",
-        "founder": "අපගේ නිර්මාතෘ: අතිපූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක ස්වාමීන් වහන්සේ — 2024 ජූනි 12 වන දින ජිනීවා ජාත්‍යන්තර බෞද්ධ මධ්‍යස්ථානයේදී අපවත් වී වදාළද, උන්වහන්සේගේ දර්ශනය සදාකාලික ආලෝකයක් ලෙස රැඳේ.",
-        "headMonk": "විහාරාධිපති: පූජ්‍ය උඩුමත්තේ අරියසීල ස්වාමීන් වහන්සේ",
-        "president": "සභාපතිනිය: ෆේබියන් එග්ලින්"
+      "body": "බාසල් බෞද්ධ විහාරය යනු ස්විට්සර්ලන්තයේ බාසල් නගරය සහ ඒ අවට ජීවත් වන ශ්‍රී ලාංකික බෞද්ධයින්ගේ මෙන්ම, බෞද්ධ දර්ශනය කෙරෙහි උනන්දුවක් දක්වන සියලුම ජාතිකයින්ගේ අධ්‍යාත්මික සුවය සලසන ප්‍රධානතම පුදබිමයි. 2021 මාර්තු මස 17 වන දින ආරම්භ කරන ලද ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානයට (SKBZ) අනුබද්ධිතව ක්‍රියාත්මක වන අප විහාරස්ථානය, සාමකාමී සහ සංවර ජීවන රටාවක් ගොඩනඟා ගැනීමට අවශ්‍ය ධර්මානුකූල මඟපෙන්වීම ලබාදීම මූලික අරමුණ කරගෙන ක්‍රියාත්මක වේ.",
+      "stats": {
+        "founded": "ආරම්භය",
+        "monks": "ස්වාමීන් වහන්සේලා",
+        "languages": "භාෂා",
+        "youtubeChannels": "යූටියුබ් නාලිකා"
+      },
+      "bullets": {
+        "bullet1": "ධර්මය පදනම් කරගත් අධ්‍යාත්මික මඟපෙන්වීම",
+        "bullet2": "සියලුම ජාතීන් සහ පසුබිම්වලට විවෘතයි",
+        "bullet3": "ජර්මන් සහ සිංහල භාෂාවලින් මාසික වැඩසටහන්",
+        "bullet4": "ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානය (SKBZ) සමඟ අනුබද්ධිතයි"
+      },
+      "story": {
+        "heading": "අපේ ඉතිහාසය",
+        "founder": {
+          "label": "නිර්මාතෘ",
+          "name": "අතිපූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක ස්වාමීන් වහන්සේ",
+          "text": "අපගේ දිවංගත නිර්මාතෘන් වහන්සේ විසින් අධ්‍යාත්මික පදනම දමන ලදී. උන්වහන්සේ 2024 ජූනි 12 වන දින අපවත් වුවද, උන්වහන්සේගේ උතුම් දර්ශනය බාසල් බෞද්ධ විහාරය සඳහා සදාකාලික ආලෝකයක් ලෙස රැඳී පවතී."
+        },
+        "leadership": {
+          "label": "නායකත්වය",
+          "roles": {
+            "headMonk": "විහාරාධිපති",
+            "president": "සභාපතිනිය",
+            "vicePresident": "උප සභාපති",
+            "secretary": "ලේකම්",
+            "treasurer": "භාණ්ඩාගාරික"
+          },
+          "names": {
+            "headMonk": "පූජ්‍ය උඩුමත්තේ අරියසීල ස්වාමීන් වහන්සේ",
+            "president": "ෆේබියන් එග්ලින්",
+            "vicePresident": "මයිකල් ජොයෙල් අනෙලර්",
+            "secretary": "පූජ්‍ය හේනගම සෝභිත ස්වාමීන් වහන්සේ",
+            "treasurer": "පූජ්‍ය උඩුමත්තේ අරියසීල ස්වාමීන් වහන්සේ"
+          }
+        }
       }
     },
     "programs": {

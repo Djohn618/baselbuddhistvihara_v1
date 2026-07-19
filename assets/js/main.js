@@ -100,6 +100,30 @@
     window.history.replaceState({}, '', url.pathname + url.hash);
   }
 
+  function initFadeIn() {
+    var fadeEls = document.querySelectorAll('.fade-in');
+    if (!fadeEls.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      fadeEls.forEach(function (el) { el.classList.add('fade-in-visible'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    fadeEls.forEach(function (el) { observer.observe(el); });
+  }
+
   function initProgramsCarousel() {
     var track = document.getElementById('programs-cards');
     var prevBtn = document.getElementById('programs-prev');
@@ -123,6 +147,7 @@
     initLinkClicks();
     initEscapeClose();
     initScrollSpy();
+    initFadeIn();
     initProgramsCarousel();
     initContactFormStatus();
   }
