@@ -105,13 +105,18 @@
       }
     },
     "contact": {
-      "title": "Kontakt",
+      "label": "KONTAKT",
+      "heading": "Wir sind für Sie da",
+      "subheading": "Haben Sie Fragen zu unseren Programmen oder möchten Sie das Vihara besuchen? Schreiben Sie uns — wir freuen uns von Ihnen zu hören.",
+      "rows": {
+        "email": { "label": "E-MAIL", "value": "ariyaseela@gmail.com" },
+        "phone": { "label": "TELEFON", "value": "+41 792 303 699" },
+        "hours": { "label": "ÖFFNUNGSZEITEN", "value": "Täglich 7:00 – 18:30 Uhr" }
+      },
+      "appointment": "Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
-      "phone": "+41 792 303 699",
-      "email": "ariyaseela@gmail.com",
-      "hours": "Täglich 7:00 – 18:30 Uhr",
-      "appointmentNote": "Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.",
       "form": {
+        "title": "Schreiben Sie uns",
         "name": "Name",
         "email": "E-Mail",
         "subject": "Betreff",
@@ -119,12 +124,19 @@
           "general": "Allgemeine Anfrage",
           "programs": "Programm-Info",
           "donations": "Spenden",
+          "homeVisit": "Hausbesuch",
           "other": "Sonstiges"
         },
         "message": "Nachricht",
-        "submit": "Nachricht senden",
+        "send": "Nachricht senden",
+        "note": "Wir antworten in der Regel innerhalb von 2–3 Werktagen.",
         "success": "Vielen Dank! Ihre Nachricht wurde gesendet.",
-        "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail."
+        "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+      },
+      "location": {
+        "label": "UNSER STANDORT",
+        "title": "Besuchen Sie uns in Basel",
+        "desc": "Wir freuen uns auf Ihren Besuch. Bitte vereinbaren Sie vorab einen Termin."
       }
     },
     "footer": {
@@ -240,13 +252,18 @@
       }
     },
     "contact": {
-      "title": "Contact",
+      "label": "CONTACT",
+      "heading": "We Are Here for You",
+      "subheading": "Do you have questions about our programs or would you like to visit the Vihara? Write to us — we look forward to hearing from you.",
+      "rows": {
+        "email": { "label": "EMAIL", "value": "ariyaseela@gmail.com" },
+        "phone": { "label": "PHONE", "value": "+41 792 303 699" },
+        "hours": { "label": "HOURS", "value": "Daily 7:00 AM – 6:30 PM" }
+      },
+      "appointment": "Please book an appointment in advance before visiting the Vihara.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
-      "phone": "+41 792 303 699",
-      "email": "ariyaseela@gmail.com",
-      "hours": "Daily 7:00 AM – 6:30 PM",
-      "appointmentNote": "Please book an appointment in advance before visiting the Vihara.",
       "form": {
+        "title": "Get in Touch",
         "name": "Name",
         "email": "Email",
         "subject": "Subject",
@@ -254,12 +271,19 @@
           "general": "General Inquiry",
           "programs": "Program Info",
           "donations": "Donations",
+          "homeVisit": "Home Visit",
           "other": "Other"
         },
         "message": "Message",
-        "submit": "Send Message",
+        "send": "Send Message",
+        "note": "We typically respond within 2–3 business days.",
         "success": "Thank you! Your message has been sent.",
-        "error": "Something went wrong. Please try again or email us directly."
+        "error": "Something went wrong. Please try again."
+      },
+      "location": {
+        "label": "OUR LOCATION",
+        "title": "Visit Us in Basel",
+        "desc": "We look forward to your visit. Please arrange an appointment in advance."
       }
     },
     "footer": {
@@ -375,13 +399,18 @@
       }
     },
     "contact": {
-      "title": "සම්බන්ධ වන්න",
+      "label": "සම්බන්ධ වන්න",
+      "heading": "අපි ඔබ වෙනුවෙන් සිටිමු",
+      "subheading": "අපගේ වැඩසටහන් පිළිබඳ ප්‍රශ්න තිබේද, නැතහොත් විහාරයට පැමිණීමට කැමතිද? අප වෙත ලියන්න — ඔබෙන් අසන්නට අප බලාපොරොත්තුවෙන් සිටිමු.",
+      "rows": {
+        "email": { "label": "විද්‍යුත් තැපෑල", "value": "ariyaseela@gmail.com" },
+        "phone": { "label": "දුරකථනය", "value": "+41 792 303 699" },
+        "hours": { "label": "විවෘත වේලාවන්", "value": "සෑම දිනකම උදේ 7:00 – සවස 18:30" }
+      },
+      "appointment": "විහාරයට පැමිණීමට පෙර කලින් වේලාවක් වෙන්කරවා ගැනීම කාරුණිකව ඉල්ලා සිටිමු.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
-      "phone": "+41 792 303 699",
-      "email": "ariyaseela@gmail.com",
-      "hours": "සෑම දිනකම උදේ 7:00 – සවස 18:30",
-      "appointmentNote": "විහාරයට පැමිණීමට පෙර කලින් වේලාවක් වෙන්කරවා ගැනීම කාරුණිකව ඉල්ලා සිටිමු.",
       "form": {
+        "title": "අපට ලියන්න",
         "name": "නම",
         "email": "විද්‍යුත් තැපෑල",
         "subject": "විෂය",
@@ -389,12 +418,19 @@
           "general": "සාමාන්‍ය විමසීමක්",
           "programs": "වැඩසටහන් තොරතුරු",
           "donations": "පරිත්‍යාග",
+          "homeVisit": "නිවාස සංචාරය",
           "other": "වෙනත්"
         },
         "message": "පණිවිඩය",
-        "submit": "පණිවිඩය යවන්න",
+        "send": "පණිවිඩය යවන්න",
+        "note": "සාමාන්‍යයෙන් අප ව්‍යාපාරික දින 2–3 ක් තුළ පිළිතුරු දෙන්නෙමු.",
         "success": "ස්තුතියි! ඔබේ පණිවිඩය යවා ඇත.",
-        "error": "යම් දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න හෝ අපට කෙලින්ම විද්‍යුත් තැපෑලෙන් ලියන්න."
+        "error": "යැවීමේදී දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න."
+      },
+      "location": {
+        "label": "අපගේ ස්ථානය",
+        "title": "බාසල් හි අපව හමුවන්න",
+        "desc": "අපි ඔබේ පැමිණීම බලාපොරොත්තුවෙන් සිටිමු. කරුණාකර කලින් වේලාවක් වෙන් කරවා ගන්න."
       }
     },
     "footer": {

@@ -86,7 +86,7 @@
     if (status !== 'sent' && status !== 'error') return;
 
     var key = status === 'sent' ? 'contact.form.success' : 'contact.form.error';
-    statusEl.classList.add(status === 'sent' ? 'form__status--success' : 'form__status--error');
+    statusEl.classList.add(status === 'sent' ? 'form-status--success' : 'form-status--error');
 
     function applyMessage() {
       statusEl.textContent = window.i18n.t(key);
