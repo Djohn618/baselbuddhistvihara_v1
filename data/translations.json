@@ -81,7 +81,9 @@
       "viewAll": "Alle Videos ansehen"
     },
     "gallery": {
-      "comingSoon": "Foto folgt bald",
+      "label": "GALERIE",
+      "title": "Einblicke in unseren Vihara",
+      "subtitle": "Entdecken Sie unsere Räumlichkeiten, Zeremonien und die Gemeinschaft des Basel Buddhist Vihara.",
       "more": "Mehr Fotos"
     },
     "donations": {
@@ -228,7 +230,9 @@
       "viewAll": "View All Videos"
     },
     "gallery": {
-      "comingSoon": "Photo coming soon",
+      "label": "GALLERY",
+      "title": "A Look Inside Our Vihara",
+      "subtitle": "Discover our premises, ceremonies and the community of the Basel Buddhist Vihara.",
       "more": "More Photos"
     },
     "donations": {
@@ -375,7 +379,9 @@
       "viewAll": "සියලුම වීඩියෝ නරඹන්න"
     },
     "gallery": {
-      "comingSoon": "ඡායාරූපය ළඟදීම",
+      "label": "ගැලරිය",
+      "title": "අපේ විහාරයේ දර්ශන",
+      "subtitle": "බාසල් බෞද්ධ විහාරයේ අපගේ පරිශ්‍රය, පිංකම් සහ ප්‍රජාව ගවේෂණය කරන්න.",
       "more": "තවත් ඡායාරූප"
     },
     "donations": {

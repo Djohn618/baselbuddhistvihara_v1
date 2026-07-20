@@ -7,8 +7,8 @@
 
   var items = Array.prototype.slice.call(document.querySelectorAll('.gallery__item'));
   var lightbox = document.getElementById('lightbox');
-  var lightboxPlaceholder = document.getElementById('lightbox-placeholder');
-  var lightboxLabel = document.getElementById('lightbox-label');
+  var content = document.getElementById('lightbox-content');
+  var counter = document.getElementById('lightbox-counter');
   var closeBtn = document.getElementById('lightbox-close');
   var prevBtn = document.getElementById('lightbox-prev');
   var nextBtn = document.getElementById('lightbox-next');
@@ -18,11 +18,11 @@
   function render(index) {
     currentIndex = (index + items.length) % items.length;
     var item = items[currentIndex];
-    var placeholder = item.querySelector('.gallery__placeholder');
-    var variant = placeholder.className.match(/gallery__placeholder--\d+/)[0];
 
-    lightboxPlaceholder.className = 'lightbox__placeholder ' + variant;
-    lightboxLabel.textContent = item.querySelector('.gallery__label').textContent;
+    content.style.aspectRatio = item.getAttribute('data-aspect') || '4 / 3';
+    content.classList.toggle('lightbox__content--odd', currentIndex % 2 === 0);
+    content.classList.toggle('lightbox__content--even', currentIndex % 2 !== 0);
+    counter.textContent = (currentIndex + 1) + ' / ' + items.length;
   }
 
   function open(index) {
