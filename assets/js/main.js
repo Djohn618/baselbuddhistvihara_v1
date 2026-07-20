@@ -129,13 +129,17 @@
     var prevBtn = document.getElementById('programs-prev');
     var nextBtn = document.getElementById('programs-next');
     var dotsContainer = document.getElementById('programs-dots');
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab-btn[data-tab]'));
     if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
-    var cards = Array.prototype.slice.call(track.children);
-    var dots = Array.prototype.slice.call(dotsContainer.children);
-    if (!cards.length) return;
+    var CARD_FADE_MS = 300;
+    var allCards = Array.prototype.slice.call(track.children);
+    if (!allCards.length) return;
 
+    var visibleCards = allCards;
+    var dots = [];
     var currentIndex = 0;
+    var filterTimer = null;
 
     function getPerView() {
       var w = window.innerWidth;
@@ -145,14 +149,28 @@
     }
 
     function getMaxIndex() {
-      return Math.max(0, cards.length - getPerView());
+      return Math.max(0, visibleCards.length - getPerView());
     }
 
     function getStep() {
+      if (!visibleCards.length) return 0;
       var gapValue = window.getComputedStyle(track).columnGap;
       if (!gapValue || gapValue === 'normal') gapValue = window.getComputedStyle(track).gap;
       var gap = parseFloat(gapValue) || 0;
-      return cards[0].getBoundingClientRect().width + gap;
+      return visibleCards[0].getBoundingClientRect().width + gap;
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      dots = visibleCards.map(function (card, i) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'programs__dot';
+        dot.setAttribute('aria-label', 'Karte ' + (i + 1));
+        dot.addEventListener('click', function () { goTo(i); });
+        dotsContainer.appendChild(dot);
+        return dot;
+      });
     }
 
     function render() {
@@ -174,16 +192,75 @@
       render();
     }
 
+    function applyFilter(type, skipAnimation) {
+      window.clearTimeout(filterTimer);
+
+      allCards.forEach(function (card) {
+        var matches = card.getAttribute('data-type') === type;
+        if (matches) {
+          card.classList.remove('program-card--removed');
+          if (!skipAnimation) void card.offsetWidth; // force reflow so the fade-in transition runs
+          card.classList.remove('program-card--hidden');
+        } else {
+          card.classList.add('program-card--hidden');
+          if (skipAnimation) card.classList.add('program-card--removed');
+        }
+      });
+
+      function finish() {
+        visibleCards = allCards.filter(function (card) {
+          return card.getAttribute('data-type') === type;
+        });
+        currentIndex = 0;
+        buildDots();
+        track.style.transform = 'translateX(0px)';
+        render();
+      }
+
+      if (skipAnimation) {
+        finish();
+      } else {
+        filterTimer = window.setTimeout(function () {
+          allCards.forEach(function (card) {
+            if (card.classList.contains('program-card--hidden')) {
+              card.classList.add('program-card--removed');
+            }
+          });
+          finish();
+        }, CARD_FADE_MS);
+      }
+    }
+
+    function initTabs() {
+      if (!tabs.length) return;
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          if (tab.classList.contains('tab-active')) return;
+          tabs.forEach(function (t) {
+            t.classList.remove('tab-active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('tab-active');
+          tab.setAttribute('aria-selected', 'true');
+          applyFilter(tab.getAttribute('data-tab'));
+        });
+      });
+    }
+
     prevBtn.addEventListener('click', function () { goTo(currentIndex - 1); });
     nextBtn.addEventListener('click', function () { goTo(currentIndex + 1); });
 
-    dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () { goTo(i); });
-    });
-
     window.addEventListener('resize', render);
 
-    render();
+    initTabs();
+
+    var initialTab = tabs.length ? tabs[0].getAttribute('data-tab') : null;
+    if (initialTab) {
+      applyFilter(initialTab, true);
+    } else {
+      buildDots();
+      render();
+    }
   }
 
   function init() {

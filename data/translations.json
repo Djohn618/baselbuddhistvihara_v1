@@ -59,6 +59,10 @@
     "programs": {
       "label": "Unsere Programme",
       "title": "Programme & Veranstaltungen",
+      "tab": {
+        "programmes": "Programme",
+        "events": "Veranstaltungen"
+      },
       "more": "Mehr erfahren",
       "cards": {
         "card1": { "badge": "Jeden 3. Freitag", "title": "Meditation auf Deutsch", "time": "18:00 – 20:00 Uhr" },
@@ -208,6 +212,10 @@
     "programs": {
       "label": "Our Programs",
       "title": "Programs & Events",
+      "tab": {
+        "programmes": "Programs",
+        "events": "Events"
+      },
       "more": "Learn more",
       "cards": {
         "card1": { "badge": "Every 3rd Friday", "title": "Meditation in German", "time": "6:00 – 8:00 PM" },
@@ -357,6 +365,10 @@
     "programs": {
       "label": "අපේ වැඩසටහන්",
       "title": "වැඩසටහන් සහ උත්සව",
+      "tab": {
+        "programmes": "වැඩසටහන්",
+        "events": "උත්සව"
+      },
       "more": "තව දැනගන්න",
       "cards": {
         "card1": { "badge": "සෑම 3වන සිකුරාදා", "title": "ජර්මන් භාෂාවෙන් භාවනාව", "time": "සවස 6.00 – 8.00" },

@@ -179,6 +179,11 @@
           <div class="programs__underline" aria-hidden="true"></div>
         </div>
 
+        <div class="programs__tabs" role="tablist">
+          <button type="button" class="tab-btn tab-active" data-tab="programme" role="tab" aria-selected="true" data-i18n="programs.tab.programmes">Programme</button>
+          <button type="button" class="tab-btn" data-tab="event" role="tab" aria-selected="false" data-i18n="programs.tab.events">Veranstaltungen</button>
+        </div>
+
         <div class="programs__carousel">
           <button type="button" class="carousel-prev" id="programs-prev" aria-label="Zurück">
             <i data-lucide="chevron-left"></i>
@@ -186,7 +191,7 @@
 
           <div class="programs__viewport">
             <div class="programs__track" id="programs-track">
-              <article class="program-card">
+              <article class="program-card" data-type="programme">
                 <div class="program-card__image" aria-hidden="true">
                   <!-- replace with real photo when available -->
                   <span class="program-card__badge" data-i18n="programs.cards.card1.badge">Jeden 3. Freitag</span>
@@ -200,7 +205,7 @@
                 </div>
               </article>
 
-              <article class="program-card">
+              <article class="program-card" data-type="programme">
                 <div class="program-card__image" aria-hidden="true">
                   <!-- replace with real photo when available -->
                   <span class="program-card__badge" data-i18n="programs.cards.card2.badge">Jeden 3. Samstag</span>
@@ -214,7 +219,7 @@
                 </div>
               </article>
 
-              <article class="program-card">
+              <article class="program-card" data-type="programme">
                 <div class="program-card__image" aria-hidden="true">
                   <!-- replace with real photo when available -->
                   <span class="program-card__badge" data-i18n="programs.cards.card3.badge">Jeden 3. Sonntag</span>
@@ -228,7 +233,7 @@
                 </div>
               </article>
 
-              <article class="program-card">
+              <article class="program-card" data-type="event">
                 <div class="program-card__image" aria-hidden="true">
                   <!-- replace with real photo when available -->
                   <span class="program-card__badge" data-i18n="programs.cards.card4.badge">Nach Vereinbarung</span>
@@ -242,7 +247,7 @@
                 </div>
               </article>
 
-              <article class="program-card">
+              <article class="program-card" data-type="event">
                 <div class="program-card__image" aria-hidden="true">
                   <!-- replace with real photo when available -->
                   <span class="program-card__badge" data-i18n="programs.cards.card5.badge">Jährlich</span>
@@ -256,7 +261,7 @@
                 </div>
               </article>
 
-              <article class="program-card">
+              <article class="program-card" data-type="event">
                 <div class="program-card__image" aria-hidden="true">
                   <!-- replace with real photo when available -->
                   <span class="program-card__badge" data-i18n="programs.cards.card6.badge">Nach Vereinbarung</span>
@@ -281,9 +286,6 @@
           <button type="button" class="programs__dot" aria-label="Karte 1"></button>
           <button type="button" class="programs__dot" aria-label="Karte 2"></button>
           <button type="button" class="programs__dot" aria-label="Karte 3"></button>
-          <button type="button" class="programs__dot" aria-label="Karte 4"></button>
-          <button type="button" class="programs__dot" aria-label="Karte 5"></button>
-          <button type="button" class="programs__dot" aria-label="Karte 6"></button>
         </div>
       </div>
     </section>
