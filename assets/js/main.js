@@ -124,6 +124,43 @@
     fadeEls.forEach(function (el) { observer.observe(el); });
   }
 
+  function initHeroSlideshow() {
+    var slides = Array.prototype.slice.call(document.querySelectorAll('.hero__slide'));
+    var dots = Array.prototype.slice.call(document.querySelectorAll('.hero__dot'));
+    if (!slides.length) return;
+
+    var SLIDE_INTERVAL_MS = 5000;
+    var currentIndex = 0;
+    var timer = null;
+
+    function show(index) {
+      currentIndex = (index + slides.length) % slides.length;
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle('is-active', i === currentIndex);
+      });
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('is-active', i === currentIndex);
+      });
+    }
+
+    function startAutoplay() {
+      window.clearInterval(timer);
+      timer = window.setInterval(function () {
+        show(currentIndex + 1);
+      }, SLIDE_INTERVAL_MS);
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        show(i);
+        startAutoplay();
+      });
+    });
+
+    show(0);
+    startAutoplay();
+  }
+
   function initProgramsCarousel() {
     var track = document.getElementById('programs-track');
     var prevBtn = document.getElementById('programs-prev');
@@ -271,6 +308,7 @@
     initEscapeClose();
     initScrollSpy();
     initFadeIn();
+    initHeroSlideshow();
     initProgramsCarousel();
     initContactFormStatus();
   }

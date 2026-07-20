@@ -47,24 +47,57 @@
 
   <main>
     <section id="home" class="hero">
-      <div class="hero__left">
-        <div class="hero__left-content">
-          <h1 class="hero__heading">
-            <span class="hero__heading-line1" data-i18n="hero.heading1">Basel Buddhist Vihara</span>
-            <span class="hero__heading-line2" data-i18n="hero.heading2">Ein Ort des Friedens</span>
-          </h1>
-          <p class="hero__subtitle" data-i18n="hero.founded">Gegründet am 1. Juli 2024 · Basel, Schweiz</p>
+      <div class="hero__slideshow">
+        <div class="hero__slide is-active" data-slide="0" aria-hidden="true">
+          <!-- Slide 1: replace with <img src="assets/images/hero/hero-1.jpg" alt="Basel Buddhist Vihara"> -->
+        </div>
+        <div class="hero__slide" data-slide="1" aria-hidden="true">
+          <!-- Slide 2: replace with <img src="assets/images/hero/hero-2.jpg" alt="Tempel Basel"> -->
+        </div>
+        <div class="hero__slide" data-slide="2" aria-hidden="true">
+          <!-- Slide 3: replace with <img src="assets/images/hero/hero-3.jpg" alt="Meditation Basel"> -->
+        </div>
 
-          <div class="hero__actions">
-            <a href="#about" class="btn btn--primary btn--lg" data-i18n="hero.cta">Mehr erfahren</a>
-            <a href="#contact" class="btn btn--outline btn--lg" data-i18n="nav.contact">Kontakt</a>
-          </div>
+        <div class="hero__dots" id="hero-dots">
+          <button type="button" class="hero__dot is-active" aria-label="Folie 1"></button>
+          <button type="button" class="hero__dot" aria-label="Folie 2"></button>
+          <button type="button" class="hero__dot" aria-label="Folie 3"></button>
         </div>
       </div>
 
-      <div class="hero__right">
-        <!-- Replace with real temple photo -->
-        <div class="hero__image" aria-hidden="true"></div>
+      <div class="hero__content">
+        <div class="hero__mini-nav">
+          <a href="#home" class="hero__mini-logo">
+            <img src="assets/images/logo/V2.png" alt="SKBZ Logo" height="36">
+          </a>
+
+          <div class="hero__mini-actions">
+            <a href="#contact" class="hero__donate-btn" data-i18n="nav.donate">Spenden</a>
+
+            <div class="hero-lang-switcher" aria-label="Sprache wählen">
+              <button type="button" class="hero-lang-switcher__btn" data-lang="de">DE</button>
+              <span class="hero-lang-switcher__divider" aria-hidden="true">|</span>
+              <button type="button" class="hero-lang-switcher__btn" data-lang="en">EN</button>
+              <span class="hero-lang-switcher__divider" aria-hidden="true">|</span>
+              <button type="button" class="hero-lang-switcher__btn" data-lang="si">සිං</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__main">
+          <h1 class="hero__title">
+            <span>Basel Buddhist</span>
+            <span>Vihara</span>
+          </h1>
+
+          <p class="hero__description" data-i18n-html="hero.description">Ein spirituelles Zentrum in Basel, das <a href="#programs" class="hero__inline-link">Meditation und Dhamma-Programme</a> anbietet und die zeitlosen Lehren des Buddha allen Menschen zugänglich macht — gegründet vom Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero und geleitet vom <a href="#about" class="hero__inline-link">Ehrw. Udumaththe Ariyaseela Thero</a>.</p>
+
+          <a href="#about" class="hero__cta" data-i18n="hero.cta">Mehr erfahren</a>
+        </div>
+
+        <div class="hero__bottom">
+          <p class="hero__founded" data-i18n="hero.founded">Gegründet am 1. Juli 2024 · Basel, Schweiz</p>
+        </div>
       </div>
     </section>
 

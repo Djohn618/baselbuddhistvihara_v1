@@ -63,6 +63,13 @@
       el.textContent = translate(key, lang);
     });
 
+    // data-i18n-html: same lookup, but renders the translation as markup —
+    // used where a translated sentence contains inline links (e.g. hero.description).
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-html');
+      el.innerHTML = translate(key, lang);
+    });
+
     document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
       var pairs = el.getAttribute('data-i18n-attr').split('|');
       pairs.forEach(function (pair) {

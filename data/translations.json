@@ -5,11 +5,13 @@
       "about": "Über Uns",
       "programs": "Programme & Veranstaltungen",
       "gallery": "Galerie",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "donate": "Spenden"
     },
     "hero": {
       "heading1": "Basel Buddhist Vihara",
       "heading2": "Ein Ort des Friedens",
+      "description": "Ein spirituelles Zentrum in Basel, das <a href=\"#programs\" class=\"hero__inline-link\">Meditation und Dhamma-Programme</a> anbietet und die zeitlosen Lehren des Buddha allen Menschen zugänglich macht — gegründet vom Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero und geleitet vom <a href=\"#about\" class=\"hero__inline-link\">Ehrw. Udumaththe Ariyaseela Thero</a>.",
       "founded": "Gegründet am 1. Juli 2024 · Basel, Schweiz",
       "cta": "Mehr erfahren"
     },
@@ -157,11 +159,13 @@
       "about": "About Us",
       "programs": "Programs & Events",
       "gallery": "Gallery",
-      "contact": "Contact"
+      "contact": "Contact",
+      "donate": "Donate"
     },
     "hero": {
       "heading1": "Basel Buddhist Vihara",
       "heading2": "A Place of Peace",
+      "description": "A spiritual centre in Basel offering <a href=\"#programs\" class=\"hero__inline-link\">meditation and Dhamma programmes</a> and bringing the timeless teachings of the Buddha to all people — founded by Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero and led by <a href=\"#about\" class=\"hero__inline-link\">Ven. Udumaththe Ariyaseela Thero</a>.",
       "founded": "Founded on July 1, 2024 · Basel, Switzerland",
       "cta": "Learn More"
     },
@@ -309,11 +313,13 @@
       "about": "අප ගැන",
       "programs": "වැඩසටහන් සහ උත්සව",
       "gallery": "ගැලරිය",
-      "contact": "සම්බන්ධ වන්න"
+      "contact": "සම්බන්ධ වන්න",
+      "donate": "පරිත්‍යාග"
     },
     "hero": {
       "heading1": "Basel Buddhist Vihara",
       "heading2": "සාමයේ ස්ථානයක්",
+      "description": "බාසල්හි අධ්‍යාත්මික මධ්‍යස්ථානයක් වන අප භාවනා සහ ධර්ම වැඩසටහන් ලබා දෙමින් බුදුන් වහන්සේගේ සදාකාලික ඉගැන්වීම් සැමට ලබා දෙයි — අතිපූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක හිමි විසින් ආරම්භ කරන ලද අතර පූජ්‍ය උඩුමත්තේ අරියසීල හිමි විසින් මෙහෙයවනු ලැබේ.",
       "founded": "2024 ජූලි 1 වන දින ආරම්භ කරන ලදී · බාසල්, ස්විට්සර්ලන්තය",
       "cta": "තව දැනගන්න"
     },
