@@ -2,8 +2,8 @@
   "de": {
     "nav": {
       "home": "Home",
-      "about": "Über Uns",
-      "programs": "Programme & Veranstaltungen",
+      "about": "Über",
+      "programs": "Events",
       "gallery": "Galerie",
       "contact": "Kontakt",
       "donate": "Spenden"
@@ -156,8 +156,8 @@
   "en": {
     "nav": {
       "home": "Home",
-      "about": "About Us",
-      "programs": "Programs & Events",
+      "about": "About",
+      "programs": "Events",
       "gallery": "Gallery",
       "contact": "Contact",
       "donate": "Donate"
@@ -310,10 +310,10 @@
   "si": {
     "nav": {
       "home": "මුල් පිටුව",
-      "about": "අප ගැන",
-      "programs": "වැඩසටහන් සහ උත්සව",
+      "about": "අප",
+      "programs": "උත්සව",
       "gallery": "ගැලරිය",
-      "contact": "සම්බන්ධ වන්න",
+      "contact": "සම්බන්ධ",
       "donate": "පරිත්‍යාග"
     },
     "hero": {

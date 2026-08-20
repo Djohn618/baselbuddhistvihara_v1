@@ -569,17 +569,18 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
-   8. Navigation — 60/40 split mirroring the hero columns.
+   8. Navigation — 72/28 split mirroring the hero columns.
 
    Mobile-first: the base rules below are the compact single bar (used
-   from phones up through laptop-width screens). Donate + language
+   from phones up through most desktop widths). Donate + language
    switcher + 5 links (incl. "Programme & Veranstaltungen") cannot fit
-   legibly inside a 40%-wide strip until the viewport is genuinely
-   wide — at 768px a 40% zone is ~307px, nowhere near enough even at
-   an unreadably small font. So the two-tone 60/40 zone split (and the
-   nav links themselves) only switch on at 1280px ("Desktop" tier);
-   below that, the unified compact bar + hamburger overlay carries
-   navigation, same as it already does on phones.
+   legibly inside a 28%-wide strip without shrinking below the fonts
+   already set here — at 28%, that strip only clears ~630px (where
+   the content's natural width stops overflowing it) at a 1700px+
+   viewport. So the two-tone 72/28 zone split (and the nav links
+   themselves) only switch on at 1700px; below that, the unified
+   compact bar + hamburger overlay carries navigation, same as it
+   already does on phones.
    -------------------------------------------------------------------------- */
 
 .site-header {
@@ -728,7 +729,7 @@ blockquote {
   overflow: hidden;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1700px) {
   .nav__container {
     align-items: stretch;
     padding-inline: 0;
@@ -747,11 +748,13 @@ blockquote {
     transition: background-color 0.3s ease;
   }
 
-  /* Left zone — 60%, sits above the image slideshow */
+  /* Left zone — 72%, sits above the image slideshow.
+     Hard edge against the right zone: no box-shadow/gradient here. */
   .nav__zone--left {
-    width: 60%;
+    width: 72%;
     justify-content: space-between;
     padding-inline: 1.5rem;
+    box-shadow: none;
   }
 
   .site-header--scrolled .nav__zone--left {
@@ -771,17 +774,16 @@ blockquote {
     color: #F5ECD7;
   }
 
-  /* Right zone — 40%, sits above the content area.
+  /* Right zone — 28%, sits above the content area.
      Donate + language switcher + divider + 5 links (one of them
-     "Programme & Veranstaltungen") is a lot of content for a 40%-wide
-     strip — font/gaps below are pulled in from the spec's literal
-     values (0.82rem / 1.2rem) so everything stays on one line without
-     overflowing at 1280px, then widen back out at 1600px+. */
+     "Programme & Veranstaltungen") is a lot of content for a 28%-wide
+     strip, so gap/padding here are trimmed tight to fit without
+     overflowing right at the 1700px breakpoint. */
   .nav__zone--right {
-    width: 40%;
+    width: 28%;
     justify-content: flex-start;
-    gap: 0.4rem;
-    padding-inline: 0.55rem;
+    gap: 0.15rem;
+    padding-inline: 0.3rem;
   }
 
   .site-header--scrolled .nav__zone--right {
@@ -796,7 +798,7 @@ blockquote {
   }
 
   .nav__donate-btn {
-    padding: 0.4rem 0.55rem;
+    padding: 0.4rem 0.3rem;
     font-size: 0.63rem;
   }
 
@@ -820,14 +822,14 @@ blockquote {
     width: 1px;
     height: 20px;
     background-color: #E8E0D5;
-    margin-inline: 0.15rem;
+    margin-inline: 0.05rem;
     flex-shrink: 0;
   }
 
   .nav__links {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.15rem;
   }
 
   .nav__link {
@@ -989,6 +991,7 @@ blockquote {
   height: 50vh;
   overflow: hidden;
   flex-shrink: 0;
+  box-shadow: none;
 }
 
 .hero__slide {
@@ -1128,12 +1131,12 @@ blockquote {
   }
 
   .hero__slideshow {
-    width: 60%;
+    width: 72%;
     height: 100%;
   }
 
   .hero__content {
-    width: 40%;
+    width: 28%;
     height: 100%;
     padding-inline: 3rem;
   }
