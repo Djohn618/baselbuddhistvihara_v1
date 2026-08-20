@@ -11,39 +11,73 @@
 <body>
 
   <header class="site-header" id="site-header">
-    <div class="container nav__container">
-      <a href="#home" class="nav__brand">
-        <img src="assets/images/logo/V2.png" alt="Basel Buddhist Vihara Logo" class="nav__logo">
-        <span class="nav__brand-text">Basel Buddhist Vihara</span>
-      </a>
+    <div class="nav__container">
+      <div class="nav__zone nav__zone--left">
+        <a href="#home" class="nav__brand">
+          <img src="assets/images/logo/V2.png" alt="Basel Buddhist Vihara Logo" class="nav__logo">
+          <span class="nav__brand-text">Basel Buddhist Vihara</span>
+        </a>
 
-      <nav class="nav__links" id="nav-links" aria-label="Hauptnavigation">
-        <ul class="nav__list">
-          <li><a href="#home" class="nav__link" data-i18n="nav.home">Home</a></li>
-          <li><a href="#about" class="nav__link" data-i18n="nav.about">Über Uns</a></li>
-          <li><a href="#programs" class="nav__link" data-i18n="nav.programs">Programme & Veranstaltungen</a></li>
-          <li><a href="#gallery" class="nav__link" data-i18n="nav.gallery">Galerie</a></li>
-          <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Kontakt</a></li>
-        </ul>
-      </nav>
+        <button type="button" class="nav__hamburger" id="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
 
-      <div class="nav__actions">
+      <div class="nav__zone nav__zone--right">
+        <a href="#contact" class="nav__donate-btn" data-i18n="nav.donate">Spenden</a>
+
         <div class="lang-switcher" aria-label="Sprache wählen">
           <button type="button" class="lang-switcher__btn" data-lang="de">DE</button>
           <span class="lang-switcher__divider" aria-hidden="true">|</span>
           <button type="button" class="lang-switcher__btn" data-lang="en">EN</button>
-          <span class="lang-switcher__divider" aria-hidden="true">|</span>
-          <button type="button" class="lang-switcher__btn" data-lang="si">සිං</button>
+          <span class="lang-switcher__divider lang-switcher__divider--si" aria-hidden="true">|</span>
+          <button type="button" class="lang-switcher__btn lang-switcher__btn--si" data-lang="si">සිං</button>
         </div>
 
-        <button type="button" class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menü öffnen">
-          <span class="nav__toggle-bar"></span>
-          <span class="nav__toggle-bar"></span>
-          <span class="nav__toggle-bar"></span>
-        </button>
+        <span class="nav__divider" aria-hidden="true"></span>
+
+        <nav class="nav__links" id="nav-links" aria-label="Hauptnavigation">
+          <a href="#contact" class="nav__link" data-i18n="nav.contact">Kontakt</a>
+          <a href="#gallery" class="nav__link" data-i18n="nav.gallery">Galerie</a>
+          <a href="#programs" class="nav__link" data-i18n="nav.programs">Programme & Veranstaltungen</a>
+          <a href="#about" class="nav__link" data-i18n="nav.about">Über Uns</a>
+          <a href="#home" class="nav__link" data-i18n="nav.home">Home</a>
+        </nav>
       </div>
     </div>
   </header>
+
+  <div class="nav-overlay" id="nav-overlay">
+    <div class="nav-overlay__top">
+      <a href="#home" class="nav-overlay__brand">
+        <img src="assets/images/logo/V2.png" alt="Basel Buddhist Vihara Logo" class="nav-overlay__logo">
+        <span class="nav-overlay__brand-text">Basel Buddhist Vihara</span>
+      </a>
+      <button type="button" class="nav-overlay__close" id="nav-overlay-close" aria-label="Menü schliessen">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <nav class="nav-overlay__links" id="nav-overlay-links" aria-label="Hauptnavigation Vollbild">
+      <a href="#home" class="nav-overlay__link" data-i18n="nav.home">Home</a>
+      <a href="#about" class="nav-overlay__link" data-i18n="nav.about">Über Uns</a>
+      <a href="#programs" class="nav-overlay__link" data-i18n="nav.programs">Programme & Veranstaltungen</a>
+      <a href="#gallery" class="nav-overlay__link" data-i18n="nav.gallery">Galerie</a>
+      <a href="#contact" class="nav-overlay__link" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+
+    <div class="nav-overlay__bottom">
+      <div class="lang-switcher" aria-label="Sprache wählen">
+        <button type="button" class="lang-switcher__btn" data-lang="de">DE</button>
+        <span class="lang-switcher__divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-switcher__btn" data-lang="en">EN</button>
+        <span class="lang-switcher__divider" aria-hidden="true">|</span>
+        <button type="button" class="lang-switcher__btn" data-lang="si">සිං</button>
+      </div>
+
+      <a href="#contact" class="nav__donate-btn" data-i18n="nav.donate">Spenden</a>
+    </div>
+  </div>
 
   <main>
     <section id="home" class="hero">
@@ -66,24 +100,6 @@
       </div>
 
       <div class="hero__content">
-        <div class="hero__mini-nav">
-          <a href="#home" class="hero__mini-logo">
-            <img src="assets/images/logo/V2.png" alt="SKBZ Logo" height="36">
-          </a>
-
-          <div class="hero__mini-actions">
-            <a href="#contact" class="hero__donate-btn" data-i18n="nav.donate">Spenden</a>
-
-            <div class="hero-lang-switcher" aria-label="Sprache wählen">
-              <button type="button" class="hero-lang-switcher__btn" data-lang="de">DE</button>
-              <span class="hero-lang-switcher__divider" aria-hidden="true">|</span>
-              <button type="button" class="hero-lang-switcher__btn" data-lang="en">EN</button>
-              <span class="hero-lang-switcher__divider" aria-hidden="true">|</span>
-              <button type="button" class="hero-lang-switcher__btn" data-lang="si">සිං</button>
-            </div>
-          </div>
-        </div>
-
         <div class="hero__main">
           <h1 class="hero__title">
             <span>Basel Buddhist</span>

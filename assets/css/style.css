@@ -70,8 +70,8 @@
   --container-padding: var(--space-sm);
   --section-padding-y: var(--space-2xl);
   --grid-gap: var(--space-lg);
-  --nav-height: 76px;
-  --z-header: 100;
+  --nav-height: 64px;
+  --z-header: 1000;
 
   /* Radius & shadow */
   --radius-sm: 4px;
@@ -569,196 +569,406 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
-   8. Navigation
+   8. Navigation — 60/40 split mirroring the hero columns.
+
+   Mobile-first: the base rules below are the compact single bar (used
+   from phones up through laptop-width screens). Donate + language
+   switcher + 5 links (incl. "Programme & Veranstaltungen") cannot fit
+   legibly inside a 40%-wide strip until the viewport is genuinely
+   wide — at 768px a 40% zone is ~307px, nowhere near enough even at
+   an unreadably small font. So the two-tone 60/40 zone split (and the
+   nav links themselves) only switch on at 1280px ("Desktop" tier);
+   below that, the unified compact bar + hamburger overlay carries
+   navigation, same as it already does on phones.
    -------------------------------------------------------------------------- */
 
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   z-index: var(--z-header);
-  background-color: rgba(26, 26, 26, 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: none;
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
-}
-
-.site-header--scrolled {
-  background-color: var(--color-bg-dark);
-  box-shadow: var(--shadow-sm);
+  height: var(--nav-height);
+  background-color: transparent;
 }
 
 .nav__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-  height: var(--nav-height);
+  height: 100%;
+  width: 100%;
+  padding-inline: 1.25rem;
+  background-color: #1A1A1A;
+  transition: background-color 0.3s ease;
+}
+
+.site-header--scrolled .nav__container {
+  background-color: var(--color-white);
+}
+
+/* Below 1280px the zone wrappers are unwrapped via `display: contents`
+   so their children become direct flex items of .nav__container and
+   can be regrouped with `order` — no duplicate markup needed. */
+.nav__zone--left,
+.nav__zone--right {
+  display: contents;
 }
 
 .nav__brand {
   display: flex;
   align-items: center;
   gap: var(--space-2xs);
-  flex-shrink: 0;
+  text-decoration: none;
+  order: 1;
 }
 
 .nav__logo {
-  height: 40px;
+  height: 36px;
   width: auto;
 }
 
 .nav__brand-text {
   display: none;
-  font-family: var(--font-heading);
-  font-size: var(--fs-md);
-  font-weight: var(--fw-semibold);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
   color: #F5ECD7;
   white-space: nowrap;
 }
 
-/* Nav links — full-screen overlay on mobile, inline row from --bp-lg up */
-.nav__links {
-  position: fixed;
-  inset: var(--nav-height) 0 0 0;
+.nav__hamburger {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-bg-dark);
-  opacity: 0;
-  transform: translateY(-8px);
-  pointer-events: none;
-  transition: opacity var(--transition-base), transform var(--transition-base);
-}
-
-.nav__links.is-open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.nav__links .nav__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-lg);
-  text-align: center;
-}
-
-.nav__links .nav__link {
-  font-family: var(--font-heading);
-  font-size: var(--fs-xl);
-}
-
-.nav__link {
-  position: relative;
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
   color: #F5ECD7;
-  padding-block: var(--space-2xs);
-  transition: color var(--transition-fast);
+  order: 4;
 }
 
-.nav__link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  height: 2px;
-  background-color: var(--color-accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-base);
+.nav__hamburger .lucide {
+  stroke: currentColor;
 }
 
-.nav__link:hover,
-.nav__link:focus-visible {
-  color: var(--color-accent);
-}
-
-.nav__link:hover::after,
-.nav__link--active::after {
-  transform: scaleX(1);
-}
-
-.nav__link--active {
-  color: var(--color-accent);
-}
-
-.nav__actions {
-  display: flex;
+.nav__donate-btn {
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  order: 3;
+}
+
+.nav__donate-btn:hover {
+  background-color: var(--color-secondary);
 }
 
 .lang-switcher {
   display: flex;
   align-items: center;
   gap: var(--space-3xs);
-  font-size: var(--fs-sm);
+  font-size: 0.8rem;
+  order: 2;
+  margin-left: auto;
 }
 
 .lang-switcher__btn {
   font-family: var(--font-body);
   font-weight: var(--fw-medium);
   color: #F5ECD7;
+  background: transparent;
+  border: none;
   padding: var(--space-3xs);
-  border-radius: var(--radius-sm);
-  transition: color var(--transition-fast);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.site-header--scrolled .lang-switcher__btn {
+  color: #2C2C2C;
 }
 
 .lang-switcher__btn:hover {
-  color: var(--color-accent);
+  color: var(--color-secondary);
 }
 
 .lang-switcher__btn.is-active {
-  color: var(--color-accent);
+  color: var(--color-secondary);
   font-weight: var(--fw-semibold);
 }
 
 .lang-switcher__divider {
-  color: rgba(245, 236, 215, 0.4);
+  color: #E8E0D5;
 }
 
-.nav__toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 32px;
-  height: 32px;
-  z-index: 101;
+.site-header--scrolled .nav__brand-text,
+.site-header--scrolled .nav__hamburger {
+  color: #2C2C2C;
 }
 
-.nav__toggle-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background-color: #F5ECD7;
-  border-radius: var(--radius-full);
-  transition: transform var(--transition-base), opacity var(--transition-base);
+.nav__container .lang-switcher__btn--si,
+.nav__container .lang-switcher__divider--si {
+  display: none;
 }
 
-.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.nav__divider,
+.nav__links {
+  display: none;
 }
 
 .no-scroll {
   overflow: hidden;
+}
+
+@media (min-width: 1280px) {
+  .nav__container {
+    align-items: stretch;
+    padding-inline: 0;
+    background-color: transparent;
+  }
+
+  .site-header--scrolled .nav__container {
+    background-color: transparent;
+  }
+
+  .nav__zone--left,
+  .nav__zone--right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Left zone — 60%, sits above the image slideshow */
+  .nav__zone--left {
+    width: 60%;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+  }
+
+  .site-header--scrolled .nav__zone--left {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .nav__brand-text {
+    color: #F5ECD7;
+  }
+
+  .nav__hamburger {
+    color: #F5ECD7;
+  }
+
+  .site-header--scrolled .nav__brand-text,
+  .site-header--scrolled .nav__hamburger {
+    color: #F5ECD7;
+  }
+
+  /* Right zone — 40%, sits above the content area.
+     Donate + language switcher + divider + 5 links (one of them
+     "Programme & Veranstaltungen") is a lot of content for a 40%-wide
+     strip — font/gaps below are pulled in from the spec's literal
+     values (0.82rem / 1.2rem) so everything stays on one line without
+     overflowing at 1280px, then widen back out at 1600px+. */
+  .nav__zone--right {
+    width: 40%;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    padding-inline: 0.55rem;
+  }
+
+  .site-header--scrolled .nav__zone--right {
+    background-color: rgba(250, 247, 242, 0.95);
+  }
+
+  .nav__brand,
+  .nav__hamburger,
+  .nav__donate-btn,
+  .lang-switcher {
+    order: initial;
+  }
+
+  .nav__donate-btn {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.63rem;
+  }
+
+  .lang-switcher {
+    margin-left: 0;
+    font-size: 0.63rem;
+  }
+
+  .lang-switcher__btn,
+  .site-header--scrolled .lang-switcher__btn {
+    color: #2C2C2C;
+  }
+
+  .nav__container .lang-switcher__btn--si,
+  .nav__container .lang-switcher__divider--si {
+    display: block;
+  }
+
+  .nav__divider {
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: #E8E0D5;
+    margin-inline: 0.15rem;
+    flex-shrink: 0;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .nav__link {
+    font-family: var(--font-body);
+    font-size: 0.63rem;
+    font-weight: var(--fw-medium);
+    color: #2C2C2C;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  .nav__link:hover,
+  .nav__link:focus-visible,
+  .nav__link--active {
+    color: var(--color-secondary);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8a. Hamburger menu — full-screen overlay
+   -------------------------------------------------------------------------- */
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-dark);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-overlay__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  padding-inline: 2rem;
+  flex-shrink: 0;
+}
+
+.nav-overlay__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.nav-overlay__logo {
+  height: 36px;
+  width: auto;
+}
+
+.nav-overlay__brand-text {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #F5ECD7;
+  white-space: nowrap;
+}
+
+.nav-overlay__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #F5ECD7;
+}
+
+.nav-overlay__close .lucide {
+  stroke: currentColor;
+}
+
+.nav-overlay__links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+.nav-overlay__link {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--color-white);
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: color 0.2s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.nav-overlay.is-open .nav-overlay__link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-overlay.is-open .nav-overlay__link:nth-child(1) { transition-delay: 0.05s; }
+.nav-overlay.is-open .nav-overlay__link:nth-child(2) { transition-delay: 0.15s; }
+.nav-overlay.is-open .nav-overlay__link:nth-child(3) { transition-delay: 0.25s; }
+.nav-overlay.is-open .nav-overlay__link:nth-child(4) { transition-delay: 0.35s; }
+.nav-overlay.is-open .nav-overlay__link:nth-child(5) { transition-delay: 0.45s; }
+
+.nav-overlay__link:hover,
+.nav-overlay__link:focus-visible,
+.nav-overlay__link.nav__link--active {
+  color: var(--color-secondary);
+}
+
+.nav-overlay__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding-bottom: var(--space-xl);
+  flex-shrink: 0;
+}
+
+.nav-overlay__bottom .lang-switcher__btn {
+  color: rgba(245, 236, 215, 0.7);
+}
+
+.nav-overlay__bottom .lang-switcher__btn:hover,
+.nav-overlay__bottom .lang-switcher__btn.is-active {
+  color: var(--color-secondary);
+}
+
+.nav-overlay__bottom .lang-switcher__divider {
+  color: rgba(245, 236, 215, 0.3);
 }
 
 /* --------------------------------------------------------------------------
@@ -846,74 +1056,6 @@ blockquote {
   overflow-y: auto;
 }
 
-.hero__mini-nav {
-  display: none;
-}
-
-.hero__mini-logo {
-  display: flex;
-  align-items: center;
-}
-
-.hero__mini-logo img {
-  height: 36px;
-  width: auto;
-}
-
-.hero__mini-actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-}
-
-.hero__donate-btn {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border: none;
-  border-radius: 6px;
-  padding: 0.4rem 1rem;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.hero__donate-btn:hover {
-  background-color: var(--color-secondary);
-}
-
-.hero-lang-switcher {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3xs);
-  font-size: var(--fs-sm);
-}
-
-.hero-lang-switcher__btn {
-  font-family: var(--font-body);
-  font-weight: var(--fw-medium);
-  color: #2C2C2C;
-  background: none;
-  border: none;
-  padding: var(--space-3xs);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: color var(--transition-fast);
-}
-
-.hero-lang-switcher__btn:hover {
-  color: var(--color-accent);
-}
-
-.hero-lang-switcher__btn.is-active {
-  color: var(--color-primary);
-  font-weight: var(--fw-semibold);
-}
-
-.hero-lang-switcher__divider {
-  color: rgba(44, 44, 44, 0.3);
-}
-
 .hero__main {
   flex: 1;
   display: flex;
@@ -994,14 +1136,6 @@ blockquote {
     width: 40%;
     height: 100%;
     padding-inline: 3rem;
-  }
-
-  .hero__mini-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1.5rem;
-    flex-shrink: 0;
   }
 }
 
@@ -2185,32 +2319,6 @@ a.contact-row:hover {
 @media (min-width: 480px) {
   .nav__brand-text {
     display: block;
-  }
-}
-
-@media (min-width: 1024px) {
-  .nav__toggle {
-    display: none;
-  }
-
-  .nav__links {
-    position: static;
-    inset: auto;
-    background: none;
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
-    transition: none;
-  }
-
-  .nav__links .nav__list {
-    flex-direction: row;
-    gap: var(--space-lg);
-  }
-
-  .nav__links .nav__link {
-    font-family: var(--font-body);
-    font-size: var(--fs-sm);
   }
 }
 
