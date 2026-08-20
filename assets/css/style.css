@@ -2022,7 +2022,6 @@ a.contact-row:hover {
   align-items: flex-start;
   gap: var(--space-2xs);
   margin-top: var(--space-lg);
-  border-left: 3px solid var(--color-secondary);
   font-size: var(--fs-sm);
   color: var(--color-text-dark);
 }
