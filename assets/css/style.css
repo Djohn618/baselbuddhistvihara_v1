@@ -569,18 +569,16 @@ blockquote {
 }
 
 /* --------------------------------------------------------------------------
-   8. Navigation — 72/28 split mirroring the hero columns.
+   8. Navigation — 55/45 split mirroring the hero columns.
 
    Mobile-first: the base rules below are the compact single bar (used
-   from phones up through most desktop widths). Donate + language
-   switcher + 5 links (incl. "Programme & Veranstaltungen") cannot fit
-   legibly inside a 28%-wide strip without shrinking below the fonts
-   already set here — at 28%, that strip only clears ~630px (where
-   the content's natural width stops overflowing it) at a 1700px+
-   viewport. So the two-tone 72/28 zone split (and the nav links
-   themselves) only switch on at 1700px; below that, the unified
-   compact bar + hamburger overlay carries navigation, same as it
-   already does on phones.
+   from phones up through most desktop widths). The full right-zone
+   layout (links, divider, language switcher, donate, hamburger) needs
+   the nav-link font/gap at their lower fallback (0.8rem / 0.8rem) to
+   fit on one line inside the 45% zone without overlap — at that size
+   it clears cleanly starting at 1280px ("Desktop" tier). Below that
+   breakpoint, the unified compact bar + hamburger overlay carries
+   navigation, same as it already does on phones.
    -------------------------------------------------------------------------- */
 
 .site-header {
@@ -646,6 +644,7 @@ blockquote {
   padding: 0.5rem;
   color: #F5ECD7;
   order: 4;
+  flex-shrink: 0;
 }
 
 .nav__hamburger .lucide {
@@ -729,7 +728,7 @@ blockquote {
   overflow: hidden;
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1280px) {
   .nav__container {
     align-items: stretch;
     padding-inline: 0;
@@ -748,11 +747,10 @@ blockquote {
     transition: background-color 0.3s ease;
   }
 
-  /* Left zone — 72%, sits above the image slideshow.
+  /* Left zone — 55%, sits above the image slideshow.
      Hard edge against the right zone: no box-shadow/gradient here. */
   .nav__zone--left {
-    width: 72%;
-    justify-content: space-between;
+    width: 55%;
     padding-inline: 1.5rem;
     box-shadow: none;
   }
@@ -765,46 +763,32 @@ blockquote {
     color: #F5ECD7;
   }
 
-  .nav__hamburger {
+  .site-header--scrolled .nav__brand-text {
     color: #F5ECD7;
   }
 
-  .site-header--scrolled .nav__brand-text,
-  .site-header--scrolled .nav__hamburger {
-    color: #F5ECD7;
-  }
-
-  /* Right zone — 28%, sits above the content area.
-     Donate + language switcher + divider + 5 links (one of them
-     "Programme & Veranstaltungen") is a lot of content for a 28%-wide
-     strip, so gap/padding here are trimmed tight to fit without
-     overflowing right at the 1700px breakpoint. */
+  /* Right zone — 45%, sits above the content area: nav links, a thin
+     divider, the language switcher, the donate button, then the
+     hamburger — all in one row, left to right, nothing overlapping. */
   .nav__zone--right {
-    width: 28%;
+    width: 45%;
     justify-content: flex-start;
-    gap: 0.15rem;
-    padding-inline: 0.3rem;
+    gap: 1rem;
+    padding-inline: 1.5rem;
   }
 
   .site-header--scrolled .nav__zone--right {
     background-color: rgba(250, 247, 242, 0.95);
   }
 
-  .nav__brand,
-  .nav__hamburger,
-  .nav__donate-btn,
-  .lang-switcher {
-    order: initial;
-  }
-
   .nav__donate-btn {
-    padding: 0.4rem 0.3rem;
-    font-size: 0.63rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.82rem;
   }
 
   .lang-switcher {
     margin-left: 0;
-    font-size: 0.63rem;
+    font-size: 0.82rem;
   }
 
   .lang-switcher__btn,
@@ -817,24 +801,31 @@ blockquote {
     display: block;
   }
 
+  .nav__hamburger {
+    color: #2C2C2C;
+  }
+
+  .site-header--scrolled .nav__hamburger {
+    color: #2C2C2C;
+  }
+
   .nav__divider {
     display: block;
     width: 1px;
     height: 20px;
     background-color: #E8E0D5;
-    margin-inline: 0.05rem;
     flex-shrink: 0;
   }
 
   .nav__links {
     display: flex;
     align-items: center;
-    gap: 0.15rem;
+    gap: 0.8rem;
   }
 
   .nav__link {
     font-family: var(--font-body);
-    font-size: 0.63rem;
+    font-size: 0.8rem;
     font-weight: var(--fw-medium);
     color: #2C2C2C;
     text-decoration: none;
@@ -1131,14 +1122,15 @@ blockquote {
   }
 
   .hero__slideshow {
-    width: 72%;
+    width: 55%;
     height: 100%;
   }
 
   .hero__content {
-    width: 28%;
+    width: 45%;
     height: 100%;
-    padding-inline: 3rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
   }
 }
 
