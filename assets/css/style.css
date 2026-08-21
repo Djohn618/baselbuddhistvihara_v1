@@ -597,12 +597,12 @@ blockquote {
   height: 100%;
   width: 100%;
   padding-inline: 1.25rem;
-  background-color: #1A1A1A;
+  background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
 .site-header--scrolled .nav__container {
-  background-color: var(--color-white);
+  background-color: transparent;
 }
 
 /* Below 1280px the zone wrappers are unwrapped via `display: contents`
@@ -1182,6 +1182,7 @@ blockquote {
     height: 100%;
     padding-left: 3rem;
     padding-right: 3rem;
+    box-sizing: border-box;
   }
 }
 
