@@ -517,7 +517,7 @@
 
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 
-          <form class="contact-form" action="contact.php" method="post" novalidate>
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
             <div class="field-group">
               <label class="field-label" for="contact-name" data-i18n="contact.form.name">Name</label>
               <input class="field-input" type="text" id="contact-name" name="name" autocomplete="name" required>
@@ -544,11 +544,8 @@
               <textarea class="field-input field-textarea" id="contact-message" name="message" rows="5" required></textarea>
             </div>
 
-            <!-- Honeypot spam trap: left empty by humans, filled in by most bots -->
-            <div class="visually-hidden" aria-hidden="true">
-              <label for="contact-website">Website</label>
-              <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off">
-            </div>
+            <!-- Formspree handles spam protection automatically -->
+            <input type="hidden" name="_gotcha" style="display:none">
 
             <button type="submit" class="contact-form__submit" data-i18n="contact.form.send">Nachricht senden</button>
           </form>

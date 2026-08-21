@@ -86,26 +86,55 @@
     });
   }
 
-  function initContactFormStatus() {
-    var statusEl = document.getElementById('form-status');
-    if (!statusEl) return;
+  function initContactForm() {
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('form-status');
+    if (!form || !status) return;
 
-    var status = new URLSearchParams(window.location.search).get('status');
-    if (status !== 'sent' && status !== 'error') return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    var key = status === 'sent' ? 'contact.form.success' : 'contact.form.error';
-    statusEl.classList.add(status === 'sent' ? 'form-status--success' : 'form-status--error');
+      var submitBtn = form.querySelector('.contact-form__submit');
+      var originalText = submitBtn.textContent;
 
-    function applyMessage() {
-      statusEl.textContent = window.i18n.t(key);
-    }
+      submitBtn.disabled = true;
+      submitBtn.textContent = '...';
 
-    applyMessage();
-    document.addEventListener('i18n:change', applyMessage);
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            status.textContent = document.documentElement.lang === 'en'
+              ? 'Thank you! Your message has been sent.'
+              : 'Vielen Dank! Ihre Nachricht wurde gesendet.';
+            status.className = 'form-status form-status--success';
+            form.reset();
+          } else {
+            status.textContent = document.documentElement.lang === 'en'
+              ? 'Error sending message. Please try again.'
+              : 'Fehler beim Senden. Bitte versuchen Sie es erneut.';
+            status.className = 'form-status form-status--error';
+          }
+        })
+        .catch(function () {
+          status.textContent = document.documentElement.lang === 'en'
+            ? 'Error sending message. Please try again.'
+            : 'Fehler beim Senden. Bitte versuchen Sie es erneut.';
+          status.className = 'form-status form-status--error';
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
 
-    var url = new URL(window.location.href);
-    url.searchParams.delete('status');
-    window.history.replaceState({}, '', url.pathname + url.hash);
+          setTimeout(function () {
+            status.textContent = '';
+            status.className = 'form-status';
+          }, 6000);
+        });
+    });
   }
 
   function initFadeIn() {
@@ -318,7 +347,7 @@
     initFadeIn();
     initHeroSlideshow();
     initProgramsCarousel();
-    initContactFormStatus();
+    initContactForm();
   }
 
   if (document.readyState === 'loading') {
