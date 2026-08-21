@@ -1753,6 +1753,66 @@ blockquote {
   background-color: var(--color-secondary);
 }
 
+@media (max-width: 768px) {
+  .swipe-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.78rem;
+    font-family: var(--font-body);
+    letter-spacing: 0.05em;
+    animation: swipe-hint-fade 4s ease forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+  }
+
+  .swipe-hint__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swipe-hint__svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .swipe-hint__hand {
+    animation: swipe-hand 1.4s ease-in-out infinite;
+    transform-origin: 31px 44px;
+  }
+
+  .swipe-hint__arc {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: swipe-arc-draw 1.4s ease forwards;
+    animation-delay: 0.8s;
+  }
+}
+
+@keyframes swipe-hint-fade {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes swipe-hand {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(10px); }
+  70%  { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes swipe-arc-draw {
+  0%   { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+
 @media (min-width: 768px) {
   .program-card {
     flex: 0 0 calc((100% - var(--space-md)) / 2);

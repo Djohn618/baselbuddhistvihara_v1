@@ -65,6 +65,7 @@
         "events": "Veranstaltungen"
       },
       "more": "Mehr erfahren",
+      "swipeHint": "Nach links oder rechts wischen",
       "cards": {
         "card1": { "badge": "Jeden 3. Freitag", "title": "Meditation auf Deutsch", "time": "18:00 – 20:00 Uhr" },
         "card2": { "badge": "Jeden 3. Samstag", "title": "Meditation auf Singhalesisch", "time": "18:00 – 20:00 Uhr" },
@@ -219,6 +220,7 @@
         "events": "Events"
       },
       "more": "Learn more",
+      "swipeHint": "Swipe left or right",
       "cards": {
         "card1": { "badge": "Every 3rd Friday", "title": "Meditation in German", "time": "6:00 – 8:00 PM" },
         "card2": { "badge": "Every 3rd Saturday", "title": "Meditation in Sinhalese", "time": "6:00 – 8:00 PM" },
@@ -373,6 +375,7 @@
         "events": "උත්සව"
       },
       "more": "තව දැනගන්න",
+      "swipeHint": "වමට හෝ දකුණට ස්වයිප් කරන්න",
       "cards": {
         "card1": { "badge": "සෑම 3වන සිකුරාදා", "title": "ජර්මන් භාෂාවෙන් භාවනාව", "time": "සවස 6.00 – 8.00" },
         "card2": { "badge": "සෑම 3වන සෙනසුරාදා", "title": "සිංහල භාෂාවෙන් භාවනාව", "time": "සවස 6.00 – 8.00" },

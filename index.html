@@ -21,10 +21,10 @@
 
       <div class="nav__zone nav__zone--right">
         <nav class="nav__links" id="nav-links" aria-label="Hauptnavigation">
-          <a href="#about" class="nav__link" data-i18n="nav.about">Über</a>
-          <a href="#programs" class="nav__link" data-i18n="nav.programs">Events</a>
-          <a href="#gallery" class="nav__link" data-i18n="nav.gallery">Galerie</a>
           <a href="#contact" class="nav__link" data-i18n="nav.contact">Kontakt</a>
+          <a href="#gallery" class="nav__link" data-i18n="nav.gallery">Galerie</a>
+          <a href="#programs" class="nav__link" data-i18n="nav.programs">Events</a>
+          <a href="#about" class="nav__link" data-i18n="nav.about">Über</a>
           <a href="#home" class="nav__link" data-i18n="nav.home">Home</a>
         </nav>
 
@@ -334,6 +334,22 @@
           <button type="button" class="programs__dot" aria-label="Karte 1"></button>
           <button type="button" class="programs__dot" aria-label="Karte 2"></button>
           <button type="button" class="programs__dot" aria-label="Karte 3"></button>
+        </div>
+
+        <div class="swipe-hint" id="swipe-hint" aria-hidden="true">
+          <div class="swipe-hint__icon">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="swipe-hint__svg">
+              <path d="M32 8 C20 8 11 17 11 29 C11 35 13.5 40.5 17.5 44.5" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" class="swipe-hint__arc"/>
+              <polyline points="11,44 17.5,44.5 17,38" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <g class="swipe-hint__hand">
+                <rect x="28" y="24" width="7" height="20" rx="3.5" fill="rgba(255,255,255,0.85)"/>
+                <rect x="22" y="30" width="6.5" height="16" rx="3" fill="rgba(255,255,255,0.85)"/>
+                <rect x="35" y="30" width="6.5" height="16" rx="3" fill="rgba(255,255,255,0.85)"/>
+                <rect x="22" y="40" width="20" height="14" rx="4" fill="rgba(255,255,255,0.85)"/>
+              </g>
+            </svg>
+          </div>
+          <span data-i18n="programs.swipeHint">Nach links oder rechts wischen</span>
         </div>
       </div>
     </section>
