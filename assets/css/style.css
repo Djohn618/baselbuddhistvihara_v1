@@ -763,6 +763,7 @@ blockquote {
     width: 55%;
     padding-inline: 1.5rem;
     box-shadow: none;
+    background-color: transparent;
   }
 
   .nav__zone--left::before,
@@ -771,7 +772,7 @@ blockquote {
   }
 
   .site-header--scrolled .nav__zone--left {
-    background-color: rgba(26, 10, 5, 0.45);
+    background-color: #1A1A1A;
   }
 
   .nav__brand-text {
@@ -790,10 +791,11 @@ blockquote {
     justify-content: flex-start;
     gap: 1rem;
     padding-inline: 1.5rem;
+    background-color: #FAF7F2;
   }
 
   .site-header--scrolled .nav__zone--right {
-    background-color: rgba(250, 247, 242, 0.95);
+    background-color: #FAF7F2;
   }
 
   .nav__donate-btn {
