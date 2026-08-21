@@ -596,7 +596,7 @@ blockquote {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding-inline: 1.25rem;
+  padding-inline: 0;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
@@ -771,7 +771,7 @@ blockquote {
   }
 
   .site-header--scrolled .nav__zone--left {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(26, 10, 5, 0.45);
   }
 
   .nav__brand-text {
@@ -1102,6 +1102,7 @@ blockquote {
   justify-content: center;
   padding-block: var(--space-lg);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .hero__title {
@@ -1112,6 +1113,7 @@ blockquote {
   font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .hero__description {
@@ -1120,7 +1122,7 @@ blockquote {
   font-size: 1rem;
   line-height: 1.7;
   width: 100%;
-  max-width: none;
+  max-width: 100%;
 }
 
 .hero__inline-link {
@@ -1183,6 +1185,7 @@ blockquote {
     padding-left: 3rem;
     padding-right: 3rem;
     box-sizing: border-box;
+    overflow: hidden;
   }
 }
 
@@ -2383,5 +2386,13 @@ a.contact-row:hover {
 @media (min-width: 1280px) {
   :root {
     --container-padding: var(--space-lg);
+  }
+}
+
+/* Hard fix: ensure hero right column uses all available space */
+@media (min-width: 768px) {
+  .hero__content * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
