@@ -8,9 +8,13 @@
   var SCROLL_THRESHOLD = 80;
 
   var header = document.getElementById('site-header');
-  var navToggle = document.getElementById('nav-toggle');
+  var navHamburger = document.getElementById('nav-hamburger');
+  var navOverlay = document.getElementById('nav-overlay');
+  var navOverlayClose = document.getElementById('nav-overlay-close');
   var navLinks = document.getElementById('nav-links');
   var navLinkEls = navLinks ? navLinks.querySelectorAll('.nav__link') : [];
+  var navOverlayLinkEls = navOverlay ? navOverlay.querySelectorAll('.nav-overlay__link') : [];
+  var allNavLinkEls = document.querySelectorAll('.nav__link, .nav-overlay__link');
   var sections = document.querySelectorAll('main [id]');
 
   function handleHeaderScroll() {
@@ -19,21 +23,21 @@
   }
 
   function closeMobileMenu() {
-    if (!navLinks || !navToggle) return;
-    navLinks.classList.remove('is-open');
-    navToggle.setAttribute('aria-expanded', 'false');
+    if (!navOverlay || !navHamburger) return;
+    navOverlay.classList.remove('is-open');
+    navHamburger.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('no-scroll');
   }
 
   function toggleMobileMenu() {
-    if (!navLinks || !navToggle) return;
-    var isOpen = navLinks.classList.toggle('is-open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
+    if (!navOverlay || !navHamburger) return;
+    var isOpen = navOverlay.classList.toggle('is-open');
+    navHamburger.setAttribute('aria-expanded', String(isOpen));
     document.body.classList.toggle('no-scroll', isOpen);
   }
 
   function setActiveLink(id) {
-    navLinkEls.forEach(function (link) {
+    allNavLinkEls.forEach(function (link) {
       var isActive = link.getAttribute('href') === '#' + id;
       link.classList.toggle('nav__link--active', isActive);
     });
@@ -62,12 +66,16 @@
   }
 
   function initNavToggle() {
-    if (!navToggle) return;
-    navToggle.addEventListener('click', toggleMobileMenu);
+    if (navHamburger) {
+      navHamburger.addEventListener('click', toggleMobileMenu);
+    }
+    if (navOverlayClose) {
+      navOverlayClose.addEventListener('click', closeMobileMenu);
+    }
   }
 
   function initLinkClicks() {
-    navLinkEls.forEach(function (link) {
+    navOverlayLinkEls.forEach(function (link) {
       link.addEventListener('click', closeMobileMenu);
     });
   }

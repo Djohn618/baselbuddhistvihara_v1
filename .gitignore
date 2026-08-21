@@ -20,6 +20,7 @@ desktop.ini
 *.sublime-project
 *.sublime-workspace
 .cursor/
+.claude/
 
 # ========================
 # PHP & Server
