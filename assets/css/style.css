@@ -651,6 +651,16 @@ blockquote {
   stroke: currentColor;
 }
 
+#nav-hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #nav-hamburger {
+    display: flex;
+  }
+}
+
 .nav__donate-btn {
   display: inline-flex;
   align-items: center;
@@ -755,6 +765,11 @@ blockquote {
     box-shadow: none;
   }
 
+  .nav__zone--left::before,
+  .nav__zone--left::after {
+    display: none;
+  }
+
   .site-header--scrolled .nav__zone--left {
     background-color: rgba(0, 0, 0, 0.3);
   }
@@ -784,11 +799,13 @@ blockquote {
   .nav__donate-btn {
     padding: 0.4rem 1rem;
     font-size: 0.82rem;
+    order: 2;
   }
 
   .lang-switcher {
     margin-left: 0;
     font-size: 0.82rem;
+    order: 1;
   }
 
   .lang-switcher__btn,
@@ -815,12 +832,14 @@ blockquote {
     height: 20px;
     background-color: #E8E0D5;
     flex-shrink: 0;
+    order: 3;
   }
 
   .nav__links {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    order: 4;
   }
 
   .nav__link {
@@ -983,6 +1002,11 @@ blockquote {
   overflow: hidden;
   flex-shrink: 0;
   box-shadow: none;
+}
+
+.hero__slideshow::before,
+.hero__slideshow::after {
+  display: none;
 }
 
 .hero__slide {
