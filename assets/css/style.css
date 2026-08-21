@@ -662,10 +662,27 @@ blockquote {
 
 @media (max-width: 768px) {
 
-  /* Nav container: logo left, spacer, lang right, hamburger far right */
+  /* Nav container: always solid on mobile so text never bleeds through */
+  .site-header {
+    background-color: #1A1A1A;
+  }
+
   .nav__container {
     padding-inline: 1rem;
     justify-content: space-between;
+    background-color: #1A1A1A;
+  }
+
+  .site-header--scrolled .nav__container {
+    background-color: #FAF7F2;
+  }
+
+  .site-header--scrolled .lang-switcher__btn {
+    color: #2C2C2C !important;
+  }
+
+  .site-header--scrolled #nav-hamburger {
+    color: #2C2C2C !important;
   }
 
   /* Logo: left side */
@@ -1728,6 +1745,18 @@ blockquote {
   cursor: default;
 }
 
+@media (max-width: 768px) {
+  .carousel-prev,
+  .carousel-next {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
 .programs__dots {
   display: flex;
   justify-content: center;
@@ -1753,9 +1782,14 @@ blockquote {
   background-color: var(--color-secondary);
 }
 
+/* Swipe hint — only on mobile */
+.swipe-hint {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .swipe-hint {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
