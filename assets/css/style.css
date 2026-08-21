@@ -594,9 +594,10 @@ blockquote {
 .nav__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
-  padding-inline: 0;
+  padding-inline: 1.25rem;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
@@ -662,6 +663,53 @@ blockquote {
 @media (max-width: 768px) {
   #nav-hamburger {
     display: flex;
+    order: 3;
+    color: #F5ECD7;
+  }
+
+  .nav__brand {
+    order: 1;
+    flex: 1;
+  }
+
+  .nav__brand-text {
+    display: none;
+  }
+
+  .lang-switcher {
+    display: flex;
+    order: 2;
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .lang-switcher__btn {
+    color: #F5ECD7;
+    font-size: 0.8rem;
+  }
+
+  .nav__donate-btn {
+    display: none;
+  }
+
+  .nav__divider {
+    display: none;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .site-header--scrolled .nav__container {
+    background-color: #FAF7F2;
+  }
+
+  .site-header--scrolled .lang-switcher__btn {
+    color: #2C2C2C;
+  }
+
+  .site-header--scrolled #nav-hamburger {
+    color: #2C2C2C;
   }
 }
 
@@ -973,13 +1021,30 @@ blockquote {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--space-md);
   padding-bottom: var(--space-xl);
+  padding-inline: 2rem;
   flex-shrink: 0;
+  width: 100%;
 }
 
 .nav-overlay__bottom .lang-switcher__btn {
   color: rgba(245, 236, 215, 0.7);
+  font-size: 1rem;
+}
+
+.nav-overlay__bottom .lang-switcher {
+  justify-content: center;
+}
+
+.nav-overlay__bottom .nav__donate-btn {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
 }
 
 .nav-overlay__bottom .lang-switcher__btn:hover,
