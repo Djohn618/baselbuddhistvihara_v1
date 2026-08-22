@@ -1591,9 +1591,15 @@ blockquote {
 
 .monk-card__image-wrap {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: linear-gradient(135deg, #2C1810 0%, #6B2737 100%);
+}
+
+@media (min-width: 768px) {
+  .monk-card__image-wrap {
+    aspect-ratio: 16 / 9;
+  }
 }
 
 .monk-card__image-wrap img {
@@ -1618,7 +1624,7 @@ blockquote {
 .monk-card__body {
   display: flex;
   flex-direction: column;
-  padding: var(--space-lg);
+  padding: var(--space-md);
   flex: 1;
 }
 
@@ -1633,7 +1639,7 @@ blockquote {
 
 .monk-card__name {
   font-family: var(--font-heading);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
   color: var(--color-primary);
   margin-bottom: var(--space-xs);
   line-height: 1.3;
@@ -1647,10 +1653,14 @@ blockquote {
 
 .monk-card__excerpt {
   color: var(--color-text-muted);
-  line-height: var(--lh-relaxed);
+  line-height: var(--lh-normal);
   font-size: var(--fs-sm);
   flex: 1;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .monk-card__divider {
@@ -1858,6 +1868,28 @@ blockquote {
   position: relative;
   aspect-ratio: 4 / 3;
   background: linear-gradient(135deg, #2C1810 0%, #6B2737 60%, #C9922A 100%);
+}
+
+@media (max-width: 768px) {
+  .program-card__image {
+    aspect-ratio: 16 / 7;
+  }
+
+  .program-card__body {
+    padding: 1rem;
+  }
+
+  .program-card__title {
+    font-size: 1rem;
+  }
+
+  .program-card__meta {
+    font-size: 0.85rem;
+  }
+
+  .program-card__more {
+    margin-top: 0.75rem;
+  }
 }
 
 .program-card__badge {
