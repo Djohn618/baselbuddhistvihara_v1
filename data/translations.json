@@ -60,7 +60,7 @@
     "monks": {
       "label": "UNSERE MÖNCHE",
       "title": "Die Menschen hinter dem Vihara",
-      "subtitle": "Lernen Sie die Mönche kennen, die unser Vihara gegründet haben und täglich begleiten."
+      "subtitle": ""
     },
     "programs": {
       "label": "Unsere Programme",
@@ -82,7 +82,7 @@
     },
     "youtube": {
       "title": "Dhamma Dana",
-      "subtitle": "Unsere YouTube-Kanäle",
+      "subtitle": "",
       "videos": {
         "video1": { "title": "Buddhistische Philosophie", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" },
         "video2": { "title": "Meditationsanleitung", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" },
@@ -94,7 +94,7 @@
     "gallery": {
       "label": "GALERIE",
       "title": "Einblicke in unseren Vihara",
-      "subtitle": "Entdecken Sie unsere Räumlichkeiten, Zeremonien und die Gemeinschaft des Basel Buddhist Vihara.",
+      "subtitle": "",
       "more": "Mehr Fotos"
     },
     "donations": {
@@ -120,7 +120,7 @@
     "contact": {
       "label": "KONTAKT",
       "heading": "Wir sind für Sie da",
-      "subheading": "Haben Sie Fragen zu unseren Programmen oder möchten Sie das Vihara besuchen? Schreiben Sie uns — wir freuen uns von Ihnen zu hören.",
+      "subheading": "",
       "rows": {
         "email": { "label": "E-MAIL", "value": "ariyaseela@gmail.com" },
         "phone": { "label": "TELEFON", "value": "+41 792 303 699" },
@@ -221,7 +221,7 @@
     "monks": {
       "label": "OUR MONKS",
       "title": "The People Behind the Vihara",
-      "subtitle": "Meet the monks who founded and daily guide our Vihara."
+      "subtitle": ""
     },
     "programs": {
       "label": "Our Programs",
@@ -243,7 +243,7 @@
     },
     "youtube": {
       "title": "Dhamma Dana",
-      "subtitle": "Our YouTube Channels",
+      "subtitle": "",
       "videos": {
         "video1": { "title": "Buddhist Philosophy", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" },
         "video2": { "title": "Meditation Guide", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" },
@@ -255,7 +255,7 @@
     "gallery": {
       "label": "GALLERY",
       "title": "A Look Inside Our Vihara",
-      "subtitle": "Discover our premises, ceremonies and the community of the Basel Buddhist Vihara.",
+      "subtitle": "",
       "more": "More Photos"
     },
     "donations": {
@@ -281,7 +281,7 @@
     "contact": {
       "label": "CONTACT",
       "heading": "We Are Here for You",
-      "subheading": "Do you have questions about our programs or would you like to visit the Vihara? Write to us — we look forward to hearing from you.",
+      "subheading": "",
       "rows": {
         "email": { "label": "EMAIL", "value": "ariyaseela@gmail.com" },
         "phone": { "label": "PHONE", "value": "+41 792 303 699" },
@@ -382,7 +382,7 @@
     "monks": {
       "label": "අපේ භික්ෂූන්",
       "title": "විහාරය පිටුපස සිටින අය",
-      "subtitle": "අපේ විහාරය ආරම්භ කළ සහ දිනපතා මෙහෙයවන භික්ෂූන් හඳුනා ගන්න."
+      "subtitle": ""
     },
     "programs": {
       "label": "අපේ වැඩසටහන්",
@@ -404,7 +404,7 @@
     },
     "youtube": {
       "title": "Dhamma Dana",
-      "subtitle": "අපගේ යූටියුබ් නාලිකා",
+      "subtitle": "",
       "videos": {
         "video1": { "title": "බෞද්ධ දර්ශනය", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" },
         "video2": { "title": "භාවනා මාර්ගෝපදේශය", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" },
@@ -416,7 +416,7 @@
     "gallery": {
       "label": "ගැලරිය",
       "title": "අපේ විහාරයේ දර්ශන",
-      "subtitle": "බාසල් බෞද්ධ විහාරයේ අපගේ පරිශ්‍රය, පිංකම් සහ ප්‍රජාව ගවේෂණය කරන්න.",
+      "subtitle": "",
       "more": "තවත් ඡායාරූප"
     },
     "donations": {
@@ -442,7 +442,7 @@
     "contact": {
       "label": "සම්බන්ධ වන්න",
       "heading": "අපි ඔබ වෙනුවෙන් සිටිමු",
-      "subheading": "අපගේ වැඩසටහන් පිළිබඳ ප්‍රශ්න තිබේද, නැතහොත් විහාරයට පැමිණීමට කැමතිද? අප වෙත ලියන්න — ඔබෙන් අසන්නට අප බලාපොරොත්තුවෙන් සිටිමු.",
+      "subheading": "",
       "rows": {
         "email": { "label": "විද්‍යුත් තැපෑල", "value": "ariyaseela@gmail.com" },
         "phone": { "label": "දුරකථනය", "value": "+41 792 303 699" },
