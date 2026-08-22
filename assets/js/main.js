@@ -102,7 +102,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      var submitBtn = form.querySelector('.contact-form__submit');
+      var submitBtn = form.querySelector('.contact__submit');
       var originalText = submitBtn.textContent;
 
       submitBtn.disabled = true;

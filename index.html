@@ -474,121 +474,125 @@
       </div>
     </section>
 
-    <section id="contact" class="contact-top">
-      <div class="container contact-top__grid">
-        <div class="contact-top__intro">
-          <p class="contact-top__label" data-i18n="contact.label">KONTAKT</p>
-          <h2 class="contact-top__heading" data-i18n="contact.heading">Wir sind für Sie da</h2>
-          <p class="contact-top__subheading" data-i18n="contact.subheading">Haben Sie Fragen zu unseren Programmen oder möchten Sie das Vihara besuchen? Schreiben Sie uns — wir freuen uns von Ihnen zu hören.</p>
+    <section id="contact" class="contact">
+      <div class="container">
 
-          <div class="contact-rows">
-            <a class="contact-row" href="mailto:ariyaseela@gmail.com">
-              <span class="contact-row__left">
-                <span class="contact-row__icon" aria-hidden="true"><i data-lucide="mail"></i></span>
-                <span class="contact-row__text">
-                  <span class="contact-row__label" data-i18n="contact.rows.email.label">E-MAIL</span>
-                  <span class="contact-row__value" data-i18n="contact.rows.email.value">ariyaseela@gmail.com</span>
-                </span>
-              </span>
-              <span class="contact-row__arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
-            </a>
+        <!-- Section header -->
+        <div class="contact__header fade-in">
+          <p class="contact__label" data-i18n="contact.label">KONTAKT</p>
+          <h2 class="contact__title" data-i18n="contact.heading">Wir sind für Sie da</h2>
+          <p class="contact__subtitle" data-i18n="contact.subheading">Haben Sie Fragen zu unseren Programmen oder möchten Sie das Vihara besuchen? Wir freuen uns von Ihnen zu hören.</p>
+        </div>
 
-            <a class="contact-row" href="tel:+41792303699">
-              <span class="contact-row__left">
-                <span class="contact-row__icon" aria-hidden="true"><i data-lucide="phone"></i></span>
-                <span class="contact-row__text">
-                  <span class="contact-row__label" data-i18n="contact.rows.phone.label">TELEFON</span>
-                  <span class="contact-row__value" data-i18n="contact.rows.phone.value">+41 792 303 699</span>
-                </span>
-              </span>
-              <span class="contact-row__arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
-            </a>
+        <!-- Two column grid -->
+        <div class="contact__grid">
 
-            <div class="contact-row contact-row--static">
-              <span class="contact-row__left">
-                <span class="contact-row__icon" aria-hidden="true"><i data-lucide="clock"></i></span>
-                <span class="contact-row__text">
-                  <span class="contact-row__label" data-i18n="contact.rows.hours.label">ÖFFNUNGSZEITEN</span>
-                  <span class="contact-row__value" data-i18n="contact.rows.hours.value">Täglich 7:00 – 18:30 Uhr</span>
+          <!-- LEFT: info + map -->
+          <div class="contact__left fade-in">
+
+            <!-- Contact rows -->
+            <div class="contact__rows">
+              <a class="contact__row" href="mailto:ariyaseela@gmail.com">
+                <span class="contact__row-icon"><i data-lucide="mail"></i></span>
+                <span class="contact__row-text">
+                  <span class="contact__row-label" data-i18n="contact.rows.email.label">E-MAIL</span>
+                  <span class="contact__row-value">ariyaseela@gmail.com</span>
                 </span>
-              </span>
+                <span class="contact__row-arrow"><i data-lucide="arrow-up-right"></i></span>
+              </a>
+
+              <a class="contact__row" href="tel:+41792303699">
+                <span class="contact__row-icon"><i data-lucide="phone"></i></span>
+                <span class="contact__row-text">
+                  <span class="contact__row-label" data-i18n="contact.rows.phone.label">TELEFON</span>
+                  <span class="contact__row-value">+41 792 303 699</span>
+                </span>
+                <span class="contact__row-arrow"><i data-lucide="arrow-up-right"></i></span>
+              </a>
+
+              <div class="contact__row contact__row--static">
+                <span class="contact__row-icon"><i data-lucide="clock"></i></span>
+                <span class="contact__row-text">
+                  <span class="contact__row-label" data-i18n="contact.rows.hours.label">ÖFFNUNGSZEITEN</span>
+                  <span class="contact__row-value" data-i18n="contact.rows.hours.value">Täglich 7:00 – 18:30 Uhr</span>
+                </span>
+              </div>
+
+              <div class="contact__row contact__row--static">
+                <span class="contact__row-icon"><i data-lucide="map-pin"></i></span>
+                <span class="contact__row-text">
+                  <span class="contact__row-label">ADRESSE</span>
+                  <span class="contact__row-value">Feldbergstrasse 142<br>4057 Basel, Switzerland</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Appointment notice -->
+            <p class="contact__appointment">
+              <i data-lucide="calendar-check"></i>
+              <span data-i18n="contact.appointment">Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.</span>
+            </p>
+
+            <!-- Map embedded small -->
+            <div class="contact__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.1213891651228!2d7.594330377081455!3d47.56718479069762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b9537b349647%3A0x7032a3cb4e594aaa!2sBasel%20Buddhist%20Vihara!5e1!3m2!1sen!2sch!4v1784121869506!5m2!1sen!2sch"
+                width="100%"
+                height="200"
+                style="border:0; border-radius:12px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Basel Buddhist Vihara auf Google Maps">
+              </iframe>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: contact form -->
+          <div class="contact__right fade-in">
+            <div class="contact__form-card">
+              <h3 class="contact__form-title" data-i18n="contact.form.title">Schreiben Sie uns</h3>
+
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+              <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+
+                <div class="field-group">
+                  <label class="field-label" for="contact-name" data-i18n="contact.form.name">Name</label>
+                  <input class="field-input" type="text" id="contact-name" name="name" autocomplete="name" required>
+                </div>
+
+                <div class="field-group">
+                  <label class="field-label" for="contact-email" data-i18n="contact.form.email">E-Mail</label>
+                  <input class="field-input" type="email" id="contact-email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="field-group">
+                  <label class="field-label" for="contact-subject" data-i18n="contact.form.subject">Betreff</label>
+                  <select class="field-input field-select" id="contact-subject" name="subject" required>
+                    <option value="general" data-i18n="contact.form.subjectOptions.general">Allgemeine Anfrage</option>
+                    <option value="programs" data-i18n="contact.form.subjectOptions.programs">Programm-Info</option>
+                    <option value="donations" data-i18n="contact.form.subjectOptions.donations">Spenden</option>
+                    <option value="homeVisit" data-i18n="contact.form.subjectOptions.homeVisit">Hausbesuch</option>
+                    <option value="other" data-i18n="contact.form.subjectOptions.other">Sonstiges</option>
+                  </select>
+                </div>
+
+                <div class="field-group">
+                  <label class="field-label" for="contact-message" data-i18n="contact.form.message">Nachricht</label>
+                  <textarea class="field-input field-textarea" id="contact-message" name="message" rows="4" required></textarea>
+                </div>
+
+                <input type="hidden" name="_gotcha" style="display:none">
+
+                <button type="submit" class="contact__submit" data-i18n="contact.form.send">Nachricht senden</button>
+              </form>
+
+              <p class="contact__form-note" data-i18n="contact.form.note">Wir antworten in der Regel innerhalb von 2–3 Werktagen.</p>
             </div>
           </div>
 
-          <p class="contact-appointment">
-            <span aria-hidden="true"><i data-lucide="calendar-check"></i></span>
-            <span data-i18n="contact.appointment">Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.</span>
-          </p>
-        </div>
-
-        <div class="contact-form-card">
-          <h3 class="contact-form-card__title" data-i18n="contact.form.title">Schreiben Sie uns</h3>
-
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-
-          <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
-            <div class="field-group">
-              <label class="field-label" for="contact-name" data-i18n="contact.form.name">Name</label>
-              <input class="field-input" type="text" id="contact-name" name="name" autocomplete="name" required>
-            </div>
-
-            <div class="field-group">
-              <label class="field-label" for="contact-email" data-i18n="contact.form.email">E-Mail</label>
-              <input class="field-input" type="email" id="contact-email" name="email" autocomplete="email" required>
-            </div>
-
-            <div class="field-group">
-              <label class="field-label" for="contact-subject" data-i18n="contact.form.subject">Betreff</label>
-              <select class="field-input field-select" id="contact-subject" name="subject" required>
-                <option value="general" data-i18n="contact.form.subjectOptions.general">Allgemeine Anfrage</option>
-                <option value="programs" data-i18n="contact.form.subjectOptions.programs">Programm-Info</option>
-                <option value="donations" data-i18n="contact.form.subjectOptions.donations">Spenden</option>
-                <option value="homeVisit" data-i18n="contact.form.subjectOptions.homeVisit">Hausbesuch</option>
-                <option value="other" data-i18n="contact.form.subjectOptions.other">Sonstiges</option>
-              </select>
-            </div>
-
-            <div class="field-group">
-              <label class="field-label" for="contact-message" data-i18n="contact.form.message">Nachricht</label>
-              <textarea class="field-input field-textarea" id="contact-message" name="message" rows="5" required></textarea>
-            </div>
-
-            <!-- Formspree handles spam protection automatically -->
-            <input type="hidden" name="_gotcha" style="display:none">
-
-            <button type="submit" class="contact-form__submit" data-i18n="contact.form.send">Nachricht senden</button>
-          </form>
-
-          <p class="contact-form-card__note" data-i18n="contact.form.note">Wir antworten in der Regel innerhalb von 2–3 Werktagen.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-location">
-      <div class="container contact-location__grid">
-        <div class="contact-location__map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.1213891651228!2d7.594330377081455!3d47.56718479069762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b9537b349647%3A0x7032a3cb4e594aaa!2sBasel%20Buddhist%20Vihara!5e1!3m2!1sen!2sch!4v1784121869506!5m2!1sen!2sch"
-            width="100%"
-            height="420"
-            style="border:0; border-radius:16px; box-shadow: 0 8px 32px rgba(0,0,0,0.10);"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            title="Basel Buddhist Vihara auf Google Maps"></iframe>
-        </div>
-
-        <div class="contact-location__info">
-          <p class="contact-location__label" data-i18n="contact.location.label">UNSER STANDORT</p>
-          <h3 class="contact-location__title" data-i18n="contact.location.title">Besuchen Sie uns in Basel</h3>
-          <p class="contact-location__desc" data-i18n="contact.location.desc">Wir freuen uns auf Ihren Besuch. Bitte vereinbaren Sie vorab einen Termin.</p>
-
-          <div class="contact-address-card">
-            <span aria-hidden="true"><i data-lucide="map-pin"></i></span>
-            <span class="contact-address-card__text" data-i18n="contact.address">Basel Buddhist Vihara
-Feldbergstrasse 142
-4057 Basel, Switzerland</span>
-          </div>
         </div>
       </div>
     </section>
