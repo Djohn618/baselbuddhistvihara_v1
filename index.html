@@ -536,7 +536,7 @@
             <!-- Map embedded small -->
             <div class="contact__map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.1213891651228!2d7.594330377081455!3d47.56718479069762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b9537b349647%3A0x7032a3cb4e594aaa!2sBasel%20Buddhist%20Vihara!5e1!3m2!1sen!2sch!4v1784121869506!5m2!1sen!2sch"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10768.124875956333!2d7.596904999999999!3d47.567181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b9537b349647%3A0x7032a3cb4e594aaa!2sBasel%20Buddhist%20Vihara!5e0!3m2!1sen!2sch!4v1787396492618!5m2!1sen!2sch"
                 width="100%"
                 height="200"
                 style="border:0; border-radius:12px;"
@@ -607,16 +607,31 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
+
+    <!-- Top gold divider line -->
+    <div class="footer__top-line"></div>
+
+    <!-- Tagline banner -->
+    <div class="footer__tagline-bar">
+      <p class="footer__tagline-text" data-i18n="footer.tagline">
+        Ein Ort des Friedens, der Weisheit und der Gemeinschaft — Basel, Schweiz
+      </p>
+    </div>
+
+    <!-- Main grid -->
     <div class="container">
       <div class="footer__grid">
+
+        <!-- Column 1: Brand -->
         <div class="footer__col footer__col--brand">
           <a href="#home" class="footer__brand">
             <img src="assets/images/logo/V2.png" alt="Basel Buddhist Vihara Logo" class="footer__logo">
-            <span class="footer__brand-text">Basel Buddhist Vihara</span>
+            <span class="footer__brand-name">Basel Buddhist Vihara</span>
           </a>
-          <p class="footer__tagline" data-i18n="footer.tagline">Ein Ort des Friedens in Basel seit 2024</p>
-
+          <p class="footer__brand-desc" data-i18n="footer.description">
+            Ein spirituelles Zentrum in Basel, das die Lehren des Buddha allen Menschen zugänglich macht.
+          </p>
           <div class="footer__social">
             <a href="#" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 21v-8.2h2.75l.41-3.2h-3.16V7.5c0-.93.26-1.56 1.6-1.56h1.7V3.1A22.7 22.7 0 0 0 14.2 3c-2.4 0-4.05 1.47-4.05 4.16v2.44H7.4v3.2h2.75V21h3.35z"/></svg>
@@ -627,8 +642,9 @@
           </div>
         </div>
 
+        <!-- Column 2: Navigation -->
         <div class="footer__col">
-          <h3 class="footer__col-title" data-i18n="footer.linksTitle">Navigation</h3>
+          <h3 class="footer__col-heading" data-i18n="footer.linksTitle">Navigation</h3>
           <ul class="footer__links">
             <li><a href="#home" class="footer__link" data-i18n="nav.home">Home</a></li>
             <li><a href="#about" class="footer__link" data-i18n="nav.about">Über</a></li>
@@ -638,21 +654,44 @@
           </ul>
         </div>
 
+        <!-- Column 3: Contact -->
         <div class="footer__col">
-          <h3 class="footer__col-title" data-i18n="nav.contact">Kontakt</h3>
-          <p class="footer__text" data-i18n="contact.address">Basel Buddhist Vihara
-Feldbergstrasse 142
-4057 Basel, Switzerland</p>
-          <a class="footer__text footer__link" href="tel:+41792303699" data-i18n="contact.phone">+41 792 303 699</a>
-          <a class="footer__text footer__link" href="mailto:ariyaseela@gmail.com" data-i18n="contact.email">ariyaseela@gmail.com</a>
+          <h3 class="footer__col-heading" data-i18n="nav.contact">Kontakt</h3>
+          <ul class="footer__contact-list">
+            <li class="footer__contact-item">
+              <i data-lucide="map-pin"></i>
+              <span>Feldbergstrasse 142<br>4057 Basel, Switzerland</span>
+            </li>
+            <li class="footer__contact-item">
+              <i data-lucide="phone"></i>
+              <a href="tel:+41792303699" class="footer__link">+41 792 303 699</a>
+            </li>
+            <li class="footer__contact-item">
+              <i data-lucide="mail"></i>
+              <a href="mailto:ariyaseela@gmail.com" class="footer__link">ariyaseela@gmail.com</a>
+            </li>
+            <li class="footer__contact-item">
+              <i data-lucide="clock"></i>
+              <span data-i18n="contact.rows.hours.value">Täglich 7:00 – 18:30 Uhr</span>
+            </li>
+          </ul>
         </div>
-      </div>
 
-      <div class="footer__bottom">
-        <p data-i18n="footer.text">© 2025 Basel Buddhist Vihara (SKBZ). Alle Rechte vorbehalten.</p>
-        <p data-i18n="footer.credit">Gestaltet mit ❤️ in Basel</p>
       </div>
     </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copyright" data-i18n="footer.text">
+          © 2025 Basel Buddhist Vihara (SKBZ). Alle Rechte vorbehalten.
+        </p>
+        <p class="footer__credit">
+          Gestaltet mit <span class="footer__heart">♥</span> in Basel 🇨🇭
+        </p>
+      </div>
+    </div>
+
   </footer>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galerie Vorschau">
