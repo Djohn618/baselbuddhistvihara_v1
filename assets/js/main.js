@@ -422,3 +422,56 @@
     init();
   }
 })();
+
+// Custom select dropdown
+(function() {
+  const select = document.getElementById('custom-select');
+  const hiddenInput = document.getElementById('contact-subject');
+  if (!select || !hiddenInput) return;
+
+  const trigger = select.querySelector('.custom-select__trigger');
+  const valueEl = select.querySelector('.custom-select__value');
+  const options = select.querySelectorAll('.custom-select__option');
+
+  // Toggle open/close
+  trigger.addEventListener('click', function() {
+    const isOpen = select.classList.contains('is-open');
+    select.classList.toggle('is-open', !isOpen);
+    trigger.setAttribute('aria-expanded', !isOpen);
+  });
+
+  // Select option
+  options.forEach(function(option) {
+    option.addEventListener('click', function() {
+      // Update hidden input
+      hiddenInput.value = option.dataset.value;
+
+      // Update visible label
+      valueEl.textContent = option.textContent;
+
+      // Update active state
+      options.forEach(o => o.classList.remove('custom-select__option--active'));
+      option.classList.add('custom-select__option--active');
+
+      // Close dropdown
+      select.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!select.contains(e.target)) {
+      select.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      select.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();

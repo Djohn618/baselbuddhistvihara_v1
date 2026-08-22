@@ -569,14 +569,23 @@
                 </div>
 
                 <div class="field-group">
-                  <label class="field-label" for="contact-subject" data-i18n="contact.form.subject">Betreff</label>
-                  <select class="field-input field-select" id="contact-subject" name="subject" required>
-                    <option value="general" data-i18n="contact.form.subjectOptions.general">Allgemeine Anfrage</option>
-                    <option value="programs" data-i18n="contact.form.subjectOptions.programs">Programm-Info</option>
-                    <option value="donations" data-i18n="contact.form.subjectOptions.donations">Spenden</option>
-                    <option value="homeVisit" data-i18n="contact.form.subjectOptions.homeVisit">Hausbesuch</option>
-                    <option value="other" data-i18n="contact.form.subjectOptions.other">Sonstiges</option>
-                  </select>
+                  <label class="field-label" data-i18n="contact.form.subject">Betreff</label>
+                  <!-- Hidden real select for form submission -->
+                  <input type="hidden" id="contact-subject" name="subject" value="general">
+                  <!-- Custom dropdown -->
+                  <div class="custom-select" id="custom-select">
+                    <button type="button" class="custom-select__trigger" aria-haspopup="listbox" aria-expanded="false">
+                      <span class="custom-select__value" data-i18n="contact.form.subjectOptions.general">Allgemeine Anfrage</span>
+                      <i data-lucide="chevron-down" class="custom-select__arrow"></i>
+                    </button>
+                    <ul class="custom-select__dropdown" role="listbox">
+                      <li class="custom-select__option custom-select__option--active" role="option" data-value="general" data-i18n="contact.form.subjectOptions.general">Allgemeine Anfrage</li>
+                      <li class="custom-select__option" role="option" data-value="programs" data-i18n="contact.form.subjectOptions.programs">Programm-Info</li>
+                      <li class="custom-select__option" role="option" data-value="donations" data-i18n="contact.form.subjectOptions.donations">Spenden</li>
+                      <li class="custom-select__option" role="option" data-value="homeVisit" data-i18n="contact.form.subjectOptions.homeVisit">Hausbesuch</li>
+                      <li class="custom-select__option" role="option" data-value="other" data-i18n="contact.form.subjectOptions.other">Sonstiges</li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div class="field-group">
