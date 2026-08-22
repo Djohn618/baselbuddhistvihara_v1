@@ -9,7 +9,13 @@
   var SUPPORTED_LANGS = ['de', 'en', 'si'];
   var DEFAULT_LANG = 'de';
   var STORAGE_KEY = 'bbv_lang';
-  var TRANSLATIONS_URL = 'data/translations.json';
+
+  // Resolved relative to this script's own location (assets/js/i18n.js) so it
+  // still finds data/translations.json when the page lives in a subfolder
+  // (e.g. monks/kalyanatissa.html).
+  var TRANSLATIONS_URL = document.currentScript
+    ? new URL('../../data/translations.json', document.currentScript.src).href
+    : 'data/translations.json';
 
   var translations = null;
   var currentLang = DEFAULT_LANG;

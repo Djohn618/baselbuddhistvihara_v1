@@ -5,6 +5,14 @@
 (function () {
   'use strict';
 
+  // Resolved relative to this script's own location (assets/js/main.js) so it
+  // still finds data/monks.json when the page lives in a subfolder
+  // (e.g. monks/kalyanatissa.html). Must be captured now — document.currentScript
+  // is only valid during this script's initial synchronous execution.
+  var MONKS_URL = document.currentScript
+    ? new URL('../../data/monks.json', document.currentScript.src).href
+    : 'data/monks.json';
+
   var SCROLL_THRESHOLD = 80;
 
   var header = document.getElementById('site-header');
@@ -137,6 +145,16 @@
     });
   }
 
+  var fadeObserver = null;
+
+  function observeFadeIn(el) {
+    if (!fadeObserver) {
+      el.classList.add('fade-in-visible');
+      return;
+    }
+    fadeObserver.observe(el);
+  }
+
   function initFadeIn() {
     var fadeEls = document.querySelectorAll('.fade-in');
     if (!fadeEls.length) return;
@@ -146,7 +164,7 @@
       return;
     }
 
-    var observer = new IntersectionObserver(
+    fadeObserver = new IntersectionObserver(
       function (entries, obs) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -158,7 +176,53 @@
       { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
     );
 
-    fadeEls.forEach(function (el) { observer.observe(el); });
+    fadeEls.forEach(function (el) { fadeObserver.observe(el); });
+  }
+
+  // Load and render monks from data/monks.json
+  function loadMonks() {
+    var grid = document.getElementById('monks-grid');
+    if (!grid) return;
+
+    fetch(MONKS_URL)
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        var lang = window.i18n ? window.i18n.getLanguage() : 'de';
+        var featured = data.monks.filter(function (m) { return m.featured; });
+
+        var badgeText = { de: 'In Erinnerung', en: 'In Memory', si: 'සිහිකිරීමෙහිලා' };
+        var readMoreText = { de: 'Mehr erfahren', en: 'Read more', si: 'තව දැනගන්න' };
+
+        grid.innerHTML = featured.map(function (monk) {
+          var isPassed = monk.status === 'passed';
+
+          return '' +
+            '<article class="monk-card ' + (isPassed ? 'monk-card--passed' : '') + ' fade-in">' +
+              '<div class="monk-card__image-wrap">' +
+                (isPassed ? '<span class="monk-card__badge">' + badgeText[lang] + '</span>' : '') +
+                '<img src="' + monk.image + '" alt="' + monk.name + '" onerror="this.style.display=\'none\'" loading="lazy">' +
+              '</div>' +
+              '<div class="monk-card__body">' +
+                '<p class="monk-card__role">' + monk.role[lang] + '</p>' +
+                '<h3 class="monk-card__name">' + monk.name + '</h3>' +
+                (monk.dates ? '<p class="monk-card__dates">' + monk.dates + '</p>' : '') +
+                '<p class="monk-card__excerpt">' + monk.excerpt[lang] + '</p>' +
+                '<div class="monk-card__divider"></div>' +
+                '<a href="' + monk.detailPage + '" class="monk-card__link">' +
+                  readMoreText[lang] +
+                  '<i data-lucide="arrow-right"></i>' +
+                '</a>' +
+              '</div>' +
+            '</article>';
+        }).join('');
+
+        if (window.lucide) lucide.createIcons();
+
+        Array.prototype.slice.call(grid.querySelectorAll('.monk-card.fade-in')).forEach(observeFadeIn);
+      })
+      .catch(function (err) {
+        console.warn('Could not load monks.json', err);
+      });
   }
 
   function initHeroSlideshow() {
@@ -348,6 +412,8 @@
     initHeroSlideshow();
     initProgramsCarousel();
     initContactForm();
+    loadMonks();
+    document.addEventListener('i18n:change', loadMonks);
   }
 
   if (document.readyState === 'loading') {

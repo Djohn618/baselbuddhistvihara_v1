@@ -57,6 +57,11 @@
         }
       }
     },
+    "monks": {
+      "label": "UNSERE MÖNCHE",
+      "title": "Die Menschen hinter dem Vihara",
+      "subtitle": "Lernen Sie die Mönche kennen, die unser Vihara gegründet haben und täglich begleiten."
+    },
     "programs": {
       "label": "Unsere Programme",
       "title": "Programme & Veranstaltungen",
@@ -212,6 +217,11 @@
         }
       }
     },
+    "monks": {
+      "label": "OUR MONKS",
+      "title": "The People Behind the Vihara",
+      "subtitle": "Meet the monks who founded and daily guide our Vihara."
+    },
     "programs": {
       "label": "Our Programs",
       "title": "Programs & Events",
@@ -366,6 +376,11 @@
           }
         }
       }
+    },
+    "monks": {
+      "label": "අපේ භික්ෂූන්",
+      "title": "විහාරය පිටුපස සිටින අය",
+      "subtitle": "අපේ විහාරය ආරම්භ කළ සහ දිනපතා මෙහෙයවන භික්ෂූන් හඳුනා ගන්න."
     },
     "programs": {
       "label": "අපේ වැඩසටහන්",
