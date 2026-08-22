@@ -1561,12 +1561,15 @@ blockquote {
 .monks__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-md);
+  max-width: 900px;
+  margin-inline: auto;
 }
 
 @media (min-width: 768px) {
   .monks__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
   }
 }
 
@@ -1591,14 +1594,14 @@ blockquote {
 
 .monk-card__image-wrap {
   position: relative;
-  aspect-ratio: 3 / 2;
+  height: 200px;
   overflow: hidden;
   background: linear-gradient(135deg, #2C1810 0%, #6B2737 100%);
 }
 
 @media (min-width: 768px) {
   .monk-card__image-wrap {
-    aspect-ratio: 16 / 9;
+    height: 220px;
   }
 }
 
@@ -1624,7 +1627,7 @@ blockquote {
 .monk-card__body {
   display: flex;
   flex-direction: column;
-  padding: var(--space-md);
+  padding: 1rem 1.25rem;
   flex: 1;
 }
 
@@ -1653,12 +1656,12 @@ blockquote {
 
 .monk-card__excerpt {
   color: var(--color-text-muted);
-  line-height: var(--lh-normal);
-  font-size: var(--fs-sm);
+  line-height: 1.5;
+  font-size: 0.85rem;
   flex: 1;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 0.75rem;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1871,24 +1874,47 @@ blockquote {
 }
 
 @media (max-width: 768px) {
+  .program-card {
+    flex-direction: row;
+    align-items: stretch;
+    max-height: 140px;
+  }
+
   .program-card__image {
-    aspect-ratio: 16 / 7;
+    width: 120px;
+    min-width: 120px;
+    aspect-ratio: unset;
+    height: 100%;
+  }
+
+  .program-card__badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+    top: 0.4rem;
+    right: 0.4rem;
   }
 
   .program-card__body {
-    padding: 1rem;
+    padding: 0.75rem;
+    justify-content: center;
+  }
+
+  .program-card__icon {
+    display: none;
   }
 
   .program-card__title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
   }
 
   .program-card__meta {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .program-card__more {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
