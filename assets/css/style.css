@@ -632,7 +632,7 @@ blockquote {
 }
 
 .nav__brand-text {
-  display: none;
+  display: block;
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: #F5ECD7;
@@ -646,8 +646,9 @@ blockquote {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  color: #F5ECD7;
+  width: 44px;
+  height: 44px;
+  color: var(--color-text-dark);
   order: 4;
   flex-shrink: 0;
 }
@@ -658,101 +659,6 @@ blockquote {
 
 #nav-hamburger {
   display: none;
-}
-
-@media (max-width: 768px) {
-
-  /* Nav container: always solid on mobile so text never bleeds through */
-  .site-header {
-    background-color: #1A1A1A;
-  }
-
-  .nav__container {
-    padding-inline: 1rem;
-    justify-content: space-between;
-    background-color: #1A1A1A;
-  }
-
-  .site-header--scrolled .nav__container {
-    background-color: #FAF7F2;
-  }
-
-  .site-header--scrolled .lang-switcher__btn {
-    color: #2C2C2C !important;
-  }
-
-  .site-header--scrolled #nav-hamburger {
-    color: #2C2C2C !important;
-  }
-
-  /* Logo: left side */
-  .nav__brand {
-    order: 1;
-    flex-shrink: 0;
-  }
-
-  /* Hide brand text on mobile — logo only */
-  .nav__brand-text {
-    display: none;
-  }
-
-  /* Spacer between logo and right group */
-  .nav__brand::after {
-    content: '';
-    flex: 1;
-  }
-
-  /* Language switcher: show all 3 languages */
-  .lang-switcher {
-    display: flex;
-    order: 2;
-    margin-left: auto;
-    margin-right: 0.75rem;
-    gap: 0.2rem;
-    align-items: center;
-  }
-
-  .lang-switcher__btn {
-    color: #F5ECD7;
-    font-size: 0.78rem;
-    padding: 0.2rem;
-  }
-
-  /* Show Sinhala on mobile */
-  .nav__container .lang-switcher__btn--si,
-  .nav__container .lang-switcher__divider--si {
-    display: inline;
-  }
-
-  /* Hamburger: far right */
-  #nav-hamburger {
-    display: flex;
-    order: 3;
-    color: #F5ECD7;
-    flex-shrink: 0;
-  }
-
-  /* Hide desktop-only elements */
-  .nav__donate-btn {
-    display: none;
-  }
-
-  .nav__divider {
-    display: none;
-  }
-
-  .nav__links {
-    display: none;
-  }
-
-  /* Scrolled state */
-  .site-header--scrolled .lang-switcher__btn {
-    color: #2C2C2C;
-  }
-
-  .site-header--scrolled #nav-hamburger {
-    color: #2C2C2C;
-  }
 }
 
 .nav__donate-btn {
@@ -791,7 +697,9 @@ blockquote {
   color: #F5ECD7;
   background: transparent;
   border: none;
-  padding: var(--space-3xs);
+  min-width: 32px;
+  min-height: 44px;
+  padding: 0 var(--space-3xs);
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -805,7 +713,7 @@ blockquote {
 }
 
 .lang-switcher__btn.is-active {
-  color: var(--color-secondary);
+  color: var(--color-accent);
   font-weight: var(--fw-semibold);
 }
 
@@ -823,13 +731,6 @@ blockquote {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .nav__container .lang-switcher__btn--si,
-  .nav__container .lang-switcher__divider--si {
-    display: inline;
-  }
-}
-
 .nav__divider,
 .nav__links {
   display: none;
@@ -837,6 +738,91 @@ blockquote {
 
 .no-scroll {
   overflow: hidden;
+}
+
+/* Compact header (phones, tablets, small laptops — everything below the
+   1280px split layout): one light bar with logo, language switcher and
+   hamburger. Links and donate button live in the overlay. */
+@media (max-width: 1279px) {
+  .site-header {
+    background-color: rgba(250, 247, 242, 0.94);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .site-header--scrolled {
+    box-shadow: 0 1px 16px rgba(60, 40, 20, 0.06);
+  }
+
+  .nav__container {
+    padding-inline: var(--container-padding);
+    justify-content: space-between;
+  }
+
+  .nav__brand {
+    order: 1;
+    flex-shrink: 0;
+    min-height: 44px;
+  }
+
+  .nav__brand-text,
+  .site-header--scrolled .nav__brand-text {
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: var(--fw-semibold);
+  }
+
+  .lang-switcher {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+    margin-right: 0.25rem;
+    gap: 0;
+    align-items: center;
+  }
+
+  .lang-switcher__btn,
+  .site-header--scrolled .lang-switcher__btn {
+    color: var(--color-text-muted);
+    font-size: 0.78rem;
+  }
+
+  .nav__container .lang-switcher__btn--si,
+  .nav__container .lang-switcher__divider--si {
+    display: inline;
+  }
+
+  .site-header .lang-switcher__btn.is-active {
+    color: var(--color-accent);
+  }
+
+  #nav-hamburger,
+  .site-header--scrolled #nav-hamburger {
+    display: flex;
+    order: 3;
+    color: var(--color-text-dark);
+    flex-shrink: 0;
+  }
+
+  .nav__donate-btn,
+  .nav__divider,
+  .nav__links {
+    display: none;
+  }
+
+  /* The fixed bar sits above the hero instead of on top of the image */
+  .hero {
+    padding-top: var(--nav-height);
+  }
+}
+
+/* Very small phones: logo only, so the language switcher keeps its room */
+@media (max-width: 479px) {
+  .nav__brand-text {
+    display: none;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -974,13 +960,13 @@ blockquote {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-bg-dark);
+  background-color: var(--color-bg-light);
   z-index: 2000;
   display: flex;
   flex-direction: column;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
 }
 
 .nav-overlay.is-open {
@@ -993,7 +979,8 @@ blockquote {
   align-items: center;
   justify-content: space-between;
   height: var(--nav-height);
-  padding-inline: 2rem;
+  padding-inline: var(--container-padding);
+  border-bottom: 1px solid var(--color-border-light);
   flex-shrink: 0;
 }
 
@@ -1009,9 +996,10 @@ blockquote {
 }
 
 .nav-overlay__brand-text {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: #F5ECD7;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-dark);
   white-space: nowrap;
 }
 
@@ -1022,8 +1010,9 @@ blockquote {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  color: #F5ECD7;
+  width: 44px;
+  height: 44px;
+  color: var(--color-text-dark);
 }
 
 .nav-overlay__close .lucide {
@@ -1041,12 +1030,13 @@ blockquote {
 
 .nav-overlay__link {
   font-family: var(--font-heading);
-  font-size: 3rem;
-  color: var(--color-white);
+  font-size: clamp(2rem, 7vw, 2.75rem);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
   text-decoration: none;
   opacity: 0;
   transform: translateY(12px);
-  transition: color 0.2s ease, opacity 0.4s ease, transform 0.4s ease;
+  transition: color 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
 }
 
 .nav-overlay.is-open .nav-overlay__link {
@@ -1080,7 +1070,7 @@ blockquote {
 }
 
 .nav-overlay__bottom .lang-switcher__btn {
-  color: rgba(245, 236, 215, 0.7);
+  color: var(--color-text-muted);
   font-size: 1rem;
 }
 
@@ -1103,11 +1093,11 @@ blockquote {
 
 .nav-overlay__bottom .lang-switcher__btn:hover,
 .nav-overlay__bottom .lang-switcher__btn.is-active {
-  color: var(--color-secondary);
+  color: var(--color-accent);
 }
 
 .nav-overlay__bottom .lang-switcher__divider {
-  color: rgba(245, 236, 215, 0.3);
+  color: var(--color-border-light);
 }
 
 /* Hard override: no shadow/gradient/filter is allowed to cross the
@@ -3006,12 +2996,6 @@ a.contact__row:hover {
 
 .footer__heart {
   color: var(--color-accent);
-}
-
-@media (min-width: 480px) {
-  .nav__brand-text {
-    display: block;
-  }
 }
 
 /* --------------------------------------------------------------------------
