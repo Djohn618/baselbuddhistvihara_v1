@@ -212,15 +212,13 @@
         </div>
       </div>
 
-      <!-- Our Story content moved into About intro section below -->
     </section>
 
     <section id="monks" class="monks">
       <div class="container">
-        <div class="monks__header fade-in">
-          <p class="monks__label" data-i18n="monks.label">UNSERE MÖNCHE</p>
-          <h2 class="monks__title" data-i18n="monks.title">Die Menschen hinter dem Vihara</h2>
-          <p class="monks__subtitle" data-i18n="monks.subtitle">Lernen Sie die Mönche kennen, die unser Vihara gegründet haben und täglich begleiten.</p>
+        <div class="section-head fade-in">
+          <p class="section-head__label" data-i18n="monks.label">UNSERE MÖNCHE</p>
+          <h2 class="section-head__title" data-i18n="monks.title">Die Menschen hinter dem Vihara</h2>
         </div>
 
         <!-- Cards are rendered here by JS from data/monks.json -->
@@ -230,13 +228,12 @@
 
     <section id="programs" class="programs">
       <div class="container">
-        <div class="programs__header">
-          <p class="programs__label" data-i18n="programs.label">Unsere Programme</p>
-          <h2 class="programs__title" data-i18n="programs.title">Programme &amp; Veranstaltungen</h2>
-          <div class="programs__underline" aria-hidden="true"></div>
+        <div class="section-head fade-in">
+          <p class="section-head__label" data-i18n="programs.label">Unsere Programme</p>
+          <h2 class="section-head__title" data-i18n="programs.title">Programme &amp; Veranstaltungen</h2>
         </div>
 
-        <div class="programs__tabs" role="tablist">
+        <div class="programs__tabs fade-in" role="tablist">
           <button type="button" class="tab-btn tab-active" data-tab="programme" role="tab" aria-selected="true" data-i18n="programs.tab.programmes">Programme</button>
           <button type="button" class="tab-btn" data-tab="event" role="tab" aria-selected="false" data-i18n="programs.tab.events">Veranstaltungen</button>
         </div>
@@ -258,7 +255,7 @@
                   <h3 class="program-card__title" data-i18n="programs.cards.card1.title">Meditation auf Deutsch</h3>
                   <div class="program-card__divider" aria-hidden="true"></div>
                   <p class="program-card__meta" data-i18n="programs.cards.card1.time">18:00 – 20:00 Uhr</p>
-                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                  <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                 </div>
               </article>
 
@@ -272,7 +269,7 @@
                   <h3 class="program-card__title" data-i18n="programs.cards.card2.title">Meditation auf Singhalesisch</h3>
                   <div class="program-card__divider" aria-hidden="true"></div>
                   <p class="program-card__meta" data-i18n="programs.cards.card2.time">18:00 – 20:00 Uhr</p>
-                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                  <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                 </div>
               </article>
 
@@ -286,7 +283,7 @@
                   <h3 class="program-card__title" data-i18n="programs.cards.card3.title">Poya-Programm</h3>
                   <div class="program-card__divider" aria-hidden="true"></div>
                   <p class="program-card__meta" data-i18n="programs.cards.card3.time">14:00 – 18:00 Uhr</p>
-                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                  <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                 </div>
               </article>
 
@@ -300,7 +297,7 @@
                   <h3 class="program-card__title" data-i18n="programs.cards.card4.title">Dana-Zeremonien</h3>
                   <div class="program-card__divider" aria-hidden="true"></div>
                   <p class="program-card__meta" data-i18n="programs.cards.card4.desc">Monatlich, jährlich oder an einem besonderen Datum</p>
-                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                  <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                 </div>
               </article>
 
@@ -314,7 +311,7 @@
                   <h3 class="program-card__title" data-i18n="programs.cards.card5.title">Kathina-Zeremonie</h3>
                   <div class="program-card__divider" aria-hidden="true"></div>
                   <p class="program-card__meta" data-i18n="programs.cards.card5.desc">Traditionelle jährliche Robe-Zeremonie</p>
-                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                  <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                 </div>
               </article>
 
@@ -328,7 +325,7 @@
                   <h3 class="program-card__title" data-i18n="programs.cards.card6.title">Hausbesuche</h3>
                   <div class="program-card__divider" aria-hidden="true"></div>
                   <p class="program-card__meta" data-i18n="programs.cards.card6.desc">Mönche kommen für Pirith-Gesänge und Dana</p>
-                  <span class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <span aria-hidden="true">&rarr;</span></span>
+                  <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                 </div>
               </article>
             </div>
@@ -348,13 +345,13 @@
         <div class="swipe-hint" id="swipe-hint" aria-hidden="true">
           <div class="swipe-hint__icon">
             <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="swipe-hint__svg">
-              <path d="M32 8 C20 8 11 17 11 29 C11 35 13.5 40.5 17.5 44.5" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" class="swipe-hint__arc"/>
-              <polyline points="11,44 17.5,44.5 17,38" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 8 C20 8 11 17 11 29 C11 35 13.5 40.5 17.5 44.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" class="swipe-hint__arc"/>
+              <polyline points="11,44 17.5,44.5 17,38" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               <g class="swipe-hint__hand">
-                <rect x="28" y="24" width="7" height="20" rx="3.5" fill="rgba(255,255,255,0.85)"/>
-                <rect x="22" y="30" width="6.5" height="16" rx="3" fill="rgba(255,255,255,0.85)"/>
-                <rect x="35" y="30" width="6.5" height="16" rx="3" fill="rgba(255,255,255,0.85)"/>
-                <rect x="22" y="40" width="20" height="14" rx="4" fill="rgba(255,255,255,0.85)"/>
+                <rect x="28" y="24" width="7" height="20" rx="3.5" fill="currentColor"/>
+                <rect x="22" y="30" width="6.5" height="16" rx="3" fill="currentColor"/>
+                <rect x="35" y="30" width="6.5" height="16" rx="3" fill="currentColor"/>
+                <rect x="22" y="40" width="20" height="14" rx="4" fill="currentColor"/>
               </g>
             </svg>
           </div>
@@ -363,13 +360,15 @@
       </div>
     </section>
 
-    <section id="youtube" class="youtube section">
+    <section id="youtube" class="youtube">
       <div class="container">
-        <h2 class="youtube__title text-center" data-i18n="youtube.title">Dhamma Dana</h2>
-        <p class="youtube__subtitle text-center" data-i18n="youtube.subtitle">Unsere YouTube-Kanäle</p>
+        <div class="section-head fade-in">
+          <p class="section-head__label" data-i18n="youtube.label">YouTube</p>
+          <h2 class="section-head__title" data-i18n="youtube.title">Dhamma Dana</h2>
+        </div>
 
         <!-- Replace placeholder cards with real YouTube links when available -->
-        <div class="youtube__grid">
+        <div class="youtube__grid fade-in">
           <a href="#" class="youtube-card">
             <div class="youtube-card__thumb">
               <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play" class="lucide-lg"></i></span>
@@ -418,13 +417,12 @@
 
     <section id="gallery" class="gallery">
       <div class="container">
-        <div class="gallery__header fade-in">
-          <p class="gallery__label" data-i18n="gallery.label">GALERIE</p>
-          <h2 class="gallery__title" data-i18n="gallery.title">Einblicke in unseren Vihara</h2>
-          <p class="gallery__subtitle" data-i18n="gallery.subtitle">Entdecken Sie unsere Räumlichkeiten, Zeremonien und die Gemeinschaft des Basel Buddhist Vihara.</p>
+        <div class="section-head fade-in">
+          <p class="section-head__label" data-i18n="gallery.label">GALERIE</p>
+          <h2 class="section-head__title" data-i18n="gallery.title">Einblicke in unseren Vihara</h2>
         </div>
 
-        <div class="gallery__grid">
+        <div class="gallery__grid fade-in">
           <button type="button" class="gallery__item" data-aspect="3 / 4" aria-label="Foto 1">
             <!-- replace with: <img src="assets/images/gallery/photo-1.jpg" alt="..."> -->
             <span class="gallery__img" aria-hidden="true"></span>
@@ -477,11 +475,9 @@
     <section id="contact" class="contact">
       <div class="container">
 
-        <!-- Section header -->
-        <div class="contact__header fade-in">
-          <p class="contact__label" data-i18n="contact.label">KONTAKT</p>
-          <h2 class="contact__title" data-i18n="contact.heading">Wir sind für Sie da</h2>
-          <p class="contact__subtitle" data-i18n="contact.subheading">Haben Sie Fragen zu unseren Programmen oder möchten Sie das Vihara besuchen? Wir freuen uns von Ihnen zu hören.</p>
+        <div class="section-head fade-in">
+          <p class="section-head__label" data-i18n="contact.label">KONTAKT</p>
+          <h2 class="section-head__title" data-i18n="contact.heading">Wir sind für Sie da</h2>
         </div>
 
         <!-- Two column grid -->
@@ -521,7 +517,7 @@
               <div class="contact__row contact__row--static">
                 <span class="contact__row-icon"><i data-lucide="map-pin"></i></span>
                 <span class="contact__row-text">
-                  <span class="contact__row-label">ADRESSE</span>
+                  <span class="contact__row-label" data-i18n="contact.rows.address.label">ADRESSE</span>
                   <span class="contact__row-value">Feldbergstrasse 142<br>4057 Basel, Switzerland</span>
                 </span>
               </div>

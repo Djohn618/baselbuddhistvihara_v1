@@ -325,6 +325,9 @@
 
       prevBtn.disabled = currentIndex === 0;
       nextBtn.disabled = currentIndex === maxIndex;
+
+      // Nothing to scroll (all cards fit): hide the arrows but keep their space
+      prevBtn.style.visibility = nextBtn.style.visibility = maxIndex === 0 ? 'hidden' : '';
     }
 
     function goTo(index) {

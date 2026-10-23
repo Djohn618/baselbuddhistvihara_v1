@@ -81,6 +81,7 @@
       }
     },
     "youtube": {
+      "label": "YouTube",
       "title": "Dhamma Dana",
       "subtitle": "",
       "videos": {
@@ -124,7 +125,8 @@
       "rows": {
         "email": { "label": "E-MAIL", "value": "ariyaseela@gmail.com" },
         "phone": { "label": "TELEFON", "value": "+41 792 303 699" },
-        "hours": { "label": "ÖFFNUNGSZEITEN", "value": "Täglich 7:00 – 18:30 Uhr" }
+        "hours": { "label": "ÖFFNUNGSZEITEN", "value": "Täglich 7:00 – 18:30 Uhr" },
+        "address": { "label": "ADRESSE" }
       },
       "appointment": "Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
@@ -242,6 +244,7 @@
       }
     },
     "youtube": {
+      "label": "YouTube",
       "title": "Dhamma Dana",
       "subtitle": "",
       "videos": {
@@ -285,7 +288,8 @@
       "rows": {
         "email": { "label": "EMAIL", "value": "ariyaseela@gmail.com" },
         "phone": { "label": "PHONE", "value": "+41 792 303 699" },
-        "hours": { "label": "HOURS", "value": "Daily 7:00 AM – 6:30 PM" }
+        "hours": { "label": "HOURS", "value": "Daily 7:00 AM – 6:30 PM" },
+        "address": { "label": "ADDRESS" }
       },
       "appointment": "Please book an appointment in advance before visiting the Vihara.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
@@ -403,6 +407,7 @@
       }
     },
     "youtube": {
+      "label": "YouTube",
       "title": "Dhamma Dana",
       "subtitle": "",
       "videos": {
@@ -446,7 +451,8 @@
       "rows": {
         "email": { "label": "විද්‍යුත් තැපෑල", "value": "ariyaseela@gmail.com" },
         "phone": { "label": "දුරකථනය", "value": "+41 792 303 699" },
-        "hours": { "label": "විවෘත වේලාවන්", "value": "සෑම දිනකම උදේ 7:00 – සවස 18:30" }
+        "hours": { "label": "විවෘත වේලාවන්", "value": "සෑම දිනකම උදේ 7:00 – සවස 18:30" },
+        "address": { "label": "ලිපිනය" }
       },
       "appointment": "විහාරයට පැමිණීමට පෙර කලින් වේලාවක් වෙන්කරවා ගැනීම කාරුණිකව ඉල්ලා සිටිමු.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
