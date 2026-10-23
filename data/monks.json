@@ -7,7 +7,11 @@
   "monks": [
     {
       "id": "kalyanatissa",
-      "name": "Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero",
+      "name": {
+        "de": "Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero",
+        "en": "Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero",
+        "si": "අති පූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක ස්වාමීන් වහන්සේ"
+      },
       "role": {
         "de": "Gründer & Spiritueller Berater",
         "en": "Founder & Spiritual Advisor",
@@ -26,7 +30,11 @@
     },
     {
       "id": "ariyaseela",
-      "name": "Ehrw. Udumaththe Ariyaseela Thero",
+      "name": {
+        "de": "Ehrw. Udumaththe Ariyaseela Thero",
+        "en": "Ven. Udumaththe Ariyaseela Thero",
+        "si": "පූජ්‍ය උඩුමත්තේ අරියසීල ස්වාමීන් වහන්සේ"
+      },
       "role": {
         "de": "Tempelvorsteher",
         "en": "Head Monk",

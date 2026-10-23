@@ -208,16 +208,18 @@
 
     grid.innerHTML = featured.map(function (monk) {
       var isPassed = monk.status === 'passed';
+      // name is either one string or { de, en, si }
+      var name = typeof monk.name === 'object' ? (monk.name[lang] || monk.name.de) : monk.name;
 
       return '' +
         '<article class="monk-card ' + (isPassed ? 'monk-card--passed' : '') + ' fade-in">' +
           '<div class="monk-card__image-wrap">' +
             (isPassed ? '<span class="monk-card__badge">' + badgeText[lang] + '</span>' : '') +
-            (monk.image ? '<img src="' + monk.image + '" alt="' + monk.name + '" onerror="this.style.display=\'none\'" loading="lazy">' : '') +
+            (monk.image ? '<img src="' + monk.image + '" alt="' + name + '" onerror="this.style.display=\'none\'" loading="lazy">' : '') +
           '</div>' +
           '<div class="monk-card__body">' +
             '<p class="monk-card__role">' + monk.role[lang] + '</p>' +
-            '<h3 class="monk-card__name">' + monk.name + '</h3>' +
+            '<h3 class="monk-card__name">' + name + '</h3>' +
             (monk.dates ? '<p class="monk-card__dates">' + monk.dates + '</p>' : '') +
             '<p class="monk-card__excerpt">' + monk.excerpt[lang] + '</p>' +
             '<div class="monk-card__divider"></div>' +

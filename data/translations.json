@@ -62,6 +62,29 @@
       "title": "Die Menschen hinter dem Vihara",
       "subtitle": ""
     },
+    "monkPages": {
+      "back": "Zurück zur Hauptseite",
+      "kalyanatissa": {
+        "role": "Gründer & Spiritueller Berater",
+        "name": "Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero",
+        "dates": "? – 12. Juni 2024",
+        "p1": "Das spirituelle Fundament und die anfängliche Führung des Basel Buddhist Vihara wurden von unserem verehrten Gründer, dem Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero, gelegt. Mit grosser Hingabe und Weitsicht widmete er sein Leben der Verbreitung des Dhamma und dem Aufbau einer Gemeinschaft, die sri-lankischen Buddhisten und allen an der buddhistischen Philosophie interessierten Menschen in und um Basel eine spirituelle Heimat bietet.",
+        "p2": "In Verbindung mit dem am 17. März 2021 gegründeten Sri Kalyana Buddhistischen Zentrum (SKBZ) verfolgte er das Ziel, spirituelle Führung auf der Grundlage des Dhamma anzubieten, um einen friedlichen und disziplinierten Lebensstil zu fördern. Seine Vision führte schliesslich zur Eröffnung des Basel Buddhist Vihara am 6. Juli 2024, mit fünf Mönchen und rund dreissig Anwesenden.",
+        "quote": "„Wie ein Fels durch Stürme nicht erschüttert wird, so lässt sich der Weise durch Lob und Tadel nicht erschüttern.\" — Dhammapada, Vers 81",
+        "p3": "Obwohl er am 12. Juni 2024 im Genfer Internationalen Buddhistischen Zentrum verstarb — nur wenige Tage vor der Eröffnung des Vihara, dessen Entstehung er so massgeblich vorangetrieben hatte — lebt seine edle Vision in unserer Gemeinschaft weiter. Sein Vermächtnis bleibt ein ewiges Leuchtfeuer für alle, die im Basel Buddhist Vihara Zuflucht und spirituelle Führung suchen."
+      },
+      "ariyaseela": {
+        "role": "Tempelvorsteher",
+        "name": "Ehrw. Udumaththe Ariyaseela Thero",
+        "p1": "Ehrw. Udumaththe Ariyaseela Thero leitet das Basel Buddhist Vihara und sorgt täglich für die spirituelle Begleitung unserer Gemeinschaft. Als Tempelvorsteher trägt er die Verantwortung für das religiöse Leben des Vihara — von der Durchführung der Poya-Programme und Dana-Zeremonien bis hin zur persönlichen Beratung von Gemeindemitgliedern, die Rat und Trost im Dhamma suchen.",
+        "p2": "Seit der Eröffnung des Basel Buddhist Vihara am 6. Juli 2024 führt er die Gemeinschaft mit grosser Hingabe weiter, im Geiste der Vision, die von unserem verstorbenen Gründer, dem Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero, gelegt wurde. Neben seiner Rolle als Tempelvorsteher wirkt er zudem als Kassier des Sri Kalyana Buddhistischen Zentrums (SKBZ).",
+        "quote": "„Gesundheit ist der grösste Gewinn, Zufriedenheit der grösste Reichtum, Vertrauen der beste Verwandte, Nibbana das höchste Glück.\" — Dhammapada, Vers 204",
+        "p3": "Ehrw. Ariyaseela Thero steht der Gemeinschaft in Basel für Meditation, Dhamma-Gespräche und Hausbesuche mit Pirith-Gesängen zur Verfügung und begleitet Menschen aller Nationalitäten auf ihrem spirituellen Weg."
+      }
+    },
+    "moonstone": {
+      "caption": "Die Sandakada Pahana, der Mondstein am Eingang srilankischer Tempel. Ihre Ringe zeigen den Weg vom Kreislauf des Lebens zur Lotusblüte des Nibbana."
+    },
     "programs": {
       "label": "Unsere Programme",
       "title": "Programme & Veranstaltungen",
@@ -225,6 +248,29 @@
       "title": "The People Behind the Vihara",
       "subtitle": ""
     },
+    "monkPages": {
+      "back": "Back to the main page",
+      "kalyanatissa": {
+        "role": "Founder & Spiritual Advisor",
+        "name": "Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero",
+        "dates": "? – June 12, 2024",
+        "p1": "The spiritual foundation and early leadership of the Basel Buddhist Vihara were laid by our venerable founder, Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero. With great dedication and foresight, he devoted his life to spreading the Dhamma and to building a community that offers a spiritual home to Sri Lankan Buddhists and to everyone in and around Basel who is interested in Buddhist philosophy.",
+        "p2": "Together with the Sri Kalyana Buddhist Centre (SKBZ), founded on March 17, 2021, he set out to offer spiritual guidance based on the Dhamma and to encourage a peaceful and disciplined way of life. His vision finally led to the opening of the Basel Buddhist Vihara on July 6, 2024, with five monks and around thirty people present.",
+        "quote": "“As a solid rock is not shaken by the wind, so the wise are not shaken by praise or blame.” — Dhammapada, verse 81",
+        "p3": "Although he passed away on June 12, 2024, at the Geneva International Buddhist Center — shortly before the opening of the Vihara he had worked so hard to create — his noble vision lives on in our community. His legacy remains a lasting light for everyone who seeks refuge and spiritual guidance at the Basel Buddhist Vihara."
+      },
+      "ariyaseela": {
+        "role": "Head Monk",
+        "name": "Ven. Udumaththe Ariyaseela Thero",
+        "p1": "Ven. Udumaththe Ariyaseela Thero leads the Basel Buddhist Vihara and gives daily spiritual guidance to our community. As head monk he is responsible for the religious life of the Vihara — from leading the Poya programmes and Dana ceremonies to personally advising members of the community who seek counsel and comfort in the Dhamma.",
+        "p2": "Since the opening of the Basel Buddhist Vihara on July 6, 2024, he has led the community with great devotion, in the spirit of the vision laid down by our late founder, Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero. Besides his role as head monk, he also serves as treasurer of the Sri Kalyana Buddhist Centre (SKBZ).",
+        "quote": "“Health is the greatest gift, contentment the greatest wealth, trust the best of relatives, Nibbana the highest happiness.” — Dhammapada, verse 204",
+        "p3": "Ven. Ariyaseela Thero is available to the community in Basel for meditation, Dhamma talks and home visits with Pirith chanting, and accompanies people of all nationalities on their spiritual path."
+      }
+    },
+    "moonstone": {
+      "caption": "The Sandakada Pahana, the moonstone at the entrance of Sri Lankan temples. Its rings trace the path from the cycle of life to the lotus of Nibbana."
+    },
     "programs": {
       "label": "Our Programs",
       "title": "Programs & Events",
@@ -387,6 +433,29 @@
       "label": "අපේ භික්ෂූන්",
       "title": "විහාරය පිටුපස සිටින අය",
       "subtitle": ""
+    },
+    "monkPages": {
+      "back": "මුල් පිටුවට ආපසු",
+      "kalyanatissa": {
+        "role": "නිර්මාතෘ සහ ආධ්‍යාත්මික උපදේශක",
+        "name": "අති පූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක ස්වාමීන් වහන්සේ",
+        "dates": "? – 2024 ජූනි 12",
+        "p1": "බාසල් බෞද්ධ විහාරයේ ආධ්‍යාත්මික පදනම සහ මුල් නායකත්වය අපගේ ගෞරවනීය නිර්මාතෘ, අති පූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක ස්වාමීන් වහන්සේ විසින් ස්ථාපිත කරන ලදී. මහත් කැපවීමකින් හා දූරදර්ශීභාවයකින් යුතුව උන්වහන්සේ ධර්මය ප්‍රචාරය කිරීමටත්, බාසල් සහ අවට ප්‍රදේශවල වෙසෙන ශ්‍රී ලාංකික බෞද්ධයන්ට මෙන්ම බෞද්ධ දර්ශනය කෙරෙහි උනන්දුවක් දක්වන සැමට ආධ්‍යාත්මික නිවහනක් වන ප්‍රජාවක් ගොඩනැගීමටත් සිය ජීවිතය කැප කළහ.",
+        "p2": "2021 මාර්තු 17 වන දින ආරම්භ කළ ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානය (SKBZ) සමඟ එක්ව, සාමකාමී හා විනයගරුක ජීවන රටාවක් දිරිමත් කිරීම සඳහා ධර්මය පදනම් කරගත් ආධ්‍යාත්මික මඟපෙන්වීමක් ලබා දීම උන්වහන්සේගේ අරමුණ විය. එම දැක්ම අවසානයේ 2024 ජූලි 6 වන දින භික්ෂූන් වහන්සේලා පස් නමක් සහ සැදැහැවතුන් තිස් දෙනෙකු පමණ සහභාගීත්වයෙන් බාසල් බෞද්ධ විහාරය විවෘත කිරීමට මඟ පෑදීය.",
+        "quote": "“ඝන ගලක් සුළඟින් නොසැලෙන්නාක් මෙන්, නුවණැත්තෝ නින්දා ප්‍රශංසාවන්හි නොසැලෙති.” — ධම්මපදය, 81 වන ගාථාව",
+        "p3": "උන්වහන්සේ 2024 ජූනි 12 වන දින ජිනීවා ජාත්‍යන්තර බෞද්ධ මධ්‍යස්ථානයේදී අපවත් වූයේ, තමන් වහන්සේ මෙතරම් වෙහෙස මහන්සි වී ගොඩනැගූ විහාරය විවෘත කිරීමට ටික කලකට පෙරය. එසේ වුවද උන්වහන්සේගේ උතුම් දැක්ම අපගේ ප්‍රජාව තුළ තවමත් ජීවමානය. උන්වහන්සේගේ උරුමය බාසල් බෞද්ධ විහාරයේ සරණ සහ ආධ්‍යාත්මික මඟපෙන්වීම සොයන සැමට සදාකාලික ආලෝකයක් ලෙස පවතී."
+      },
+      "ariyaseela": {
+        "role": "විහාරාධිපති",
+        "name": "පූජ්‍ය උඩුමත්තේ අරියසීල ස්වාමීන් වහන්සේ",
+        "p1": "පූජ්‍ය උඩුමත්තේ අරියසීල ස්වාමීන් වහන්සේ බාසල් බෞද්ධ විහාරය මෙහෙයවන අතර, අපගේ ප්‍රජාවට දිනපතා ආධ්‍යාත්මික මඟපෙන්වීම ලබා දෙති. විහාරාධිපති වශයෙන් පෝය වැඩසටහන් සහ දාන පිංකම් පැවැත්වීමේ සිට ධර්මයෙන් උපදෙස් හා සැනසීම සොයන දායක දායිකාවන්ට පුද්ගලිකව උපදෙස් දීම දක්වා විහාරයේ ආගමික කටයුතු සියල්ලේ වගකීම උන්වහන්සේ දරති.",
+        "p2": "2024 ජූලි 6 වන දින බාසල් බෞද්ධ විහාරය විවෘත කළ දින සිට, අපගේ දිවංගත නිර්මාතෘ අති පූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක ස්වාමීන් වහන්සේ තැබූ දැක්මට අනුව උන්වහන්සේ මහත් භක්තියෙන් ප්‍රජාව මෙහෙයවති. විහාරාධිපති ධුරයට අමතරව උන්වහන්සේ ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානයේ (SKBZ) භාණ්ඩාගාරික ලෙසද කටයුතු කරති.",
+        "quote": "“ආරෝග්‍යය උතුම් ලාභයයි, සන්තුෂ්ටිය උතුම් ධනයයි, විශ්වාසය උතුම් ඥාතියායි, නිර්වාණය උතුම් සැපයයි.” — ධම්මපදය, 204 වන ගාථාව",
+        "p3": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ භාවනාව, ධර්ම සාකච්ඡා සහ පිරිත් සජ්ඣායනා සහිත නිවෙස් වැඩම කිරීම් සඳහා බාසල් ප්‍රජාවට සැමවිටම සහභාගී වන අතර, සියලු ජාතීන්ට අයත් අයට ඔවුන්ගේ ආධ්‍යාත්මික ගමනේදී සහාය වෙති."
+      }
+    },
+    "moonstone": {
+      "caption": "සඳකඩ පහණ — ශ්‍රී ලාංකේය විහාරස්ථානවල දොරටුවේ ඇති මෙම කැටයමේ වළලු, සසර චක්‍රයේ සිට නිර්වාණය සංකේතවත් කරන පියුම දක්වා වූ ගමන පෙන්වයි."
     },
     "programs": {
       "label": "අපේ වැඩසටහන්",
