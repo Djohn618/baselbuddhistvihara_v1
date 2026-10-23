@@ -1996,7 +1996,7 @@ blockquote {
     padding: 0.6rem 0.75rem;
   }
 
-  .program-card__icon {
+  .program-card .program-card__icon {
     display: none;
   }
 
@@ -2970,8 +2970,14 @@ a.contact__row:hover .contact__row-arrow .lucide {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: var(--space-lg);
+  column-gap: var(--space-md);
   margin-top: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .footer__nav {
+    column-gap: var(--space-lg);
+  }
 }
 
 .footer__link {
