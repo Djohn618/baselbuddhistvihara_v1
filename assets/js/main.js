@@ -204,6 +204,13 @@
     var featured = data.monks.filter(function (m) { return m.featured; });
 
     var badgeText = { de: 'In Erinnerung', en: 'In Memory', si: 'සිහිකිරීමෙහිලා' };
+
+    // Small clay oil lamp (pol thel pahana) with a softly flickering flame
+    var lampIcon =
+      '<svg class="oil-lamp" viewBox="0 0 20 20" aria-hidden="true" focusable="false">' +
+        '<path class="oil-lamp__flame" d="M10 10.5 C7.6 8.6 8.6 5.6 10 2.5 C11.4 5.6 12.4 8.6 10 10.5 Z"/>' +
+        '<path class="oil-lamp__body" d="M3 12 C3.5 15.5 16.5 15.5 17 12 Z M17 12 L18.5 11 M7.5 17.5 L12.5 17.5 M10 15.2 L10 17.5"/>' +
+      '</svg>';
     var readMoreText = { de: 'Mehr erfahren', en: 'Read more', si: 'තව දැනගන්න' };
 
     grid.innerHTML = featured.map(function (monk) {
@@ -214,7 +221,7 @@
       return '' +
         '<article class="monk-card ' + (isPassed ? 'monk-card--passed' : '') + ' fade-in">' +
           '<div class="monk-card__image-wrap">' +
-            (isPassed ? '<span class="monk-card__badge">' + badgeText[lang] + '</span>' : '') +
+            (isPassed ? '<span class="monk-card__badge">' + lampIcon + badgeText[lang] + '</span>' : '') +
             (monk.image ? '<img src="' + monk.image + '" alt="' + name + '" onerror="this.style.display=\'none\'" loading="lazy">' : '') +
           '</div>' +
           '<div class="monk-card__body">' +

@@ -91,12 +91,19 @@ Shared building blocks (reuse these, do not invent new variants):
 - Buttons: pill shaped (`var(--radius-full)`), burgundy outline or fill
 - Placeholders: `var(--ph-1)`, `var(--ph-2)`, `var(--ph-3)` (soft parchment gradients)
 - Spacing: every section uses `padding-block: var(--section-padding-y)`
-- Sandakada Pahana (moonstone): fine gold line-art half moonstone drawn by
-  assets/js/moonstone.js into any `<div class="moonstone" data-moonstone>`.
-  Used at the "entrance" (bottom of the hero text column) and the "exit"
-  (footer, with the caption key moonstone.caption). Rings: fire, beads,
-  creeper, slowly turning swans (hamsa), lotus petals, lotus centre.
-  Lines draw in when visible. Keep it rare: two places only.
+- Sri Lankan Buddhist art touches (fine gold line-art, all calm). Keep each
+  in its place, do not add more without asking:
+  - Makara Thorana arch over the hero title (inline SVG in index.html, draws
+    itself once on load; hidden on short laptop screens ≤700px high)
+  - Sandakada Pahana (moonstone) in the footer only, drawn by
+    assets/js/moonstone.js into `<div class="moonstone" data-moonstone>`,
+    with caption key moonstone.caption; its swans turn very slowly
+  - Liyawela vine with lotus bud under every `.section-head__title`
+    (CSS data-URI), grows outward when the header fades in
+  - Clay oil lamp with a softly flickering flame in the founder's
+    "In Memory" badge (main.js renderMonks)
+  - Lotus bud icons for the About bullets (`.lotus-icon`)
+  - Kandyan curled-corner frame around the quotes on monks/*.html
 - Motion: slow and calm. `var(--ease-calm)`, ~0.6–1s. `.fade-in` on scroll,
   hero text rises in, hero slides crossfade with a gentle zoom.
   `prefers-reduced-motion` disables all of it.
