@@ -8,9 +8,11 @@ Always follow these rules and conventions throughout the entire project.
 ## Project Overview
 
 **Project:** Basel Buddhist Vihara — full website redesign
-**Domain:** baselbuddhistvihara.ch (hosted on Cyon.ch, Apache server)
+**Owner:** SKBZ (Sri Kalyana Buddhistisches Zentrum). Developer: Deshan (apprentice, explain simply)
+**Domain:** baselbuddhistvihara.ch (registered at Cyon.ch)
+**Hosting:** Vercel (free), deployed from the GitHub repo. No PHP on the server.
 **Repo:** https://github.com/Djohn618/baselbuddhistvihara.git
-**Design reference:** Plum Village (plumvillage.org) + Aether Atlas — calm, minimal, warm, spiritual
+**Design reference:** plumvillage.org, ibf-geneva.org — calm, minimal, warm, spiritual, modern
 **Languages:** German (de, DEFAULT), English (en), Sinhala (si)
 
 ---
@@ -18,10 +20,10 @@ Always follow these rules and conventions throughout the entire project.
 ## Tech Stack — STRICT RULES
 
 - Vanilla HTML, CSS, JavaScript ONLY
-- NO Bootstrap, NO jQuery, NO React, NO Tailwind, NO Formspree, NO external CSS frameworks
-- Lucide Icons (CDN) is the ONLY allowed external library for icons
-- PHP only for contact.php (contact form handler)
-- No emojis anywhere — use Lucide icons instead
+- NO Bootstrap, NO jQuery, NO React, NO Tailwind, NO Swiper, NO external CSS frameworks
+- Lucide Icons (CDN, pinned version) is the ONLY allowed external library
+- Contact form posts to Formspree via AJAX (no PHP)
+- No emojis anywhere (UI, translations, footer) — use Lucide icons or plain text
 - Google Fonts allowed: Cormorant Garamond (headings) + Inter (body)
 
 ---
@@ -30,133 +32,134 @@ Always follow these rules and conventions throughout the entire project.
 
 baselbuddhistvihara/
 ├── index.html                  # Main single-page file
-├── contact.php                 # PHP contact form handler (Cyon)
-├── .htaccess                   # Apache config (HTTPS, caching, GZIP)
-├── robots.txt
-├── sitemap.xml
-├── 404.html
 ├── CLAUDE.md                   # This file
 ├── README.md                   # GitHub documentation
+├── monks/
+│   ├── kalyanatissa.html       # Founder detail page
+│   └── ariyaseela.html         # Head monk detail page
 ├── assets/
 │   ├── css/
 │   │   ├── style.css           # Main stylesheet
-│   │   └── fonts.css           # Google Fonts imports
+│   │   └── fonts.css           # Google Fonts import
 │   ├── js/
-│   │   ├── main.js             # Main JS (animations, lightbox, scroll)
-│   │   └── i18n.js             # Language switcher logic
+│   │   ├── main.js             # Nav, hero slideshow, carousel, monks, form, dropdown
+│   │   ├── i18n.js             # Language switcher logic
+│   │   └── gallery.js          # Gallery lightbox
 │   └── images/
-│       ├── logo/               # V2.png (SKBZ logo)
-│       ├── hero/               # Hero images (real photos come later)
-│       ├── about/              # Temple/monk photos (real photos come later)
-│       └── gallery/            # Gallery photos (real photos come later)
+│       ├── logo/               # V2.png (SKBZ logo, also used as favicon)
+│       ├── hero/               # Home_page.png, Budda.png, our_monk.png
+│       ├── other/              # Walpola_Maha Thero.jpg
+│       ├── monks/              # monk portraits (ariyaseela.jpg still missing)
+│       ├── about/              # about collage photos (pending)
+│       └── gallery/            # photo-1.jpg ... photo-N.jpg (pending)
 └── data/
-    └── translations.json       # All text content in DE, EN, SI
+    ├── translations.json       # All text content in DE, EN, SI
+    └── monks.json              # Monk cards (new monk = new object)
+
+Not yet created: robots.txt, sitemap.xml, 404.html, vercel.json.
 
 ---
 
 ## Design System
 
 Colors (CSS custom properties in style.css):
---color-primary:     #6B2737   (dark burgundy)
---color-secondary:   #C9922A   (warm gold)
---color-accent:      #E8762B   (saffron orange — from logo)
---color-bg-light:    #FAF7F2   (warm off-white)
+--color-primary:     #6B2737   (burgundy — headings, buttons)
+--color-secondary:   #C9922A   (warm gold — labels, lines, icons, links)
+--color-accent:      #E8762B   (saffron — active language only)
+--color-bg-light:    #FAF7F2   (warm off-white — main background, footer)
+--color-bg-soft:     #F4EEE3   (alternating section background)
 --color-bg-paper:    #F5ECD7   (aged parchment)
---color-bg-dark:     #1A1A1A   (near black)
 --color-text-dark:   #2C2C2C
 --color-text-muted:  #6B6B6B
 --color-border-light:#E8E0D5
 --color-gold-border: rgba(180,140,80,0.25)
 
-Typography:
-- Headings: Cormorant Garamond (elegant, spiritual)
-- Body: Inter (clean, modern)
+Section backgrounds alternate: about (light) → monks (soft) → programs (light)
+→ youtube (soft) → gallery (light) → contact (soft) → footer (light).
+No dark sections. The whole site is light and calm.
 
-Key CSS class — .paper-card (used on cards, fact rows, contact info):
-Warm parchment texture — NOT AI-looking, NOT digital-flat.
-background: #F5ECD7 with subtle repeating-linear-gradient texture
-border: 1px solid rgba(180,140,80,0.25)
-box-shadow: inset soft warm shadow + outer soft shadow
+Typography:
+- Headings: Cormorant Garamond, weight 500–600, burgundy
+- Body: Inter
+
+Shared building blocks (reuse these, do not invent new variants):
+- Section header: `.section-head` > `.section-head__label` (small gold uppercase)
+  + `.section-head__title` (serif, burgundy, short gold line underneath)
+- Cards: white, `border: var(--border-soft)`, `border-radius: var(--radius-lg)`,
+  `box-shadow: var(--shadow-soft)`, hover lifts 4px with `var(--shadow-lift)`
+- Buttons: pill shaped (`var(--radius-full)`), burgundy outline or fill
+- Placeholders: `var(--ph-1)`, `var(--ph-2)`, `var(--ph-3)` (soft parchment gradients)
+- Spacing: every section uses `padding-block: var(--section-padding-y)`
+- Motion: slow and calm. `var(--ease-calm)`, ~0.6–1s. `.fade-in` on scroll,
+  hero text rises in, hero slides crossfade with a gentle zoom.
+  `prefers-reduced-motion` disables all of it.
 
 ---
 
 ## Icons — Lucide Only, No Emojis
 
-Add to index.html before </body>:
-  <script src="https://unpkg.com/lucide@latest"></script>
+Loaded before </body> (pinned version, do not use @latest):
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script>lucide.createIcons();</script>
 
-Icon reference:
-  map-pin          → address
-  phone            → phone number
-  mail             → email
-  clock            → opening hours
-  calendar-check   → appointment notice
-  wind             → meditation
-  moon             → poya program
-  heart-handshake  → dana / donations
-  star             → ceremony
-  calendar         → events
-  landmark         → founding date
-  user             → person / monk
-  users            → community / group
-  book-open        → dhamma / teaching
-  play-circle      → video / youtube
-  arrow-right      → link / CTA
-  facebook         → facebook social
-  youtube          → youtube social
-  home             → home visits
-  menu             → hamburger (mobile nav)
-  x                → close button
-  chevron-down     → scroll down arrow
-  chevron-up       → back to top
-  chevron-left     → previous
-  chevron-right    → next
+Use current icon names (old aliases like check-circle, play-circle, home are deprecated):
+  map-pin, phone, mail, clock, calendar-check, wind (meditation), moon (poya),
+  heart-handshake (dana), star (ceremony), house (home visits), circle-check,
+  circle-play, arrow-right, arrow-up-right, arrow-left, flower-2 (footer ornament),
+  menu, x, chevron-down/left/right
 
-Icon CSS:
-  .lucide          { width:20px; height:20px; stroke:#C9922A; stroke-width:1.5; fill:none; }
-  .lucide-lg       { width:28px; height:28px; }
-  .lucide-white    { stroke:#FAF7F2; }
-  .lucide-dark     { stroke:#2C2C2C; }
+Facebook/YouTube logos in the footer are inline SVG (Lucide has no brand icons).
 
 ---
 
 ## Multilingual System
 
-File: data/translations.json
-All text content in 3 languages with keys like: "hero.tagline", "about.title", etc.
-
-HTML elements: data-i18n="key.name"
-JS file: assets/js/i18n.js reads translations.json and updates all data-i18n elements
-Default language: de (Deutsch)
-Saved in: localStorage key "bbv-lang"
-Language switcher buttons: DE | EN | සිං
-Active language: bold + color #E8762B
+File: data/translations.json (keys like "hero.description", "contact.form.success")
+HTML: data-i18n="key" (text), data-i18n-html="key" (text with inline links),
+      data-i18n-attr="attr:key|attr:key"
+JS: assets/js/i18n.js loads the JSON, updates all elements, sets <html lang>,
+    and dispatches the "i18n:change" event (monk cards and the subject dropdown listen to it).
+Public API: window.i18n.t(key), window.i18n.setLanguage(lang), window.i18n.getLanguage()
+Default language: de. Saved in localStorage key "bbv_lang".
+Switcher: DE | EN | සිං — active language bold + #E8762B
+Every visible text must exist in all 3 languages. Sinhala was machine-written
+and needs review by a native speaker.
 
 ---
 
 ## Page Sections (in order, all in index.html)
 
-1.  #home          → Hero (split layout: text left, image right)
-2.  #ueber-uns     → About Us (two-column, paper-card facts)
-3.  #programme     → Programs & Events (card carousel, 6 cards)
-4.  #dhamma        → Dhamma Dana / YouTube (4 video placeholder cards)
-5.  #galerie       → Gallery (masonry grid, lightbox)
-6.  #spenden       → Donations (dark bg, bank details, 2 cards)
-7.  #kontakt       → Contact (Google Maps, PHP form)
-                   → Footer
+NAV (fixed):
+- ≥1280px: 58/42 split mirroring the hero. Left: logo + name. Right: language
+  switcher, Spenden button, divider, links Kontakt | Galerie | Events | Über | Home.
+  Transparent over the hero, turns #FAF7F2 after scrolling (site-header--scrolled).
+- <1280px: one light bar with logo (+ name from 480px), DE|EN|සිං and hamburger.
+  Links and Spenden button are in the full-screen light overlay.
+
+1.  #home      → Hero: 58% image slideshow (3 slides, 5s) left, 42% text right.
+                 Phones: image on top, text below. Keep the hard left/right edge.
+2.  #about     → Stats bar, image collage + text + bullets, founder + leadership
+3.  #monks     → Cards rendered by JS from data/monks.json, links to monks/*.html
+4.  #programs  → Tabs "Programme | Veranstaltungen", carousel (arrows on desktop,
+                 2 square cards + swipe + one-time swipe hint on phones)
+5.  #youtube   → Dhamma Dana, 4 placeholder video cards
+6.  #gallery   → 8 placeholders, lightbox (gallery.js)
+7.  #contact   → Contact rows + appointment note + map (left), form card (right)
+FOOTER         → Light, centered: lotus ornament, logo, tagline, link row,
+                 address · phone · email, social icons, copyright (year set by JS)
+
+The Donations section was removed on purpose. Do not re-add it without asking
+(planned later: bank details + TWINT/PayPal).
 
 ---
 
 ## Contact Form
 
-File: contact.php
-Sends to: ariyaseela@gmail.com
-Method: PHP mail()
-Honeypot field: name="website" (hidden, if filled → discard)
-On success: redirect index.html?success=1
-On error: redirect index.html?error=1
-JS in main.js checks URL params and shows message
+Formspree via AJAX (fetch) in main.js. Action URL in index.html:
+  https://formspree.io/f/YOUR_FORMSPREE_ID   ← placeholder, real ID pending
+Honeypot field: name="_gotcha" (hidden)
+Success/error messages come from contact.form.success / contact.form.error.
+Subject uses a custom dropdown (keyboard accessible) writing to a hidden input.
 
 ---
 
@@ -164,36 +167,39 @@ JS in main.js checks URL params and shows message
 
 Address:    Feldbergstrasse 142, 4057 Basel, Switzerland
 Phone:      +41 792 303 699
-Email:      ariyaseela@gmail.com
-Founded:    July 1, 2024
-Opened:     July 6, 2024 (5 monks, ~30 attendees)
-Head Monk:  Ven. Udumaththe Ariyaseela Thero
-President:  Fabienne Eglin
-Founder:    Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero (passed away June 12, 2024)
+Email:      ariyaseela@gmail.com (will become info@baselbuddhistvihara.ch once
+            the owner confirms the Zoho mailbox works — do not change before)
+SKBZ founded: March 17, 2021
+Vihara founded: July 1, 2024. Opened: July 6, 2024 (5 monks, ~30 attendees)
+Head Monk + Treasurer: Ven. Udumaththe Ariyaseela Thero
+Secretary:  Ven. Henegama Sobitha Thero
+President:  Fabienne Eglin. Vice president: Michael Joel Anneler
+Founder:    Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero
+            (passed away June 12, 2024, Geneva International Buddhist Center)
 
-Bank account (SKBZ):
+Bank account (SKBZ, for the future donation section):
   Holder:   Sri Kalyana Buddhistisches Zentrum (SKBZ)
   IBAN:     CH05 8080 8009 7919
   Type:     Vereinskonto / CHF
   Address:  Neugrabenweg 29, 5702 Niederlenz
 
-Google Maps embed src:
-  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3754.1213891651228!2d7.594330377081455!3d47.56718479069762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b9537b349647%3A0x7032a3cb4e594aaa!2sBasel%20Buddhist%20Vihara!5e1!3m2!1sen!2sch!4v1784121869506!5m2!1sen!2sch
+Unverified (Vihara must confirm): opening hours "daily 7:00–18:30", stats
+numbers, founder birth date, bullet texts.
+
+Google Maps: keep the embed URL that is in index.html.
 
 ---
 
 ## Placeholders (real content comes later)
 
-All images are placeholders for now. When adding a placeholder:
-- Use a warm CSS gradient (e.g. linear-gradient(135deg, #2C1810, #6B2737, #C9922A))
+When adding a placeholder:
+- Use the soft placeholder tokens (var(--ph-1/2/3)), not dark gradients
 - Always add a comment: <!-- replace with real image: assets/images/FOLDER/filename.jpg -->
+- Real photos: object-fit: cover, real alt text
 
-Placeholder locations:
-- Hero image:    assets/images/hero/hero-1.jpg
-- About image:   assets/images/about/temple.jpg
-- Gallery:       assets/images/gallery/photo-1.jpg through photo-N.jpg
-- YouTube links: real URLs come later (use href="#" for now)
-- Social media:  Facebook + YouTube URLs come later (use href="#" for now)
+Pending: new temple photos (owner has them), Ariyaseela portrait, gallery,
+about collage, YouTube video links, Facebook + YouTube URLs (href="#" for now;
+main.js stops href="#" links from jumping to the top).
 
 ---
 
@@ -202,33 +208,23 @@ Placeholder locations:
 - Always commit in English
 - Commit after each completed stable phase
 - Commit message format: short imperative sentence
-  Examples:
-    "Add hero section split layout"
-    "Add navigation with language switcher"
-    "Fix responsive design for all breakpoints"
 
 ---
 
 ## Responsive Breakpoints
 
-Mobile:       375px
-Mobile L:     414px
-Tablet:       768px
-Laptop:       1024px
-Desktop:      1280px
-Wide:         1440px+
+Mobile 375px · Mobile L 414px · Tablet 768px · Laptop 1024px · Desktop 1280px · Wide 1440px+
 
 Rules:
-- Mobile-first CSS
-- All touch targets minimum 44px height
+- All touch targets minimum 44px
 - No horizontal scroll at any breakpoint
-- Font sizes use clamp() where helpful
+- Check the desktop nav at exactly 1280px in all 3 languages (it is tight)
+- Verify visual fixes in the browser at 375px, 1024px and 1280px+
 
 ---
 
-## Deployment (Cyon.ch)
+## Deployment
 
-- Hosting: Cyon.ch, Apache server
-- Upload all files to: public_html/
-- SSL: Let's Encrypt via Cyon panel
-- .htaccess handles: HTTPS redirect, GZIP, browser caching, deny data/*.json access
+- Vercel, deployed from GitHub (main branch)
+- Domain DNS at Cyon: when adding the Vercel A/CNAME records, NEVER delete the
+  MX, SPF, DKIM or TXT records (Zoho Mail)
