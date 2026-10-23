@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seite nicht gefunden — Basel Buddhist Vihara</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="/assets/images/logo/V2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- absolute paths: Vercel serves this page for any missing URL, at any depth -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <main class="notfound">
+    <a href="/" class="notfound__brand">
+      <img src="/assets/images/logo/logo-160.webp" width="160" height="160" alt="Basel Buddhist Vihara Logo" class="notfound__logo">
+      <span class="notfound__brand-name">Basel Buddhist Vihara</span>
+    </a>
+
+    <div class="moonstone notfound__moonstone" data-moonstone aria-hidden="true"></div>
+
+    <h1 class="notfound__title" data-i18n="notFound.title">Seite nicht gefunden</h1>
+    <p class="notfound__text" data-i18n="notFound.text">Diese Seite gibt es leider nicht. Vielleicht wurde sie verschoben, oder der Link ist nicht mehr aktuell.</p>
+
+    <a href="/" class="notfound__back" data-i18n="notFound.back">Zur Startseite</a>
+
+    <div class="lang-switcher notfound__lang" aria-label="Sprache wählen">
+      <button type="button" class="lang-switcher__btn" data-lang="de">DE</button>
+      <span class="lang-switcher__divider" aria-hidden="true">|</span>
+      <button type="button" class="lang-switcher__btn" data-lang="en">EN</button>
+      <span class="lang-switcher__divider" aria-hidden="true">|</span>
+      <button type="button" class="lang-switcher__btn" data-lang="si">සිං</button>
+    </div>
+  </main>
+
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/moonstone.js"></script>
+</body>
+</html>

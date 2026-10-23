@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://baselbuddhistvihara.ch/sitemap.xml

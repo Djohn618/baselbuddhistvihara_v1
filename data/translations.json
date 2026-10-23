@@ -83,6 +83,11 @@
         "p3": "Ehrw. Ariyaseela Thero steht der Gemeinschaft in Basel für Meditation, Dhamma-Gespräche und Hausbesuche mit Pirith-Gesängen zur Verfügung und begleitet Menschen aller Nationalitäten auf ihrem spirituellen Weg."
       }
     },
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "text": "Diese Seite gibt es leider nicht. Vielleicht wurde sie verschoben, oder der Link ist nicht mehr aktuell.",
+      "back": "Zur Startseite"
+    },
     "moonstone": {
       "caption": "Die Sandakada Pahana, der Mondstein am Eingang srilankischer Tempel. Ihre Ringe zeigen den Weg vom Kreislauf des Lebens zur Lotusblüte des Nibbana."
     },
@@ -275,6 +280,11 @@
         "p3": "Ven. Ariyaseela Thero is available to the community in Basel for meditation, Dhamma talks and home visits with Pirith chanting, and accompanies people of all nationalities on their spiritual path."
       }
     },
+    "notFound": {
+      "title": "Page not found",
+      "text": "Sorry, this page does not exist. It may have moved, or the link is out of date.",
+      "back": "Back to the home page"
+    },
     "moonstone": {
       "caption": "The Sandakada Pahana, the moonstone at the entrance of Sri Lankan temples. Its rings trace the path from the cycle of life to the lotus of Nibbana."
     },
@@ -466,6 +476,11 @@
         "quote": "“ආරෝග්‍යය උතුම් ලාභයයි, සන්තුෂ්ටිය උතුම් ධනයයි, විශ්වාසය උතුම් ඥාතියායි, නිර්වාණය උතුම් සැපයයි.” — ධම්මපදය, 204 වන ගාථාව",
         "p3": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ භාවනාව, ධර්ම සාකච්ඡා සහ පිරිත් සජ්ඣායනා සහිත නිවෙස් වැඩම කිරීම් සඳහා බාසල් ප්‍රජාවට සැමවිටම සහභාගී වන අතර, සියලු ජාතීන්ට අයත් අයට ඔවුන්ගේ ආධ්‍යාත්මික ගමනේදී සහාය වෙති."
       }
+    },
+    "notFound": {
+      "title": "පිටුව හමු නොවීය",
+      "text": "කණගාටුයි, මෙම පිටුව නොපවතී. එය වෙනත් තැනකට ගෙන ගොස් හෝ සබැඳිය යල් පැන ගොස් තිබිය හැක.",
+      "back": "මුල් පිටුවට"
     },
     "moonstone": {
       "caption": "සඳකඩ පහණ — ශ්‍රී ලාංකේය විහාරස්ථානවල දොරටුවේ ඇති මෙම කැටයමේ වළලු, සසර චක්‍රයේ සිට නිර්වාණය සංකේතවත් කරන පියුම දක්වා වූ ගමන පෙන්වයි."

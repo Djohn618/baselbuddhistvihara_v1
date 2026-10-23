@@ -3352,6 +3352,80 @@ a.contact__row:hover .contact__row-arrow .lucide {
   margin: 0;
 }
 
+/* ==============================================
+   404 page
+   ============================================== */
+
+.notfound {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xl) var(--container-padding);
+  text-align: center;
+}
+
+.notfound__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+}
+
+.notfound__logo {
+  height: 40px;
+  width: auto;
+}
+
+.notfound__moonstone {
+  width: min(260px, 70vw);
+  margin-top: var(--space-lg);
+}
+
+.notfound__title {
+  font-size: clamp(2rem, 3vw + 1.25rem, 2.875rem);
+  font-weight: var(--fw-medium);
+}
+
+.notfound__text {
+  max-width: 440px;
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+}
+
+.notfound__back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.notfound__back:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg-light);
+}
+
+.notfound__lang {
+  margin: 0;
+}
+
+.notfound__lang .lang-switcher__btn {
+  color: var(--color-text-muted);
+}
+
+.notfound__lang .lang-switcher__btn.is-active {
+  color: var(--color-accent);
+}
+
 /* --------------------------------------------------------------------------
    9. Responsive Breakpoints (reference)
    -------------------------------------------------------------------------- */

@@ -32,6 +32,10 @@ Always follow these rules and conventions throughout the entire project.
 
 baselbuddhistvihara/
 ├── index.html                  # Main single-page file
+├── 404.html                    # Not-found page (absolute /paths, served by Vercel)
+├── robots.txt
+├── sitemap.xml                 # add new pages here
+├── vercel.json                 # security headers + asset caching
 ├── CLAUDE.md                   # This file
 ├── README.md                   # GitHub documentation
 ├── monks/
@@ -47,9 +51,10 @@ baselbuddhistvihara/
 │   │   ├── i18n.js             # Language switcher logic
 │   │   └── gallery.js          # Gallery lightbox
 │   └── images/
-│       ├── logo/               # V2.png (SKBZ logo, also used as favicon)
-│       ├── hero/               # Home_page.png, Budda.png, our_monk.png
-│       ├── other/              # Walpola_Maha Thero.jpg
+│       ├── og-image.jpg        # 1200x630 share preview (WhatsApp/Facebook)
+│       ├── logo/               # V2.png (favicon, apple-touch, JSON-LD) + logo-160.webp (on page)
+│       ├── hero/               # home-page.webp, buddha.webp, our-monks.webp
+│       ├── other/              # walpola-maha-thero.webp
 │       ├── monks/              # monk portraits (ariyaseela.jpg still missing)
 │       ├── about/              # about collage photos (pending)
 │       └── gallery/            # photo-1.jpg ... photo-N.jpg (pending)
@@ -57,7 +62,9 @@ baselbuddhistvihara/
     ├── translations.json       # All text content in DE, EN, SI
     └── monks.json              # Monk cards (new monk = new object)
 
-Not yet created: robots.txt, sitemap.xml, 404.html, vercel.json.
+Images: use WebP (quality ~80), lowercase-dash file names, and always set
+width/height attributes. Current hero photos are low resolution; replace
+them with the new temple photos (at least 1600px wide).
 
 ---
 
@@ -134,7 +141,8 @@ HTML: data-i18n="key" (text), data-i18n-html="key" (text with inline links),
 JS: assets/js/i18n.js loads the JSON, updates all elements, sets <html lang>,
     and dispatches the "i18n:change" event (monk cards and the subject dropdown listen to it).
 Public API: window.i18n.t(key), window.i18n.setLanguage(lang), window.i18n.getLanguage()
-Default language: de. Saved in localStorage key "bbv_lang".
+Default language: de. Saved in localStorage key "bbv_lang". On the first
+visit the browser language is used if it is en or si.
 Switcher: DE | EN | සිං — active language bold + #E8762B
 Every visible text must exist in all 3 languages. Sinhala was machine-written
 and needs review by a native speaker.
