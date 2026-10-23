@@ -43,6 +43,7 @@ baselbuddhistvihara/
 │   │   └── fonts.css           # Google Fonts import
 │   ├── js/
 │   │   ├── main.js             # Nav, hero slideshow, carousel, monks, form, dropdown
+│   │   ├── moonstone.js        # Draws the Sandakada Pahana line-art ornament
 │   │   ├── i18n.js             # Language switcher logic
 │   │   └── gallery.js          # Gallery lightbox
 │   └── images/
@@ -90,6 +91,12 @@ Shared building blocks (reuse these, do not invent new variants):
 - Buttons: pill shaped (`var(--radius-full)`), burgundy outline or fill
 - Placeholders: `var(--ph-1)`, `var(--ph-2)`, `var(--ph-3)` (soft parchment gradients)
 - Spacing: every section uses `padding-block: var(--section-padding-y)`
+- Sandakada Pahana (moonstone): fine gold line-art half moonstone drawn by
+  assets/js/moonstone.js into any `<div class="moonstone" data-moonstone>`.
+  Used at the "entrance" (bottom of the hero text column) and the "exit"
+  (footer, with the caption key moonstone.caption). Rings: fire, beads,
+  creeper, slowly turning swans (hamsa), lotus petals, lotus centre.
+  Lines draw in when visible. Keep it rare: two places only.
 - Motion: slow and calm. `var(--ease-calm)`, ~0.6–1s. `.fade-in` on scroll,
   hero text rises in, hero slides crossfade with a gentle zoom.
   `prefers-reduced-motion` disables all of it.
@@ -105,7 +112,7 @@ Loaded before </body> (pinned version, do not use @latest):
 Use current icon names (old aliases like check-circle, play-circle, home are deprecated):
   map-pin, phone, mail, clock, calendar-check, wind (meditation), moon (poya),
   heart-handshake (dana), star (ceremony), house (home visits), circle-check,
-  circle-play, arrow-right, arrow-up-right, arrow-left, flower-2 (footer ornament),
+  circle-play, arrow-right, arrow-up-right, arrow-left,
   menu, x, chevron-down/left/right
 
 Facebook/YouTube logos in the footer are inline SVG (Lucide has no brand icons).
@@ -140,12 +147,13 @@ NAV (fixed):
                  Phones: image on top, text below. Keep the hard left/right edge.
 2.  #about     → Stats bar, image collage + text + bullets, founder + leadership
 3.  #monks     → Cards rendered by JS from data/monks.json, links to monks/*.html
+                 (monk names are { de, en, si }; detail page texts use monkPages.* keys)
 4.  #programs  → Tabs "Programme | Veranstaltungen", carousel (arrows on desktop,
                  2 square cards + swipe + one-time swipe hint on phones)
 5.  #youtube   → Dhamma Dana, 4 placeholder video cards
 6.  #gallery   → 8 placeholders, lightbox (gallery.js)
 7.  #contact   → Contact rows + appointment note + map (left), form card (right)
-FOOTER         → Light, centered: lotus ornament, logo, tagline, link row,
+FOOTER         → Light, centered: moonstone + caption, logo, tagline, link row,
                  address · phone · email, social icons, copyright (year set by JS)
 
 The Donations section was removed on purpose. Do not re-add it without asking

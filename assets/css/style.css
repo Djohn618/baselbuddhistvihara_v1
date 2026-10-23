@@ -2895,6 +2895,113 @@ a.contact__row:hover .contact__row-arrow .lucide {
 }
 
 /* ==============================================
+   Sandakada Pahana (moonstone) ornament
+   Fine gold line-art drawn by assets/js/moonstone.js
+   ============================================== */
+
+.moonstone {
+  color: var(--color-secondary);
+  line-height: 0;
+}
+
+.moonstone svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.moonstone svg path,
+.moonstone svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* hidden until drawn (pathLength="1" on every shape) */
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 2.6s var(--ease-calm);
+}
+
+.moonstone.is-drawn svg path,
+.moonstone.is-drawn svg circle {
+  stroke-dashoffset: 0;
+}
+
+/* Rings draw one after another, from the outer fire to the inner lotus */
+.moonstone .ms-ring--2 * { transition-delay: 0.25s; }
+.moonstone .ms-ring--3 * { transition-delay: 0.5s; }
+.moonstone .ms-ring--4 * { transition-delay: 0.75s; }
+.moonstone .ms-ring--5 * { transition-delay: 1s; }
+.moonstone .ms-ring--6 * { transition-delay: 1.25s; }
+
+/* The swans walk around the stone very slowly: the turning cycle of life */
+.moonstone .ms-hamsa {
+  transform-box: view-box;
+  transform-origin: 200px 200px;
+  animation: ms-turn 240s linear infinite;
+}
+
+@keyframes ms-turn {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moonstone .ms-hamsa {
+    animation: none;
+  }
+}
+
+/* Hero: the stone lies at the entrance, on the bottom edge of the text column */
+.hero__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  column-gap: var(--space-lg);
+  row-gap: var(--space-md);
+  padding-bottom: 0;
+}
+
+.hero__founded {
+  width: auto;
+  padding-bottom: 1.5rem;
+}
+
+.moonstone--hero {
+  width: clamp(150px, 15vw, 220px);
+  margin-left: auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 767px) {
+  .hero__bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__founded {
+    padding-bottom: 0;
+  }
+
+  .moonstone--hero {
+    width: min(70%, 240px);
+    margin-inline: auto;
+  }
+}
+
+/* Short laptop screens: keep the hero text room, skip the stone there */
+@media (min-width: 768px) and (max-height: 700px) {
+  .moonstone--hero {
+    display: none;
+  }
+
+  .hero__founded {
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* ==============================================
    Footer — light, centered, quiet
    ============================================== */
 
@@ -2914,27 +3021,34 @@ a.contact__row:hover .contact__row-arrow .lucide {
 /* Thin gold lines with a small lotus between them */
 .footer__ornament {
   display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+  align-items: flex-end;
   width: 100%;
-  max-width: 420px;
-  margin-bottom: var(--space-xl);
+  max-width: 720px;
+}
+
+.moonstone--footer {
+  width: clamp(200px, 30vw, 300px);
+  flex-shrink: 0;
+}
+
+.footer__moonstone-caption {
+  max-width: 440px;
+  margin: var(--space-sm) auto var(--space-xl);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  color: var(--color-text-muted);
 }
 
 .footer__ornament-line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-gold-border) 40%, var(--color-gold-border));
+  background: linear-gradient(90deg, transparent, var(--color-secondary));
 }
 
 .footer__ornament-line:last-child {
-  background: linear-gradient(270deg, transparent, var(--color-gold-border) 40%, var(--color-gold-border));
-}
-
-.footer__ornament .lucide {
-  width: 22px;
-  height: 22px;
-  stroke-width: 1.25;
+  background: linear-gradient(270deg, transparent, var(--color-secondary));
 }
 
 .footer__brand {

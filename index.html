@@ -115,6 +115,8 @@
 
         <div class="hero__bottom">
           <p class="hero__founded" data-i18n="hero.founded">Gegründet am 1. Juli 2024 · Basel, Schweiz</p>
+          <!-- Sandakada Pahana (moonstone) at the entrance, drawn by moonstone.js -->
+          <div class="moonstone moonstone--hero" data-moonstone aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -608,12 +610,13 @@
   <footer class="footer">
     <div class="container footer__inner">
 
-      <!-- Ornament: thin gold lines with a lotus in the middle -->
+      <!-- Sandakada Pahana (moonstone) on the threshold line, drawn by moonstone.js -->
       <div class="footer__ornament" aria-hidden="true">
         <span class="footer__ornament-line"></span>
-        <i data-lucide="flower-2"></i>
+        <div class="moonstone moonstone--footer" data-moonstone></div>
         <span class="footer__ornament-line"></span>
       </div>
+      <p class="footer__moonstone-caption" data-i18n="moonstone.caption">Die Sandakada Pahana, der Mondstein am Eingang srilankischer Tempel. Ihre Ringe zeigen den Weg vom Kreislauf des Lebens zur Lotusblüte des Nibbana.</p>
 
       <a href="#home" class="footer__brand">
         <img src="assets/images/logo/V2.png" alt="Basel Buddhist Vihara Logo" class="footer__logo">
@@ -665,6 +668,7 @@
 
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/moonstone.js"></script>
   <script src="assets/js/gallery.js"></script>
   <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script>lucide.createIcons();</script>
