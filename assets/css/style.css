@@ -2772,6 +2772,23 @@ a.contact__row:hover .contact__row-arrow .lucide {
   top: calc(var(--nav-height) + 2rem);
 }
 
+/* Phones: contact rows and appointment note first, then the form, map last.
+   The left column is unwrapped so its children can be reordered around the form. */
+@media (max-width: 767px) {
+  .contact__grid {
+    gap: var(--space-lg);
+  }
+
+  .contact__left {
+    display: contents;
+  }
+
+  .contact__rows        { order: 1; }
+  .contact__appointment { order: 2; }
+  .contact__right       { order: 3; position: static; }
+  .contact__map         { order: 4; }
+}
+
 .contact__form-card {
   background-color: var(--color-white);
   border: var(--border-soft);
