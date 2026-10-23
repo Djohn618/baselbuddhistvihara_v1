@@ -94,6 +94,10 @@
     });
   }
 
+  function t(key) {
+    return window.i18n ? window.i18n.t(key) : key;
+  }
+
   function initContactForm() {
     var form = document.getElementById('contact-form');
     var status = document.getElementById('form-status');
@@ -115,22 +119,17 @@
       })
         .then(function (response) {
           if (response.ok) {
-            status.textContent = document.documentElement.lang === 'en'
-              ? 'Thank you! Your message has been sent.'
-              : 'Vielen Dank! Ihre Nachricht wurde gesendet.';
+            status.textContent = t('contact.form.success');
             status.className = 'form-status form-status--success';
             form.reset();
+            document.dispatchEvent(new CustomEvent('contact-form:reset'));
           } else {
-            status.textContent = document.documentElement.lang === 'en'
-              ? 'Error sending message. Please try again.'
-              : 'Fehler beim Senden. Bitte versuchen Sie es erneut.';
+            status.textContent = t('contact.form.error');
             status.className = 'form-status form-status--error';
           }
         })
         .catch(function () {
-          status.textContent = document.documentElement.lang === 'en'
-            ? 'Error sending message. Please try again.'
-            : 'Fehler beim Senden. Bitte versuchen Sie es erneut.';
+          status.textContent = t('contact.form.error');
           status.className = 'form-status form-status--error';
         })
         .finally(function () {
@@ -179,50 +178,60 @@
     fadeEls.forEach(function (el) { fadeObserver.observe(el); });
   }
 
-  // Load and render monks from data/monks.json
+  // Load data/monks.json once; render again on every language change
+  var monksData = null;
+
   function loadMonks() {
-    var grid = document.getElementById('monks-grid');
-    if (!grid) return;
+    if (!document.getElementById('monks-grid')) return;
 
     fetch(MONKS_URL)
       .then(function (response) { return response.json(); })
       .then(function (data) {
-        var lang = window.i18n ? window.i18n.getLanguage() : 'de';
-        var featured = data.monks.filter(function (m) { return m.featured; });
-
-        var badgeText = { de: 'In Erinnerung', en: 'In Memory', si: 'සිහිකිරීමෙහිලා' };
-        var readMoreText = { de: 'Mehr erfahren', en: 'Read more', si: 'තව දැනගන්න' };
-
-        grid.innerHTML = featured.map(function (monk) {
-          var isPassed = monk.status === 'passed';
-
-          return '' +
-            '<article class="monk-card ' + (isPassed ? 'monk-card--passed' : '') + ' fade-in">' +
-              '<div class="monk-card__image-wrap">' +
-                (isPassed ? '<span class="monk-card__badge">' + badgeText[lang] + '</span>' : '') +
-                '<img src="' + monk.image + '" alt="' + monk.name + '" onerror="this.style.display=\'none\'" loading="lazy">' +
-              '</div>' +
-              '<div class="monk-card__body">' +
-                '<p class="monk-card__role">' + monk.role[lang] + '</p>' +
-                '<h3 class="monk-card__name">' + monk.name + '</h3>' +
-                (monk.dates ? '<p class="monk-card__dates">' + monk.dates + '</p>' : '') +
-                '<p class="monk-card__excerpt">' + monk.excerpt[lang] + '</p>' +
-                '<div class="monk-card__divider"></div>' +
-                '<a href="' + monk.detailPage + '" class="monk-card__link">' +
-                  readMoreText[lang] +
-                  '<i data-lucide="arrow-right"></i>' +
-                '</a>' +
-              '</div>' +
-            '</article>';
-        }).join('');
-
-        if (window.lucide) lucide.createIcons();
-
-        Array.prototype.slice.call(grid.querySelectorAll('.monk-card.fade-in')).forEach(observeFadeIn);
+        monksData = data;
+        renderMonks();
       })
       .catch(function (err) {
         console.warn('Could not load monks.json', err);
       });
+  }
+
+  function renderMonks() {
+    var grid = document.getElementById('monks-grid');
+    if (!grid || !monksData) return;
+
+    var data = monksData;
+    var lang = window.i18n ? window.i18n.getLanguage() : 'de';
+    var featured = data.monks.filter(function (m) { return m.featured; });
+
+    var badgeText = { de: 'In Erinnerung', en: 'In Memory', si: 'සිහිකිරීමෙහිලා' };
+    var readMoreText = { de: 'Mehr erfahren', en: 'Read more', si: 'තව දැනගන්න' };
+
+    grid.innerHTML = featured.map(function (monk) {
+      var isPassed = monk.status === 'passed';
+
+      return '' +
+        '<article class="monk-card ' + (isPassed ? 'monk-card--passed' : '') + ' fade-in">' +
+          '<div class="monk-card__image-wrap">' +
+            (isPassed ? '<span class="monk-card__badge">' + badgeText[lang] + '</span>' : '') +
+            (monk.image ? '<img src="' + monk.image + '" alt="' + monk.name + '" onerror="this.style.display=\'none\'" loading="lazy">' : '') +
+          '</div>' +
+          '<div class="monk-card__body">' +
+            '<p class="monk-card__role">' + monk.role[lang] + '</p>' +
+            '<h3 class="monk-card__name">' + monk.name + '</h3>' +
+            (monk.dates ? '<p class="monk-card__dates">' + monk.dates + '</p>' : '') +
+            '<p class="monk-card__excerpt">' + monk.excerpt[lang] + '</p>' +
+            '<div class="monk-card__divider"></div>' +
+            '<a href="' + monk.detailPage + '" class="monk-card__link">' +
+              readMoreText[lang] +
+              '<i data-lucide="arrow-right"></i>' +
+            '</a>' +
+          '</div>' +
+        '</article>';
+    }).join('');
+
+    if (window.lucide) lucide.createIcons();
+
+    Array.prototype.slice.call(grid.querySelectorAll('.monk-card.fade-in')).forEach(observeFadeIn);
   }
 
   function initHeroSlideshow() {
@@ -440,6 +449,15 @@
     }
   }
 
+  // Links whose real URL is still pending (href="#") do nothing instead of
+  // jumping to the top of the page.
+  function initPlaceholderLinks() {
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href="#"]');
+      if (link) e.preventDefault();
+    });
+  }
+
   function initFooterYear() {
     document.querySelectorAll('.footer__year').forEach(function (el) {
       el.textContent = new Date().getFullYear();
@@ -458,8 +476,9 @@
     initHeroSlideshow();
     initProgramsCarousel();
     initContactForm();
+    initPlaceholderLinks();
     loadMonks();
-    document.addEventListener('i18n:change', loadMonks);
+    document.addEventListener('i18n:change', renderMonks);
   }
 
   if (document.readyState === 'loading') {
@@ -477,47 +496,90 @@
 
   const trigger = select.querySelector('.custom-select__trigger');
   const valueEl = select.querySelector('.custom-select__value');
-  const options = select.querySelectorAll('.custom-select__option');
+  const options = Array.prototype.slice.call(select.querySelectorAll('.custom-select__option'));
 
-  // Toggle open/close
-  trigger.addEventListener('click', function() {
-    const isOpen = select.classList.contains('is-open');
-    select.classList.toggle('is-open', !isOpen);
-    trigger.setAttribute('aria-expanded', !isOpen);
+  function open() {
+    select.classList.add('is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+    const active = select.querySelector('.custom-select__option--active') || options[0];
+    active.focus();
+  }
+
+  function close(returnFocus) {
+    if (!select.classList.contains('is-open')) return;
+    select.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+    if (returnFocus) trigger.focus();
+  }
+
+  function choose(option) {
+    hiddenInput.value = option.dataset.value;
+    valueEl.textContent = option.textContent;
+    options.forEach(function(o) {
+      o.classList.remove('custom-select__option--active');
+      o.setAttribute('aria-selected', 'false');
+    });
+    option.classList.add('custom-select__option--active');
+    option.setAttribute('aria-selected', 'true');
+  }
+
+  options.forEach(function(option) {
+    option.setAttribute('tabindex', '-1');
+
+    option.addEventListener('click', function() {
+      choose(option);
+      close(true);
+    });
+
+    // Arrow keys move, Enter/Space choose, Tab closes
+    option.addEventListener('keydown', function(e) {
+      const i = options.indexOf(option);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        options[Math.min(i + 1, options.length - 1)].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        options[Math.max(i - 1, 0)].focus();
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        choose(option);
+        close(true);
+      } else if (e.key === 'Tab') {
+        close(false);
+      }
+    });
   });
 
-  // Select option
-  options.forEach(function(option) {
-    option.addEventListener('click', function() {
-      // Update hidden input
-      hiddenInput.value = option.dataset.value;
+  trigger.addEventListener('click', function() {
+    if (select.classList.contains('is-open')) close(false);
+    else open();
+  });
 
-      // Update visible label
-      valueEl.textContent = option.textContent;
-
-      // Update active state
-      options.forEach(o => o.classList.remove('custom-select__option--active'));
-      option.classList.add('custom-select__option--active');
-
-      // Close dropdown
-      select.classList.remove('is-open');
-      trigger.setAttribute('aria-expanded', 'false');
-    });
+  trigger.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      open();
+    }
   });
 
   // Close on outside click
   document.addEventListener('click', function(e) {
-    if (!select.contains(e.target)) {
-      select.classList.remove('is-open');
-      trigger.setAttribute('aria-expanded', 'false');
-    }
+    if (!select.contains(e.target)) close(false);
   });
 
   // Close on Escape
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      select.classList.remove('is-open');
-      trigger.setAttribute('aria-expanded', 'false');
-    }
+    if (e.key === 'Escape') close(select.contains(document.activeElement));
+  });
+
+  // After a language switch, show the chosen subject in the new language
+  document.addEventListener('i18n:change', function() {
+    const active = select.querySelector('.custom-select__option--active') || options[0];
+    valueEl.textContent = active.textContent;
+  });
+
+  // After a successful send the form resets to "general"
+  document.addEventListener('contact-form:reset', function() {
+    choose(options[0]);
   });
 })();

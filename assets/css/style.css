@@ -995,6 +995,11 @@ blockquote {
     margin-right: 0;
   }
 
+  /* Sinhala labels are longer: tighter spacing keeps one line at 1280px */
+  html[lang="si"] .nav__links {
+    gap: 0.8rem;
+  }
+
   .nav__link {
     font-family: var(--font-body);
     font-size: 0.8rem;

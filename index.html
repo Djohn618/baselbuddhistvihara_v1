@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basel Buddhist Vihara</title>
+  <meta name="description" content="Basel Buddhist Vihara: ein buddhistisches Zentrum in Basel mit Meditation, Dhamma-Programmen und Zeremonien, offen für alle Menschen.">
+  <link rel="icon" type="image/png" href="assets/images/logo/V2.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
@@ -565,16 +567,16 @@
                 </div>
 
                 <div class="field-group">
-                  <label class="field-label" data-i18n="contact.form.subject">Betreff</label>
+                  <label class="field-label" id="contact-subject-label" data-i18n="contact.form.subject">Betreff</label>
                   <!-- Hidden real select for form submission -->
                   <input type="hidden" id="contact-subject" name="subject" value="general">
                   <!-- Custom dropdown -->
                   <div class="custom-select" id="custom-select">
-                    <button type="button" class="custom-select__trigger" aria-haspopup="listbox" aria-expanded="false">
-                      <span class="custom-select__value" data-i18n="contact.form.subjectOptions.general">Allgemeine Anfrage</span>
+                    <button type="button" class="custom-select__trigger" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="contact-subject-label">
+                      <span class="custom-select__value">Allgemeine Anfrage</span>
                       <i data-lucide="chevron-down" class="custom-select__arrow"></i>
                     </button>
-                    <ul class="custom-select__dropdown" role="listbox">
+                    <ul class="custom-select__dropdown" role="listbox" aria-labelledby="contact-subject-label">
                       <li class="custom-select__option custom-select__option--active" role="option" data-value="general" data-i18n="contact.form.subjectOptions.general">Allgemeine Anfrage</li>
                       <li class="custom-select__option" role="option" data-value="programs" data-i18n="contact.form.subjectOptions.programs">Programm-Info</li>
                       <li class="custom-select__option" role="option" data-value="donations" data-i18n="contact.form.subjectOptions.donations">Spenden</li>
