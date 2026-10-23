@@ -40,6 +40,17 @@
     }
   }
 
+  // First visit: use the browser's preferred language if we support it
+  // (e.g. an English or Sinhala phone), otherwise German.
+  function detectBrowserLang() {
+    var prefs = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < prefs.length; i++) {
+      var code = String(prefs[i]).slice(0, 2).toLowerCase();
+      if (SUPPORTED_LANGS.indexOf(code) !== -1) return code;
+    }
+    return null;
+  }
+
   function storeLang(lang) {
     try {
       window.localStorage.setItem(STORAGE_KEY, lang);
@@ -134,7 +145,7 @@
   function init() {
     loadTranslations()
       .then(function () {
-        var lang = getStoredLang() || DEFAULT_LANG;
+        var lang = getStoredLang() || detectBrowserLang() || DEFAULT_LANG;
         bindSwitcherButtons();
         setLanguage(lang);
       })

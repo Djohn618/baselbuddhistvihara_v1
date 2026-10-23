@@ -66,6 +66,28 @@
       if (event.key === 'ArrowLeft') render(currentIndex - 1);
       if (event.key === 'ArrowRight') render(currentIndex + 1);
     });
+
+    // Swipe left/right to change photos (helper from main.js)
+    if (window.bbvOnSwipe) {
+      window.bbvOnSwipe(lightbox, function (direction) {
+        render(currentIndex + direction);
+      });
+    }
+
+    // Swipe down to close, like in a phone's photo app
+    var startY = null;
+    var startX = null;
+    lightbox.addEventListener('touchstart', function (event) {
+      startY = event.touches[0].clientY;
+      startX = event.touches[0].clientX;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', function (event) {
+      if (startY === null) return;
+      var dy = event.changedTouches[0].clientY - startY;
+      var dx = event.changedTouches[0].clientX - startX;
+      startY = null;
+      if (dy > 80 && dy > Math.abs(dx) * 1.5) close();
+    }, { passive: true });
   }
 
   function init() {

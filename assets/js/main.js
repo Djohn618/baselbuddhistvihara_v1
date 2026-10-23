@@ -15,6 +15,30 @@
 
   var SCROLL_THRESHOLD = 80;
 
+  // Calls back with +1 (swipe left = next) or -1 (swipe right = previous)
+  // for a clear horizontal swipe; vertical scrolling is left alone.
+  function onSwipe(el, callback) {
+    var startX = null;
+    var startY = null;
+
+    el.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+
+    el.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      var dy = e.changedTouches[0].clientY - startY;
+      startX = null;
+      if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+      callback(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  }
+
+  // Shared with gallery.js
+  window.bbvOnSwipe = onSwipe;
+
   var header = document.getElementById('site-header');
   var navHamburger = document.getElementById('nav-hamburger');
   var navOverlay = document.getElementById('nav-overlay');
@@ -28,6 +52,24 @@
   function handleHeaderScroll() {
     if (!header) return;
     header.classList.toggle('site-header--scrolled', window.scrollY > SCROLL_THRESHOLD);
+  }
+
+  // Back-to-top button: appears after scrolling about one screen
+  var backToTop = document.getElementById('back-to-top');
+
+  function handleBackToTop() {
+    if (!backToTop) return;
+    backToTop.classList.toggle('is-visible', window.scrollY > window.innerHeight);
+  }
+
+  function initBackToTop() {
+    if (!backToTop) return;
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0 });
+      backToTop.blur();
+    });
+    handleBackToTop();
+    window.addEventListener('scroll', handleBackToTop, { passive: true });
   }
 
   function closeMobileMenu() {
@@ -103,8 +145,61 @@
     var status = document.getElementById('form-status');
     if (!form || !status) return;
 
+    var EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    var checks = [
+      { id: 'contact-name', key: 'contact.form.errors.name', ok: function (v) { return v.length > 0; } },
+      { id: 'contact-email', key: 'contact.form.errors.email', ok: function (v) { return EMAIL_PATTERN.test(v); } },
+      { id: 'contact-message', key: 'contact.form.errors.message', ok: function (v) { return v.length > 0; } }
+    ];
+
+    // The message element carries data-i18n, so i18n.js re-translates it
+    // automatically when the language changes.
+    function setError(input, key) {
+      var errorId = input.id + '-error';
+      var error = document.getElementById(errorId);
+      if (!key) {
+        input.removeAttribute('aria-invalid');
+        input.removeAttribute('aria-describedby');
+        if (error) error.remove();
+        return;
+      }
+      if (!error) {
+        error = document.createElement('p');
+        error.id = errorId;
+        error.className = 'field-error';
+        input.insertAdjacentElement('afterend', error);
+      }
+      error.setAttribute('data-i18n', key);
+      error.textContent = t(key);
+      input.setAttribute('aria-invalid', 'true');
+      input.setAttribute('aria-describedby', errorId);
+    }
+
+    function validate() {
+      var firstInvalid = null;
+      checks.forEach(function (check) {
+        var input = document.getElementById(check.id);
+        var valid = check.ok(input.value.trim());
+        setError(input, valid ? null : check.key);
+        if (!valid && !firstInvalid) firstInvalid = input;
+      });
+      if (firstInvalid) firstInvalid.focus();
+      return !firstInvalid;
+    }
+
+    // Once a field was marked, clear the message as soon as it becomes valid
+    checks.forEach(function (check) {
+      var input = document.getElementById(check.id);
+      input.addEventListener('input', function () {
+        if (input.getAttribute('aria-invalid') && check.ok(input.value.trim())) {
+          setError(input, null);
+        }
+      });
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (!validate()) return;
 
       var submitBtn = form.querySelector('.contact__submit');
       var originalText = submitBtn.textContent;
@@ -262,11 +357,24 @@
       });
     }
 
+    var reduceMotion = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hovering = false;
+
+    // Autoplay only while it makes sense: not for reduced-motion users,
+    // not while the mouse rests on the photo, not in a background tab.
     function startAutoplay() {
       window.clearInterval(timer);
+      timer = null;
+      if (reduceMotion || hovering || document.hidden) return;
       timer = window.setInterval(function () {
         show(currentIndex + 1);
       }, SLIDE_INTERVAL_MS);
+    }
+
+    function stopAutoplay() {
+      window.clearInterval(timer);
+      timer = null;
     }
 
     dots.forEach(function (dot, i) {
@@ -274,6 +382,29 @@
         show(i);
         startAutoplay();
       });
+    });
+
+    var slideshow = slides[0].parentElement;
+
+    slideshow.addEventListener('mouseenter', function () {
+      hovering = true;
+      stopAutoplay();
+    });
+
+    slideshow.addEventListener('mouseleave', function () {
+      hovering = false;
+      startAutoplay();
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stopAutoplay();
+      else startAutoplay();
+    });
+
+    // Swipe left/right to change photos
+    onSwipe(slideshow, function (direction) {
+      show(currentIndex + direction);
+      startAutoplay();
     });
 
     show(0);
@@ -417,23 +548,9 @@
     });
 
     // Touch swipe (the arrows are hidden on phones)
-    var viewport = track.parentElement;
-    var touchStartX = null;
-    var touchStartY = null;
-
-    viewport.addEventListener('touchstart', function (e) {
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-    }, { passive: true });
-
-    viewport.addEventListener('touchend', function (e) {
-      if (touchStartX === null) return;
-      var dx = e.changedTouches[0].clientX - touchStartX;
-      var dy = e.changedTouches[0].clientY - touchStartY;
-      touchStartX = null;
-      if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
-      goTo(currentIndex + (dx < 0 ? 1 : -1));
-    }, { passive: true });
+    onSwipe(track.parentElement, function (direction) {
+      goTo(currentIndex + direction);
+    });
 
     // Play the swipe hint once, when the carousel actually comes into view
     var swipeHint = document.getElementById('swipe-hint');
@@ -475,6 +592,7 @@
 
   function init() {
     initFooterYear();
+    initBackToTop();
     handleHeaderScroll();
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
     initNavToggle();

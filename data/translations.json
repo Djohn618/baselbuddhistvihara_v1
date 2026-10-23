@@ -1,6 +1,7 @@
 {
   "de": {
     "nav": {
+      "backToTop": "Nach oben",
       "home": "Home",
       "about": "Über",
       "programs": "Events",
@@ -169,7 +170,12 @@
         "send": "Nachricht senden",
         "note": "Wir antworten in der Regel innerhalb von 2–3 Werktagen.",
         "success": "Vielen Dank! Ihre Nachricht wurde gesendet.",
-        "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+        "error": "Fehler beim Senden. Bitte versuchen Sie es erneut.",
+        "errors": {
+          "name": "Bitte geben Sie Ihren Namen ein.",
+          "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+          "message": "Bitte schreiben Sie uns eine kurze Nachricht."
+        }
       },
       "location": {
         "label": "UNSER STANDORT",
@@ -187,6 +193,7 @@
   },
   "en": {
     "nav": {
+      "backToTop": "Back to top",
       "home": "Home",
       "about": "About",
       "programs": "Events",
@@ -355,7 +362,12 @@
         "send": "Send Message",
         "note": "We typically respond within 2–3 business days.",
         "success": "Thank you! Your message has been sent.",
-        "error": "Something went wrong. Please try again."
+        "error": "Something went wrong. Please try again.",
+        "errors": {
+          "name": "Please enter your name.",
+          "email": "Please enter a valid email address.",
+          "message": "Please write us a short message."
+        }
       },
       "location": {
         "label": "OUR LOCATION",
@@ -373,6 +385,7 @@
   },
   "si": {
     "nav": {
+      "backToTop": "ඉහළට",
       "home": "මුල් පිටුව",
       "about": "අප",
       "programs": "උත්සව",
@@ -541,7 +554,12 @@
         "send": "පණිවිඩය යවන්න",
         "note": "සාමාන්‍යයෙන් අප ව්‍යාපාරික දින 2–3 ක් තුළ පිළිතුරු දෙන්නෙමු.",
         "success": "ස්තුතියි! ඔබේ පණිවිඩය යවා ඇත.",
-        "error": "යැවීමේදී දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න."
+        "error": "යැවීමේදී දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+        "errors": {
+          "name": "කරුණාකර ඔබගේ නම ඇතුළත් කරන්න.",
+          "email": "කරුණාකර වලංගු ඊමේල් ලිපිනයක් ඇතුළත් කරන්න.",
+          "message": "කරුණාකර අපට කෙටි පණිවිඩයක් ලියන්න."
+        }
       },
       "location": {
         "label": "අපගේ ස්ථානය",
