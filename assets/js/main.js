@@ -437,7 +437,14 @@
     }
   }
 
+  function initFooterYear() {
+    document.querySelectorAll('.footer__year').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  }
+
   function init() {
+    initFooterYear();
     handleHeaderScroll();
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
     initNavToggle();
