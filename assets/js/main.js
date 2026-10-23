@@ -279,11 +279,10 @@
     var currentIndex = 0;
     var filterTimer = null;
 
+    // Must match the card widths in style.css: 3 per view from 1024px,
+    // otherwise 2 (on phones the cards are 44vw each, side by side).
     function getPerView() {
-      var w = window.innerWidth;
-      if (w >= 1024) return 3;
-      if (w >= 768) return 2;
-      return 1;
+      return window.innerWidth >= 1024 ? 3 : 2;
     }
 
     function getMaxIndex() {
@@ -298,9 +297,12 @@
       return visibleCards[0].getBoundingClientRect().width + gap;
     }
 
+    // One dot per reachable position, not per card; hidden when everything fits.
     function buildDots() {
+      var count = getMaxIndex() + 1;
       dotsContainer.innerHTML = '';
-      dots = visibleCards.map(function (card, i) {
+      dotsContainer.hidden = count < 2;
+      dots = visibleCards.slice(0, count).map(function (card, i) {
         var dot = document.createElement('button');
         dot.type = 'button';
         dot.className = 'programs__dot';
@@ -388,7 +390,41 @@
     prevBtn.addEventListener('click', function () { goTo(currentIndex - 1); });
     nextBtn.addEventListener('click', function () { goTo(currentIndex + 1); });
 
-    window.addEventListener('resize', render);
+    window.addEventListener('resize', function () {
+      if (dots.length !== getMaxIndex() + 1) buildDots();
+      render();
+    });
+
+    // Touch swipe (the arrows are hidden on phones)
+    var viewport = track.parentElement;
+    var touchStartX = null;
+    var touchStartY = null;
+
+    viewport.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', function (e) {
+      if (touchStartX === null) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      var dy = e.changedTouches[0].clientY - touchStartY;
+      touchStartX = null;
+      if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+      goTo(currentIndex + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+
+    // Play the swipe hint once, when the carousel actually comes into view
+    var swipeHint = document.getElementById('swipe-hint');
+    if (swipeHint && 'IntersectionObserver' in window) {
+      var hintObserver = new IntersectionObserver(function (entries, obs) {
+        if (entries[0].isIntersecting) {
+          swipeHint.classList.add('is-playing');
+          obs.disconnect();
+        }
+      }, { threshold: 0.6 });
+      hintObserver.observe(swipeHint);
+    }
 
     initTabs();
 

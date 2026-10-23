@@ -1294,6 +1294,22 @@ blockquote {
   text-align: left;
 }
 
+/* Phones: let the hero grow with its text instead of scrolling inside itself */
+@media (max-width: 767px) {
+  .hero {
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .hero__content {
+    overflow: visible;
+  }
+
+  .hero__main {
+    overflow: visible;
+  }
+}
+
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
@@ -2042,6 +2058,10 @@ blockquote {
   margin-top: var(--space-xl);
 }
 
+.programs__dots[hidden] {
+  display: none;
+}
+
 .programs__dot {
   width: 8px;
   height: 8px;
@@ -2076,9 +2096,12 @@ blockquote {
     font-size: 0.78rem;
     font-family: var(--font-body);
     letter-spacing: 0.05em;
-    animation: swipe-hint-fade 4s ease forwards;
-    animation-delay: 0.8s;
     opacity: 0;
+  }
+
+  .swipe-hint.is-playing {
+    animation: swipe-hint-fade 4.5s ease forwards;
+    animation-delay: 0.4s;
   }
 
   .swipe-hint__icon {
@@ -2100,8 +2123,11 @@ blockquote {
   .swipe-hint__arc {
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
+  }
+
+  .swipe-hint.is-playing .swipe-hint__arc {
     animation: swipe-arc-draw 1.4s ease forwards;
-    animation-delay: 0.8s;
+    animation-delay: 0.4s;
   }
 }
 
