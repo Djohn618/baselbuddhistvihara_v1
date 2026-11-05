@@ -2784,13 +2784,44 @@ a.contact__row:hover .contact__row-arrow .lucide {
 }
 
 /* Map */
+/* The map sits in a white frame like the form card. On wider screens it
+   grows to fill the column, so its bottom lines up with the form card. */
+.contact__map {
+  position: relative;
+  padding: 6px;
+  background-color: var(--color-white);
+  border: var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
 .contact__map iframe {
   display: block;
   width: 100%;
-  height: 200px;
+  height: 260px;
   border: 0;
-  border-radius: var(--radius-lg);
+  border-radius: calc(var(--radius-lg) - 6px);
   filter: saturate(0.85);
+}
+
+@media (min-width: 768px) {
+  .contact__grid {
+    align-items: stretch;
+  }
+
+  .contact__map {
+    flex: 1;
+    min-height: 280px;
+    margin-top: var(--space-2xs);
+  }
+
+  /* fill the frame, whatever height the column gives it */
+  .contact__map iframe {
+    position: absolute;
+    inset: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+  }
 }
 
 /* RIGHT column — form card */
