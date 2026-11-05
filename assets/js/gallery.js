@@ -19,9 +19,21 @@
     currentIndex = (index + items.length) % items.length;
     var item = items[currentIndex];
 
-    content.style.aspectRatio = item.getAttribute('data-aspect') || '4 / 3';
-    content.classList.toggle('lightbox__content--odd', currentIndex % 2 === 0);
-    content.classList.toggle('lightbox__content--even', currentIndex % 2 !== 0);
+    // Real photo: show the large version, uncropped; otherwise the gradient placeholder
+    var full = item.getAttribute('data-full');
+    content.innerHTML = '';
+    if (full) {
+      var img = document.createElement('img');
+      img.src = full;
+      img.alt = item.getAttribute('aria-label') || '';
+      content.appendChild(img);
+      content.style.aspectRatio = '3 / 2';
+    } else {
+      content.style.aspectRatio = item.getAttribute('data-aspect') || '4 / 3';
+    }
+    content.classList.toggle('lightbox__content--photo', !!full);
+    content.classList.toggle('lightbox__content--odd', !full && currentIndex % 2 === 0);
+    content.classList.toggle('lightbox__content--even', !full && currentIndex % 2 !== 0);
     counter.textContent = (currentIndex + 1) + ' / ' + items.length;
   }
 

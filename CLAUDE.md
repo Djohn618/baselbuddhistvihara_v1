@@ -53,18 +53,21 @@ baselbuddhistvihara/
 │   └── images/
 │       ├── og-image.jpg        # 1200x630 share preview (WhatsApp/Facebook)
 │       ├── logo/               # V2.png (favicon, apple-touch, JSON-LD) + logo-160.webp (on page)
-│       ├── hero/               # home-page.webp, buddha.webp, our-monks.webp
-│       ├── other/              # walpola-maha-thero.webp
-│       ├── monks/              # monk portraits (ariyaseela.jpg still missing)
-│       ├── about/              # about collage photos (pending)
-│       └── gallery/            # photo-1.jpg ... photo-N.jpg (pending)
+│       ├── vihara/             # real temple photos, each as <name>-1600.webp + <name>-800.webp
+│       │                       # (hero, about collage, program cards, gallery all use these)
+│       ├── other/              # walpola-maha-thero.webp (founder)
+│       ├── test_images/        # camera RAW originals (.CR2) — NOT in git (.gitignore)
+│       └── test_images_edited/ # graded full-size JPGs (PhotoCraft) — NOT in git
 └── data/
     ├── translations.json       # All text content in DE, EN, SI
     └── monks.json              # Monk cards (new monk = new object)
 
-Images: use WebP (quality ~80), lowercase-dash file names, and always set
-width/height attributes. Current hero photos are low resolution; replace
-them with the new temple photos (at least 1600px wide).
+Images: all photo grading, resizing and converting is done with PhotoCraft
+(photocraft-photo-grading skill), never Python/PIL. Web versions: WebP,
+1600px (quality 78) + 800px (quality 76), lowercase-dash names, always
+width/height attributes, srcset where an image can be large. Alt texts are
+translation keys images.<name> (data-i18n-attr="alt:..." / "aria-label:...").
+Still missing: Ariyaseela portrait, YouTube thumbnails (with the real videos).
 
 ---
 
@@ -166,7 +169,7 @@ NAV (fixed):
 4.  #programs  → Tabs "Programme | Veranstaltungen", carousel (arrows on desktop,
                  2 square cards + swipe + one-time swipe hint on phones)
 5.  #youtube   → Dhamma Dana, 4 placeholder video cards
-6.  #gallery   → 8 placeholders, lightbox (gallery.js)
+6.  #gallery   → 8 real photos (data-full = 1600px version), lightbox (gallery.js)
 7.  #contact   → Contact rows + appointment note + map (left), form card (right)
 FOOTER         → Light, centered: moonstone + caption, logo, tagline, link row,
                  address · phone · email, social icons, copyright (year set by JS)
@@ -220,8 +223,8 @@ When adding a placeholder:
 - Always add a comment: <!-- replace with real image: assets/images/FOLDER/filename.jpg -->
 - Real photos: object-fit: cover, real alt text
 
-Pending: new temple photos (owner has them), Ariyaseela portrait, gallery,
-about collage, YouTube video links, Facebook + YouTube URLs (href="#" for now;
+Pending: Ariyaseela portrait, more photos from the owner, YouTube video
+links + thumbnails, Facebook + YouTube URLs (href="#" for now;
 main.js stops href="#" links from jumping to the top).
 
 ---

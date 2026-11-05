@@ -68,14 +68,13 @@ temp/
 *~
 
 # ========================
-# Uploads & Private Media
+# Source photos (camera RAW + full-size edits)
 # ========================
-# Uncomment if you want to exclude real photos from git
-# (recommended if photos are large — upload directly to Cyon instead)
-# assets/images/gallery/*.jpg
-# assets/images/gallery/*.png
-# assets/images/hero/*.jpg
-# assets/images/about/*.jpg
+# Only the web versions in assets/images/vihara/ belong in git and on Vercel.
+assets/images/test_images/
+assets/images/test_images_edited/
+*.CR2
+*.cr2
 
 # ========================
 # Sensitive Files
