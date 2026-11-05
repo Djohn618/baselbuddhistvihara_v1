@@ -403,42 +403,50 @@
           <h2 class="section-head__title" data-i18n="youtube.title">Dhamma Dana</h2>
         </div>
 
-        <!-- Cards open the channel until the real video links are added -->
+        <!-- The monk's four playlists. Each card is a normal link to YouTube;
+             with JavaScript it opens the calm player on this page instead (main.js). -->
+        <p class="youtube__intro fade-in" data-i18n="youtube.intro">Lehrreden und Erklärungen zum Dhamma, gesammelt in vier Reihen.</p>
+
         <div class="youtube__grid fade-in">
-          <a href="https://www.youtube.com/@BaselBuddhistVihara" class="youtube-card" target="_blank" rel="noopener noreferrer">
-            <div class="youtube-card__thumb">
-              <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play" class="lucide-lg"></i></span>
-            </div>
-            <h3 class="youtube-card__title" data-i18n="youtube.videos.video1.title">Buddhistische Philosophie</h3>
-            <p class="youtube-card__speaker" data-i18n="youtube.videos.video1.speaker">Ehrw. Ariyaseela Thero</p>
-            <p class="youtube-card__date" data-i18n="youtube.videos.video1.date">Bald verfügbar</p>
+          <a href="https://www.youtube.com/playlist?list=PLsSjdK2SRA-H19JgVLuUjE5QylYmBwgET" class="youtube-card" data-playlist="PLsSjdK2SRA-H19JgVLuUjE5QylYmBwgET" target="_blank" rel="noopener noreferrer">
+            <span class="youtube-card__thumb">
+              <img src="assets/images/youtube/buddha-qualities-640.webp" width="640" height="360" loading="lazy" alt="">
+              <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play"></i></span>
+              <span class="youtube-card__count"><i data-lucide="list-video" aria-hidden="true"></i><span data-i18n="youtube.playlists.p1.count">2 Lektionen</span></span>
+            </span>
+            <span class="youtube-card__text">
+              <span class="youtube-card__title" data-i18n="youtube.playlists.p1.title">Besondere Eigenschaften, die nur ein Buddha besitzt</span>
+            </span>
           </a>
-
-          <a href="https://www.youtube.com/@BaselBuddhistVihara" class="youtube-card" target="_blank" rel="noopener noreferrer">
-            <div class="youtube-card__thumb">
-              <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play" class="lucide-lg"></i></span>
-            </div>
-            <h3 class="youtube-card__title" data-i18n="youtube.videos.video2.title">Meditationsanleitung</h3>
-            <p class="youtube-card__speaker" data-i18n="youtube.videos.video2.speaker">Ehrw. Ariyaseela Thero</p>
-            <p class="youtube-card__date" data-i18n="youtube.videos.video2.date">Bald verfügbar</p>
+          <a href="https://www.youtube.com/playlist?list=PLsSjdK2SRA-GGhaHZzOzFcr8pN5myXbkk" class="youtube-card" data-playlist="PLsSjdK2SRA-GGhaHZzOzFcr8pN5myXbkk" target="_blank" rel="noopener noreferrer">
+            <span class="youtube-card__thumb">
+              <img src="assets/images/youtube/jhanas-640.webp" width="640" height="360" loading="lazy" alt="">
+              <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play"></i></span>
+              <span class="youtube-card__count"><i data-lucide="list-video" aria-hidden="true"></i><span data-i18n="youtube.playlists.p2.count">4 Lektionen</span></span>
+            </span>
+            <span class="youtube-card__text">
+              <span class="youtube-card__title" data-i18n="youtube.playlists.p2.title">8 Jhānas Explained | Meditation vs Brain Science</span>
+            </span>
           </a>
-
-          <a href="https://www.youtube.com/@BaselBuddhistVihara" class="youtube-card" target="_blank" rel="noopener noreferrer">
-            <div class="youtube-card__thumb">
-              <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play" class="lucide-lg"></i></span>
-            </div>
-            <h3 class="youtube-card__title" data-i18n="youtube.videos.video3.title">Dhamma Vortrag</h3>
-            <p class="youtube-card__speaker" data-i18n="youtube.videos.video3.speaker">Ehrw. Ariyaseela Thero</p>
-            <p class="youtube-card__date" data-i18n="youtube.videos.video3.date">Bald verfügbar</p>
+          <a href="https://www.youtube.com/playlist?list=PLsSjdK2SRA-EMGfXa5CAanQZXHB0xWUw_" class="youtube-card" data-playlist="PLsSjdK2SRA-EMGfXa5CAanQZXHB0xWUw_" target="_blank" rel="noopener noreferrer">
+            <span class="youtube-card__thumb">
+              <img src="assets/images/youtube/depth-of-dhamma-640.webp" width="640" height="360" loading="lazy" alt="">
+              <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play"></i></span>
+              <span class="youtube-card__count"><i data-lucide="list-video" aria-hidden="true"></i><span data-i18n="youtube.playlists.p3.count">12 Videos</span></span>
+            </span>
+            <span class="youtube-card__text">
+              <span class="youtube-card__title" data-i18n="youtube.playlists.p3.title">Die Tiefe des Dhamma: Abhidhamma & Philosophie</span>
+            </span>
           </a>
-
-          <a href="https://www.youtube.com/@BaselBuddhistVihara" class="youtube-card" target="_blank" rel="noopener noreferrer">
-            <div class="youtube-card__thumb">
-              <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play" class="lucide-lg"></i></span>
-            </div>
-            <h3 class="youtube-card__title" data-i18n="youtube.videos.video4.title">Pirith Chanting</h3>
-            <p class="youtube-card__speaker" data-i18n="youtube.videos.video4.speaker">Ehrw. Ariyaseela Thero</p>
-            <p class="youtube-card__date" data-i18n="youtube.videos.video4.date">Bald verfügbar</p>
+          <a href="https://www.youtube.com/playlist?list=PLsSjdK2SRA-ELGTcBlrpAqb61q1zPOe5_" class="youtube-card" data-playlist="PLsSjdK2SRA-ELGTcBlrpAqb61q1zPOe5_" target="_blank" rel="noopener noreferrer">
+            <span class="youtube-card__thumb">
+              <img src="assets/images/youtube/psychologisch-betrachtet-640.webp" width="640" height="360" loading="lazy" alt="">
+              <span class="youtube-card__play" aria-hidden="true"><i data-lucide="circle-play"></i></span>
+              <span class="youtube-card__count"><i data-lucide="list-video" aria-hidden="true"></i><span data-i18n="youtube.playlists.p4.count">4 Videos</span></span>
+            </span>
+            <span class="youtube-card__text">
+              <span class="youtube-card__title" data-i18n="youtube.playlists.p4.title">Psychologisch betrachtet</span>
+            </span>
           </a>
         </div>
 
@@ -669,6 +677,21 @@
   <button type="button" class="back-to-top" id="back-to-top" aria-label="Nach oben" data-i18n-attr="aria-label:nav.backToTop">
     <i data-lucide="chevron-up"></i>
   </button>
+
+  <!-- Playlist player: the YouTube frame (privacy mode) is only created after a click -->
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Video-Player" data-i18n-attr="aria-label:youtube.player">
+    <div class="video-modal__panel">
+      <button type="button" class="video-modal__close" id="video-modal-close" aria-label="Schliessen" data-i18n-attr="aria-label:youtube.close"><i data-lucide="x"></i></button>
+      <div class="video-modal__frame" id="video-modal-frame"></div>
+      <div class="video-modal__bar">
+        <p class="video-modal__title" id="video-modal-title"></p>
+        <a class="video-modal__youtube" id="video-modal-youtube" href="#" target="_blank" rel="noopener noreferrer">
+          <span data-i18n="youtube.watch">Auf YouTube ansehen</span>
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galerie Vorschau">
     <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Schliessen"><i data-lucide="x"></i></button>

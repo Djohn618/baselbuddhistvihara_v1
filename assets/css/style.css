@@ -2492,72 +2492,170 @@ blockquote {
   scroll-margin-top: var(--nav-height);
 }
 
+.youtube__intro {
+  max-width: 46ch;
+  margin: calc(var(--space-xl) * -0.5) auto var(--space-xl);
+  text-align: center;
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-muted);
+  text-wrap: balance;
+}
+
+/* Phones: one calm row per playlist (thumbnail left, title right) */
 .youtube__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-lg);
+  gap: var(--space-sm);
+  max-width: 1100px;
+  margin-inline: auto;
 }
 
 .youtube-card {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2xs);
-}
-
-.youtube-card__thumb {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs);
+  background-color: var(--color-white);
+  border: var(--border-soft);
   border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--ph-1);
   box-shadow: var(--shadow-soft);
+  color: inherit;
   transition: transform 0.6s var(--ease-calm), box-shadow 0.6s var(--ease-calm);
 }
 
-.youtube-card:nth-child(even) .youtube-card__thumb {
-  background: var(--ph-2);
-}
-
-.youtube-card__play .lucide {
-  stroke: var(--color-primary);
-  transition: transform 0.6s var(--ease-calm);
-}
-
-.youtube-card:hover .youtube-card__thumb {
+.youtube-card:hover {
+  color: inherit;
   transform: translateY(-4px);
   box-shadow: var(--shadow-lift);
 }
 
-.youtube-card:hover .youtube-card__play .lucide {
-  transform: scale(1.08);
+.youtube-card__thumb {
+  position: relative;
+  flex: 0 0 132px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: calc(var(--radius-lg) - 6px);
+  background: var(--ph-1);
+}
+
+/* The YouTube covers are very colourful: softened a little to sit calmly
+   on the page, full colour on hover */
+.youtube-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.8);
+  transition: filter 0.6s var(--ease-calm), transform 1.2s var(--ease-calm);
+}
+
+.youtube-card:hover .youtube-card__thumb img {
+  filter: saturate(1);
+  transform: scale(1.03);
+}
+
+.youtube-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background-color: rgba(26, 20, 16, 0.25);
+  transition: opacity 0.5s ease;
+}
+
+.youtube-card__play .lucide {
+  width: 40px;
+  height: 40px;
+  stroke: var(--color-white);
+  stroke-width: 1.25;
+}
+
+.youtube-card:hover .youtube-card__play,
+.youtube-card:focus-visible .youtube-card__play {
+  opacity: 1;
+}
+
+.youtube-card__count {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  background-color: rgba(26, 20, 16, 0.72);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: var(--fw-medium);
+}
+
+.youtube-card__count .lucide {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+}
+
+.youtube-card__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .youtube-card__title {
-  margin-top: var(--space-2xs);
   font-family: var(--font-heading);
-  font-size: var(--fs-lg);
+  font-size: 1.05rem;
   font-weight: var(--fw-semibold);
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--color-primary);
+  text-wrap: balance;
 }
 
-.youtube-card__speaker {
-  font-size: var(--fs-sm);
-  color: var(--color-text-dark);
+/* Tablet: 2 x 2 cards with the cover on top; desktop: 4 in a row */
+@media (min-width: 768px) {
+  .youtube__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .youtube-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .youtube-card__thumb {
+    flex: none;
+    border-radius: 0;
+  }
+
+  .youtube-card__count {
+    right: 10px;
+    bottom: 10px;
+    font-size: var(--fs-xs);
+  }
+
+  .youtube-card__text {
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+  }
+
+  .youtube-card__title {
+    font-size: 1.2rem;
+  }
 }
 
-.youtube-card__date {
-  font-size: var(--fs-xs);
-  color: var(--color-text-muted);
+@media (min-width: 1024px) {
+  .youtube__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .youtube__more {
   display: flex;
   justify-content: center;
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-xl);
 }
 
 .youtube__view-all {
@@ -2582,10 +2680,100 @@ blockquote {
   transform: translateX(3px);
 }
 
-@media (min-width: 900px) {
-  .youtube__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+/* Playlist player window (like the gallery lightbox) */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm);
+  background-color: rgba(26, 20, 16, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.video-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-modal__panel {
+  position: relative;
+  width: min(100%, 1000px);
+}
+
+.video-modal__frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: #000;
+}
+
+.video-modal__frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-modal__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xs) var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.video-modal__title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-bg-light);
+}
+
+.video-modal__youtube {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  min-height: 44px;
+  font-size: var(--fs-sm);
+  color: var(--color-secondary-light);
+}
+
+.video-modal__youtube .lucide {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.video-modal__youtube:hover {
+  color: var(--color-white);
+}
+
+.video-modal__close {
+  position: absolute;
+  top: -52px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  transition: background-color var(--transition-fast);
+}
+
+.video-modal__close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video-modal__close .lucide {
+  stroke: currentColor;
 }
 
 /* --------------------------------------------------------------------------

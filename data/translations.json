@@ -122,13 +122,28 @@
     "youtube": {
       "label": "YouTube",
       "title": "Dhamma Dana",
-      "subtitle": "",
-      "videos": {
-        "video1": { "title": "Buddhistische Philosophie", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" },
-        "video2": { "title": "Meditationsanleitung", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" },
-        "video3": { "title": "Dhamma Vortrag", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" },
-        "video4": { "title": "Pirith Chanting", "speaker": "Ehrw. Ariyaseela Thero", "date": "Bald verfügbar" }
+      "intro": "Lehrreden und Erklärungen zum Dhamma, gesammelt in vier Reihen.",
+      "playlists": {
+        "p1": {
+          "title": "Besondere Eigenschaften, die nur ein Buddha besitzt",
+          "count": "2 Lektionen"
+        },
+        "p2": {
+          "title": "8 Jhānas Explained | Meditation vs Brain Science",
+          "count": "4 Lektionen"
+        },
+        "p3": {
+          "title": "Die Tiefe des Dhamma: Abhidhamma & Philosophie",
+          "count": "12 Videos"
+        },
+        "p4": {
+          "title": "Psychologisch betrachtet",
+          "count": "4 Videos"
+        }
       },
+      "watch": "Auf YouTube ansehen",
+      "close": "Schliessen",
+      "player": "Video-Player",
       "viewAll": "Alle Videos ansehen"
     },
     "gallery": {
@@ -329,13 +344,28 @@
     "youtube": {
       "label": "YouTube",
       "title": "Dhamma Dana",
-      "subtitle": "",
-      "videos": {
-        "video1": { "title": "Buddhist Philosophy", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" },
-        "video2": { "title": "Meditation Guide", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" },
-        "video3": { "title": "Dhamma Talk", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" },
-        "video4": { "title": "Pirith Chanting", "speaker": "Ven. Ariyaseela Thero", "date": "Coming soon" }
+      "intro": "Teachings and explanations of the Dhamma, gathered in four series.",
+      "playlists": {
+        "p1": {
+          "title": "Special qualities possessed only by a Buddha",
+          "count": "2 lessons"
+        },
+        "p2": {
+          "title": "8 Jhānas Explained | Meditation vs Brain Science",
+          "count": "4 lessons"
+        },
+        "p3": {
+          "title": "The Depth of Dhamma",
+          "count": "12 videos"
+        },
+        "p4": {
+          "title": "Psychologisch betrachtet",
+          "count": "4 videos"
+        }
       },
+      "watch": "Watch on YouTube",
+      "close": "Close",
+      "player": "Video player",
       "viewAll": "View All Videos"
     },
     "gallery": {
@@ -536,13 +566,28 @@
     "youtube": {
       "label": "YouTube",
       "title": "Dhamma Dana",
-      "subtitle": "",
-      "videos": {
-        "video1": { "title": "බෞද්ධ දර්ශනය", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" },
-        "video2": { "title": "භාවනා මාර්ගෝපදේශය", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" },
-        "video3": { "title": "ධර්ම දේශනාව", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" },
-        "video4": { "title": "පිරිත් සජ්ඣායනාව", "speaker": "පූජ්‍ය අරියසීල ස්වාමීන් වහන්සේ", "date": "ළඟදීම" }
+      "intro": "ධර්ම දේශනා සහ පැහැදිලි කිරීම්, මාලා හතරකට එක් කර ඇත.",
+      "playlists": {
+        "p1": {
+          "title": "Special qualities possessed only by a Buddha",
+          "count": "පාඩම් 2"
+        },
+        "p2": {
+          "title": "8 Jhānas Explained | Meditation vs Brain Science",
+          "count": "පාඩම් 4"
+        },
+        "p3": {
+          "title": "The Depth of Dhamma",
+          "count": "වීඩියෝ 12"
+        },
+        "p4": {
+          "title": "Psychologisch betrachtet",
+          "count": "වීඩියෝ 4"
+        }
       },
+      "watch": "YouTube හි නරඹන්න",
+      "close": "වසන්න",
+      "player": "වීඩියෝ ධාවකය",
       "viewAll": "සියලුම වීඩියෝ නරඹන්න"
     },
     "gallery": {

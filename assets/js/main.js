@@ -623,6 +623,68 @@
     });
   }
 
+  // YouTube playlists: open the player on this page. The frame uses YouTube's
+  // privacy mode and is only created after a click, so nothing loads from
+  // YouTube before someone actually wants to watch.
+  function initVideoModal() {
+    var modal = document.getElementById('video-modal');
+    var frame = document.getElementById('video-modal-frame');
+    var title = document.getElementById('video-modal-title');
+    var youtubeLink = document.getElementById('video-modal-youtube');
+    var closeBtn = document.getElementById('video-modal-close');
+    if (!modal || !frame) return;
+
+    var lastCard = null;
+
+    function open(card) {
+      var list = card.getAttribute('data-playlist');
+      var lang = window.i18n ? window.i18n.getLanguage() : 'de';
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/videoseries?list=' + encodeURIComponent(list) +
+        '&autoplay=1&rel=0&hl=' + lang;
+      iframe.title = card.querySelector('.youtube-card__title').textContent;
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      iframe.allowFullscreen = true;
+      frame.innerHTML = '';
+      frame.appendChild(iframe);
+
+      title.textContent = iframe.title;
+      youtubeLink.href = card.href;
+      lastCard = card;
+
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+      closeBtn.focus();
+    }
+
+    function close() {
+      if (!modal.classList.contains('is-open')) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+      frame.innerHTML = '';          // removing the frame stops the video
+      if (lastCard) lastCard.focus();
+    }
+
+    document.querySelectorAll('.youtube-card[data-playlist]').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        // Ctrl/Cmd-click or middle-click still opens YouTube in a new tab
+        if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return;
+        e.preventDefault();
+        open(card);
+      });
+    });
+
+    closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+  }
+
   // Donate page: copy the IBAN (without spaces) and confirm quietly
   function initCopyButtons() {
     document.querySelectorAll('[data-copy]').forEach(function (btn) {
@@ -674,6 +736,7 @@
     initFooterYear();
     initBackToTop();
     initCopyButtons();
+    initVideoModal();
     handleHeaderScroll();
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
     initNavToggle();

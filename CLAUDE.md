@@ -58,6 +58,7 @@ baselbuddhistvihara/
 │       │                       # (hero, about collage, program cards, gallery all use these)
 │       ├── other/              # walpola-maha-thero.webp (founder)
 │       ├── donate/             # swiss-qr-bill.svg (shown) + .png (download)
+│       ├── youtube/            # playlist covers <name>-640.webp (from YouTube, via PhotoCraft)
 │       ├── test_images/        # camera RAW originals (.CR2) — NOT in git (.gitignore)
 │       └── test_images_edited/ # graded full-size JPGs (PhotoCraft) — NOT in git
 └── data/
@@ -69,7 +70,7 @@ Images: all photo grading, resizing and converting is done with PhotoCraft
 1600px (quality 78) + 800px (quality 76), lowercase-dash names, always
 width/height attributes, srcset where an image can be large. Alt texts are
 translation keys images.<name> (data-i18n-attr="alt:..." / "aria-label:...").
-Still missing: Ariyaseela portrait, YouTube thumbnails (with the real videos).
+Still missing: Ariyaseela portrait.
 
 ---
 
@@ -186,7 +187,18 @@ NAV (fixed):
                  Pages without a .hero show the solid header from the start.
 4.  #programs  → Tabs "Programme | Veranstaltungen", carousel (arrows on desktop,
                  2 square cards + swipe + one-time swipe hint on phones)
-5.  #youtube   → Dhamma Dana, 4 placeholder video cards
+5.  #youtube   → Dhamma Dana: the monk's 4 chosen playlists (keys youtube.playlists.p1–p4,
+                 exact YouTube names without emojis; DE/EN parts per language):
+                   p1 PLsSjdK2SRA-H19JgVLuUjE5QylYmBwgET  Besondere Eigenschaften… (course)
+                   p2 PLsSjdK2SRA-GGhaHZzOzFcr8pN5myXbkk  8 Jhānas Explained… (course)
+                   p3 PLsSjdK2SRA-EMGfXa5CAanQZXHB0xWUw_  Die Tiefe des Dhamma…
+                   p4 PLsSjdK2SRA-ELGTcBlrpAqb61q1zPOe5_  Psychologisch betrachtet
+                 Each card links to the playlist on YouTube; main.js opens it in a
+                 calm player window instead (youtube-nocookie.com, frame created
+                 only on click, removed on close). Phones: one row per playlist;
+                 tablet 2x2; desktop 4 in a row. Covers softened (saturate 0.8).
+                 If the counts change, update youtube.playlists.*.count.
+                 The privacy policy must mention the embedded YouTube player.
 6.  #gallery   → 8 real photos (data-full = 1600px version), lightbox (gallery.js)
 7.  #contact   → Left: one sentence (contact.intro, "visits by appointment only"),
                  two pill buttons Call / Email (contact.actions), a quiet line
@@ -254,8 +266,7 @@ When adding a placeholder:
 - Always add a comment: <!-- replace with real image: assets/images/FOLDER/filename.jpg -->
 - Real photos: object-fit: cover, real alt text
 
-Pending: Ariyaseela portrait, more photos from the owner, single YouTube
-video links + thumbnails (the 4 cards open the channel for now).
+Pending: Ariyaseela portrait, more photos from the owner.
 
 Social profiles (footer, YouTube section, JSON-LD sameAs):
   Facebook: https://www.facebook.com/p/Basel-Buddhist-Vihara-61569741141373/
