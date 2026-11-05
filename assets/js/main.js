@@ -49,9 +49,13 @@
   var allNavLinkEls = document.querySelectorAll('.nav__link, .nav-overlay__link');
   var sections = document.querySelectorAll('main [id]');
 
+  // The see-through header only makes sense over the hero photo; pages
+  // without one (monk pages) show the solid header from the start.
+  var hasHero = !!document.querySelector('.hero');
+
   function handleHeaderScroll() {
     if (!header) return;
-    header.classList.toggle('site-header--scrolled', window.scrollY > SCROLL_THRESHOLD);
+    header.classList.toggle('site-header--scrolled', !hasHero || window.scrollY > SCROLL_THRESHOLD);
   }
 
   // Back-to-top button: appears after scrolling about one screen

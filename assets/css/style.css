@@ -99,6 +99,9 @@
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
   --ease-calm: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* Liyawela vine with a lotus bud (section titles, monk pages) */
+  --liyawela: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -2 160 22' fill='none' stroke='%23C9922A' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M80 2.5 C75.5 7.5 75.5 12.5 80 16.5 C84.5 12.5 84.5 7.5 80 2.5 Z'/%3E%3Cpath d='M80 16.5 C74 15 71 11.5 70 8.5'/%3E%3Cpath d='M80 16.5 C86 15 89 11.5 90 8.5'/%3E%3Cg%3E%3Cpath d='M88 12 C96 12 100 5 108 5 S120 14 128 13 S142 5 150 8'/%3E%3Cpath d='M108 5 C104 1 110 -1 111 2.5'/%3E%3Cpath d='M128 13 C132 17 126 19 125 16'/%3E%3Cpath d='M150 8 C155 6 155.5 12 151.5 11'/%3E%3Cpath d='M117 9.5 C118 6.5 121 6 123 6.5'/%3E%3Cpath d='M139 9.5 C140 12.5 143 13 145 12.5'/%3E%3C/g%3E%3Cg transform='matrix(-1 0 0 1 160 0)'%3E%3Cpath d='M88 12 C96 12 100 5 108 5 S120 14 128 13 S142 5 150 8'/%3E%3Cpath d='M108 5 C104 1 110 -1 111 2.5'/%3E%3Cpath d='M128 13 C132 17 126 19 125 16'/%3E%3Cpath d='M150 8 C155 6 155.5 12 151.5 11'/%3E%3Cpath d='M117 9.5 C118 6.5 121 6 123 6.5'/%3E%3Cpath d='M139 9.5 C140 12.5 143 13 145 12.5'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* --------------------------------------------------------------------------
@@ -394,7 +397,7 @@ blockquote {
   width: 132px;
   height: 18px;
   margin: var(--space-md) auto 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -2 160 22' fill='none' stroke='%23C9922A' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M80 2.5 C75.5 7.5 75.5 12.5 80 16.5 C84.5 12.5 84.5 7.5 80 2.5 Z'/%3E%3Cpath d='M80 16.5 C74 15 71 11.5 70 8.5'/%3E%3Cpath d='M80 16.5 C86 15 89 11.5 90 8.5'/%3E%3Cg%3E%3Cpath d='M88 12 C96 12 100 5 108 5 S120 14 128 13 S142 5 150 8'/%3E%3Cpath d='M108 5 C104 1 110 -1 111 2.5'/%3E%3Cpath d='M128 13 C132 17 126 19 125 16'/%3E%3Cpath d='M150 8 C155 6 155.5 12 151.5 11'/%3E%3Cpath d='M117 9.5 C118 6.5 121 6 123 6.5'/%3E%3Cpath d='M139 9.5 C140 12.5 143 13 145 12.5'/%3E%3C/g%3E%3Cg transform='matrix(-1 0 0 1 160 0)'%3E%3Cpath d='M88 12 C96 12 100 5 108 5 S120 14 128 13 S142 5 150 8'/%3E%3Cpath d='M108 5 C104 1 110 -1 111 2.5'/%3E%3Cpath d='M128 13 C132 17 126 19 125 16'/%3E%3Cpath d='M150 8 C155 6 155.5 12 151.5 11'/%3E%3Cpath d='M117 9.5 C118 6.5 121 6 123 6.5'/%3E%3Cpath d='M139 9.5 C140 12.5 143 13 145 12.5'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+  background: var(--liyawela) center / contain no-repeat;
   clip-path: inset(0 50% 0 50%);
   transition: clip-path 1.8s var(--ease-calm) 0.4s;
 }
@@ -1912,42 +1915,31 @@ blockquote {
   transform: translateX(3px);
 }
 
-/* Monk detail page (monks/*.html) */
-.monk-detail__hero {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  max-height: 70vh;
-  margin-top: var(--nav-height);
-  overflow: hidden;
-  background: var(--ph-2);
-}
-
-.monk-detail__hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
+/* Monk detail page (monks/*.html): one calm centred column */
 .monk-detail__container {
-  max-width: 760px;
-  padding-block: var(--space-2xl);
+  max-width: 720px;
+  padding-top: calc(var(--nav-height) + var(--space-lg));
+  padding-bottom: var(--space-2xl);
 }
 
 .monk-detail__back {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2xs);
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-full);
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
   color: var(--color-secondary);
   text-decoration: none;
-  margin-bottom: var(--space-xl);
-  transition: color var(--transition-fast);
+  transition: color var(--transition-base), border-color var(--transition-base);
 }
 
 .monk-detail__back:hover {
   color: var(--color-primary);
+  border-color: var(--color-secondary);
 }
 
 .monk-detail__back .lucide {
@@ -1956,30 +1948,101 @@ blockquote {
   height: 16px;
 }
 
+.monk-detail__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+/* Liyawela vine under the header, same drawing as under the section titles */
+.monk-detail__header::after {
+  content: "";
+  width: 132px;
+  height: 18px;
+  margin-top: var(--space-lg);
+  background: var(--liyawela) center / contain no-repeat;
+}
+
+/* Round portrait in a thin gold ring */
+.monk-detail__portrait {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(140px, 30vw, 200px);
+  aspect-ratio: 1;
+  margin-bottom: var(--space-lg);
+  padding: 5px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 50%;
+}
+
+.monk-detail__portrait img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.monk-detail__lotus {
+  width: 100%;
+  height: 100%;
+  padding: 26%;
+  border-radius: 50%;
+  background: var(--ph-1);
+  fill: none;
+  stroke: var(--color-secondary);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .monk-detail__role {
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--color-secondary);
-  margin-bottom: var(--space-2xs);
+  margin-bottom: var(--space-xs);
 }
 
 .monk-detail__name {
+  max-width: 18ch;
+  font-size: clamp(1.75rem, 3vw + 1rem, 2.6rem);
+  font-weight: var(--fw-medium);
+  line-height: 1.15;
   color: var(--color-primary);
-  margin-bottom: var(--space-2xs);
+  text-wrap: balance;
 }
 
-.monk-detail__dates {
-  color: var(--color-text-muted);
+.monk-detail__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: var(--space-sm);
   font-size: var(--fs-sm);
-  margin-bottom: var(--space-xl);
+  color: var(--color-primary);
+}
+
+.monk-detail__meta .oil-lamp__body {
+  stroke: var(--color-secondary);
 }
 
 .monk-detail__body p {
-  color: var(--color-text-dark);
+  color: var(--color-text-muted);
   line-height: var(--lh-relaxed);
   margin-bottom: var(--space-md);
+}
+
+/* A gentle opening: the first paragraph in the serif, a little larger */
+.monk-detail__body > p:first-child {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 0.6vw + 1rem, 1.35rem);
+  line-height: 1.6;
+  color: var(--color-primary);
 }
 
 /* Dhammapada quote in a Kandyan painted-panel frame: curled corners

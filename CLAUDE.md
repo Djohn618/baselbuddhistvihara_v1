@@ -177,6 +177,11 @@ NAV (fixed):
                  Phones: one row per monk, round portrait, no excerpt.
                  Tablet+: two equal cards, "In memory" label in the photo corner.
                  No photo yet: lotus line drawing.
+                 Detail pages (monks/*.html): "Our monks" pill back to #monks,
+                 centred round portrait in a gold ring (lotus if no photo),
+                 role, name, memory line (monkPages.<slug>.memory), liyawela
+                 vine (--liyawela), serif lead paragraph, Kandyan quote frame.
+                 Pages without a .hero show the solid header from the start.
 4.  #programs  → Tabs "Programme | Veranstaltungen", carousel (arrows on desktop,
                  2 square cards + swipe + one-time swipe hint on phones)
 5.  #youtube   → Dhamma Dana, 4 placeholder video cards
