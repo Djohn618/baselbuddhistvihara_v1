@@ -1669,22 +1669,14 @@ blockquote {
 
 .monks__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
   max-width: 780px;
   margin-inline: auto;
 }
 
-@media (min-width: 768px) {
-  .monks__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
-  }
-}
-
 .monk-card {
   display: flex;
-  flex-direction: column;
   background-color: var(--color-white);
   border: var(--border-soft);
   border-radius: var(--radius-lg);
@@ -1701,40 +1693,46 @@ blockquote {
 
 .monk-card__image-wrap {
   position: relative;
-  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  background: var(--ph-2);
-}
-
-@media (min-width: 768px) {
-  .monk-card__image-wrap {
-    height: 180px;
-  }
+  background: var(--ph-1);
 }
 
 .monk-card__image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%;   /* keep the face in view */
   display: block;
 }
 
-.monk-card__badge {
-  position: absolute;
-  top: var(--space-sm);
-  left: var(--space-sm);
-  padding: 0.25rem 0.75rem;
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-semibold);
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  border-radius: var(--radius-full);
+/* Lotus line drawing while a portrait is still missing */
+.monk-card__placeholder {
+  width: 46%;
+  max-width: 72px;
+  fill: none;
+  stroke: var(--color-secondary);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
+/* "In memory" label: light pill in the photo's lower corner (tablet and up) */
 .monk-card__badge {
+  position: absolute;
+  right: var(--space-xs);
+  bottom: var(--space-xs);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  background-color: rgba(250, 247, 242, 0.94);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
 }
 
 /* Oil lamp in the "In Memory" badge */
@@ -1775,52 +1773,100 @@ blockquote {
 .monk-card__body {
   display: flex;
   flex-direction: column;
-  padding: 0.9rem;
   flex: 1;
+  min-width: 0;
 }
 
 .monk-card__role {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--color-secondary);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .monk-card__name {
   font-family: var(--font-heading);
-  font-size: 1rem;
-  color: var(--color-primary);
-  margin-bottom: 0.25rem;
+  font-size: 1.15rem;
   line-height: 1.2;
+  color: var(--color-primary);
+  text-wrap: balance;
 }
 
-.monk-card__dates {
-  font-size: var(--fs-sm);
+.monk-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: var(--space-3xs);
+  font-size: var(--fs-xs);
   color: var(--color-text-muted);
-  margin-bottom: var(--space-sm);
+}
+
+.monk-card__memory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-right: 0.3rem;
+  color: var(--color-primary);
+}
+
+.monk-card__memory .oil-lamp__body {
+  stroke: var(--color-secondary);
 }
 
 .monk-card__excerpt {
-  color: var(--color-text-muted);
-  line-height: 1.4;
-  font-size: 0.75rem;
-  flex: 1;
-  margin-bottom: 0.5rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin-top: var(--space-xs);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--color-text-muted);
 }
 
-.monk-card__divider {
-  height: 1px;
-  background-color: var(--color-border-light);
-  margin-bottom: var(--space-2xs);
+/* Phones: one calm row per monk, round portrait, no excerpt, no photo label */
+@media (max-width: 767px) {
+  .monk-card {
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+  }
+
+  .monk-card__image-wrap {
+    flex: 0 0 72px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+  }
+
+  .monk-card__badge,
+  .monk-card__excerpt {
+    display: none;
+  }
+
+  .monk-card__link {
+    min-height: 36px;
+    margin-top: 0.1rem;
+  }
 }
 
+/* Tablet and up: two cards side by side, photo on top */
 @media (min-width: 768px) {
+  .monks__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .monk-card {
+    flex-direction: column;
+  }
+
+  .monk-card__image-wrap {
+    height: 220px;
+  }
+
   .monk-card__body {
     padding: 1.25rem 1.5rem 1rem;
   }
@@ -1829,8 +1875,13 @@ blockquote {
     font-size: 1.3rem;
   }
 
-  .monk-card__excerpt {
-    font-size: var(--fs-sm);
+  .monk-card__memory {
+    display: none;      /* the photo label says it here */
+  }
+
+  .monk-card__link {
+    margin-top: auto;
+    padding-top: var(--space-xs);
   }
 }
 

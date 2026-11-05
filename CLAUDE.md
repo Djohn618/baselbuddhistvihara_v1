@@ -171,7 +171,12 @@ NAV (fixed):
 2.  #about     → Image collage + text + bullets, founder + leadership
                  (the old 4-number stats box was removed; only ONE resident monk)
 3.  #monks     → Cards rendered by JS from data/monks.json, links to monks/*.html
-                 (monk names are { de, en, si }; detail page texts use monkPages.* keys)
+                 (monk names are { de, en, si }; detail page texts use monkPages.* keys;
+                 date of passing as passedAway "YYYY-MM-DD", formatted per language,
+                 Sinhala by hand; never a "?" or a † cross).
+                 Phones: one row per monk, round portrait, no excerpt.
+                 Tablet+: two equal cards, "In memory" label in the photo corner.
+                 No photo yet: lotus line drawing.
 4.  #programs  → Tabs "Programme | Veranstaltungen", carousel (arrows on desktop,
                  2 square cards + swipe + one-time swipe hint on phones)
 5.  #youtube   → Dhamma Dana, 4 placeholder video cards

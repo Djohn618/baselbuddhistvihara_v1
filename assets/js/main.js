@@ -298,7 +298,8 @@
     var lang = window.i18n ? window.i18n.getLanguage() : 'de';
     var featured = data.monks.filter(function (m) { return m.featured; });
 
-    var badgeText = { de: 'In Erinnerung', en: 'In Memory', si: 'සිහිකිරීමෙහිලා' };
+    var memoryText = { de: 'In Erinnerung', en: 'In memory', si: 'සිහිකිරීමෙහිලා' };
+    var locales = { de: 'de-CH', en: 'en-GB', si: 'si-LK' };
 
     // Small clay oil lamp (pol thel pahana) with a softly flickering flame
     var lampIcon =
@@ -306,25 +307,59 @@
         '<path class="oil-lamp__flame" d="M10 10.5 C7.6 8.6 8.6 5.6 10 2.5 C11.4 5.6 12.4 8.6 10 10.5 Z"/>' +
         '<path class="oil-lamp__body" d="M3 12 C3.5 15.5 16.5 15.5 17 12 Z M17 12 L18.5 11 M7.5 17.5 L12.5 17.5 M10 15.2 L10 17.5"/>' +
       '</svg>';
+
+    // Shown until a portrait exists: the same lotus as in the hero
+    var lotusIcon =
+      '<svg class="monk-card__placeholder" viewBox="0 0 120 72" aria-hidden="true" focusable="false">' +
+        '<path d="M32 66 C46 63 74 63 88 66 M60 56 C42 56 26 48 18 34 C32 34 48 42 60 56 M60 56 C78 56 94 48 102 34 C88 34 72 42 60 56 ' +
+        'M60 54 C48 48 40 34 42 18 C50 26 56 38 60 54 M60 54 C72 48 80 34 78 18 C70 26 64 38 60 54 M60 6 C52 20 52 40 60 54 C68 40 68 20 60 6 Z"/>' +
+      '</svg>';
     var readMoreText = { de: 'Mehr erfahren', en: 'Read more', si: 'තව දැනගන්න' };
+
+    // "2024-06-12" -> "12. Juni 2024" / "12 June 2024" / Sinhala, in the current language
+    var siMonths = ['ජනවාරි', 'පෙබරවාරි', 'මාර්තු', 'අප්‍රේල්', 'මැයි', 'ජූනි',
+      'ජූලි', 'අගෝස්තු', 'සැප්තැම්බර්', 'ඔක්තෝබර්', 'නොවැම්බර්', 'දෙසැම්බර්'];
+
+    function formatDate(iso) {
+      // Most browsers have no Sinhala date format, so build it by hand: "2024 ජූනි 12"
+      if (lang === 'si') {
+        var p = iso.split('-');
+        return p[0] + ' ' + siMonths[parseInt(p[1], 10) - 1] + ' ' + parseInt(p[2], 10);
+      }
+      try {
+        return new Intl.DateTimeFormat(locales[lang], { day: 'numeric', month: 'long', year: 'numeric' })
+          .format(new Date(iso + 'T12:00:00'));
+      } catch (e) {
+        return iso;
+      }
+    }
 
     grid.innerHTML = featured.map(function (monk) {
       var isPassed = monk.status === 'passed';
       // name is either one string or { de, en, si }
       var name = typeof monk.name === 'object' ? (monk.name[lang] || monk.name.de) : monk.name;
+      var date = monk.passedAway ? formatDate(monk.passedAway) : '';
+
+      // Phones show the memory note as a line under the name; tablets and
+      // desktops show it as a small label in the photo corner (see style.css).
+      var meta = isPassed
+        ? '<p class="monk-card__meta"><span class="monk-card__memory">' + lampIcon + memoryText[lang] +
+            (date ? ' · ' : '') + '</span>' + date + '</p>'
+        : '';
 
       return '' +
         '<article class="monk-card ' + (isPassed ? 'monk-card--passed' : '') + ' fade-in">' +
           '<div class="monk-card__image-wrap">' +
-            (isPassed ? '<span class="monk-card__badge">' + lampIcon + badgeText[lang] + '</span>' : '') +
-            (monk.image ? '<img src="' + monk.image + '" alt="' + name + '" onerror="this.style.display=\'none\'" loading="lazy">' : '') +
+            (monk.image
+              ? '<img src="' + monk.image + '" alt="' + name + '" onerror="this.style.display=\'none\'" loading="lazy">'
+              : lotusIcon) +
+            (isPassed ? '<span class="monk-card__badge">' + lampIcon + memoryText[lang] + '</span>' : '') +
           '</div>' +
           '<div class="monk-card__body">' +
             '<p class="monk-card__role">' + monk.role[lang] + '</p>' +
             '<h3 class="monk-card__name">' + name + '</h3>' +
-            (monk.dates ? '<p class="monk-card__dates">' + monk.dates + '</p>' : '') +
+            meta +
             '<p class="monk-card__excerpt">' + monk.excerpt[lang] + '</p>' +
-            '<div class="monk-card__divider"></div>' +
             '<a href="' + monk.detailPage + '" class="monk-card__link">' +
               readMoreText[lang] +
               '<i data-lucide="arrow-right"></i>' +
