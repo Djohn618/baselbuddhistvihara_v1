@@ -199,8 +199,9 @@ Subject uses a custom dropdown (keyboard accessible) writing to a hidden input.
 
 Address:    Feldbergstrasse 142, 4057 Basel, Switzerland
 Phone:      +41 792 303 699
-Email:      ariyaseela@gmail.com (will become info@baselbuddhistvihara.ch once
-            the owner confirms the Zoho mailbox works — do not change before)
+Email:      info@baselbuddhistvihara.ch (Zoho Mail; switched Nov 2026 on the
+            owner's request — the Formspree form target is set in the
+            Formspree dashboard, not in the code)
 SKBZ founded: March 17, 2021
 Vihara founded: July 1, 2024. Opened: July 6, 2024 (5 monks, ~30 attendees)
 Head Monk + Treasurer: Ven. Udumaththe Ariyaseela Thero
