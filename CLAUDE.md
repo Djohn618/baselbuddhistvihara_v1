@@ -176,7 +176,11 @@ NAV (fixed):
                  2 square cards + swipe + one-time swipe hint on phones)
 5.  #youtube   → Dhamma Dana, 4 placeholder video cards
 6.  #gallery   → 8 real photos (data-full = 1600px version), lightbox (gallery.js)
-7.  #contact   → Contact rows + appointment note + map (left), form card (right)
+7.  #contact   → Left: one sentence (contact.intro, "visits by appointment only"),
+                 two pill buttons Call / Email (contact.actions), a quiet line
+                 with number + email, address and hours side by side, then the
+                 framed map filling down to the form's bottom edge.
+                 Right: form card. Phones: all centred, form before the map.
 FOOTER         → Light, centered: moonstone + caption, logo, tagline, link row,
                  address · phone · email, social icons, copyright (year set by JS)
 

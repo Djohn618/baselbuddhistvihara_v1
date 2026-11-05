@@ -2724,82 +2724,103 @@ blockquote {
   gap: var(--space-lg);
 }
 
-/* Contact rows */
-.contact__rows {
-  display: flex;
-  flex-direction: column;
+/* Calm contact info: one sentence, two buttons, a quiet line with the
+   number and email, then address + hours side by side */
+.contact__intro {
+  max-width: 40ch;
+  text-wrap: balance;
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-muted);
 }
 
-.contact__row {
+.contact__actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.contact__action {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-sm);
-  min-height: 64px;
-  padding: var(--space-sm) 0;
-  border-bottom: 1px solid var(--color-border-light);
-  color: inherit;
-  text-decoration: none;
+  justify-content: center;
+  gap: var(--space-2xs);
+  min-height: 48px;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.contact__row-arrow .lucide {
-  width: 16px;
-  height: 16px;
+.contact__action .lucide {
+  width: 18px;
+  height: 18px;
   stroke: currentColor;
-  transition: transform 0.4s var(--ease-calm);
 }
 
-a.contact__row:hover .contact__row-arrow {
+.contact__action:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.contact__action--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.contact__action--primary:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
+.contact__direct {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-sm);
+  row-gap: 2px;
+  margin-top: calc(var(--space-lg) * -0.5);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.contact__direct a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: inherit;
+}
+
+.contact__direct a:hover {
   color: var(--color-secondary);
 }
 
-a.contact__row:hover .contact__row-arrow .lucide {
-  transform: translate(2px, -2px);
+.contact__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-light);
 }
 
-.contact__row-icon {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.contact__row-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex: 1;
-}
-
-.contact__row-label {
+.contact__info dt {
+  margin-bottom: var(--space-3xs);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--color-secondary);
 }
 
-.contact__row-value {
+.contact__info dd {
+  text-wrap: balance;
   font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
   color: var(--color-text-dark);
 }
 
-.contact__row-arrow {
-  display: flex;
-  flex-shrink: 0;
-  color: var(--color-text-muted);
-}
-
-/* Appointment */
-.contact__appointment {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2xs);
-  font-size: var(--fs-sm);
-  line-height: var(--lh-normal);
-  color: var(--color-text-muted);
-}
-
-/* Map */
 /* The map sits in a white frame like the form card. On wider screens it
    grows to fill the column, so its bottom lines up with the form card. */
 .contact__map {
@@ -2846,8 +2867,9 @@ a.contact__row:hover .contact__row-arrow .lucide {
   top: calc(var(--nav-height) + 2rem);
 }
 
-/* Phones: contact rows and appointment note first, then the form, map last.
-   The left column is unwrapped so its children can be reordered around the form. */
+/* Phones: everything centred; sentence, buttons and info first, then the
+   form, map last. The left column is unwrapped so its children can be
+   reordered around the form. */
 @media (max-width: 767px) {
   .contact__grid {
     gap: var(--space-lg);
@@ -2857,10 +2879,24 @@ a.contact__row:hover .contact__row-arrow .lucide {
     display: contents;
   }
 
-  .contact__rows        { order: 1; }
-  .contact__appointment { order: 2; }
-  .contact__right       { order: 3; position: static; }
-  .contact__map         { order: 4; }
+  .contact__intro   { order: 1; margin-inline: auto; text-align: center; }
+  .contact__actions { order: 2; justify-content: center; }
+  .contact__direct  { order: 3; justify-content: center; text-align: center; }
+  .contact__info    { order: 4; text-align: center; }
+  .contact__right   { order: 5; position: static; }
+  .contact__map     { order: 6; }
+
+  .contact__action {
+    flex: 1 1 0;
+    max-width: 180px;
+    padding-inline: 1rem;
+  }
+
+  .contact__direct {
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(var(--space-lg) * -0.5);
+  }
 }
 
 .contact__form-card {

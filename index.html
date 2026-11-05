@@ -510,48 +510,36 @@
           <!-- LEFT: info + map -->
           <div class="contact__left fade-in">
 
-            <!-- Contact rows -->
-            <div class="contact__rows">
-              <a class="contact__row" href="mailto:info@baselbuddhistvihara.ch">
-                <span class="contact__row-icon"><i data-lucide="mail"></i></span>
-                <span class="contact__row-text">
-                  <span class="contact__row-label" data-i18n="contact.rows.email.label">E-MAIL</span>
-                  <span class="contact__row-value">info@baselbuddhistvihara.ch</span>
-                </span>
-                <span class="contact__row-arrow"><i data-lucide="arrow-up-right"></i></span>
+            <!-- Visits are by appointment: that is the first thing people need to know -->
+            <p class="contact__intro" data-i18n="contact.intro">Besuche nur nach Vereinbarung. Rufen Sie uns an oder schreiben Sie uns, wir helfen gerne.</p>
+
+            <div class="contact__actions">
+              <a class="contact__action contact__action--primary" href="tel:+41792303699">
+                <i data-lucide="phone" aria-hidden="true"></i>
+                <span data-i18n="contact.actions.call">Anrufen</span>
               </a>
-
-              <a class="contact__row" href="tel:+41792303699">
-                <span class="contact__row-icon"><i data-lucide="phone"></i></span>
-                <span class="contact__row-text">
-                  <span class="contact__row-label" data-i18n="contact.rows.phone.label">TELEFON</span>
-                  <span class="contact__row-value">+41 792 303 699</span>
-                </span>
-                <span class="contact__row-arrow"><i data-lucide="arrow-up-right"></i></span>
+              <a class="contact__action" href="mailto:info@baselbuddhistvihara.ch">
+                <i data-lucide="mail" aria-hidden="true"></i>
+                <span data-i18n="contact.actions.email">E-Mail</span>
               </a>
-
-              <div class="contact__row contact__row--static">
-                <span class="contact__row-icon"><i data-lucide="clock"></i></span>
-                <span class="contact__row-text">
-                  <span class="contact__row-label" data-i18n="contact.rows.hours.label">ÖFFNUNGSZEITEN</span>
-                  <span class="contact__row-value" data-i18n="contact.rows.hours.value">Täglich 7:00 – 18:30 Uhr</span>
-                </span>
-              </div>
-
-              <div class="contact__row contact__row--static">
-                <span class="contact__row-icon"><i data-lucide="map-pin"></i></span>
-                <span class="contact__row-text">
-                  <span class="contact__row-label" data-i18n="contact.rows.address.label">ADRESSE</span>
-                  <span class="contact__row-value">Feldbergstrasse 142<br>4057 Basel, Switzerland</span>
-                </span>
-              </div>
             </div>
 
-            <!-- Appointment notice -->
-            <p class="contact__appointment">
-              <i data-lucide="calendar-check"></i>
-              <span data-i18n="contact.appointment">Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.</span>
+            <!-- the number and address stay visible to read or copy (no mail app on many computers) -->
+            <p class="contact__direct">
+              <a href="tel:+41792303699">+41 792 303 699</a>
+              <a href="mailto:info@baselbuddhistvihara.ch">info@baselbuddhistvihara.ch</a>
             </p>
+
+            <dl class="contact__info">
+              <div>
+                <dt data-i18n="contact.rows.address.label">ADRESSE</dt>
+                <dd>Feldbergstrasse 142<br>4057 Basel</dd>
+              </div>
+              <div>
+                <dt data-i18n="contact.rows.hours.label">ÖFFNUNGSZEITEN</dt>
+                <dd data-i18n="contact.rows.hours.value">Täglich 7:00 – 18:30 Uhr</dd>
+              </div>
+            </dl>
 
             <!-- Map embedded small -->
             <div class="contact__map">

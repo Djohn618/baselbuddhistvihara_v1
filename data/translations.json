@@ -160,14 +160,15 @@
     "contact": {
       "label": "KONTAKT",
       "heading": "Wir sind für Sie da",
-      "subheading": "",
+      "intro": "Besuche nur nach Vereinbarung. Rufen Sie uns an oder schreiben Sie uns, wir helfen gerne.",
+      "actions": {
+        "call": "Anrufen",
+        "email": "E-Mail"
+      },
       "rows": {
-        "email": { "label": "E-MAIL", "value": "info@baselbuddhistvihara.ch" },
-        "phone": { "label": "TELEFON", "value": "+41 792 303 699" },
         "hours": { "label": "ÖFFNUNGSZEITEN", "value": "Täglich 7:00 – 18:30 Uhr" },
         "address": { "label": "ADRESSE" }
       },
-      "appointment": "Bitte vereinbaren Sie vorab einen Termin, bevor Sie das Vihara besuchen.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "form": {
         "title": "Schreiben Sie uns",
@@ -367,14 +368,15 @@
     "contact": {
       "label": "CONTACT",
       "heading": "We Are Here for You",
-      "subheading": "",
+      "intro": "Visits by appointment only. Call or write to us, we're happy to help.",
+      "actions": {
+        "call": "Call",
+        "email": "Email"
+      },
       "rows": {
-        "email": { "label": "EMAIL", "value": "info@baselbuddhistvihara.ch" },
-        "phone": { "label": "PHONE", "value": "+41 792 303 699" },
         "hours": { "label": "HOURS", "value": "Daily 7:00 AM – 6:30 PM" },
         "address": { "label": "ADDRESS" }
       },
-      "appointment": "Please book an appointment in advance before visiting the Vihara.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "form": {
         "title": "Get in Touch",
@@ -574,14 +576,15 @@
     "contact": {
       "label": "සම්බන්ධ වන්න",
       "heading": "අපි ඔබ වෙනුවෙන් සිටිමු",
-      "subheading": "",
+      "intro": "හමුවීම් පූර්ව වේලාවක් වෙන් කර ගැනීමෙන් පමණි. අපට කතා කරන්න හෝ ලියන්න, අපි සතුටින් උදව් කරන්නෙමු.",
+      "actions": {
+        "call": "අමතන්න",
+        "email": "ඊමේල්"
+      },
       "rows": {
-        "email": { "label": "විද්‍යුත් තැපෑල", "value": "info@baselbuddhistvihara.ch" },
-        "phone": { "label": "දුරකථනය", "value": "+41 792 303 699" },
         "hours": { "label": "විවෘත වේලාවන්", "value": "සෑම දිනකම උදේ 7:00 – සවස 18:30" },
         "address": { "label": "ලිපිනය" }
       },
-      "appointment": "විහාරයට පැමිණීමට පෙර කලින් වේලාවක් වෙන්කරවා ගැනීම කාරුණිකව ඉල්ලා සිටිමු.",
       "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "form": {
         "title": "අපට ලියන්න",
