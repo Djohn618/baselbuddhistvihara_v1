@@ -137,25 +137,24 @@
       "subtitle": "",
       "more": "Mehr Fotos"
     },
-    "donations": {
-      "title": "Spenden",
-      "text": "Die laufenden Kosten des Basel Buddhist Vihara — einschliesslich Miete, Stromrechnungen und Unterhalt der Mönche — werden durch das Sri Kalyana Buddhistisches Zentrum (SKBZ) getragen. Wir sind auf Ihre grosszügige Unterstützung angewiesen.",
-      "bank": {
-        "title": "Banküberweisung",
-        "accountHolderLabel": "Kontoinhaber",
-        "accountHolder": "Sri Kalyana Buddhistisches Zentrum (SKBZ)",
-        "ibanLabel": "IBAN",
-        "iban": "CH05 8080 8009 7919",
-        "accountTypeLabel": "Kontoart",
-        "accountType": "Vereinskonto / CHF",
-        "addressLabel": "Adresse",
-        "address": "Neugrabenweg 29, 5702 Niederlenz"
-      },
-      "contact": {
-        "title": "Kontakt für Spenden",
-        "text": "Für weitere Informationen zu Spendenmöglichkeiten kontaktieren Sie uns.",
-        "cta": "Kontakt aufnehmen"
-      }
+    "donate": {
+      "label": "DANA",
+      "title": "Den Vihara unterstützen",
+      "intro": "Miete, Nebenkosten und die Versorgung unseres Mönchs trägt das SKBZ. Jede Gabe, ob gross oder klein, hält den Vihara für alle offen.",
+      "qrAlt": "Swiss QR-Rechnung für Spenden an das SKBZ",
+      "qrTitle": "Mit der Banking-App scannen",
+      "qrText": "Betrag frei wählbar. Alle Angaben werden automatisch ausgefüllt.",
+      "qrPhone": "Auf dem Handy: QR-Code speichern und in der Banking-App öffnen.",
+      "save": "QR-Code speichern",
+      "bankTitle": "Banküberweisung",
+      "holder": "Kontoinhaber",
+      "address": "Adresse",
+      "currency": "Währung",
+      "copy": "Kopieren",
+      "copyIban": "IBAN kopieren",
+      "copied": "IBAN kopiert",
+      "inPerson": "Möchten Sie Dana persönlich darbringen?",
+      "contactLink": "Kontakt aufnehmen"
     },
     "contact": {
       "label": "KONTAKT",
@@ -345,25 +344,24 @@
       "subtitle": "",
       "more": "More Photos"
     },
-    "donations": {
-      "title": "Donations",
-      "text": "All operational costs of the Basel Buddhist Vihara — including monthly rent, utility bills, and the support of the resident monks — are managed by the Sri Kalyana Buddhistisches Zentrum (SKBZ). We deeply appreciate your generous support.",
-      "bank": {
-        "title": "Bank Transfer",
-        "accountHolderLabel": "Account Holder",
-        "accountHolder": "Sri Kalyana Buddhistisches Zentrum (SKBZ)",
-        "ibanLabel": "IBAN",
-        "iban": "CH05 8080 8009 7919",
-        "accountTypeLabel": "Account Type",
-        "accountType": "Association Account / CHF",
-        "addressLabel": "Address",
-        "address": "Neugrabenweg 29, 5702 Niederlenz"
-      },
-      "contact": {
-        "title": "Contact for Donations",
-        "text": "For more information on donation options, please contact us.",
-        "cta": "Contact Us"
-      }
+    "donate": {
+      "label": "DANA",
+      "title": "Support the Vihara",
+      "intro": "Rent, utilities and the care of our monk are carried by SKBZ. Every gift, large or small, keeps the Vihara open to everyone.",
+      "qrAlt": "Swiss QR bill for donations to SKBZ",
+      "qrTitle": "Scan with your banking app",
+      "qrText": "Choose any amount. All details fill in by themselves.",
+      "qrPhone": "On your phone: save the QR code and open it in your banking app.",
+      "save": "Save QR code",
+      "bankTitle": "Bank transfer",
+      "holder": "Account holder",
+      "address": "Address",
+      "currency": "Currency",
+      "copy": "Copy",
+      "copyIban": "Copy IBAN",
+      "copied": "IBAN copied",
+      "inPerson": "Prefer to offer Dana in person?",
+      "contactLink": "Contact us"
     },
     "contact": {
       "label": "CONTACT",
@@ -553,25 +551,24 @@
       "subtitle": "",
       "more": "තවත් ඡායාරූප"
     },
-    "donations": {
-      "title": "පරිත්‍යාග",
-      "text": "බාසල් බෞද්ධ විහාරයේ දෛනික නඩත්තු කටයුතු ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානය (SKBZ) විසින් සිදු කරනු ලැබේ. ඔබගේ නොමසුරු දායකත්වය අප ඉතා කෘතවේදීව අගය කොට සලකමු.",
-      "bank": {
-        "title": "බැංකු මාරුව",
-        "accountHolderLabel": "ගිණුම් හිමිකරු",
-        "accountHolder": "Sri Kalyana Buddhistisches Zentrum (SKBZ)",
-        "ibanLabel": "IBAN",
-        "iban": "CH05 8080 8009 7919",
-        "accountTypeLabel": "ගිණුම් වර්ගය",
-        "accountType": "සංගම ගිණුම / CHF",
-        "addressLabel": "ලිපිනය",
-        "address": "Neugrabenweg 29, 5702 Niederlenz"
-      },
-      "contact": {
-        "title": "පරිත්‍යාග සඳහා සම්බන්ධ වන්න",
-        "text": "පරිත්‍යාග විකල්ප පිළිබඳ වැඩිදුර තොරතුරු සඳහා අප අමතන්න.",
-        "cta": "අප අමතන්න"
-      }
+    "donate": {
+      "label": "දානය",
+      "title": "විහාරයට සහාය වන්න",
+      "intro": "කුලිය, විදුලි හා ජල ගාස්තු සහ අපගේ භික්ෂූන් වහන්සේගේ නඩත්තුව SKBZ විසින් දරනු ලැබේ. කුඩා හෝ විශාල සෑම දායකත්වයක්ම විහාරය සැමට විවෘතව තබා ගැනීමට උපකාරී වේ.",
+      "qrAlt": "SKBZ වෙත පරිත්‍යාග සඳහා ස්විස් QR බිල්පත",
+      "qrTitle": "ඔබගේ බැංකු යෙදුමෙන් ස්කෑන් කරන්න",
+      "qrText": "ඕනෑම මුදලක් තෝරන්න. අනෙකුත් විස්තර ස්වයංක්‍රීයව පිරවේ.",
+      "qrPhone": "දුරකථනයෙන්: QR කේතය සුරකින්න, ඔබගේ බැංකු යෙදුමෙන් විවෘත කරන්න.",
+      "save": "QR කේතය සුරකින්න",
+      "bankTitle": "බැංකු මාරුව",
+      "holder": "ගිණුම් හිමියා",
+      "address": "ලිපිනය",
+      "currency": "මුදල් ඒකකය",
+      "copy": "පිටපත් කරන්න",
+      "copyIban": "IBAN පිටපත් කරන්න",
+      "copied": "IBAN පිටපත් විය",
+      "inPerson": "දානය පුද්ගලිකව පිරිනැමීමට කැමතිද?",
+      "contactLink": "අප අමතන්න"
     },
     "contact": {
       "label": "සම්බන්ධ වන්න",

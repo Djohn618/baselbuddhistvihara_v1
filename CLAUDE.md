@@ -33,6 +33,7 @@ Always follow these rules and conventions throughout the entire project.
 baselbuddhistvihara/
 ├── index.html                  # Main single-page file
 ├── 404.html                    # Not-found page (absolute /paths, served by Vercel)
+├── donate.html                 # Donation page (Swiss QR bill + bank details)
 ├── robots.txt
 ├── sitemap.xml                 # add new pages here
 ├── vercel.json                 # security headers + asset caching
@@ -56,6 +57,7 @@ baselbuddhistvihara/
 │       ├── vihara/             # real temple photos, each as <name>-1600.webp + <name>-800.webp
 │       │                       # (hero, about collage, program cards, gallery all use these)
 │       ├── other/              # walpola-maha-thero.webp (founder)
+│       ├── donate/             # swiss-qr-bill.svg (shown) + .png (download)
 │       ├── test_images/        # camera RAW originals (.CR2) — NOT in git (.gitignore)
 │       └── test_images_edited/ # graded full-size JPGs (PhotoCraft) — NOT in git
 └── data/
@@ -194,8 +196,15 @@ NAV (fixed):
 FOOTER         → Light, centered: moonstone + caption, logo, tagline, link row,
                  address · phone · email, social icons, copyright (year set by JS)
 
-The Donations section was removed on purpose. Do not re-add it without asking
-(planned later: bank details + TWINT/PayPal).
+DONATE PAGE (donate.html, own page; both Spenden buttons and the footer link
+point to it): Dana label, title, one sentence, then two cards. Desktop: QR
+card left, bank card right (IBAN + Copy button, holder, address, CHF).
+Phones: bank card + big "Copy IBAN" first, QR second with "Save QR code"
+(you can't scan your own screen). Texts: donate.* keys.
+The QR code was recreated sharp from the exact data decoded from SKBZ's
+paper QR bill (Swiss Payments Code 0200, no amount, NON reference) and
+test-decoded. If the bank details ever change, regenerate it and test-scan
+it with a real banking app before publishing. TWINT/PayPal: only if SKBZ asks.
 
 ---
 
@@ -224,9 +233,10 @@ President:  Fabienne Eglin. Vice president: Michael Joel Anneler
 Founder:    Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero
             (passed away June 12, 2024, Geneva International Buddhist Center)
 
-Bank account (SKBZ, for the future donation section):
-  Holder:   Sri Kalyana Buddhistisches Zentrum (SKBZ)
-  IBAN:     CH05 8080 8009 7919
+Bank account (SKBZ, used on donate.html — from the official QR bill):
+  Holder:   Sri Kalyana Buddhistische Zentrum (SKBZ)   (spelled as on the bill)
+  IBAN:     CH05 8080 8009 7919 6193 1   (21 characters, checksum valid;
+            an older note had it cut short to "CH05 8080 8009 7919")
   Type:     Vereinskonto / CHF
   Address:  Neugrabenweg 29, 5702 Niederlenz
 
@@ -244,9 +254,12 @@ When adding a placeholder:
 - Always add a comment: <!-- replace with real image: assets/images/FOLDER/filename.jpg -->
 - Real photos: object-fit: cover, real alt text
 
-Pending: Ariyaseela portrait, more photos from the owner, YouTube video
-links + thumbnails, Facebook + YouTube URLs (href="#" for now;
-main.js stops href="#" links from jumping to the top).
+Pending: Ariyaseela portrait, more photos from the owner, single YouTube
+video links + thumbnails (the 4 cards open the channel for now).
+
+Social profiles (footer, YouTube section, JSON-LD sameAs):
+  Facebook: https://www.facebook.com/p/Basel-Buddhist-Vihara-61569741141373/
+  YouTube:  https://www.youtube.com/@BaselBuddhistVihara
 
 ---
 

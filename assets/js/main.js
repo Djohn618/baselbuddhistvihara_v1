@@ -623,6 +623,47 @@
     });
   }
 
+  // Donate page: copy the IBAN (without spaces) and confirm quietly
+  function initCopyButtons() {
+    document.querySelectorAll('[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-copy');
+        var status = document.querySelector('.donate__status');
+
+        function done() {
+          btn.classList.add('is-copied');
+          if (status) status.textContent = t('donate.copied');
+          window.setTimeout(function () {
+            btn.classList.remove('is-copied');
+            if (status) status.textContent = '';
+          }, 2500);
+        }
+
+        // older browsers, plain http or a refused permission:
+        // copy through a hidden text field instead
+        function fallback() {
+          var field = document.createElement('textarea');
+          field.value = text;
+          field.setAttribute('readonly', '');
+          field.style.position = 'absolute';
+          field.style.left = '-9999px';
+          document.body.appendChild(field);
+          field.select();
+          try {
+            if (document.execCommand('copy')) done();
+          } catch (e) { /* the IBAN stays visible to copy by hand */ }
+          field.remove();
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else {
+          fallback();
+        }
+      });
+    });
+  }
+
   function initFooterYear() {
     document.querySelectorAll('.footer__year').forEach(function (el) {
       el.textContent = new Date().getFullYear();
@@ -632,6 +673,7 @@
   function init() {
     initFooterYear();
     initBackToTop();
+    initCopyButtons();
     handleHeaderScroll();
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
     initNavToggle();

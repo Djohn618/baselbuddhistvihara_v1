@@ -3340,6 +3340,238 @@ blockquote {
 }
 
 /* ==============================================
+   Donate page (donate.html)
+   ============================================== */
+
+.donate {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + var(--section-padding-y) * 0.6);
+  padding-bottom: var(--section-padding-y);
+  background-color: var(--color-bg-soft);
+}
+
+.donate__intro {
+  max-width: 46ch;
+  margin: var(--space-md) auto 0;
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-muted);
+  text-wrap: balance;
+}
+
+.donate__grid {
+  display: grid;
+  gap: var(--space-md);
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.donate__card {
+  background-color: var(--color-white);
+  border: var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.donate__card--qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.donate__qr {
+  width: min(220px, 70vw);
+  height: auto;
+  margin-bottom: var(--space-md);
+}
+
+.donate__card-title {
+  font-size: clamp(1.4rem, 1vw + 1.1rem, 1.7rem);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+}
+
+.donate__note {
+  max-width: 32ch;
+  margin-top: var(--space-2xs);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--color-text-muted);
+}
+
+.donate__save {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  min-height: 44px;
+  margin-top: var(--space-md);
+  padding: 0 1.3rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.donate__save:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.donate__save .lucide,
+.donate__copy .lucide {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.donate__list {
+  margin-top: var(--space-md);
+}
+
+.donate__list > div {
+  padding-block: var(--space-sm);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.donate__list dt {
+  margin-bottom: var(--space-3xs);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.donate__list dd {
+  color: var(--color-text-dark);
+}
+
+.donate__iban {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+}
+
+.donate__iban-value {
+  font-size: 1.1rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.donate__copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  min-height: 40px;
+  padding: 0 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.donate__copy:hover,
+.donate__copy.is-copied {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.donate__copy-label--long {
+  display: none;
+}
+
+.donate__status {
+  min-height: 1.4em;
+  font-size: var(--fs-sm);
+  color: #3F7A44;
+}
+
+.donate__note--phone {
+  display: none;
+}
+
+.donate__more {
+  margin: var(--space-xl) auto 0;
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.donate__more a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-left: 0.35rem;
+  color: var(--color-secondary);
+  font-weight: var(--fw-medium);
+}
+
+.donate__more a:hover {
+  color: var(--color-primary);
+}
+
+/* Desktop: QR left, bank details right */
+@media (min-width: 768px) {
+  .donate__grid {
+    grid-template-columns: 1fr 1.25fr;
+    align-items: stretch;
+  }
+}
+
+/* Phones: you can't scan your own screen, so bank details + a big copy
+   button come first and the QR code second (save it for the banking app) */
+@media (max-width: 767px) {
+  .donate__card--bank {
+    order: -1;
+  }
+
+  .donate__iban {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .donate__iban-value {
+    white-space: normal;
+  }
+
+  .donate__copy {
+    min-height: 48px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .donate__copy-label {
+    display: none;
+  }
+
+  .donate__copy-label--long {
+    display: inline;
+  }
+
+  .donate__note--desktop {
+    display: none;
+  }
+
+  .donate__note--phone {
+    display: block;
+  }
+
+  .donate__qr {
+    width: min(180px, 55vw);
+  }
+}
+
+/* ==============================================
    Footer — light, centered, quiet
    ============================================== */
 
