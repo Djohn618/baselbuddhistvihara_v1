@@ -356,10 +356,7 @@ blockquote {
   transition: opacity 1s var(--ease-calm), transform 1s var(--ease-calm);
 }
 
-.about__stat.fade-in:nth-child(2),
 .monk-card.fade-in:nth-child(2) { transition-delay: 0.12s; }
-.about__stat.fade-in:nth-child(3) { transition-delay: 0.24s; }
-.about__stat.fade-in:nth-child(4) { transition-delay: 0.36s; }
 
 /* --------------------------------------------------------------------------
    Shared section header: small gold label, serif title, short gold line
@@ -1262,14 +1259,14 @@ blockquote {
 }
 
 .hero__main > *,
-.hero__founded {
+.hero__facts {
   animation: hero-rise 1.4s var(--ease-calm) both;
 }
 
 .hero__main > :nth-child(2) { animation-delay: 0.15s; }
 .hero__main > :nth-child(3) { animation-delay: 0.3s; }
 .hero__main > :nth-child(4) { animation-delay: 0.45s; }
-.hero__founded { animation-delay: 0.6s; }
+.hero__facts { animation-delay: 0.6s; }
 
 @keyframes hero-rise {
   from { opacity: 0; transform: translateY(14px); }
@@ -1360,16 +1357,6 @@ blockquote {
   max-width: 100%;
 }
 
-.hero__inline-link {
-  color: var(--color-secondary);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.hero__inline-link:hover {
-  color: var(--color-primary);
-}
-
 .hero__cta {
   align-self: flex-start;
   margin-top: 2rem;
@@ -1396,12 +1383,97 @@ blockquote {
   text-align: left;
 }
 
-.hero__founded {
+/* One quiet line of facts at the foot of the hero text */
+.hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--space-2xs);
+  row-gap: 2px;
+  max-width: none;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border-light);
   font-family: var(--font-body);
-  color: var(--color-text-muted);
   font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+
+.hero__facts span {
+  white-space: nowrap;
+}
+
+/* the dot belongs to the item after it, so a wrapped line never ends in "·" */
+.hero__facts span + span::before {
+  content: "·";
+  margin-right: var(--space-2xs);
+  color: var(--color-secondary);
+}
+
+/* Small sacred lotus above the title, drawn in once */
+.hero__lotus {
+  width: clamp(48px, 4.5vw, 64px);
+  margin-bottom: var(--space-md);
+  color: var(--color-secondary);
+  line-height: 0;
+}
+
+.hero__lotus svg {
   width: 100%;
-  text-align: left;
+  height: auto;
+  overflow: visible;
+}
+
+.hero__lotus path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: line-draw 2.2s var(--ease-calm) forwards;
+}
+
+.hero__lotus .la-2 { animation-delay: 0.3s; }
+.hero__lotus .la-3 { animation-delay: 0.6s; }
+.hero__lotus .la-4 { animation-delay: 0.9s; }
+
+@keyframes line-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Phones and small tablets (text below the photo): centred and calm */
+@media (max-width: 767px) {
+  .hero__content {
+    text-align: center;
+  }
+
+  .hero__main {
+    align-items: center;
+    padding-block: var(--space-xl) var(--space-lg);
+  }
+
+  .hero__title {
+    align-items: center;
+  }
+
+  .hero__description {
+    max-width: 30ch;
+    margin-inline: auto;
+    color: var(--color-text-muted);
+  }
+
+  .hero__cta {
+    align-self: center;
+  }
+
+  .hero__facts {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.01em;
+  }
 }
 
 /* Phones: let the hero grow with its text instead of scrolling inside itself */
@@ -1447,46 +1519,6 @@ blockquote {
 .about {
   background-color: var(--color-bg-light);
   scroll-margin-top: var(--nav-height);
-}
-
-/* Stats bar */
-.about__stats {
-  background-color: var(--color-bg-light);
-  border-bottom: 1px solid var(--color-border-light);
-}
-
-.about__stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.about__stat {
-  padding: var(--space-xl) var(--space-md);
-  text-align: center;
-  border-bottom: 1px solid var(--color-border-light);
-}
-
-.about__stat:nth-child(odd) {
-  border-right: 1px solid var(--color-border-light);
-}
-
-.about__stat-number {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 3vw + 1.75rem, 3.75rem);
-  font-weight: var(--fw-regular);
-  line-height: 1;
-  color: var(--color-primary);
-  margin-bottom: var(--space-2xs);
-}
-
-.about__stat-label {
-  display: block;
-  font-family: var(--font-body);
-  font-size: var(--fs-xs);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
 }
 
 /* Image collage + intro text */
@@ -1614,22 +1646,6 @@ blockquote {
 }
 
 @media (min-width: 768px) {
-  .about__stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .about__stat {
-    border-bottom: none;
-  }
-
-  .about__stat:nth-child(odd) {
-    border-right: none;
-  }
-
-  .about__stat:not(:last-child) {
-    border-right: 1px solid var(--color-border-light);
-  }
-
   .about__grid {
     grid-template-columns: 1fr 1.1fr;
     gap: var(--space-3xl);
@@ -3170,51 +3186,6 @@ a.contact__row:hover .contact__row-arrow .lucide {
   .back-to-top {
     right: var(--space-lg);
     bottom: var(--space-lg);
-  }
-}
-
-/* ==============================================
-   Makara Thorana (hero arch)
-   Fine gold line-art that draws itself once when the page opens
-   ============================================== */
-
-.thorana {
-  width: clamp(200px, 22vw, 300px);
-  margin-bottom: var(--space-sm);
-  color: var(--color-secondary);
-  line-height: 0;
-}
-
-.thorana svg {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.thorana path,
-.thorana circle {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: line-draw 2.4s var(--ease-calm) forwards;
-}
-
-.thorana .la-2 { animation-delay: 0.35s; }
-.thorana .la-3 { animation-delay: 0.7s; }
-.thorana .la-4 { animation-delay: 1.05s; }
-
-@keyframes line-draw {
-  to { stroke-dashoffset: 0; }
-}
-
-/* Short laptop screens: keep the hero text room, skip the arch there */
-@media (min-width: 768px) and (max-height: 700px) {
-  .thorana {
-    display: none;
   }
 }
 

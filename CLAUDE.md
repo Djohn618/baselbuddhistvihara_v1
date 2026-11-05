@@ -103,8 +103,9 @@ Shared building blocks (reuse these, do not invent new variants):
 - Spacing: every section uses `padding-block: var(--section-padding-y)`
 - Sri Lankan Buddhist art touches (fine gold line-art, all calm). Keep each
   in its place, do not add more without asking:
-  - Makara Thorana arch over the hero title (inline SVG in index.html, draws
-    itself once on load; hidden on short laptop screens ≤700px high)
+  - Small sacred lotus (Nelumbo nucifera) above the hero title (inline SVG
+    in index.html, `.hero__lotus`, draws itself in once on load). It replaced
+    the earlier Makara Thorana arch: the home screen is kept minimal on purpose.
   - Sandakada Pahana (moonstone) in the footer only, drawn by
     assets/js/moonstone.js into `<div class="moonstone" data-moonstone>`,
     with caption key moonstone.caption; its swans turn very slowly
@@ -161,9 +162,14 @@ NAV (fixed):
 - <1280px: one light bar with logo (+ name from 480px), DE|EN|සිං and hamburger.
   Links and Spenden button are in the full-screen light overlay.
 
-1.  #home      → Hero: 58% image slideshow (3 slides, 5s) left, 42% text right.
-                 Phones: image on top, text below. Keep the hard left/right edge.
-2.  #about     → Stats bar, image collage + text + bullets, founder + leadership
+1.  #home      → Hero: 58% image slideshow (3 slides, 5s) left, 42% text right:
+                 lotus, title, ONE short sentence (hero.description, no links),
+                 one button, and one quiet facts line (hero.facts: Since 2024 ·
+                 2 YouTube channels · 3 languages). Keep it minimal.
+                 Phones: image on top, text below and centred.
+                 Keep the hard left/right edge on desktop.
+2.  #about     → Image collage + text + bullets, founder + leadership
+                 (the old 4-number stats box was removed; only ONE resident monk)
 3.  #monks     → Cards rendered by JS from data/monks.json, links to monks/*.html
                  (monk names are { de, en, si }; detail page texts use monkPages.* keys)
 4.  #programs  → Tabs "Programme | Veranstaltungen", carousel (arrows on desktop,
@@ -209,8 +215,8 @@ Bank account (SKBZ, for the future donation section):
   Type:     Vereinskonto / CHF
   Address:  Neugrabenweg 29, 5702 Niederlenz
 
-Unverified (Vihara must confirm): opening hours "daily 7:00–18:30", stats
-numbers, founder birth date, bullet texts.
+Unverified (Vihara must confirm): opening hours "daily 7:00–18:30", founder
+birth date, bullet texts. There is one resident monk (do not show "5 monks").
 
 Google Maps: keep the embed URL that is in index.html.
 

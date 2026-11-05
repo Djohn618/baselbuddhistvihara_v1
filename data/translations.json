@@ -12,20 +12,18 @@
     "hero": {
       "heading1": "Basel Buddhist Vihara",
       "heading2": "Ein Ort des Friedens",
-      "description": "Ein spirituelles Zentrum in Basel, das <a href=\"#programs\" class=\"hero__inline-link\">Meditation und Dhamma-Programme</a> anbietet und die zeitlosen Lehren des Buddha allen Menschen zugänglich macht — gegründet vom Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero und geleitet vom <a href=\"#about\" class=\"hero__inline-link\">Ehrw. Udumaththe Ariyaseela Thero</a>.",
-      "founded": "Gegründet am 1. Juli 2024 · Basel, Schweiz",
+      "description": "Ein Ort der Meditation und der Lehre des Buddha in Basel, offen für alle Menschen.",
+      "facts": {
+        "since": "Seit 2024",
+        "channels": "2 YouTube-Kanäle",
+        "languages": "3 Sprachen"
+      },
       "cta": "Mehr erfahren"
     },
     "about": {
       "label": "Über Uns",
       "title": "Über das Basel Buddhist Vihara",
       "body": "Das Basel Buddhist Vihara ist das wichtigste spirituelle Zentrum für srilankische Buddhisten und Menschen aller Nationalitäten in und um Basel, die sich für die buddhistische Philosophie interessieren. In Verbindung mit dem am 17. März 2021 gegründeten Sri Kalyana Buddhistischen Zentrum (SKBZ) ist es unser Hauptziel, spirituelle Führung auf der Grundlage des Dhamma anzubieten, um einen friedlichen und disziplinierten Lebensstil zu fördern.",
-      "stats": {
-        "founded": "Gegründet",
-        "monks": "Mönche",
-        "languages": "Sprachen",
-        "youtubeChannels": "YouTube Kanäle"
-      },
       "bullets": {
         "bullet1": "Spirituelle Führung auf Grundlage des Dhamma",
         "bullet2": "Offen für alle Nationalitäten und Hintergründe",
@@ -221,20 +219,18 @@
     "hero": {
       "heading1": "Basel Buddhist Vihara",
       "heading2": "A Place of Peace",
-      "description": "A spiritual centre in Basel offering <a href=\"#programs\" class=\"hero__inline-link\">meditation and Dhamma programmes</a> and bringing the timeless teachings of the Buddha to all people — founded by Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero and led by <a href=\"#about\" class=\"hero__inline-link\">Ven. Udumaththe Ariyaseela Thero</a>.",
-      "founded": "Founded on July 1, 2024 · Basel, Switzerland",
+      "description": "A place of meditation and the Buddha's teaching in Basel, open to everyone.",
+      "facts": {
+        "since": "Since 2024",
+        "channels": "2 YouTube channels",
+        "languages": "3 languages"
+      },
       "cta": "Learn More"
     },
     "about": {
       "label": "About Us",
       "title": "About Basel Buddhist Vihara",
       "body": "The Basel Buddhist Vihara is the primary spiritual sanctuary for Sri Lankan Buddhists and individuals of all nationalities interested in Buddhist philosophy, living in and around Basel, Switzerland. Affiliated with the Sri Kalyana Buddhistisches Zentrum (SKBZ), which was founded on March 17, 2021, our Vihara aims to provide spiritual guidance based on the Dhamma to help cultivate a peaceful and disciplined lifestyle.",
-      "stats": {
-        "founded": "Founded",
-        "monks": "Monks",
-        "languages": "Languages",
-        "youtubeChannels": "YouTube Channels"
-      },
       "bullets": {
         "bullet1": "Spiritual guidance rooted in the Dhamma",
         "bullet2": "Open to all nationalities and backgrounds",
@@ -430,20 +426,18 @@
     "hero": {
       "heading1": "Basel Buddhist Vihara",
       "heading2": "සාමයේ ස්ථානයක්",
-      "description": "බාසල්හි අධ්‍යාත්මික මධ්‍යස්ථානයක් වන අප භාවනා සහ ධර්ම වැඩසටහන් ලබා දෙමින් බුදුන් වහන්සේගේ සදාකාලික ඉගැන්වීම් සැමට ලබා දෙයි — අතිපූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක හිමි විසින් ආරම්භ කරන ලද අතර පූජ්‍ය උඩුමත්තේ අරියසීල හිමි විසින් මෙහෙයවනු ලැබේ.",
-      "founded": "2024 ජූලි 1 වන දින ආරම්භ කරන ලදී · බාසල්, ස්විට්සර්ලන්තය",
+      "description": "බාසල්හි භාවනාව සහ බුදු දහම සඳහා වූ, සැමට විවෘත ස්ථානයකි.",
+      "facts": {
+        "since": "2024 සිට",
+        "channels": "YouTube නාලිකා 2",
+        "languages": "භාෂා 3"
+      },
       "cta": "තව දැනගන්න"
     },
     "about": {
       "label": "අප ගැන",
       "title": "බාසල් බෞද්ධ විහාරය ගැන",
       "body": "බාසල් බෞද්ධ විහාරය යනු ස්විට්සර්ලන්තයේ බාසල් නගරය සහ ඒ අවට ජීවත් වන ශ්‍රී ලාංකික බෞද්ධයින්ගේ මෙන්ම, බෞද්ධ දර්ශනය කෙරෙහි උනන්දුවක් දක්වන සියලුම ජාතිකයින්ගේ අධ්‍යාත්මික සුවය සලසන ප්‍රධානතම පුදබිමයි. 2021 මාර්තු මස 17 වන දින ආරම්භ කරන ලද ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානයට (SKBZ) අනුබද්ධිතව ක්‍රියාත්මක වන අප විහාරස්ථානය, සාමකාමී සහ සංවර ජීවන රටාවක් ගොඩනඟා ගැනීමට අවශ්‍ය ධර්මානුකූල මඟපෙන්වීම ලබාදීම මූලික අරමුණ කරගෙන ක්‍රියාත්මක වේ.",
-      "stats": {
-        "founded": "ආරම්භය",
-        "monks": "ස්වාමීන් වහන්සේලා",
-        "languages": "භාෂා",
-        "youtubeChannels": "යූටියුබ් නාලිකා"
-      },
       "bullets": {
         "bullet1": "ධර්මය පදනම් කරගත් අධ්‍යාත්මික මඟපෙන්වීම",
         "bullet2": "සියලුම ජාතීන් සහ පසුබිම්වලට විවෘතයි",
