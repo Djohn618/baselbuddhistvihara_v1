@@ -5,7 +5,10 @@
 (function () {
   'use strict';
 
-  var items = Array.prototype.slice.call(document.querySelectorAll('.gallery__item'));
+  // Home gallery photos and event album photos (albums are drawn later by
+  // events.js, so the list is read again each time a photo is opened)
+  var ITEM_SELECTOR = '.gallery__item, .album-photo';
+  var items = [];
   var lightbox = document.getElementById('lightbox');
   var content = document.getElementById('lightbox-content');
   var counter = document.getElementById('lightbox-counter');
@@ -28,6 +31,12 @@
       img.alt = item.getAttribute('aria-label') || '';
       content.appendChild(img);
       content.style.aspectRatio = '3 / 2';
+      // portrait phone photos keep their own shape
+      img.addEventListener('load', function () {
+        if (img.naturalWidth && img.naturalHeight) {
+          content.style.aspectRatio = img.naturalWidth + ' / ' + img.naturalHeight;
+        }
+      });
     } else {
       content.style.aspectRatio = item.getAttribute('data-aspect') || '4 / 3';
     }
@@ -52,10 +61,11 @@
   }
 
   function initItemClicks() {
-    items.forEach(function (item, index) {
-      item.addEventListener('click', function () {
-        open(index);
-      });
+    document.addEventListener('click', function (event) {
+      var item = event.target.closest(ITEM_SELECTOR);
+      if (!item) return;
+      items = Array.prototype.slice.call(document.querySelectorAll(ITEM_SELECTOR));
+      open(items.indexOf(item));
     });
   }
 
@@ -103,7 +113,7 @@
   }
 
   function init() {
-    if (!items.length || !lightbox) return;
+    if (!lightbox) return;
     initItemClicks();
     initControls();
   }

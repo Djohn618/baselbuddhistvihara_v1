@@ -1,0 +1,22 @@
+{
+  "_comment": [
+    "Community event albums. Newest first or any order: the site sorts by date.",
+    "To add an event:",
+    "1. Grade/resize the photos with PhotoCraft into assets/images/events/<id>/ as",
+    "   <name>-800.webp and <name>-1600.webp (camera data removed).",
+    "2. Copy the example below into \"events\", fill it in, save.",
+    "   id: folder name, e.g. 2025-sinhala-new-year (letters, numbers, dashes)",
+    "   date: YYYY-MM-DD (the album shows month + year in the reader's language)",
+    "   title / text: one name and one or two sentences in de, en, si",
+    "   cover: the photo name used on the album card",
+    "   photos: photo names in the order they should appear",
+    "Only add photos the people in them are OK with (see CLAUDE.md).",
+    "",
+    "Example:",
+    "{ \"id\": \"2025-sinhala-new-year\", \"date\": \"2025-04-13\",",
+    "  \"title\": { \"de\": \"…\", \"en\": \"…\", \"si\": \"…\" },",
+    "  \"text\":  { \"de\": \"…\", \"en\": \"…\", \"si\": \"…\" },",
+    "  \"cover\": \"photo-01\", \"photos\": [\"photo-01\", \"photo-02\"] }"
+  ],
+  "events": []
+}

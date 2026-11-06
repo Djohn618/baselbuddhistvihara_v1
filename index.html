@@ -501,9 +501,20 @@
           </button>
         </div>
 
-        <div class="gallery__more">
-          <!-- link to full gallery page or social media when available -->
-          <a href="#" class="gallery__more-btn" data-i18n="gallery.more">Mehr Fotos</a>
+        <!-- Community moments: the 3 newest event albums (events.js). Stays hidden
+             until the first event is added to data/events.json. -->
+        <div class="community-strip" id="community-strip" hidden>
+          <div class="section-head community-strip__head fade-in">
+            <p class="section-head__label" data-i18n="community.label">GEMEINSCHAFT</p>
+            <h2 class="section-head__title" data-i18n="community.title">Unsere Gemeinschaft durch das Jahr</h2>
+          </div>
+          <div class="album-grid"></div>
+          <div class="community-strip__more">
+            <a href="community.html" class="community-strip__link">
+              <span data-i18n="community.allEvents">Alle Veranstaltungen und Fotos</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -706,6 +717,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/moonstone.js"></script>
   <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/events.js"></script>
   <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script>lucide.createIcons();</script>
 </body>

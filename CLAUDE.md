@@ -34,6 +34,8 @@ baselbuddhistvihara/
 ├── index.html                  # Main single-page file
 ├── 404.html                    # Not-found page (absolute /paths, served by Vercel)
 ├── donate.html                 # Donation page (Swiss QR bill + bank details)
+├── community.html              # All community event albums, grouped by year
+├── event.html                  # One album: event.html?id=<event id>
 ├── robots.txt
 ├── sitemap.xml                 # add new pages here
 ├── vercel.json                 # security headers + asset caching
@@ -50,6 +52,7 @@ baselbuddhistvihara/
 │   │   ├── main.js             # Nav, hero slideshow, carousel, monks, form, dropdown
 │   │   ├── moonstone.js        # Draws the Sandakada Pahana line-art ornament
 │   │   ├── i18n.js             # Language switcher logic
+│   │   ├── events.js           # Community albums (home strip, community, event pages)
 │   │   └── gallery.js          # Gallery lightbox
 │   └── images/
 │       ├── og-image.jpg        # 1200x630 share preview (WhatsApp/Facebook)
@@ -59,10 +62,12 @@ baselbuddhistvihara/
 │       ├── other/              # walpola-maha-thero.webp (founder)
 │       ├── donate/             # swiss-qr-bill.svg (shown) + .png (download)
 │       ├── youtube/            # playlist covers <name>-640.webp (from YouTube, via PhotoCraft)
+│       ├── events/<id>/        # event album photos <name>-800.webp + <name>-1600.webp
 │       ├── test_images/        # camera RAW originals (.CR2) — NOT in git (.gitignore)
 │       └── test_images_edited/ # graded full-size JPGs (PhotoCraft) — NOT in git
 └── data/
     ├── translations.json       # All text content in DE, EN, SI
+    ├── events.json             # Community event albums (empty until real photos come)
     └── monks.json              # Monk cards (new monk = new object)
 
 Images: all photo grading, resizing and converting is done with PhotoCraft
@@ -199,7 +204,10 @@ NAV (fixed):
                  tablet 2x2; desktop 4 in a row. Covers softened (saturate 0.8).
                  If the counts change, update youtube.playlists.*.count.
                  The privacy policy must mention the embedded YouTube player.
-6.  #gallery   → 8 real photos (data-full = 1600px version), lightbox (gallery.js)
+6.  #gallery   → 8 real photos (data-full = 1600px version), lightbox (gallery.js).
+                 Below it: "Our community through the year", the 3 newest event
+                 albums (#community-strip, events.js) + link to community.html.
+                 Hidden automatically while data/events.json has no events.
 7.  #contact   → Left: one sentence (contact.intro, "visits by appointment only"),
                  two pill buttons Call / Email (contact.actions), a quiet line
                  with number + email, address and hours side by side, then the
@@ -217,6 +225,20 @@ The QR code was recreated sharp from the exact data decoded from SKBZ's
 paper QR bill (Swiss Payments Code 0200, no amount, NON reference) and
 test-decoded. If the bank details ever change, regenerate it and test-scan
 it with a real banking app before publishing. TWINT/PayPal: only if SKBZ asks.
+
+COMMUNITY ALBUMS (community.html + event.html, both drawn by events.js from
+data/events.json; texts: community.* keys):
+- community.html: albums grouped by year (year heading + thin line), year
+  buttons when there is more than one year, calm "coming soon" note if empty.
+- event.html?id=<id>: "All events" pill, month + year, title, liyawela vine,
+  one or two sentences, square photo grid (2/3/4 columns), lightbox with
+  swipe (gallery.js picks up .album-photo), "photo removed? write to us" line.
+- To add an event: photos with PhotoCraft into assets/images/events/<id>/ as
+  <name>-800.webp + <name>-1600.webp, then one entry in data/events.json
+  (id, date YYYY-MM-DD, title/text in de/en/si, cover, photos). No HTML
+  editing. Pick 15–30 good photos per event.
+- People in photos (revDSG): prefer group and atmosphere shots, no close-ups
+  of children without their parents' OK, remove any photo on request.
 
 ---
 

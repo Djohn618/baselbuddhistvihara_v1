@@ -146,11 +146,24 @@
       "player": "Video-Player",
       "viewAll": "Alle Videos ansehen"
     },
+    "community": {
+      "label": "GEMEINSCHAFT",
+      "title": "Unsere Gemeinschaft durch das Jahr",
+      "pageTitle": "Feste und Begegnungen",
+      "intro": "Bilder von unseren Festen, Zeremonien und gemeinsamen Tagen.",
+      "all": "Alle",
+      "allEvents": "Alle Veranstaltungen und Fotos",
+      "back": "Alle Veranstaltungen",
+      "empty": "Bald finden Sie hier Bilder von unseren Festen und Begegnungen.",
+      "photos": "{n} Fotos",
+      "notFound": "Dieses Album wurde nicht gefunden.",
+      "removal": "Möchten Sie, dass ein Foto entfernt wird?",
+      "removalLink": "Schreiben Sie uns"
+    },
     "gallery": {
       "label": "GALERIE",
       "title": "Einblicke in unseren Vihara",
-      "subtitle": "",
-      "more": "Mehr Fotos"
+      "subtitle": ""
     },
     "donate": {
       "label": "DANA",
@@ -368,11 +381,24 @@
       "player": "Video player",
       "viewAll": "View All Videos"
     },
+    "community": {
+      "label": "COMMUNITY",
+      "title": "Our community through the year",
+      "pageTitle": "Events and moments",
+      "intro": "Photos from our festivals, ceremonies and days together.",
+      "all": "All",
+      "allEvents": "All events and photos",
+      "back": "All events",
+      "empty": "Photos from our festivals and gatherings will appear here soon.",
+      "photos": "{n} photos",
+      "notFound": "This album could not be found.",
+      "removal": "Would you like a photo removed?",
+      "removalLink": "Write to us"
+    },
     "gallery": {
       "label": "GALLERY",
       "title": "A Look Inside Our Vihara",
-      "subtitle": "",
-      "more": "More Photos"
+      "subtitle": ""
     },
     "donate": {
       "label": "DANA",
@@ -590,11 +616,24 @@
       "player": "වීඩියෝ ධාවකය",
       "viewAll": "සියලුම වීඩියෝ නරඹන්න"
     },
+    "community": {
+      "label": "ප්‍රජාව",
+      "title": "වසර පුරා අපේ ප්‍රජාව",
+      "pageTitle": "උත්සව සහ හමුවීම්",
+      "intro": "අපගේ උත්සව, පිංකම් සහ එක්ව ගත කළ දිනවල ඡායාරූප.",
+      "all": "සියල්ල",
+      "allEvents": "සියලු උත්සව සහ ඡායාරූප",
+      "back": "සියලු උත්සව",
+      "empty": "අපගේ උත්සව සහ හමුවීම්වල ඡායාරූප ඉක්මනින් මෙහි පළ වේ.",
+      "photos": "ඡායාරූප {n}",
+      "notFound": "මෙම ඇල්බමය හමු නොවීය.",
+      "removal": "ඡායාරූපයක් ඉවත් කිරීමට කැමතිද?",
+      "removalLink": "අපට ලියන්න"
+    },
     "gallery": {
       "label": "ගැලරිය",
       "title": "අපේ විහාරයේ දර්ශන",
-      "subtitle": "",
-      "more": "තවත් ඡායාරූප"
+      "subtitle": ""
     },
     "donate": {
       "label": "දානය",
