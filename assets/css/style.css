@@ -291,56 +291,6 @@ blockquote {
   padding-inline: var(--container-padding);
 }
 
-.container--narrow {
-  max-width: 800px;
-}
-
-.container--wide {
-  max-width: 1440px;
-}
-
-.section {
-  padding-block: var(--section-padding-y);
-}
-
-.section--sm {
-  padding-block: var(--space-xl);
-}
-
-.section--lg {
-  padding-block: var(--space-3xl);
-}
-
-.section--dark {
-  background-color: var(--color-bg-dark);
-  color: var(--color-text-inverse);
-}
-
-.section--dark h1,
-.section--dark h2,
-.section--dark h3,
-.section--dark h4,
-.section--dark h5,
-.section--dark h6 {
-  color: var(--color-secondary-light);
-}
-
-.section--tinted {
-  background-color: var(--color-white);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-muted {
-  color: var(--color-text-muted);
-}
-
-.text-accent {
-  color: var(--color-accent);
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -411,197 +361,7 @@ blockquote {
   transform: translateY(0);
 }
 
-/* --------------------------------------------------------------------------
-   5. Grid System
-   -------------------------------------------------------------------------- */
-
-.grid {
-  display: grid;
-  gap: var(--grid-gap);
-  grid-template-columns: repeat(1, 1fr);
-}
-
-.grid--gap-sm {
-  gap: var(--space-sm);
-}
-
-.grid--gap-lg {
-  gap: var(--space-xl);
-}
-
-@media (min-width: 640px) {
-  .grid--2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .grid--3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid--4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.flex {
-  display: flex;
-}
-
-.flex--center {
-  align-items: center;
-  justify-content: center;
-}
-
-.flex--between {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flex--wrap {
-  flex-wrap: wrap;
-}
-
-.flex--column {
-  flex-direction: column;
-}
-
-.gap-sm {
-  gap: var(--space-sm);
-}
-
-.gap-md {
-  gap: var(--space-md);
-}
-
-.gap-lg {
-  gap: var(--space-lg);
-}
-
-/* --------------------------------------------------------------------------
-   6. Buttons
-   -------------------------------------------------------------------------- */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2xs);
-  padding: var(--space-xs) var(--space-lg);
-  font-family: var(--font-body);
-  font-size: var(--fs-base);
-  font-weight: var(--fw-medium);
-  line-height: 1;
-  border-radius: var(--radius-full);
-  border: 1px solid transparent;
-  transition: background-color var(--transition-base),
-    color var(--transition-base), border-color var(--transition-base),
-    transform var(--transition-fast), box-shadow var(--transition-base);
-  white-space: nowrap;
-}
-
-.btn:active {
-  transform: translateY(1px);
-}
-
-.btn--primary {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.btn--primary:hover {
-  background-color: var(--color-primary-dark);
-  color: var(--color-white);
-}
-
-.btn--secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
-}
-
-.btn--secondary:hover {
-  background-color: var(--color-secondary-light);
-  color: var(--color-white);
-}
-
-.btn--accent {
-  background-color: var(--color-accent);
-  color: var(--color-white);
-}
-
-.btn--accent:hover {
-  background-color: var(--color-accent-light);
-  color: var(--color-white);
-}
-
-.btn--outline {
-  background-color: transparent;
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-}
-
-.btn--outline:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.btn--outline-light {
-  background-color: transparent;
-  border-color: var(--color-text-inverse);
-  color: var(--color-text-inverse);
-}
-
-.btn--outline-light:hover {
-  background-color: var(--color-text-inverse);
-  color: var(--color-primary-dark);
-}
-
-.btn--ghost {
-  background-color: transparent;
-  color: var(--color-primary);
-}
-
-.btn--ghost:hover {
-  background-color: var(--color-border-light);
-}
-
-.btn--sm {
-  padding: var(--space-3xs) var(--space-md);
-  font-size: var(--fs-sm);
-}
-
-.btn--lg {
-  padding: var(--space-sm) var(--space-2xl);
-  font-size: var(--fs-md);
-}
-
-/* --------------------------------------------------------------------------
-   7. Cards & Common Components
-   -------------------------------------------------------------------------- */
-
-.card {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition-base), transform var(--transition-base);
-}
-
-.card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid var(--color-border-light);
-  margin-block: var(--space-lg);
-}
-
+/* Lucide icons: thin gold lines unless a component sets its own colour */
 .lucide {
   width: 20px;
   height: 20px;
@@ -609,31 +369,6 @@ blockquote {
   stroke-width: 1.5;
   fill: none;
   flex-shrink: 0;
-}
-
-.lucide-lg {
-  width: 28px;
-  height: 28px;
-}
-
-/* Warm parchment/paper texture — used where a physical, tactile feel is wanted */
-.paper-card {
-  position: relative;
-  background-color: #FAF8F0;
-  border: 1px solid rgba(180, 140, 80, 0.25);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -8px 16px -12px rgba(139, 94, 52, 0.18),
-    0 4px 14px rgba(107, 39, 55, 0.08);
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(180, 140, 80, 0.015) 2px,
-    rgba(180, 140, 80, 0.015) 4px
-  );
 }
 
 /* --------------------------------------------------------------------------
@@ -1654,10 +1389,6 @@ blockquote {
     gap: var(--space-3xl);
   }
 
-  .about__story-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3xl);
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1707,7 +1438,7 @@ blockquote {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;   /* keep the face in view */
+  object-position: center 15%;   /* keep the whole head in view */
   display: block;
 }
 
@@ -1979,12 +1710,14 @@ blockquote {
   border-radius: 50%;
 }
 
+/* always a circle, whatever the photo's shape (tall portraits included) */
 .monk-detail__portrait img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 15%;
 }
 
 .monk-detail__lotus {
@@ -2804,14 +2537,10 @@ blockquote {
   cursor: pointer;
 }
 
-.gallery__item:nth-child(1) { aspect-ratio: 3 / 4; }
-.gallery__item:nth-child(2) { aspect-ratio: 4 / 3; }
-.gallery__item:nth-child(3) { aspect-ratio: 1 / 1; }
-.gallery__item:nth-child(4) { aspect-ratio: 3 / 4; }
-.gallery__item:nth-child(5) { aspect-ratio: 4 / 3; }
-.gallery__item:nth-child(6) { aspect-ratio: 1 / 1; }
-.gallery__item:nth-child(7) { aspect-ratio: 3 / 4; }
-.gallery__item:nth-child(8) { aspect-ratio: 4 / 3; }
+/* repeating rhythm of shapes, for any number of photos: tall, wide, square */
+.gallery__item:nth-child(3n+1) { aspect-ratio: 3 / 4; }
+.gallery__item:nth-child(3n+2) { aspect-ratio: 4 / 3; }
+.gallery__item:nth-child(3n)   { aspect-ratio: 1 / 1; }
 
 .gallery__img {
   position: absolute;
@@ -3382,19 +3111,6 @@ blockquote {
   color: var(--color-secondary);
   font-weight: var(--fw-semibold);
   background-color: rgba(201,146,42,0.05);
-}
-
-/* Temporary scaffold for section anchors — replaced as each section is built */
-.dev-placeholder {
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
-  text-align: center;
-  scroll-margin-top: var(--nav-height);
-  border-bottom: 1px solid var(--color-border-light);
 }
 
 /* ==============================================

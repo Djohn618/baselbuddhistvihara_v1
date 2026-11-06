@@ -10,8 +10,6 @@
       "donate": "Spenden"
     },
     "hero": {
-      "heading1": "Basel Buddhist Vihara",
-      "heading2": "Ein Ort des Friedens",
       "description": "Ein Ort der Meditation und der Lehre des Buddha in Basel, offen für alle Menschen.",
       "facts": {
         "since": "Seit 2024",
@@ -31,7 +29,6 @@
         "bullet4": "Verbunden mit dem Sri Kalyana Buddhistischen Zentrum (SKBZ)"
       },
       "story": {
-        "heading": "Unsere Geschichte",
         "founder": {
           "label": "Gründer",
           "name": "Ehrw. Dr. Walpola Kalyanatissa Nayaka Thero",
@@ -58,8 +55,7 @@
     },
     "monks": {
       "label": "UNSERE MÖNCHE",
-      "title": "Die Menschen hinter dem Vihara",
-      "subtitle": ""
+      "title": "Die Menschen hinter dem Vihara"
     },
     "monkPages": {
       "back": "Unsere Mönche",
@@ -89,9 +85,11 @@
       "shrine_cabinet": "Geschnitzter Holzschrein mit Buddha-Figur und Blumen",
       "buddha_statue": "Die Buddha-Statue im Schreinraum",
       "buddha_face": "Das friedliche Gesicht der Buddha-Statue",
-      "meditation_room": "Der Meditationsraum mit Sitzkissen",
+      "meditation_room": "Der Meditationsraum mit dem Schrein",
       "relic_stupa": "Reliquienschrein mit Lotusblüten und dem Bild eines Mönchs",
-      "buddha_hands": "Die Hände der Buddha-Statue in der Geste der Lehre"
+      "buddha_hands": "Die Hände der Buddha-Statue in der Geste der Lehre",
+      "shrine_new_statues": "Der Schreinraum mit den neuen Statuen",
+      "meditation_cushions": "Sitzkissen für die Meditation"
     },
     "notFound": {
       "title": "Seite nicht gefunden",
@@ -111,12 +109,36 @@
       "more": "Mehr erfahren",
       "swipeHint": "Nach links oder rechts wischen",
       "cards": {
-        "card1": { "badge": "Jeden 3. Freitag", "title": "Meditation auf Deutsch", "time": "18:00 – 20:00 Uhr" },
-        "card2": { "badge": "Jeden 3. Samstag", "title": "Meditation auf Singhalesisch", "time": "18:00 – 20:00 Uhr" },
-        "card3": { "badge": "Jeden 3. Sonntag", "title": "Poya-Programm", "time": "14:00 – 18:00 Uhr" },
-        "card4": { "badge": "Nach Vereinbarung", "title": "Dana-Zeremonien", "desc": "Monatlich, jährlich oder an einem besonderen Datum" },
-        "card5": { "badge": "Jährlich", "title": "Kathina-Zeremonie", "desc": "Traditionelle jährliche Robe-Zeremonie" },
-        "card6": { "badge": "Nach Vereinbarung", "title": "Hausbesuche", "desc": "Mönche kommen für Pirith-Gesänge und Dana" }
+        "card1": {
+          "badge": "Jeden 3. Freitag",
+          "title": "Meditation auf Deutsch",
+          "time": "18:00 – 20:00 Uhr"
+        },
+        "card2": {
+          "badge": "Jeden 3. Samstag",
+          "title": "Meditation auf Singhalesisch",
+          "time": "18:00 – 20:00 Uhr"
+        },
+        "card3": {
+          "badge": "Jeden 3. Sonntag",
+          "title": "Poya-Programm",
+          "time": "14:00 – 18:00 Uhr"
+        },
+        "card4": {
+          "badge": "Nach Vereinbarung",
+          "title": "Dana-Zeremonien",
+          "desc": "Monatlich, jährlich oder an einem besonderen Datum"
+        },
+        "card5": {
+          "badge": "Jährlich",
+          "title": "Kathina-Zeremonie",
+          "desc": "Traditionelle jährliche Robe-Zeremonie"
+        },
+        "card6": {
+          "badge": "Nach Vereinbarung",
+          "title": "Hausbesuche",
+          "desc": "Mönche kommen für Pirith-Gesänge und Dana"
+        }
       }
     },
     "youtube": {
@@ -162,8 +184,7 @@
     },
     "gallery": {
       "label": "GALERIE",
-      "title": "Einblicke in unseren Vihara",
-      "subtitle": ""
+      "title": "Einblicke in unseren Vihara"
     },
     "donate": {
       "label": "DANA",
@@ -193,10 +214,14 @@
         "email": "E-Mail"
       },
       "rows": {
-        "hours": { "label": "ÖFFNUNGSZEITEN", "value": "Täglich 7:00 – 18:30 Uhr" },
-        "address": { "label": "ADRESSE" }
+        "hours": {
+          "label": "ÖFFNUNGSZEITEN",
+          "value": "Täglich 7:00 – 18:30 Uhr"
+        },
+        "address": {
+          "label": "ADRESSE"
+        }
       },
-      "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "form": {
         "title": "Schreiben Sie uns",
         "name": "Name",
@@ -219,17 +244,10 @@
           "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
           "message": "Bitte schreiben Sie uns eine kurze Nachricht."
         }
-      },
-      "location": {
-        "label": "UNSER STANDORT",
-        "title": "Besuchen Sie uns in Basel",
-        "desc": "Wir freuen uns auf Ihren Besuch. Bitte vereinbaren Sie vorab einen Termin."
       }
     },
     "footer": {
       "tagline": "Ein Ort des Friedens, der Weisheit und der Gemeinschaft — Basel, Schweiz",
-      "description": "Ein spirituelles Zentrum in Basel, das die Lehren des Buddha allen Menschen zugänglich macht.",
-      "linksTitle": "Navigation",
       "text": "Basel Buddhist Vihara (SKBZ). Alle Rechte vorbehalten.",
       "credit": "Mit Achtsamkeit gestaltet in Basel"
     }
@@ -245,8 +263,6 @@
       "donate": "Donate"
     },
     "hero": {
-      "heading1": "Basel Buddhist Vihara",
-      "heading2": "A Place of Peace",
       "description": "A place of meditation and the Buddha's teaching in Basel, open to everyone.",
       "facts": {
         "since": "Since 2024",
@@ -266,7 +282,6 @@
         "bullet4": "Affiliated with Sri Kalyana Buddhistisches Zentrum (SKBZ)"
       },
       "story": {
-        "heading": "Our Story",
         "founder": {
           "label": "Founder",
           "name": "Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero",
@@ -293,8 +308,7 @@
     },
     "monks": {
       "label": "OUR MONKS",
-      "title": "The People Behind the Vihara",
-      "subtitle": ""
+      "title": "The People Behind the Vihara"
     },
     "monkPages": {
       "back": "Our monks",
@@ -324,9 +338,11 @@
       "shrine_cabinet": "Carved wooden shrine with a Buddha figure and flowers",
       "buddha_statue": "The Buddha statue in the shrine room",
       "buddha_face": "The peaceful face of the Buddha statue",
-      "meditation_room": "The meditation room with cushions",
+      "meditation_room": "The meditation room with the shrine",
       "relic_stupa": "Relic casket with lotus flowers and a portrait of a monk",
-      "buddha_hands": "The hands of the Buddha statue in the teaching gesture"
+      "buddha_hands": "The hands of the Buddha statue in the teaching gesture",
+      "shrine_new_statues": "The shrine room with the new statues",
+      "meditation_cushions": "Meditation cushions"
     },
     "notFound": {
       "title": "Page not found",
@@ -346,12 +362,36 @@
       "more": "Learn more",
       "swipeHint": "Swipe left or right",
       "cards": {
-        "card1": { "badge": "Every 3rd Friday", "title": "Meditation in German", "time": "6:00 – 8:00 PM" },
-        "card2": { "badge": "Every 3rd Saturday", "title": "Meditation in Sinhalese", "time": "6:00 – 8:00 PM" },
-        "card3": { "badge": "Every 3rd Sunday", "title": "Poya Program", "time": "2:00 – 6:00 PM" },
-        "card4": { "badge": "By Appointment", "title": "Dana Ceremonies", "desc": "Monthly, annually or on a special date" },
-        "card5": { "badge": "Annually", "title": "Kathina Ceremony", "desc": "Traditional annual robe offering ceremony" },
-        "card6": { "badge": "By Appointment", "title": "Home Visits", "desc": "Monks can visit for Pirith chanting and Dana" }
+        "card1": {
+          "badge": "Every 3rd Friday",
+          "title": "Meditation in German",
+          "time": "6:00 – 8:00 PM"
+        },
+        "card2": {
+          "badge": "Every 3rd Saturday",
+          "title": "Meditation in Sinhalese",
+          "time": "6:00 – 8:00 PM"
+        },
+        "card3": {
+          "badge": "Every 3rd Sunday",
+          "title": "Poya Program",
+          "time": "2:00 – 6:00 PM"
+        },
+        "card4": {
+          "badge": "By Appointment",
+          "title": "Dana Ceremonies",
+          "desc": "Monthly, annually or on a special date"
+        },
+        "card5": {
+          "badge": "Annually",
+          "title": "Kathina Ceremony",
+          "desc": "Traditional annual robe offering ceremony"
+        },
+        "card6": {
+          "badge": "By Appointment",
+          "title": "Home Visits",
+          "desc": "Monks can visit for Pirith chanting and Dana"
+        }
       }
     },
     "youtube": {
@@ -397,8 +437,7 @@
     },
     "gallery": {
       "label": "GALLERY",
-      "title": "A Look Inside Our Vihara",
-      "subtitle": ""
+      "title": "A Look Inside Our Vihara"
     },
     "donate": {
       "label": "DANA",
@@ -428,10 +467,14 @@
         "email": "Email"
       },
       "rows": {
-        "hours": { "label": "HOURS", "value": "Daily 7:00 AM – 6:30 PM" },
-        "address": { "label": "ADDRESS" }
+        "hours": {
+          "label": "HOURS",
+          "value": "Daily 7:00 AM – 6:30 PM"
+        },
+        "address": {
+          "label": "ADDRESS"
+        }
       },
-      "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "form": {
         "title": "Get in Touch",
         "name": "Name",
@@ -454,17 +497,10 @@
           "email": "Please enter a valid email address.",
           "message": "Please write us a short message."
         }
-      },
-      "location": {
-        "label": "OUR LOCATION",
-        "title": "Visit Us in Basel",
-        "desc": "We look forward to your visit. Please arrange an appointment in advance."
       }
     },
     "footer": {
       "tagline": "A Place of Peace, Wisdom, and Community — Basel, Switzerland",
-      "description": "A spiritual centre in Basel bringing the teachings of the Buddha to all people.",
-      "linksTitle": "Quick Links",
       "text": "Basel Buddhist Vihara (SKBZ). All rights reserved.",
       "credit": "Designed with care in Basel"
     }
@@ -480,8 +516,6 @@
       "donate": "පරිත්‍යාග"
     },
     "hero": {
-      "heading1": "Basel Buddhist Vihara",
-      "heading2": "සාමයේ ස්ථානයක්",
       "description": "බාසල්හි භාවනාව සහ බුදු දහම සඳහා වූ, සැමට විවෘත ස්ථානයකි.",
       "facts": {
         "since": "2024 සිට",
@@ -501,7 +535,6 @@
         "bullet4": "ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානය (SKBZ) සමඟ අනුබද්ධිතයි"
       },
       "story": {
-        "heading": "අපේ ඉතිහාසය",
         "founder": {
           "label": "නිර්මාතෘ",
           "name": "අතිපූජ්‍ය ආචාර්ය වල්පොල කල්‍යාණතිස්ස නායක ස්වාමීන් වහන්සේ",
@@ -528,8 +561,7 @@
     },
     "monks": {
       "label": "අපේ භික්ෂූන්",
-      "title": "විහාරය පිටුපස සිටින අය",
-      "subtitle": ""
+      "title": "විහාරය පිටුපස සිටින අය"
     },
     "monkPages": {
       "back": "අපේ භික්ෂූන්",
@@ -559,9 +591,11 @@
       "shrine_cabinet": "බුදු පිළිමයක් සහ මල් සහිත කැටයම් කළ ලී කුටිය",
       "buddha_statue": "පිළිම ගෙයි බුදු පිළිමය",
       "buddha_face": "බුදු පිළිමයේ සාමකාමී මුහුණ",
-      "meditation_room": "භාවනා කුෂන් සහිත භාවනා කාමරය",
+      "meditation_room": "පිළිම ගෙය සහිත භාවනා කාමරය",
       "relic_stupa": "නෙළුම් මල් සහ භික්ෂුවකගේ ඡායාරූපයක් සහිත ධාතු කරඬුව",
-      "buddha_hands": "ධර්ම දේශනා මුද්‍රාවෙන් යුත් බුදු පිළිමයේ අත්"
+      "buddha_hands": "ධර්ම දේශනා මුද්‍රාවෙන් යුත් බුදු පිළිමයේ අත්",
+      "shrine_new_statues": "නව පිළිම සහිත පිළිම ගෙය",
+      "meditation_cushions": "භාවනා කුෂන්"
     },
     "notFound": {
       "title": "පිටුව හමු නොවීය",
@@ -581,12 +615,36 @@
       "more": "තව දැනගන්න",
       "swipeHint": "වමට හෝ දකුණට ස්වයිප් කරන්න",
       "cards": {
-        "card1": { "badge": "සෑම 3වන සිකුරාදා", "title": "ජර්මන් භාෂාවෙන් භාවනාව", "time": "සවස 6.00 – 8.00" },
-        "card2": { "badge": "සෑම 3වන සෙනසුරාදා", "title": "සිංහල භාෂාවෙන් භාවනාව", "time": "සවස 6.00 – 8.00" },
-        "card3": { "badge": "සෑම 3වන ඉරිදා", "title": "පෝය වැඩසටහන", "time": "දහවල් 2.00 – 6.00" },
-        "card4": { "badge": "එකඟතාවය අනුව", "title": "දානමය පිංකම්", "desc": "මාසිකව, වාර්ෂිකව හෝ විශේෂ දිනකදී" },
-        "card5": { "badge": "වාර්ෂිකව", "title": "කඨින චීවර පිංකම", "desc": "සාම්ප්‍රදායික වාර්ෂික චීවර පූජා පිංකම" },
-        "card6": { "badge": "එකඟතාවය අනුව", "title": "නිවෙස් වෙත පැමිණීම", "desc": "පිරිත් සජ්ඣායනාව සහ දානය සඳහා ස්වාමීන් වහන්සේලා නිවෙසට වැඩම කරති" }
+        "card1": {
+          "badge": "සෑම 3වන සිකුරාදා",
+          "title": "ජර්මන් භාෂාවෙන් භාවනාව",
+          "time": "සවස 6.00 – 8.00"
+        },
+        "card2": {
+          "badge": "සෑම 3වන සෙනසුරාදා",
+          "title": "සිංහල භාෂාවෙන් භාවනාව",
+          "time": "සවස 6.00 – 8.00"
+        },
+        "card3": {
+          "badge": "සෑම 3වන ඉරිදා",
+          "title": "පෝය වැඩසටහන",
+          "time": "දහවල් 2.00 – 6.00"
+        },
+        "card4": {
+          "badge": "එකඟතාවය අනුව",
+          "title": "දානමය පිංකම්",
+          "desc": "මාසිකව, වාර්ෂිකව හෝ විශේෂ දිනකදී"
+        },
+        "card5": {
+          "badge": "වාර්ෂිකව",
+          "title": "කඨින චීවර පිංකම",
+          "desc": "සාම්ප්‍රදායික වාර්ෂික චීවර පූජා පිංකම"
+        },
+        "card6": {
+          "badge": "එකඟතාවය අනුව",
+          "title": "නිවෙස් වෙත පැමිණීම",
+          "desc": "පිරිත් සජ්ඣායනාව සහ දානය සඳහා ස්වාමීන් වහන්සේලා නිවෙසට වැඩම කරති"
+        }
       }
     },
     "youtube": {
@@ -632,8 +690,7 @@
     },
     "gallery": {
       "label": "ගැලරිය",
-      "title": "අපේ විහාරයේ දර්ශන",
-      "subtitle": ""
+      "title": "අපේ විහාරයේ දර්ශන"
     },
     "donate": {
       "label": "දානය",
@@ -663,10 +720,14 @@
         "email": "ඊමේල්"
       },
       "rows": {
-        "hours": { "label": "විවෘත වේලාවන්", "value": "සෑම දිනකම උදේ 7:00 – සවස 18:30" },
-        "address": { "label": "ලිපිනය" }
+        "hours": {
+          "label": "විවෘත වේලාවන්",
+          "value": "සෑම දිනකම උදේ 7:00 – සවස 18:30"
+        },
+        "address": {
+          "label": "ලිපිනය"
+        }
       },
-      "address": "Basel Buddhist Vihara\nFeldbergstrasse 142\n4057 Basel, Switzerland",
       "form": {
         "title": "අපට ලියන්න",
         "name": "නම",
@@ -689,17 +750,10 @@
           "email": "කරුණාකර වලංගු ඊමේල් ලිපිනයක් ඇතුළත් කරන්න.",
           "message": "කරුණාකර අපට කෙටි පණිවිඩයක් ලියන්න."
         }
-      },
-      "location": {
-        "label": "අපගේ ස්ථානය",
-        "title": "බාසල් හි අපව හමුවන්න",
-        "desc": "අපි ඔබේ පැමිණීම බලාපොරොත්තුවෙන් සිටිමු. කරුණාකර කලින් වේලාවක් වෙන් කරවා ගන්න."
       }
     },
     "footer": {
       "tagline": "සාමයේ, ප්‍රඥාවේ සහ සමාජයේ ස්ථානයක් — බාසල්, ස්විට්සර්ලන්තය",
-      "description": "බුදුන් වහන්සේගේ ඉගැන්වීම් සියලුම ජනතාවට ලබා දෙන බාසල්හි අධ්‍යාත්මික මධ්‍යස්ථානයකි.",
-      "linksTitle": "ඉක්මන් සබැඳි",
       "text": "බාසල් බෞද්ධ විහාරය (SKBZ). සියලුම හිමිකම් ඇවිරිණි.",
       "credit": "බාසල් හි සැලකිල්ලෙන් නිර්මාණය කරන ලදී"
     }

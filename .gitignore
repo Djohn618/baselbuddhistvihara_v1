@@ -83,3 +83,6 @@ assets/images/test_images_edited/
 *.key
 *.cert
 *.p12
+
+# Source of the donation QR code (the web page uses the recreated SVG/PNG)
+assets/images/donation.pdf

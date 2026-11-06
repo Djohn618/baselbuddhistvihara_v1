@@ -59,12 +59,13 @@ baselbuddhistvihara/
 │       ├── logo/               # V2.png (favicon, apple-touch, JSON-LD) + logo-160.webp (on page)
 │       ├── vihara/             # real temple photos, each as <name>-1600.webp + <name>-800.webp
 │       │                       # (hero, about collage, program cards, gallery all use these)
-│       ├── other/              # walpola-maha-thero.webp (founder)
+│       ├── monks/              # monk portraits <name>-400.webp (cards) + -800.webp (pages)
 │       ├── donate/             # swiss-qr-bill.svg (shown) + .png (download)
 │       ├── youtube/            # playlist covers <name>-640.webp (from YouTube, via PhotoCraft)
 │       ├── events/<id>/        # event album photos <name>-800.webp + <name>-1600.webp
 │       ├── test_images/        # camera RAW originals (.CR2) — NOT in git (.gitignore)
-│       └── test_images_edited/ # graded full-size JPGs (PhotoCraft) — NOT in git
+│       └── test_images_edited/ # graded full-size JPGs (PhotoCraft), named like the web
+│                               # files (e.g. buddha-altar.jpg) — NOT in git
 └── data/
     ├── translations.json       # All text content in DE, EN, SI
     ├── events.json             # Community event albums (empty until real photos come)
@@ -75,7 +76,22 @@ Images: all photo grading, resizing and converting is done with PhotoCraft
 1600px (quality 78) + 800px (quality 76), lowercase-dash names, always
 width/height attributes, srcset where an image can be large. Alt texts are
 translation keys images.<name> (data-i18n-attr="alt:..." / "aria-label:...").
-Still missing: Ariyaseela portrait.
+Photo names (source JPG -> web file -> where it is used):
+  buddha-altar (IMG_8761)        hero 1
+  buddha-face (IMG_8778)         hero 2, gallery, og-image
+  shrine-new-statues (phone pic) hero 3, gallery
+  meditation-room (phone pic)    hero 4, meditation (German) card, gallery
+  shrine-room (IMG_8744)         hero 5, gallery
+  shrine-offerings (IMG_8748)    about collage, gallery
+  lotus-offerings (IMG_8764)     about collage, Dana card, gallery
+  buddha-hands (IMG_8796)        about collage, gallery
+  meditation-cushions (IMG_8789) meditation (Sinhala) card, gallery
+  relic-stupa (IMG_8792)         Poya card, gallery
+  buddha-statue (IMG_8749)       Kathina card, gallery
+  shrine-cabinet (IMG_8757)      home visits card, gallery
+  black-buddha (IMG_8752)        gallery
+  monks/ariyaseela-thero, monks/kalyanatissa-nayaka-thero: monk cards + pages
+Hero slides are never lazy-loaded (a slide must be ready when it fades in).
 
 ---
 
@@ -170,7 +186,7 @@ NAV (fixed):
 - <1280px: one light bar with logo (+ name from 480px), DE|EN|සිං and hamburger.
   Links and Spenden button are in the full-screen light overlay.
 
-1.  #home      → Hero: 58% image slideshow (3 slides, 5s) left, 42% text right:
+1.  #home      → Hero: 58% image slideshow (5 slides, 5s) left, 42% text right:
                  lotus, title, ONE short sentence (hero.description, no links),
                  one button, and one quiet facts line (hero.facts: Since 2024 ·
                  2 YouTube channels · 3 languages). Keep it minimal.
@@ -184,7 +200,7 @@ NAV (fixed):
                  Sinhala by hand; never a "?" or a † cross).
                  Phones: one row per monk, round portrait, no excerpt.
                  Tablet+: two equal cards, "In memory" label in the photo corner.
-                 No photo yet: lotus line drawing.
+                 No photo yet (future monks): lotus line drawing.
                  Detail pages (monks/*.html): "Our monks" pill back to #monks,
                  centred round portrait in a gold ring (lotus if no photo),
                  role, name, memory line (monkPages.<slug>.memory), liyawela
@@ -204,7 +220,8 @@ NAV (fixed):
                  tablet 2x2; desktop 4 in a row. Covers softened (saturate 0.8).
                  If the counts change, update youtube.playlists.*.count.
                  The privacy policy must mention the embedded YouTube player.
-6.  #gallery   → 8 real photos (data-full = 1600px version), lightbox (gallery.js).
+6.  #gallery   → 12 real photos (data-full = 1600px version), lightbox (gallery.js);
+                 shapes repeat tall / wide / square for any number of photos.
                  Below it: "Our community through the year", the 3 newest event
                  albums (#community-strip, events.js) + link to community.html.
                  Hidden automatically while data/events.json has no events.
@@ -288,7 +305,7 @@ When adding a placeholder:
 - Always add a comment: <!-- replace with real image: assets/images/FOLDER/filename.jpg -->
 - Real photos: object-fit: cover, real alt text
 
-Pending: Ariyaseela portrait, more photos from the owner.
+Pending: community event photos (see COMMUNITY ALBUMS).
 
 Social profiles (footer, YouTube section, JSON-LD sameAs):
   Facebook: https://www.facebook.com/p/Basel-Buddhist-Vihara-61569741141373/
