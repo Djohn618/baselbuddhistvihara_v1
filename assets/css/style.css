@@ -4023,6 +4023,15 @@ blockquote {
 .footer__credit-name {
   font-weight: var(--fw-semibold);
   color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--transition-fast);
+}
+
+.footer__credit-name:hover {
+  color: var(--color-primary);
+  text-decoration-color: var(--color-secondary);
 }
 
 /* ==============================================
