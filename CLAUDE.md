@@ -86,7 +86,7 @@ Photo names (source JPG -> web file -> where it is used):
   buddha-hands (IMG_8796)        about collage, gallery
   relic-stupa (IMG_8792)         Poya card, gallery
   buddha-statue (IMG_8749)       gallery
-  shrine-cabinet (IMG_8757)      gallery
+  shrine-cabinet (IMG_8757)      hero 5, gallery
   meditation-room (phone pic)    meditation (German) card only
   shrine-new-statues (phone pic) meditation (Sinhala) card only
   black-buddha (IMG_8752)        Kathina card only
