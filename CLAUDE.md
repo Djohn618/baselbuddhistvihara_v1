@@ -307,18 +307,27 @@ Vihara founded: July 1, 2024. Opened: July 6, 2024 (5 monks, ~30 attendees)
 Head Monk + Treasurer: Ven. Udumaththe Ariyaseela Thero
 Secretary:  Ven. Henegama Sobitha Thero
 President:  Fabienne Eglin. Vice president: Michael Joel Anneler
+Founding president: Pascal Yannick Anneler
+Committee:  Claudio Andrin Anneler, Nicola Caserio, Matheo Giampietro
+Head monk appointed on the proposal of the founder, Ven. Henegama Sobitha
+            Thero and Ven. Welagedara Sumanajothi Thero
 Founder:    Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero
             (passed away June 12, 2024, Geneva International Buddhist Center)
 
 Bank account (SKBZ, used on donate.html — from the official QR bill):
-  Holder:   Sri Kalyana Buddhistische Zentrum (SKBZ)   (spelled as on the bill)
+  Holder:   Sri Kalyana Buddhistisches Zentrum (SKBZ)   (official spelling; the
+            QR bill data itself says "Buddhistische", left unchanged)
   IBAN:     CH05 8080 8009 7919 6193 1   (21 characters, checksum valid;
             an older note had it cut short to "CH05 8080 8009 7919")
   Type:     Vereinskonto / CHF
   Address:  Neugrabenweg 29, 5702 Niederlenz
 
-Unverified (Vihara must confirm): opening hours "daily 7:00–18:30", founder
-birth date, bullet texts. There is one resident monk (do not show "5 monks").
+Source of truth: the Vihara's official text document (Nov 2026, DE/EN/SI).
+No opening hours: every visit is by appointment (one resident monk, small
+space). Never show fixed hours. There is one resident monk (do not show
+"5 monks" except for the opening day). Services in the document: monthly
+programs, Kathina and special events, Dana offerings, home visits (Pirith,
+Dana), Vihara visits by appointment, 2 YouTube channels (one video a week).
 
 Google Maps: keep the embed URL that is in index.html.
 
