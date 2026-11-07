@@ -901,7 +901,9 @@ blockquote {
   gap: 0.5rem;
 }
 
+/* the phone rule that hides the header button must not hide this one */
 .nav-overlay__bottom .nav__donate-btn {
+  display: inline-flex;
   width: 100%;
   max-width: 200px;
   text-align: center;
