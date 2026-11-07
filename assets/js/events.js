@@ -4,8 +4,8 @@
    - home page: the 3 newest albums under the gallery (#community-strip)
    - community.html: all albums grouped by year, with year buttons
    - event.html?id=…: one album with its photo grid (lightbox: gallery.js)
-   With no events in the list, the home strip stays hidden and the
-   community page shows a calm "coming soon" note.
+   With no events in the list yet, both places show a calm preview of
+   the albums that are coming ("photos coming soon").
    ========================================================================== */
 
 (function () {
@@ -81,6 +81,26 @@
       '</a>';
   }
 
+  // Preview while no photos are online yet: the yearly events that will get
+  // an album, each with the lotus and a "photos coming soon" label
+  var PREVIEW = ['newYear', 'vesak', 'kathina'];
+  var LOTUS = '<svg class="album-card__lotus" viewBox="0 0 120 72" aria-hidden="true" focusable="false">' +
+    '<path d="M32 66 C46 63 74 63 88 66 M60 56 C42 56 26 48 18 34 C32 34 48 42 60 56 M60 56 C78 56 94 48 102 34 C88 34 72 42 60 56 ' +
+    'M60 54 C48 48 40 34 42 18 C50 26 56 38 60 54 M60 54 C72 48 80 34 78 18 C70 26 64 38 60 54 M60 6 C52 20 52 40 60 54 C68 40 68 20 60 6 Z"/></svg>';
+
+  function previewCard(key) {
+    return '' +
+      '<div class="album-card album-card--soon fade-in">' +
+        '<span class="album-card__cover">' + LOTUS +
+          '<span class="album-card__soon">' + escapeHtml(t('community.soon')) + '</span>' +
+        '</span>' +
+        '<span class="album-card__body">' +
+          '<span class="album-card__title">' + escapeHtml(t('community.preview.' + key)) + '</span>' +
+          '<span class="album-card__meta">' + escapeHtml(t('community.soonText')) + '</span>' +
+        '</span>' +
+      '</div>';
+  }
+
   function revealCards(root) {
     if (window.lucide) window.lucide.createIcons();
     // the cards are added after the page's fade-in observer started,
@@ -93,13 +113,11 @@
 
   // ---- home page: the 3 newest albums
   function renderStrip() {
-    if (!events.length) {
-      strip.hidden = true;
-      return;
-    }
     strip.hidden = false;
     var grid = strip.querySelector('.album-grid');
-    grid.innerHTML = events.slice(0, 3).map(albumCard).join('');
+    grid.innerHTML = events.length
+      ? events.slice(0, 3).map(albumCard).join('')
+      : PREVIEW.map(previewCard).join('');
     revealCards(grid);
   }
 
@@ -109,9 +127,10 @@
     var filters = document.getElementById('community-years');
 
     if (!events.length) {
-      list.innerHTML = '';
       filters.hidden = true;
       empty.hidden = false;
+      list.innerHTML = '<div class="album-grid album-grid--page">' + PREVIEW.map(previewCard).join('') + '</div>';
+      revealCards(list);
       return;
     }
     empty.hidden = true;

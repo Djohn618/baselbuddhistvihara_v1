@@ -49,6 +49,7 @@ baselbuddhistvihara/
 │   │   ├── style.css           # Main stylesheet
 │   │   └── fonts.css           # Google Fonts import
 │   ├── js/
+│   │   ├── settings.js         # On/off switches (e.g. poyaProgram: true/false)
 │   │   ├── main.js             # Nav, hero slideshow, carousel, monks, form, dropdown
 │   │   ├── moonstone.js        # Draws the Sandakada Pahana line-art ornament
 │   │   ├── i18n.js             # Language switcher logic
@@ -211,7 +212,13 @@ NAV (fixed):
                  vine (--liyawela), serif lead paragraph, Kandyan quote frame.
                  Pages without a .hero show the solid header from the start.
 4.  #programs  → Tabs "Programme | Veranstaltungen", carousel (arrows on desktop,
-                 2 square cards + swipe + one-time swipe hint on phones)
+                 2 square cards + swipe + one-time swipe hint on phones).
+                 Programmes: Meditation DE (3rd Friday), Meditation SI (3rd
+                 Saturday), Poya (3rd Sunday, switchable). Events: Vesak and
+                 Kathina only (Dana and home visits removed on the monk's wish).
+                 Poya switch: assets/js/settings.js -> poyaProgram: true/false
+                 (any card with data-setting="<name>" can be switched the same
+                 way). Fewer cards than fit in a row are centred.
 5.  #youtube   → Dhamma Dana: the monk's 4 chosen playlists (keys youtube.playlists.p1–p4,
                  exact YouTube names without emojis; DE/EN parts per language):
                    p1 PLsSjdK2SRA-H19JgVLuUjE5QylYmBwgET  Besondere Eigenschaften… (course)
@@ -228,7 +235,9 @@ NAV (fixed):
                  shapes repeat tall / wide / square for any number of photos.
                  Below it: "Our community through the year", the 3 newest event
                  albums (#community-strip, events.js) + link to community.html.
-                 Hidden automatically while data/events.json has no events.
+                 While data/events.json is empty it shows a "coming soon"
+                 preview (New Year, Vesak, Kathina with the lotus); real
+                 albums replace it automatically.
 7.  #contact   → Left: one sentence (contact.intro, "visits by appointment only"),
                  two pill buttons Call / Email (contact.actions), a quiet line
                  with number + email, address and hours side by side, then the
@@ -250,7 +259,8 @@ it with a real banking app before publishing. TWINT/PayPal: only if SKBZ asks.
 COMMUNITY ALBUMS (community.html + event.html, both drawn by events.js from
 data/events.json; texts: community.* keys):
 - community.html: albums grouped by year (year heading + thin line), year
-  buttons when there is more than one year, calm "coming soon" note if empty.
+  buttons when there is more than one year; while empty: a calm note and the
+  same "coming soon" preview cards. Linked from the footer ("Gemeinschaft").
 - event.html?id=<id>: "All events" pill, month + year, title, liyawela vine,
   one or two sentences, square photo grid (2/3/4 columns), lightbox with
   swipe (gallery.js picks up .album-photo), "photo removed? write to us" line.

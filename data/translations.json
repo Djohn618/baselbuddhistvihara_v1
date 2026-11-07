@@ -7,7 +7,8 @@
       "programs": "Events",
       "gallery": "Galerie",
       "contact": "Kontakt",
-      "donate": "Spenden"
+      "donate": "Spenden",
+      "community": "Gemeinschaft"
     },
     "hero": {
       "description": "Ein Ort der Meditation und der Lehre des Buddha in Basel, offen für alle Menschen.",
@@ -123,20 +124,15 @@
           "title": "Poya-Programm",
           "time": "14:00 – 18:00 Uhr"
         },
-        "card4": {
-          "badge": "Nach Vereinbarung",
-          "title": "Dana-Zeremonien",
-          "desc": "Monatlich, jährlich oder an einem besonderen Datum"
-        },
         "card5": {
           "badge": "Jährlich",
           "title": "Kathina-Zeremonie",
           "desc": "Traditionelle jährliche Robe-Zeremonie"
         },
-        "card6": {
-          "badge": "Nach Vereinbarung",
-          "title": "Hausbesuche",
-          "desc": "Mönche kommen für Pirith-Gesänge und Dana"
+        "vesak": {
+          "badge": "Jährlich · Mai",
+          "title": "Vesak",
+          "desc": "Fest der Geburt, Erleuchtung und des Parinibbana des Buddha"
         }
       }
     },
@@ -175,11 +171,18 @@
       "all": "Alle",
       "allEvents": "Alle Veranstaltungen und Fotos",
       "back": "Alle Veranstaltungen",
-      "empty": "Bald finden Sie hier Bilder von unseren Festen und Begegnungen.",
+      "empty": "Unsere Fotoalben entstehen gerade. Bald finden Sie hier Bilder von unseren Festen und Begegnungen.",
       "photos": "{n} Fotos",
       "notFound": "Dieses Album wurde nicht gefunden.",
       "removal": "Möchten Sie, dass ein Foto entfernt wird?",
-      "removalLink": "Schreiben Sie uns"
+      "removalLink": "Schreiben Sie uns",
+      "soon": "Bald verfügbar",
+      "soonText": "Fotos folgen bald",
+      "preview": {
+        "newYear": "Singhalesisches und tamilisches Neujahr",
+        "vesak": "Vesak",
+        "kathina": "Kathina"
+      }
     },
     "gallery": {
       "label": "GALERIE",
@@ -259,7 +262,8 @@
       "programs": "Events",
       "gallery": "Gallery",
       "contact": "Contact",
-      "donate": "Donate"
+      "donate": "Donate",
+      "community": "Community"
     },
     "hero": {
       "description": "A place of meditation and the Buddha's teaching in Basel, open to everyone.",
@@ -375,20 +379,15 @@
           "title": "Poya Program",
           "time": "2:00 – 6:00 PM"
         },
-        "card4": {
-          "badge": "By Appointment",
-          "title": "Dana Ceremonies",
-          "desc": "Monthly, annually or on a special date"
-        },
         "card5": {
           "badge": "Annually",
           "title": "Kathina Ceremony",
           "desc": "Traditional annual robe offering ceremony"
         },
-        "card6": {
-          "badge": "By Appointment",
-          "title": "Home Visits",
-          "desc": "Monks can visit for Pirith chanting and Dana"
+        "vesak": {
+          "badge": "Yearly · May",
+          "title": "Vesak",
+          "desc": "Celebrating the Buddha's birth, enlightenment and passing away"
         }
       }
     },
@@ -427,11 +426,18 @@
       "all": "All",
       "allEvents": "All events and photos",
       "back": "All events",
-      "empty": "Photos from our festivals and gatherings will appear here soon.",
+      "empty": "Our photo albums are on their way. Soon you will find pictures of our festivals and gatherings here.",
       "photos": "{n} photos",
       "notFound": "This album could not be found.",
       "removal": "Would you like a photo removed?",
-      "removalLink": "Write to us"
+      "removalLink": "Write to us",
+      "soon": "Coming soon",
+      "soonText": "Photos coming soon",
+      "preview": {
+        "newYear": "Sinhala and Tamil New Year",
+        "vesak": "Vesak",
+        "kathina": "Kathina"
+      }
     },
     "gallery": {
       "label": "GALLERY",
@@ -511,7 +517,8 @@
       "programs": "උත්සව",
       "gallery": "ගැලරිය",
       "contact": "සම්බන්ධ",
-      "donate": "පරිත්‍යාග"
+      "donate": "පරිත්‍යාග",
+      "community": "ප්‍රජාව"
     },
     "hero": {
       "description": "බාසල්හි භාවනාව සහ බුදු දහම සඳහා වූ, සැමට විවෘත ස්ථානයකි.",
@@ -627,20 +634,15 @@
           "title": "පෝය වැඩසටහන",
           "time": "දහවල් 2.00 – 6.00"
         },
-        "card4": {
-          "badge": "එකඟතාවය අනුව",
-          "title": "දානමය පිංකම්",
-          "desc": "මාසිකව, වාර්ෂිකව හෝ විශේෂ දිනකදී"
-        },
         "card5": {
           "badge": "වාර්ෂිකව",
           "title": "කඨින චීවර පිංකම",
           "desc": "සාම්ප්‍රදායික වාර්ෂික චීවර පූජා පිංකම"
         },
-        "card6": {
-          "badge": "එකඟතාවය අනුව",
-          "title": "නිවෙස් වෙත පැමිණීම",
-          "desc": "පිරිත් සජ්ඣායනාව සහ දානය සඳහා ස්වාමීන් වහන්සේලා නිවෙසට වැඩම කරති"
+        "vesak": {
+          "badge": "වාර්ෂික · මැයි",
+          "title": "වෙසක්",
+          "desc": "බුදුන් වහන්සේගේ උපත, බුද්ධත්වය සහ පරිනිර්වාණය සමරන උත්සවය"
         }
       }
     },
@@ -679,11 +681,18 @@
       "all": "සියල්ල",
       "allEvents": "සියලු උත්සව සහ ඡායාරූප",
       "back": "සියලු උත්සව",
-      "empty": "අපගේ උත්සව සහ හමුවීම්වල ඡායාරූප ඉක්මනින් මෙහි පළ වේ.",
+      "empty": "අපගේ ඡායාරූප ඇල්බම සකස් වෙමින් පවතී. අපගේ උත්සව සහ හමුවීම්වල ඡායාරූප ඉක්මනින් මෙහි පළ වේ.",
       "photos": "ඡායාරූප {n}",
       "notFound": "මෙම ඇල්බමය හමු නොවීය.",
       "removal": "ඡායාරූපයක් ඉවත් කිරීමට කැමතිද?",
-      "removalLink": "අපට ලියන්න"
+      "removalLink": "අපට ලියන්න",
+      "soon": "ඉක්මනින්",
+      "soonText": "ඡායාරූප ඉක්මනින්",
+      "preview": {
+        "newYear": "සිංහල හා දෙමළ අලුත් අවුරුද්ද",
+        "vesak": "වෙසක්",
+        "kathina": "කඨින"
+      }
     },
     "gallery": {
       "label": "ගැලරිය",

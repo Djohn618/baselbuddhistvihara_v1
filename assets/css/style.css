@@ -1888,6 +1888,10 @@ blockquote {
   margin-block: -0.5rem -2rem;
 }
 
+.programs__track--centered {
+  justify-content: center;
+}
+
 .programs__track {
   display: flex;
   gap: var(--space-md);
@@ -3324,6 +3328,62 @@ blockquote {
   height: 14px;
 }
 
+/* "Coming soon" preview cards (no photos online yet) */
+.album-card--soon .album-card__cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-card__lotus {
+  width: 34%;
+  fill: none;
+  stroke: var(--color-secondary);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.8;
+}
+
+.album-card__soon {
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  background-color: rgba(250, 247, 242, 0.94);
+  color: var(--color-primary);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+}
+
+/* phones: compact rows instead of three tall empty cards */
+@media (max-width: 639px) {
+  .album-card--soon {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .album-card--soon .album-card__cover {
+    flex: 0 0 96px;
+    aspect-ratio: 1;
+  }
+
+  .album-card--soon .album-card__lotus {
+    width: 56%;
+  }
+
+  .album-card--soon .album-card__soon {
+    display: none;   /* "Photos coming soon" under the title says it already */
+  }
+}
+
+.album-card--soon.fade-in-visible:hover {
+  transform: none;
+  box-shadow: var(--shadow-soft);
+}
+
 .community-strip__more {
   display: flex;
   justify-content: center;
@@ -3428,7 +3488,7 @@ blockquote {
 
 .community__empty {
   max-width: 40ch;
-  margin: var(--space-lg) auto 0;
+  margin: 0 auto var(--space-xl);
   text-align: center;
   font-family: var(--font-heading);
   font-size: 1.25rem;

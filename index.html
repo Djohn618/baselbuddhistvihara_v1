@@ -312,7 +312,7 @@
                 </div>
               </article>
 
-              <article class="program-card" data-type="programme">
+              <article class="program-card" data-type="programme" data-setting="poyaProgram">
                 <div class="program-card__image" aria-hidden="true">
                   <img class="program-card__photo" src="assets/images/vihara/relic-stupa-800.webp" width="800" height="534" loading="lazy" alt="">
                   <span class="program-card__badge" data-i18n="programs.cards.card3.badge">Jeden 3. Sonntag</span>
@@ -328,18 +328,17 @@
 
               <article class="program-card" data-type="event">
                 <div class="program-card__image" aria-hidden="true">
-                  <img class="program-card__photo" src="assets/images/vihara/lotus-offerings-800.webp" width="800" height="534" loading="lazy" alt="">
-                  <span class="program-card__badge" data-i18n="programs.cards.card4.badge">Nach Vereinbarung</span>
+                  <img class="program-card__photo" src="assets/images/vihara/buddha-altar-800.webp" width="800" height="533" loading="lazy" alt="">
+                  <span class="program-card__badge" data-i18n="programs.cards.vesak.badge">Jährlich · Mai</span>
                 </div>
                 <div class="program-card__body">
-                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="heart-handshake"></i></span>
-                  <h3 class="program-card__title" data-i18n="programs.cards.card4.title">Dana-Zeremonien</h3>
+                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="lamp"></i></span>
+                  <h3 class="program-card__title" data-i18n="programs.cards.vesak.title">Vesak</h3>
                   <div class="program-card__divider" aria-hidden="true"></div>
-                  <p class="program-card__meta" data-i18n="programs.cards.card4.desc">Monatlich, jährlich oder an einem besonderen Datum</p>
+                  <p class="program-card__meta" data-i18n="programs.cards.vesak.desc">Fest der Geburt, Erleuchtung und des Parinibbana des Buddha</p>
                   <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                 </div>
               </article>
-
               <article class="program-card" data-type="event">
                 <div class="program-card__image" aria-hidden="true">
                   <img class="program-card__photo" src="assets/images/vihara/buddha-statue-800.webp" width="800" height="534" loading="lazy" alt="">
@@ -350,20 +349,6 @@
                   <h3 class="program-card__title" data-i18n="programs.cards.card5.title">Kathina-Zeremonie</h3>
                   <div class="program-card__divider" aria-hidden="true"></div>
                   <p class="program-card__meta" data-i18n="programs.cards.card5.desc">Traditionelle jährliche Robe-Zeremonie</p>
-                  <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
-                </div>
-              </article>
-
-              <article class="program-card" data-type="event">
-                <div class="program-card__image" aria-hidden="true">
-                  <img class="program-card__photo" src="assets/images/vihara/black-buddha-800.webp" width="800" height="533" loading="lazy" alt="">
-                  <span class="program-card__badge" data-i18n="programs.cards.card6.badge">Nach Vereinbarung</span>
-                </div>
-                <div class="program-card__body">
-                  <span class="program-card__icon" aria-hidden="true"><i data-lucide="house"></i></span>
-                  <h3 class="program-card__title" data-i18n="programs.cards.card6.title">Hausbesuche</h3>
-                  <div class="program-card__divider" aria-hidden="true"></div>
-                  <p class="program-card__meta" data-i18n="programs.cards.card6.desc">Mönche kommen für Pirith-Gesänge und Dana</p>
                   <a href="#contact" class="program-card__more"><span data-i18n="programs.more">Mehr erfahren</span> <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                 </div>
               </article>
@@ -504,9 +489,9 @@
           </button>
         </div>
 
-        <!-- Community moments: the 3 newest event albums (events.js). Stays hidden
-             until the first event is added to data/events.json. -->
-        <div class="community-strip" id="community-strip" hidden>
+        <!-- Community moments: the 3 newest event albums (events.js). Until the first
+             event is in data/events.json it shows a "photos coming soon" preview. -->
+        <div class="community-strip" id="community-strip">
           <div class="section-head community-strip__head fade-in">
             <p class="section-head__label" data-i18n="community.label">GEMEINSCHAFT</p>
             <h2 class="section-head__title" data-i18n="community.title">Unsere Gemeinschaft durch das Jahr</h2>
@@ -663,6 +648,7 @@
         <a href="#gallery" class="footer__link" data-i18n="nav.gallery">Galerie</a>
         <a href="#contact" class="footer__link" data-i18n="nav.contact">Kontakt</a>
         <a href="donate.html" class="footer__link" data-i18n="nav.donate">Spenden</a>
+        <a href="community.html" class="footer__link" data-i18n="nav.community">Gemeinschaft</a>
       </nav>
 
       <ul class="footer__contact">
@@ -717,6 +703,7 @@
   </div>
 
   <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/settings.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/moonstone.js"></script>
   <script src="assets/js/gallery.js"></script>

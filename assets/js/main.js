@@ -460,6 +460,12 @@
     if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
     var CARD_FADE_MS = 300;
+    // Cards switched off in settings.js (e.g. the Poya program) leave the page
+    var settings = window.BBV_SETTINGS || {};
+    Array.prototype.slice.call(track.querySelectorAll('[data-setting]')).forEach(function (card) {
+      if (settings[card.getAttribute('data-setting')] === false) card.remove();
+    });
+
     var allCards = Array.prototype.slice.call(track.children);
     if (!allCards.length) return;
 
@@ -511,6 +517,9 @@
       dots.forEach(function (dot, i) {
         dot.classList.toggle('is-active', i === currentIndex);
       });
+
+      // fewer cards than fit in a row: centre them instead of leaving a gap
+      track.classList.toggle('programs__track--centered', maxIndex === 0);
 
       prevBtn.disabled = currentIndex === 0;
       nextBtn.disabled = currentIndex === maxIndex;
