@@ -34,6 +34,7 @@ baselbuddhistvihara/
 ├── index.html                  # Main single-page file
 ├── 404.html                    # Not-found page (absolute /paths, served by Vercel)
 ├── donate.html                 # Donation page (Swiss QR bill + bank details)
+├── legal.html                  # Impressum + privacy policy on one page (noindex)
 ├── community.html              # All community event albums, grouped by year
 ├── event.html                  # One album: event.html?id=<event id>
 ├── robots.txt
@@ -257,6 +258,13 @@ The QR code was recreated sharp from the exact data decoded from SKBZ's
 paper QR bill (Swiss Payments Code 0200, no amount, NON reference) and
 test-decoded. If the bank details ever change, regenerate it and test-scan
 it with a real banking app before publishing. TWINT/PayPal: only if SKBZ asks.
+
+LEGAL PAGE (legal.html): Impressum (#imprint: operator SKBZ, address,
+contact, represented by the president) and privacy policy (#privacy: Formspree,
+Google Maps, YouTube nocookie, Vercel/Google Fonts/unpkg, no cookies, rights,
+FDPIC) on one page. Texts: legal.* keys. Linked once, small, from every
+footer ("Impressum & Datenschutz"). If a new outside service is added to the
+site, add it to the privacy part. The design credit stays only in the footer.
 
 COMMUNITY ALBUMS (community.html + event.html, both drawn by events.js from
 data/events.json; texts: community.* keys):

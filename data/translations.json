@@ -265,6 +265,47 @@
       "nextImage": "Nächstes Bild",
       "slide": "Bild {n}",
       "card": "Karte {n}"
+    },
+    "legal": {
+      "label": "Rechtliches",
+      "title": "Impressum & Datenschutz",
+      "intro": "Wer hinter dieser Website steht und was mit Ihren Daten geschieht, in einfachen Worten.",
+      "jumpImprint": "Impressum",
+      "jumpPrivacy": "Datenschutz",
+      "imprint": {
+        "title": "Impressum",
+        "operator": "Betreiber",
+        "operatorText": "Sri Kalyana Buddhistisches Zentrum (SKBZ), Verein nach Schweizer Recht",
+        "address": "Adresse",
+        "contact": "Kontakt",
+        "represented": "Vertreten durch",
+        "president": "Fabienne Eglin, Präsidentin",
+        "liabilityTitle": "Haftung",
+        "liability": "Wir prüfen die Inhalte dieser Website sorgfältig, können aber keine Gewähr für ihre Richtigkeit und Vollständigkeit übernehmen. Für die Inhalte verlinkter Websites sind ausschliesslich deren Betreiber verantwortlich.",
+        "copyrightTitle": "Bilder und Texte",
+        "copyright": "Alle Fotos und Texte gehören dem SKBZ und dürfen nicht ohne Erlaubnis verwendet werden. Möchten Sie, dass ein Foto von Ihnen entfernt wird? Schreiben Sie uns, wir entfernen es umgehend.",
+        "country": "Schweiz"
+      },
+      "privacy": {
+        "title": "Datenschutz",
+        "lead": "Wir sammeln so wenig Daten wie möglich. Diese Erklärung folgt dem Schweizer Datenschutzgesetz (DSG).",
+        "responsibleTitle": "Verantwortliche Stelle",
+        "responsible": "Verantwortlich für die Bearbeitung Ihrer Daten ist das Sri Kalyana Buddhistisches Zentrum (SKBZ), Feldbergstrasse 142, 4057 Basel. Für alle Fragen zum Datenschutz: info@baselbuddhistvihara.ch.",
+        "formTitle": "Kontaktformular",
+        "form": "Wenn Sie uns über das Formular schreiben, werden Ihr Name, Ihre E-Mail-Adresse und Ihre Nachricht über den Dienst Formspree (USA) an uns weitergeleitet. Wir nutzen diese Angaben nur, um Ihnen zu antworten, und löschen sie, wenn sie nicht mehr gebraucht werden.",
+        "mapTitle": "Google Maps",
+        "map": "Die Karte im Kontaktbereich wird von Google geladen, sobald Sie zu ihr scrollen. Dabei erhält Google unter anderem Ihre IP-Adresse.",
+        "youtubeTitle": "YouTube-Videos",
+        "youtube": "Videos werden erst geladen, wenn Sie auf eine Reihe klicken, und zwar im erweiterten Datenschutzmodus von YouTube (youtube-nocookie.com). Vorher wird keine Verbindung zu YouTube aufgebaut.",
+        "servicesTitle": "Hosting, Schriften und Symbole",
+        "services": "Die Website liegt bei Vercel (USA). Die Schriften kommen von Google Fonts, die Symbole von unpkg.com. Diese Dienste sehen technisch bedingt Ihre IP-Adresse; Vercel speichert sie kurz in Protokollen, um die Website zu schützen.",
+        "cookiesTitle": "Keine Cookies, kein Tracking",
+        "cookies": "Wir verwenden keine Cookies, keine Statistik und keine Werbung. Nur die von Ihnen gewählte Sprache wird in Ihrem Browser gespeichert.",
+        "rightsTitle": "Ihre Rechte",
+        "rights": "Sie können jederzeit Auskunft über Ihre Daten verlangen und sie berichtigen oder löschen lassen. Schreiben Sie dazu an info@baselbuddhistvihara.ch. Sie können sich auch beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) beschweren.",
+        "updated": "Stand: November 2026"
+      },
+      "footerLink": "Impressum & Datenschutz"
     }
   },
   "en": {
@@ -533,6 +574,47 @@
       "nextImage": "Next photo",
       "slide": "Photo {n}",
       "card": "Card {n}"
+    },
+    "legal": {
+      "label": "Legal",
+      "title": "Legal notice & privacy",
+      "intro": "Who is behind this website and what happens to your data, in plain words.",
+      "jumpImprint": "Legal notice",
+      "jumpPrivacy": "Privacy",
+      "imprint": {
+        "title": "Legal notice",
+        "operator": "Operator",
+        "operatorText": "Sri Kalyana Buddhistisches Zentrum (SKBZ), an association under Swiss law",
+        "address": "Address",
+        "contact": "Contact",
+        "represented": "Represented by",
+        "president": "Fabienne Eglin, President",
+        "liabilityTitle": "Liability",
+        "liability": "We check the content of this website carefully but cannot guarantee that it is correct and complete. The operators of linked websites are solely responsible for their content.",
+        "copyrightTitle": "Photos and texts",
+        "copyright": "All photos and texts belong to SKBZ and may not be used without permission. Would you like a photo of yourself removed? Write to us and we will remove it promptly.",
+        "country": "Switzerland"
+      },
+      "privacy": {
+        "title": "Privacy policy",
+        "lead": "We collect as little data as possible. This policy follows the Swiss Federal Act on Data Protection (FADP).",
+        "responsibleTitle": "Who is responsible",
+        "responsible": "Sri Kalyana Buddhistisches Zentrum (SKBZ), Feldbergstrasse 142, 4057 Basel, is responsible for processing your data. For any privacy questions: info@baselbuddhistvihara.ch.",
+        "formTitle": "Contact form",
+        "form": "When you write to us through the form, your name, email address and message are passed to us through the service Formspree (USA). We use them only to answer you and delete them when they are no longer needed.",
+        "mapTitle": "Google Maps",
+        "map": "The map in the contact section is loaded from Google as soon as you scroll to it. Google receives your IP address, among other things.",
+        "youtubeTitle": "YouTube videos",
+        "youtube": "Videos only load when you click a series, using YouTube's privacy-enhanced mode (youtube-nocookie.com). Until then, no connection to YouTube is made.",
+        "servicesTitle": "Hosting, fonts and icons",
+        "services": "The website is hosted by Vercel (USA). The fonts come from Google Fonts and the icons from unpkg.com. For technical reasons these services see your IP address; Vercel keeps it briefly in logs to protect the website.",
+        "cookiesTitle": "No cookies, no tracking",
+        "cookies": "We use no cookies, no analytics and no advertising. Only the language you choose is saved in your browser.",
+        "rightsTitle": "Your rights",
+        "rights": "You can ask at any time what data we hold about you and have it corrected or deleted. Just write to info@baselbuddhistvihara.ch. You can also file a complaint with the Federal Data Protection and Information Commissioner (FDPIC).",
+        "updated": "Last updated: November 2026"
+      },
+      "footerLink": "Legal notice & privacy"
     }
   },
   "si": {
@@ -801,6 +883,47 @@
       "nextImage": "ඊළඟ ඡායාරූපය",
       "slide": "ඡායාරූපය {n}",
       "card": "කාඩ්පත {n}"
+    },
+    "legal": {
+      "label": "නීතිමය තොරතුරු",
+      "title": "නීතිමය දැන්වීම සහ රහස්‍යතාව",
+      "intro": "මෙම වෙබ් අඩවිය පවත්වාගෙන යන්නේ කවුද සහ ඔබගේ දත්තවලට කුමක් සිදුවේද යන්න සරල වචනවලින්.",
+      "jumpImprint": "නීතිමය දැන්වීම",
+      "jumpPrivacy": "රහස්‍යතාව",
+      "imprint": {
+        "title": "නීතිමය දැන්වීම",
+        "operator": "පවත්වාගෙන යන්නා",
+        "operatorText": "ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානය (SKBZ), ස්විස් නීතිය යටතේ ලියාපදිංචි සංගමයකි",
+        "address": "ලිපිනය",
+        "contact": "සම්බන්ධතා",
+        "represented": "නියෝජනය කරන්නේ",
+        "president": "ෆේබියන් එග්ලින්, සභාපතිනිය",
+        "liabilityTitle": "වගකීම",
+        "liability": "මෙම වෙබ් අඩවියේ අන්තර්ගතය අපි සැලකිල්ලෙන් පරීක්ෂා කරන නමුත්, එහි නිවැරදිභාවය සහ සම්පූර්ණභාවය සහතික කළ නොහැක. සබැඳි ඇති වෙනත් වෙබ් අඩවිවල අන්තර්ගතය සඳහා වගකිව යුත්තේ ඒවායේ හිමිකරුවන් පමණි.",
+        "copyrightTitle": "ඡායාරූප සහ පෙළ",
+        "copyright": "සියලුම ඡායාරූප සහ පෙළ SKBZ සතු වන අතර අවසරයකින් තොරව භාවිත කළ නොහැක. ඔබ සිටින ඡායාරූපයක් ඉවත් කිරීමට ඔබ කැමතිද? අපට ලියන්න, අපි එය වහාම ඉවත් කරන්නෙමු.",
+        "country": "ස්විට්සර්ලන්තය"
+      },
+      "privacy": {
+        "title": "රහස්‍යතා ප්‍රතිපත්තිය",
+        "lead": "අපි හැකි තරම් අඩු දත්ත ප්‍රමාණයක් එකතු කරමු. මෙම ප්‍රකාශය ස්විස් දත්ත ආරක්ෂණ නීතියට (DSG) අනුකූල වේ.",
+        "responsibleTitle": "වගකිව යුත්තා",
+        "responsible": "ඔබගේ දත්ත සැකසීම සඳහා වගකිව යුත්තේ ශ්‍රී කල්‍යාණ බෞද්ධ මධ්‍යස්ථානයයි (SKBZ), Feldbergstrasse 142, 4057 Basel. රහස්‍යතාව පිළිබඳ ඕනෑම ප්‍රශ්නයක් සඳහා: info@baselbuddhistvihara.ch.",
+        "formTitle": "සම්බන්ධතා පෝරමය",
+        "form": "ඔබ පෝරමය හරහා අපට ලියන විට, ඔබගේ නම, ඊමේල් ලිපිනය සහ පණිවිඩය Formspree (ඇමරිකා එක්සත් ජනපදය) සේවාව හරහා අප වෙත යොමු කෙරේ. අපි ඒවා ඔබට පිළිතුරු දීමට පමණක් භාවිත කරන අතර, තවදුරටත් අවශ්‍ය නොවන විට මකා දමමු.",
+        "mapTitle": "Google Maps",
+        "map": "සම්බන්ධතා කොටසේ සිතියම ඔබ එය වෙත පහළට යන විට Google වෙතින් පූරණය වේ. එවිට Google හට ඔබගේ IP ලිපිනය ඇතුළු තොරතුරු ලැබේ.",
+        "youtubeTitle": "YouTube වීඩියෝ",
+        "youtube": "ඔබ වීඩියෝ මාලාවක් ක්ලික් කළ විට පමණක්, YouTube හි වැඩිදියුණු කළ රහස්‍යතා ක්‍රමය (youtube-nocookie.com) හරහා වීඩියෝ පූරණය වේ. ඊට පෙර YouTube සමඟ කිසිදු සම්බන්ධතාවක් ඇති නොවේ.",
+        "servicesTitle": "සත්කාරකත්වය, අකුරු සහ සංකේත",
+        "services": "මෙම වෙබ් අඩවිය Vercel (ඇමරිකා එක්සත් ජනපදය) හි සත්කාරකත්වය ලබයි. අකුරු Google Fonts වෙතින් ද, සංකේත unpkg.com වෙතින් ද ලැබේ. තාක්ෂණික හේතූන් මත මෙම සේවාවන්ට ඔබගේ IP ලිපිනය පෙනේ; වෙබ් අඩවිය ආරක්ෂා කිරීම සඳහා Vercel එය කෙටි කාලයක් ලොග් සටහන්වල තබා ගනී.",
+        "cookiesTitle": "කුකීස් නැත, ලුහුබැඳීම් නැත",
+        "cookies": "අපි කුකීස්, සංඛ්‍යාලේඛන හෝ වෙළඳ දැන්වීම් භාවිත නොකරමු. ඔබ තෝරාගත් භාෂාව පමණක් ඔබගේ බ්‍රවුසරයේ සුරැකේ.",
+        "rightsTitle": "ඔබගේ අයිතිවාසිකම්",
+        "rights": "ඔබ පිළිබඳ අප සතු දත්ත මොනවාදැයි ඕනෑම වේලාවක විමසීමටත්, ඒවා නිවැරදි කිරීමට හෝ මකා දැමීමට ඉල්ලීමටත් ඔබට හැකිය. ඒ සඳහා info@baselbuddhistvihara.ch වෙත ලියන්න. ස්විස් ෆෙඩරල් දත්ත ආරක්ෂණ කොමසාරිස් (EDÖB) වෙත පැමිණිලි කිරීමටද ඔබට හැකිය.",
+        "updated": "අවසන් යාවත්කාලීන කිරීම: 2026 නොවැම්බර්"
+      },
+      "footerLink": "නීතිමය දැන්වීම සහ රහස්‍යතාව"
     }
   }
 }

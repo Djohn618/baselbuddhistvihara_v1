@@ -4124,6 +4124,159 @@ blockquote {
   }
 }
 
+
+/* ==============================================
+   Legal page (legal.html): Impressum + Datenschutz on one calm page
+   ============================================== */
+
+.legal {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + var(--section-padding-y) * 0.6);
+  padding-bottom: var(--section-padding-y);
+  background-color: var(--color-bg-soft);
+}
+
+.legal__container {
+  max-width: 760px;
+}
+
+.legal__intro {
+  max-width: 46ch;
+  margin: var(--space-md) auto 0;
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-muted);
+  text-wrap: balance;
+}
+
+.legal__jump {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+}
+
+.legal__jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 1.25rem;
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.legal__jump a:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.legal__part {
+  margin-top: var(--space-2xl);
+  scroll-margin-top: calc(var(--nav-height) + 1.5rem);
+}
+
+.legal__part-title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.legal__lead {
+  max-width: 52ch;
+  margin: 0 auto var(--space-md);
+  text-align: center;
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+}
+
+.legal__card {
+  background-color: var(--color-white);
+  border: var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.legal__card + .legal__card {
+  margin-top: var(--space-sm);
+}
+
+.legal__card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.legal__card-title .lucide {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--color-secondary);
+}
+
+.legal__card p {
+  max-width: none;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-dark);
+}
+
+.legal__facts dl {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .legal__facts dl {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.legal__facts dt {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.legal__facts dd {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+
+.legal__facts a {
+  color: var(--color-primary);
+}
+
+.legal__updated {
+  margin: var(--space-lg) auto 0;
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* small "Impressum & Datenschutz" link in every footer */
+.footer__legal {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--color-gold-border);
+  text-underline-offset: 3px;
+}
+
+.footer__legal:hover {
+  color: var(--color-primary);
+}
+
 /* --------------------------------------------------------------------------
    Phone type scale — one calm set of sizes for every page under 768px:
    page titles 28px, card titles 18px, body text 15px.
@@ -4145,7 +4298,8 @@ blockquote {
   .contact__form-title,
   .event__title,
   .notfound__title,
-  .monk-detail__name {
+  .monk-detail__name,
+  .legal__part-title {
     font-size: 1.75rem;
   }
 
@@ -4154,7 +4308,8 @@ blockquote {
   .album-card__title,
   .monk-card__name,
   .youtube-card__title,
-  .about__story-name {
+  .about__story-name,
+  .legal__card-title {
     font-size: 1.125rem;
   }
 
@@ -4170,6 +4325,7 @@ blockquote {
   .contact__intro,
   .community__intro,
   .donate__intro,
+  .legal__intro,
   .notfound__text,
   .monk-detail__body p,
   .footer__moonstone-caption {
