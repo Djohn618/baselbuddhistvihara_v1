@@ -276,7 +276,9 @@ data/events.json; texts: community.* keys):
 ## Contact Form
 
 Formspree via AJAX (fetch) in main.js. Action URL in index.html:
-  https://formspree.io/f/YOUR_FORMSPREE_ID   ← placeholder, real ID pending
+  https://formspree.io/f/mbggeage   (form "Kontaktformular Website", sends to
+  info@baselbuddhistvihara.ch; free plan: 50 messages per month)
+Email subject: main.js adds "_subject" = "Website: <topic in German> – <name>".
 Honeypot field: name="_gotcha" (hidden)
 Success/error messages come from contact.form.success / contact.form.error.
 Subject uses a custom dropdown (keyboard accessible) writing to a hidden input.

@@ -211,9 +211,22 @@
       submitBtn.disabled = true;
       submitBtn.textContent = '...';
 
+      // Subject line for the Vihara's inbox, always in German,
+      // e.g. "Website: Hausbesuch – Anna Muster"
+      var SUBJECTS = {
+        general: 'Allgemeine Anfrage',
+        programs: 'Programm-Info',
+        donations: 'Spenden',
+        homeVisit: 'Hausbesuch',
+        other: 'Sonstiges'
+      };
+      var data = new FormData(form);
+      var topic = SUBJECTS[data.get('subject')] || SUBJECTS.general;
+      data.append('_subject', 'Website: ' + topic + ' – ' + String(data.get('name') || '').trim());
+
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
+        body: data,
         headers: { 'Accept': 'application/json' }
       })
         .then(function (response) {
