@@ -315,16 +315,16 @@ Founder:    Most Ven. Dr. Walpola Kalyanatissa Nayaka Thero
             (passed away June 12, 2024, Geneva International Buddhist Center)
 
 Bank account (SKBZ, used on donate.html — from the official QR bill):
-  Holder:   Sri Kalyana Buddhistisches Zentrum (SKBZ)   (official spelling; the
-            QR bill data itself says "Buddhistische", left unchanged)
+  Holder:   Sri Kalyana Buddhistische Zentrum (SKBZ)   (spelled as on the bill)
   IBAN:     CH05 8080 8009 7919 6193 1   (21 characters, checksum valid;
             an older note had it cut short to "CH05 8080 8009 7919")
   Type:     Vereinskonto / CHF
   Address:  Neugrabenweg 29, 5702 Niederlenz
 
-Source of truth: the Vihara's official text document (Nov 2026, DE/EN/SI).
-No opening hours: every visit is by appointment (one resident monk, small
-space). Never show fixed hours. There is one resident monk (do not show
+Source of truth: the Vihara's official text document (Nov 2026, DE/EN/SI) for
+the story, people and services. For practical details (opening hours
+daily 7:00–18:30, program days/times, phone, email, bank data) the site is
+correct and the document is outdated. There is one resident monk (do not show
 "5 monks" except for the opening day). Services in the document: monthly
 programs, Kathina and special events, Dana offerings, home visits (Pirith,
 Dana), Vihara visits by appointment, 2 YouTube channels (one video a week).
