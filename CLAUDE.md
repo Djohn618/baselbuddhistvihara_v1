@@ -79,18 +79,19 @@ translation keys images.<name> (data-i18n-attr="alt:..." / "aria-label:...").
 Photo names (source JPG -> web file -> where it is used):
   buddha-altar (IMG_8761)        hero 1
   buddha-face (IMG_8778)         hero 2, gallery, og-image
-  shrine-new-statues (phone pic) hero 3, gallery
-  meditation-room (phone pic)    hero 4, meditation (German) card, gallery
-  shrine-room (IMG_8744)         hero 5, gallery
-  shrine-offerings (IMG_8748)    about collage, gallery
+  shrine-room (IMG_8744)         hero 3, gallery
+  shrine-offerings (IMG_8748)    hero 4, about collage, gallery
   lotus-offerings (IMG_8764)     about collage, Dana card, gallery
   buddha-hands (IMG_8796)        about collage, gallery
-  meditation-cushions (IMG_8789) meditation (Sinhala) card, gallery
   relic-stupa (IMG_8792)         Poya card, gallery
   buddha-statue (IMG_8749)       Kathina card, gallery
-  shrine-cabinet (IMG_8757)      home visits card, gallery
-  black-buddha (IMG_8752)        gallery
+  shrine-cabinet (IMG_8757)      gallery
+  meditation-room (phone pic)    meditation (German) card only
+  shrine-new-statues (phone pic) meditation (Sinhala) card only
+  black-buddha (IMG_8752)        home visits card only
   monks/ariyaseela-thero, monks/kalyanatissa-nayaka-thero: monk cards + pages
+Hero: only the sharp camera photos, no phone pictures. The monk asked to
+remove the meditation cushions photo (IMG_8789): do not use it again.
 Hero slides are never lazy-loaded (a slide must be ready when it fades in).
 
 ---
