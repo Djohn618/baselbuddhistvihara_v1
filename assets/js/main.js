@@ -144,6 +144,12 @@
     return window.i18n ? window.i18n.t(key) : key;
   }
 
+  // "a11y.card" + 2 -> "Karte 2" / "Card 2" / "කාඩ්පත 2" (screen reader labels)
+  function numberLabel(key, n) {
+    var text = t(key);
+    return text === key ? String(n) : text.replace('{n}', n);
+  }
+
   function initContactForm() {
     var form = document.getElementById('contact-form');
     var status = document.getElementById('form-status');
@@ -316,7 +322,7 @@
     var featured = data.monks.filter(function (m) { return m.featured; });
 
     var memoryText = { de: 'In Erinnerung', en: 'In memory', si: 'සිහිකිරීමෙහිලා' };
-    var locales = { de: 'de-CH', en: 'en-GB', si: 'si-LK' };
+    var locales = { de: 'de-CH', en: 'en-US', si: 'si-LK' };
 
     // Small clay oil lamp (pol thel pahana) with a softly flickering flame
     var lampIcon =
@@ -409,6 +415,14 @@
         dot.classList.toggle('is-active', i === currentIndex);
       });
     }
+
+    function labelDots() {
+      dots.forEach(function (dot, i) {
+        dot.setAttribute('aria-label', numberLabel('a11y.slide', i + 1));
+      });
+    }
+    labelDots();
+    document.addEventListener('i18n:change', labelDots);
 
     var reduceMotion = window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -514,7 +528,7 @@
         var dot = document.createElement('button');
         dot.type = 'button';
         dot.className = 'programs__dot';
-        dot.setAttribute('aria-label', 'Karte ' + (i + 1));
+        dot.setAttribute('aria-label', numberLabel('a11y.card', i + 1));
         dot.addEventListener('click', function () { goTo(i); });
         dotsContainer.appendChild(dot);
         return dot;
@@ -609,6 +623,13 @@
       render();
     });
 
+    // dot labels follow the language switch
+    document.addEventListener('i18n:change', function () {
+      dots.forEach(function (dot, i) {
+        dot.setAttribute('aria-label', numberLabel('a11y.card', i + 1));
+      });
+    });
+
     // Touch swipe (the arrows are hidden on phones)
     onSwipe(track.parentElement, function (direction) {
       goTo(currentIndex + direction);
@@ -635,15 +656,6 @@
       buildDots();
       render();
     }
-  }
-
-  // Links whose real URL is still pending (href="#") do nothing instead of
-  // jumping to the top of the page.
-  function initPlaceholderLinks() {
-    document.addEventListener('click', function (e) {
-      var link = e.target.closest('a[href="#"]');
-      if (link) e.preventDefault();
-    });
   }
 
   // YouTube playlists: open the player on this page. The frame uses YouTube's
@@ -770,7 +782,6 @@
     initHeroSlideshow();
     initProgramsCarousel();
     initContactForm();
-    initPlaceholderLinks();
     loadMonks();
     document.addEventListener('i18n:change', renderMonks);
   }

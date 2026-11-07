@@ -23,7 +23,7 @@
   var events = null;
   var activeYear = 'all';
 
-  var locales = { de: 'de-CH', en: 'en-GB', si: 'si-LK' };
+  var locales = { de: 'de-CH', en: 'en-US', si: 'si-LK' };
   var siMonths = ['ජනවාරි', 'පෙබරවාරි', 'මාර්තු', 'අප්‍රේල්', 'මැයි', 'ජූනි',
     'ජූලි', 'අගෝස්තු', 'සැප්තැම්බර්', 'ඔක්තෝබර්', 'නොවැම්බර්', 'දෙසැම්බර්'];
 

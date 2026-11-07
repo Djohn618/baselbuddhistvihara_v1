@@ -1,4 +1,4 @@
-.gitignore für Basel Buddhist Vihara
+# .gitignore — Basel Buddhist Vihara
 
 # ========================
 # System Files
@@ -23,19 +23,12 @@ desktop.ini
 .claude/
 
 # ========================
-# PHP & Server
+# Secrets (never commit)
 # ========================
-# Config with sensitive data (email passwords etc.)
-php/config.php
-config.php
 *.env
 .env
 .env.local
 .env.production
-
-# PHP error logs
-php_errors.log
-error_log
 
 # ========================
 # Logs
@@ -68,11 +61,11 @@ temp/
 *~
 
 # ========================
-# Source photos (camera RAW + full-size edits)
+# Source material (camera RAW, full-size edits, documents)
 # ========================
-# Only the web versions in assets/images/vihara/ belong in git and on Vercel.
-assets/images/test_images/
-assets/images/test_images_edited/
+# Kept locally in source-files/. Only the web versions in assets/images/
+# belong in git and on Vercel.
+source-files/
 *.CR2
 *.cr2
 
@@ -83,6 +76,3 @@ assets/images/test_images_edited/
 *.key
 *.cert
 *.p12
-
-# Source of the donation QR code (the web page uses the recreated SVG/PNG)
-assets/images/donation.pdf

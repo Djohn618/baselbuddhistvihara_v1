@@ -22,7 +22,7 @@
     currentIndex = (index + items.length) % items.length;
     var item = items[currentIndex];
 
-    // Real photo: show the large version, uncropped; otherwise the gradient placeholder
+    // show the large version, uncropped, in its own shape
     var full = item.getAttribute('data-full');
     content.innerHTML = '';
     if (full) {
@@ -37,12 +37,7 @@
           content.style.aspectRatio = img.naturalWidth + ' / ' + img.naturalHeight;
         }
       });
-    } else {
-      content.style.aspectRatio = item.getAttribute('data-aspect') || '4 / 3';
     }
-    content.classList.toggle('lightbox__content--photo', !!full);
-    content.classList.toggle('lightbox__content--odd', !full && currentIndex % 2 === 0);
-    content.classList.toggle('lightbox__content--even', !full && currentIndex % 2 !== 0);
     counter.textContent = (currentIndex + 1) + ' / ' + items.length;
   }
 

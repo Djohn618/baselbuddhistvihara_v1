@@ -57,20 +57,22 @@ baselbuddhistvihara/
 │   │   └── gallery.js          # Gallery lightbox
 │   └── images/
 │       ├── og-image.jpg        # 1200x630 share preview (WhatsApp/Facebook)
-│       ├── logo/               # V2.png (favicon, apple-touch, JSON-LD) + logo-160.webp (on page)
+│       ├── logo/               # logo.png (favicon, apple-touch, JSON-LD) + logo-160.webp (on page)
 │       ├── vihara/             # real temple photos, each as <name>-1600.webp + <name>-800.webp
 │       │                       # (hero, about collage, program cards, gallery all use these)
 │       ├── monks/              # monk portraits <name>-400.webp (cards) + -800.webp (pages)
 │       ├── donate/             # swiss-qr-bill.svg (shown) + .png (download)
 │       ├── youtube/            # playlist covers <name>-640.webp (from YouTube, via PhotoCraft)
-│       ├── events/<id>/        # event album photos <name>-800.webp + <name>-1600.webp
-│       ├── test_images/        # camera RAW originals (.CR2) — NOT in git (.gitignore)
-│       └── test_images_edited/ # graded full-size JPGs (PhotoCraft), named like the web
-│                               # files (e.g. buddha-altar.jpg) — NOT in git
-└── data/
+│       └── events/<id>/        # event album photos <name>-800.webp + <name>-1600.webp
+├── data/
     ├── translations.json       # All text content in DE, EN, SI
     ├── events.json             # Community event albums (empty until real photos come)
-    └── monks.json              # Monk cards (new monk = new object)
+│   └── monks.json              # Monk cards (new monk = new object)
+└── source-files/               # NOT in git (.gitignore), local only, never delete
+    ├── photos-raw/             # camera RAW originals (.CR2) + original phone pictures
+    ├── photos-edited/          # graded full-size JPGs (PhotoCraft), named like the web
+    │                           # files (e.g. buddha-altar.jpg)
+    └── documents/              # skbz-qr-bill.pdf (SKBZ's paper QR bill, source of donate/)
 
 Images: all photo grading, resizing and converting is done with PhotoCraft
 (photocraft-photo-grading skill), never Python/PIL. Web versions: WebP,
