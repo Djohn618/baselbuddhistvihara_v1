@@ -321,6 +321,12 @@ blockquote {
   text-align: center;
 }
 
+/* paragraphs have a max reading width (p { max-width: 70ch }); inside a
+   centred header they must sit in the middle too, not on the left */
+.section-head > p {
+  margin-inline: auto;
+}
+
 .section-head__label,
 .about__label {
   font-family: var(--font-body);
