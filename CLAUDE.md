@@ -85,11 +85,11 @@ Photo names (source JPG -> web file -> where it is used):
   lotus-offerings (IMG_8764)     about collage, Dana card, gallery
   buddha-hands (IMG_8796)        about collage, gallery
   relic-stupa (IMG_8792)         Poya card, gallery
-  buddha-statue (IMG_8749)       Kathina card, gallery
+  buddha-statue (IMG_8749)       gallery
   shrine-cabinet (IMG_8757)      gallery
   meditation-room (phone pic)    meditation (German) card only
   shrine-new-statues (phone pic) meditation (Sinhala) card only
-  black-buddha (IMG_8752)        home visits card only
+  black-buddha (IMG_8752)        Kathina card only
   monks/ariyaseela-thero, monks/kalyanatissa-nayaka-thero: monk cards + pages
 Hero: only the sharp camera photos, no phone pictures. The monk asked to
 remove the meditation cushions photo (IMG_8789): do not use it again.
