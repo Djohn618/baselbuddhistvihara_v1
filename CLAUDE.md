@@ -202,6 +202,9 @@ NAV (fixed):
                  Phones: one row per monk, round portrait, no excerpt.
                  Tablet+: two equal cards, "In memory" label in the photo corner.
                  No photo yet (future monks): lotus line drawing.
+                 Portrait on a white background: set "imageOnWhite": true in
+                 monks.json (and --on-white on the page's portrait) so the white
+                 is blended into the warm parchment (mix-blend-mode: multiply).
                  Detail pages (monks/*.html): "Our monks" pill back to #monks,
                  centred round portrait in a gold ring (lotus if no photo),
                  role, name, memory line (monkPages.<slug>.memory), liyawela
@@ -273,7 +276,7 @@ Subject uses a custom dropdown (keyboard accessible) writing to a hidden input.
 ## Real Content (do not change these)
 
 Address:    Feldbergstrasse 142, 4057 Basel, Switzerland
-Phone:      +41 792 303 699
+Phone:      +41 76 255 50 86  (tel:+41762555086; changed Nov 2026 on the owner's request)
 Email:      info@baselbuddhistvihara.ch (Zoho Mail; switched Nov 2026 on the
             owner's request — the Formspree form target is set in the
             Formspree dashboard, not in the code)

@@ -2,7 +2,8 @@
   "_comment": [
     "To add a new monk: copy one object, change the fields, save.",
     "status: 'active' = currently serving, 'passed' = passed away",
-    "featured: true = shown on homepage"
+    "featured: true = shown on homepage",
+    "imageOnWhite: true = portrait on a white background; the card blends it into the warm colour"
   ],
   "monks": [
     {
@@ -24,6 +25,7 @@
         "si": "අපේ ආදරණීය නිර්මාතෘ සහ ආධ්‍යාත්මික උපදේශකයා බාසල් බෞද්ධ විහාරයේ පදනම තැබූහ."
       },
       "image": "assets/images/monks/kalyanatissa-nayaka-thero-400.webp",
+      "imageOnWhite": true,
       "detailPage": "monks/kalyanatissa.html",
       "status": "passed",
       "featured": true

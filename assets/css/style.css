@@ -1442,6 +1442,21 @@ blockquote {
   display: block;
 }
 
+/* Portraits taken on a white background: "multiply" turns the white into the
+   card's warm parchment tone, so the monk sits on the page instead of on a
+   white box. On tablet and desktop the whole portrait shows, resting on the
+   photo's bottom edge. */
+.monk-card__image-wrap--on-white img {
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 768px) {
+  .monk-card__image-wrap--on-white img {
+    object-fit: contain;
+    object-position: center bottom;
+  }
+}
+
 /* Lotus line drawing while a portrait is still missing */
 .monk-card__placeholder {
   width: 46%;
@@ -1718,6 +1733,15 @@ blockquote {
   border-radius: 50%;
   object-fit: cover;
   object-position: center 15%;
+}
+
+/* same idea on the monk page: warm tone inside the gold ring, white blended away */
+.monk-detail__portrait--on-white {
+  background: var(--ph-1) content-box;
+}
+
+.monk-detail__portrait--on-white img {
+  mix-blend-mode: multiply;
 }
 
 .monk-detail__lotus {

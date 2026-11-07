@@ -353,7 +353,8 @@
 
       return '' +
         '<article class="monk-card ' + (isPassed ? 'monk-card--passed' : '') + ' fade-in">' +
-          '<div class="monk-card__image-wrap">' +
+          // imageOnWhite: the portrait was taken on a white background (see style.css)
+          '<div class="monk-card__image-wrap' + (monk.imageOnWhite ? ' monk-card__image-wrap--on-white' : '') + '">' +
             (monk.image
               ? '<img src="' + monk.image + '" alt="' + name + '" onerror="this.style.display=\'none\'" loading="lazy">'
               : lotusIcon) +
