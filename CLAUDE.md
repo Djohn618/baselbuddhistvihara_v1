@@ -185,7 +185,7 @@ and needs review by a native speaker.
 
 NAV (fixed):
 - ≥1280px: 58/42 split mirroring the hero. Left: logo + name. Right: language
-  switcher, Spenden button, divider, links Kontakt | Galerie | Events | Über | Home.
+  switcher, Spenden button, divider, links Home | Über | Events | Galerie | Kontakt.
   Transparent over the hero, turns #FAF7F2 after scrolling (site-header--scrolled).
 - <1280px: one light bar with logo (+ name from 480px), DE|EN|සිං and hamburger.
   Links and Spenden button are in the full-screen light overlay.

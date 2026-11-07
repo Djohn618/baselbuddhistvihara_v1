@@ -4015,6 +4015,16 @@ blockquote {
   margin: 0;
 }
 
+/* "Crafted by Deshan John": quiet words, the name a little stronger */
+.footer__credit {
+  color: var(--color-text-muted);
+}
+
+.footer__credit-name {
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+}
+
 /* ==============================================
    404 page
    ============================================== */
@@ -4111,5 +4121,73 @@ blockquote {
   .hero__content * {
     max-width: 100%;
     box-sizing: border-box;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Phone type scale — one calm set of sizes for every page under 768px:
+   page titles 28px, card titles 18px, body text 15px.
+   Kept last in the file so it wins over the section rules above.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  body {
+    font-size: 0.9375rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  /* page and section titles */
+  .section-head__title,
+  .about__heading,
+  .contact__form-title,
+  .event__title,
+  .notfound__title,
+  .monk-detail__name {
+    font-size: 1.75rem;
+  }
+
+  /* card titles and names */
+  .program-card__title,
+  .album-card__title,
+  .monk-card__name,
+  .youtube-card__title,
+  .about__story-name {
+    font-size: 1.125rem;
+  }
+
+  .donate__card-title,
+  .footer__brand-name {
+    font-size: 1.375rem;
+  }
+
+  /* running text */
+  .hero__description,
+  .about__text,
+  .youtube__intro,
+  .contact__intro,
+  .community__intro,
+  .donate__intro,
+  .notfound__text,
+  .monk-detail__body p,
+  .footer__moonstone-caption {
+    font-size: 0.9375rem;
+  }
+
+  .monk-detail__body > p:first-child,
+  .footer__tagline {
+    font-size: 1rem;
+  }
+
+  .monk-detail__body blockquote {
+    font-size: 1.125rem;
+  }
+
+  /* the small lines inside the two side-by-side programme cards */
+  .program-card__meta,
+  .program-card__more {
+    font-size: 0.8125rem;
   }
 }

@@ -109,17 +109,17 @@
         "card1": {
           "badge": "Monatlich · 3. Freitag",
           "title": "Meditation auf Deutsch",
-          "time": "18:00 –⁠ 20:00 Uhr"
+          "time": "18:00 –⁠ 20:00 Uhr"
         },
         "card2": {
           "badge": "Monatlich · 3. Samstag",
           "title": "Meditation auf Singhalesisch",
-          "time": "18:00 –⁠ 20:00 Uhr"
+          "time": "18:00 –⁠ 20:00 Uhr"
         },
         "card3": {
           "badge": "Monatlich · 3. Sonntag",
           "title": "Poya-Programm",
-          "time": "14:00 –⁠ 18:00 Uhr"
+          "time": "14:00 –⁠ 18:00 Uhr"
         },
         "card5": {
           "badge": "Jährlich",
@@ -248,7 +248,7 @@
     "footer": {
       "tagline": "Ein Ort des Friedens, der Weisheit und der Gemeinschaft — Basel, Schweiz",
       "text": "Basel Buddhist Vihara (SKBZ). Alle Rechte vorbehalten.",
-      "credit": "Mit Achtsamkeit gestaltet in Basel"
+      "credit": "Gestaltet von"
     },
     "a11y": {
       "mainNav": "Hauptnavigation",
@@ -377,17 +377,17 @@
         "card1": {
           "badge": "Monthly · 3rd Friday",
           "title": "Meditation in German",
-          "time": "6:00 –⁠ 8:00 PM"
+          "time": "6:00 –⁠ 8:00 PM"
         },
         "card2": {
           "badge": "Monthly · 3rd Saturday",
           "title": "Meditation in Sinhala",
-          "time": "6:00 –⁠ 8:00 PM"
+          "time": "6:00 –⁠ 8:00 PM"
         },
         "card3": {
           "badge": "Monthly · 3rd Sunday",
           "title": "Poya program",
-          "time": "2:00 –⁠ 6:00 PM"
+          "time": "2:00 –⁠ 6:00 PM"
         },
         "card5": {
           "badge": "Every year",
@@ -516,7 +516,7 @@
     "footer": {
       "tagline": "A place of peace, wisdom and community — Basel, Switzerland",
       "text": "Basel Buddhist Vihara (SKBZ). All rights reserved.",
-      "credit": "Designed with care in Basel"
+      "credit": "Crafted by"
     },
     "a11y": {
       "mainNav": "Main navigation",
@@ -784,7 +784,7 @@
     "footer": {
       "tagline": "සාමයේ, ප්‍රඥාවේ සහ ප්‍රජාවේ ස්ථානයක් — බාසල්, ස්විට්සර්ලන්තය",
       "text": "බාසල් බෞද්ධ විහාරය (SKBZ). සියලුම හිමිකම් ඇවිරිණි.",
-      "credit": "බාසල් හි සැලකිල්ලෙන් නිර්මාණය කරන ලදී"
+      "credit": "වෙබ් අඩවිය නිර්මාණය කළේ"
     },
     "a11y": {
       "mainNav": "ප්‍රධාන සංචාලනය",

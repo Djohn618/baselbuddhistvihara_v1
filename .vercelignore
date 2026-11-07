@@ -1,0 +1,6 @@
+# Files that stay on GitHub but are not uploaded to the live website
+CLAUDE.md
+README.md
+.gitignore
+.vercelignore
+source-files/
